@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Palm Court at The Plaza",
+  servesCuisine: ["Afternoon Tea", "American", "Contemporary"],
+  priceRange: "$$$$",
+  telephone: "+1-212-546-5300",
+  url: "https://www.theplazany.com/dining/the-palm-court/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "768 5th Ave",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10019",
+    addressCountry: "US",
+  },
+  description:
+    "Iconic afternoon tea room under a stained-glass dome at The Plaza hotel on Fifth Avenue, New York.",
+};
+---
+
+<BaseLayout
+  title="The Palm Court Afternoon Tea Guide (2026) — Prices & What to Expect | Hotel Menu Guide"
+  description="An independent guide to afternoon tea at The Palm Court in The Plaza, NYC: the experience, reported prices, what to expect, and how to book. Prices reported as of September 2026."
+  path="/plaza-palm-court-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/palm-court-tea.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/palm-court-tea.webp"
+      alt="Illustration of afternoon tea beneath the Palm Court's glass dome"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · The Plaza, Fifth Avenue
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Palm Court Afternoon Tea — Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Beneath its famous stained-glass dome, the Palm Court at The Plaza has served afternoon tea
+      for over a century — finger sandwiches, warm scones with Devonshire cream, tiered pastries,
+      and a long tea list, all in one of the most photographed dining rooms in New York. This is our
+      independent guide to the experience: what it costs, what to expect, and how to book.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">768 5th Ave, New York, NY 10019 (The Plaza hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Served</dt><dd class="text-ink-soft">Daily, 11:00 AM – 4:00 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Style</dt><dd class="text-ink-soft">Classic afternoon tea; evening light fare &amp; cocktails after 5 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Essential — book via the hotel's official site or OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (212) 546-5300</dd></div>
+        <div><dt class="font-semibold text-ink">Dress</dt><dd class="text-ink-soft">Smart; guests are encouraged to dress for the occasion</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>The experience</h2>
+      <p>
+        Afternoon tea here follows the traditional three-act structure. It opens with savory
+        finger sandwiches — think smoked salmon, cucumber, egg salad, and seasonal variations —
+        moves to warm, freshly baked scones served with Devonshire cream, lemon curd and preserves,
+        and finishes with a tier of pastries and sweets that changes with the seasons. A broad tea
+        list (black, green, herbal, and rooibos blends) accompanies the food, and champagne can be
+        added.
+      </p>
+      <p>
+        The room itself is half the attraction: soaring palm trees, mirrored tables, and the
+        celebrated glass dome overhead. Service is formal but warm, and the whole affair typically
+        runs about two hours. For children, the Eloise Tea — named for the Plaza's most famous
+        fictional resident — offers a kid-friendly version of the ritual.
+      </p>
+
+      <h2>Reported prices</h2>
+      <p>
+        Afternoon tea pricing has risen notably over the years, and it varies by season — holiday
+        menus (like the winter Holiday Afternoon Tea) command a premium. Based on recent public
+        sources, the realistic bands are:
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Tea service</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price (per person)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Classic afternoon tea</td><td class="px-4 py-3 text-right whitespace-nowrap">~$125</td></tr>
+            <tr><td class="px-4 py-3">Champagne afternoon tea</td><td class="px-4 py-3 text-right whitespace-nowrap">~$110–$155</td></tr>
+            <tr><td class="px-4 py-3">Most luxurious / premium tea</td><td class="px-4 py-3 text-right whitespace-nowrap">~$235</td></tr>
+            <tr><td class="px-4 py-3">Eloise Tea (children)</td><td class="px-4 py-3 text-right whitespace-nowrap">~$115 per child</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        For context: a decade ago, published prices were roughly half of today's — older sources
+        listed teas around $60–$110. Prices have climbed steadily since, so if you're working from
+        an old blog post, double the number before you go. Tax and an automatic service charge sit
+        on top of the listed price, so budget accordingly.
+      </p>
+
+      <h2>What to expect</h2>
+      <ul>
+        <li><strong>Timing:</strong> tea is served 11 AM to 4 PM daily; the last seating is mid-afternoon. Evenings switch to light fare and cocktails from 5 PM.</li>
+        <li><strong>Booking:</strong> reservations are genuinely essential — walk-ins for tea are rarely accommodated. Book days or weeks ahead for weekends and holidays.</li>
+        <li><strong>Duration:</strong> plan on about two hours. This is not a quick bite; it's the point of the visit.</li>
+        <li><strong>Dietary needs:</strong> vegetarian options are part of the standard offering; for other requirements, contact the restaurant when booking.</li>
+        <li><strong>Seasonal menus:</strong> the pastry tier and sandwich selection rotate, and holiday editions (Thanksgiving, Christmas) are the hardest reservations of the year.</li>
+      </ul>
+
+      <h2>Is it worth it?</h2>
+      <p>
+        Our honest take: you're paying for the room and the ritual as much as the food. Nobody
+        leaves hungry, but the scones-and-sandwiches format is what it is — if you want a serious
+        meal, book dinner elsewhere. What you can't replicate is tea under that dome. For a special
+        occasion, a first-time visitor, or anyone who grew up on Eloise, it delivers exactly what it
+        promises. Just go in knowing the price, book ahead, and order the champagne if the day
+        deserves it.
+      </p>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Reserve early</strong> via theplazany.com or OpenTable — especially for weekends and the holiday season.</li>
+        <li><strong>Confirm the current price</strong> when booking; seasonal menus move the numbers.</li>
+        <li><strong>Arrive on time</strong> — seatings are scheduled, and late arrivals compress your two hours.</li>
+        <li><strong>Combine it with Fifth Avenue:</strong> the Plaza sits at the southeast corner of Central Park, an easy walk from the park, Rockefeller Center, and the Fifth Avenue shops.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of September 2026</strong>, compiled from recent public
+        sources and the hotel's published materials. Afternoon tea prices change seasonally and older
+        sources list lower figures — always verify the current price with the restaurant when booking.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+---
+
+<BaseLayout
+  title="About — Hotel Menu Guide"
+  description="About Hotel Menu Guide: independent, original guides to New York's famous hotel restaurant menus, by Firoz Khan of FK Digital Media."
+  path="/about/"
+>
+  <article class="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <h1 class="font-display text-3xl sm:text-4xl font-bold">About</h1>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-6 items-start rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <img
+        src="/images/firoz-khan.webp"
+        alt="Firoz Khan"
+        class="w-28 h-28 rounded-full object-cover border-2 border-gold shrink-0"
+      />
+      <div>
+        <h2 class="font-display text-xl font-bold">Firoz Khan</h2>
+        <p class="text-sm text-gold-dark font-medium mt-1">FK Digital Media</p>
+        <p class="mt-3 text-ink-soft text-sm leading-relaxed">
+          I'm Firoz Khan, an independent maker behind FK Digital Media. I build small, focused
+          websites — calculators, guides, and tools — that answer one question well instead of
+          everything poorly.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-3 text-sm">
+          <a href="https://www.linkedin.com/in/firoz-khan-1153358a/" target="_blank" rel="noopener noreferrer" class="text-gold-dark font-semibold hover:underline">LinkedIn</a>
+          <a href="https://github.com/fkdigitalmedia" target="_blank" rel="noopener noreferrer" class="text-gold-dark font-semibold hover:underline">GitHub</a>
+          <a href="https://www.instagram.com/rtibyfiroz/" target="_blank" rel="noopener noreferrer" class="text-gold-dark font-semibold hover:underline">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose-guide mt-8">
+      <h2>What this site is</h2>
+      <p>
+        Hotel Menu Guide publishes independent, original guides to the menus of New York's most
+        famous hotel restaurants. Each guide explains what the menu looks like, what dishes cost,
+        what we'd order, and how to plan a visit — written in our own words from publicly
+        reported facts.
+      </p>
+      <h2>What this site is not</h2>
+      <p>
+        We are not affiliated with, endorsed by, or connected to any hotel or restaurant mentioned
+        here. We don't reprint menus and we don't copy anyone's photos — every illustration on this
+        site is original artwork, and every description is our own writing.
+      </p>
+      <h2>On prices</h2>
+      <p>
+        Restaurant prices change with the seasons. We date every price we publish (currently
+        reported as of September 2026), show ranges where sources disagree, and ask you to verify
+        with the restaurant before visiting. We'd rather show an honest range than a false precise
+        number.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

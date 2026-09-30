@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf7f1;
+  --color-parchment: #f3eee2;
+  --color-ink: #211d16;
+  --color-ink-soft: #4a4438;
+  --color-gold: #a3802e;
+  --color-gold-dark: #7d5f1e;
+  --color-line: #e5ddc9;
+  --font-display: Georgia, "Times New Roman", "Nimbus Roman", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.prose-guide h2 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-line);
+}
+
+.prose-guide h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-guide p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: var(--color-ink-soft);
+}
+
+.prose-guide ul {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+  line-height: 1.75;
+  color: var(--color-ink-soft);
+}
+
+.prose-guide li {
+  margin-bottom: 0.4rem;
+}

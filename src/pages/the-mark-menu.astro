@@ -1,0 +1,196 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Mark Restaurant by Jean-Georges",
+  servesCuisine: ["American", "French", "Contemporary"],
+  priceRange: "$$$$",
+  telephone: "+1-212-606-3030",
+  url: "https://www.themarkrestaurantnyc.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "25 E 77th St",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10075",
+    addressCountry: "US",
+  },
+  description:
+    "Fine-dining restaurant inside The Mark hotel on Manhattan's Upper East Side, led by chef Jean-Georges Vongerichten.",
+};
+---
+
+<BaseLayout
+  title="The Mark Restaurant Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to The Mark Restaurant by Jean-Georges in NYC: starters, salads, pizza, pasta and entrées with reported prices, our picks for what to order, and visiting tips. Prices reported as of September 2026."
+  path="/the-mark-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/the-mark-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/the-mark-dining.webp"
+      alt="Illustration of an elegant dinner setting at The Mark restaurant"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Upper East Side, Manhattan
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Mark Restaurant by Jean-Georges — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Tucked inside The Mark hotel at 25 East 77th Street, this is chef Jean-Georges
+      Vongerichten's Upper East Side dining room — polished, clubby, and built around
+      a menu that moves confidently from raw-bar classics to truffle-heavy comfort food.
+      Below is our independent walkthrough of what the menu looks like, what dishes cost,
+      and what we'd order. Everything is written in our own words; prices are reported
+      figures, not a copy of the restaurant's menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">25 E 77th St, New York, NY 10075 (inside The Mark hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Jean-Georges Vongerichten</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary American with French technique</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Expensive — expect $80–150+ per person before drinks</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; book via the restaurant's official site or OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (212) 606-3030</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Starters</h2>
+      <p>
+        The opening section leans into the classics of a grand hotel dining room: chilled seafood,
+        caviar service, and a couple of soups. Reported starter prices run roughly <strong>$24–$49</strong>,
+        before you climb into caviar territory.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Chilled artichoke with mustard sauce</td><td class="px-4 py-3 text-right whitespace-nowrap">$27</td></tr>
+            <tr><td class="px-4 py-3">Shrimp cocktail</td><td class="px-4 py-3 text-right whitespace-nowrap">$32</td></tr>
+            <tr><td class="px-4 py-3">Tuna tartare with avocado</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Hamachi sashimi, soy-yuzu dressing</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Burrata with heirloom tomato</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Chicken coconut soup</td><td class="px-4 py-3 text-right whitespace-nowrap">$28</td></tr>
+            <tr><td class="px-4 py-3">Egg caviar</td><td class="px-4 py-3 text-right whitespace-nowrap">$49</td></tr>
+            <tr><td class="px-4 py-3">Osetra caviar with warm blinis</td><td class="px-4 py-3 text-right whitespace-nowrap">$120 / oz</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Our take: the tuna tartare is the archetypal Jean-Georges starter — clean, precise, and hard
+        to get wrong. If you're celebrating, the egg caviar is the room's signature splurge.
+      </p>
+
+      <h2>Salads</h2>
+      <p>
+        Reported prices sit between <strong>$26 and $38</strong>. The kale salad with serrano chili,
+        parmesan and lemon is the lighter, modern-feeling option; the warm shrimp salad with avocado
+        and champagne vinegar dressing sits at the top of the range. Most salads can be topped with
+        chicken, salmon, or shrimp for a supplement.
+      </p>
+
+      <h2>Pizza &amp; Pasta</h2>
+      <p>
+        A short, confident list. Pizzas are reported from <strong>$25 to $49</strong> — the classic
+        mozzarella, tomato and basil at the low end, the black truffle and fontina pizza at the top.
+        Pastas run <strong>$32 to $47</strong>, built around two preparations: a fusilli with mozzarella
+        and tomato, and a fresh fettuccine with Meyer lemon, parmesan and black pepper.
+      </p>
+      <p>
+        Our take: the black truffle pizza is the move if you're sharing — it's the dish most likely
+        to make the table go quiet for a minute.
+      </p>
+
+      <h2>Entrées</h2>
+      <p>
+        The main courses are where the bill climbs: reported prices span <strong>$40 to $79</strong>
+        depending on the menu and season. The structure is classic — fish, a burger, beef, lamb,
+        chicken, and a vegetarian cauliflower centerpiece.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Roasted lobster, sweet &amp; spicy pepper sauce</td><td class="px-4 py-3 text-right whitespace-nowrap">$65</td></tr>
+            <tr><td class="px-4 py-3">Grilled black sea bass, braised fennel</td><td class="px-4 py-3 text-right whitespace-nowrap">$51–$72</td></tr>
+            <tr><td class="px-4 py-3">Slow-cooked salmon</td><td class="px-4 py-3 text-right whitespace-nowrap">$51–$64</td></tr>
+            <tr><td class="px-4 py-3">The Mark cheeseburger, black truffle dressing &amp; brie</td><td class="px-4 py-3 text-right whitespace-nowrap">$41–$47</td></tr>
+            <tr><td class="px-4 py-3">Grilled beef tenderloin, miso-mustard sauce</td><td class="px-4 py-3 text-right whitespace-nowrap">$57–$79</td></tr>
+            <tr><td class="px-4 py-3">Grilled lamb chops, seven spices</td><td class="px-4 py-3 text-right whitespace-nowrap">$56–$58</td></tr>
+            <tr><td class="px-4 py-3">Parmesan-crusted organic chicken</td><td class="px-4 py-3 text-right whitespace-nowrap">$42–$43</td></tr>
+            <tr><td class="px-4 py-3">Whole roasted cauliflower, couscous &amp; tahini (v)</td><td class="px-4 py-3 text-right whitespace-nowrap">$40–$48</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        You'll notice ranges rather than single figures on several dishes. That's deliberate: the
+        restaurant's official published menus have listed different prices across seasons and
+        services (for example, the cheeseburger appears at $41 on one menu and $47 on a later
+        lunch menu). Treat these as the realistic band, not a promise.
+      </p>
+
+      <h2>Lunch</h2>
+      <p>
+        Lunch is sandwich territory, and it's priced accordingly: reported <strong>$42–$48</strong>
+        for sandwiches including a Croque Monsieur-style Croque M, a chicken club, an organic turkey
+        burger, a grilled tuna burger, a Maine lobster burger, and a crispy fried chicken sandwich.
+        Sides run about <strong>$19</strong> (hand-cut fries, mac and cheese, sautéed greens), and
+        fresh juices and smoothies <strong>$12–$23</strong>.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>To start:</strong> the tuna tartare — it's the Jean-Georges calling card, and this room does it well.</li>
+        <li><strong>The main event:</strong> The Mark cheeseburger. Black truffle dressing and brie on a burger sounds like a gimmick until you taste it; it's the dish regulars come back for.</li>
+        <li><strong>The splurge:</strong> roasted lobster if the occasion warrants it — the sweet-and-spicy pepper sauce keeps it from feeling old-fashioned.</li>
+        <li><strong>To share:</strong> the black truffle pizza as a middle course. Order it for the table and thank us later.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book ahead.</strong> Dinner, especially Thursday through Saturday, fills up. Reserve through the restaurant's official website or OpenTable.</li>
+        <li><strong>Lunch vs. dinner are different menus</strong> with different prices — the sandwich-heavy lunch is the gentler way in.</li>
+        <li><strong>Dress code</strong> is smart — this is an Upper East Side hotel dining room, and the room dresses the part.</li>
+        <li><strong>Budget realistically:</strong> a comfortable dinner with a glass of wine lands well above $100 per person; a full three-course dinner for two can approach $300+ before tip.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of September 2026</strong>, compiled from the restaurant's
+        officially published menus. Menus change seasonally and prices move — where official sources
+        listed different figures, we show the range. Always verify current prices with the restaurant
+        before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,102 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  ogImage?: string;
+}
+
+const { title, description, path = "/", jsonLd, ogImage = "/images/hero-home.webp" } = Astro.props;
+const site = "https://hotel-menu-guide.pages.dev";
+const canonical = new URL(path, site).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(ogImage, site).toString()} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23211d16'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23a3802e' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="border-b border-line bg-cream/95 backdrop-blur sticky top-0 z-50">
+      <nav class="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16" aria-label="Main navigation">
+        <a href="/" class="font-display text-xl sm:text-2xl font-bold tracking-tight text-ink">
+          Hotel Menu <span class="text-gold">Guide</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-ink-soft">
+          <li><a href="/" class="hover:text-gold-dark transition-colors">Home</a></li>
+          <li><a href="/the-mark-menu/" class="hover:text-gold-dark transition-colors">The Mark</a></li>
+          <li><a href="/plaza-palm-court-menu/" class="hover:text-gold-dark transition-colors">Palm Court</a></li>
+          <li><a href="/about/" class="hover:text-gold-dark transition-colors">About</a></li>
+          <li><a href="/contact/" class="hover:text-gold-dark transition-colors">Contact</a></li>
+        </ul>
+        <a href="/the-mark-menu/" class="md:hidden text-sm font-medium text-gold-dark border border-gold rounded-full px-4 py-1.5">
+          Guides
+        </a>
+      </nav>
+      <nav class="md:hidden border-t border-line" aria-label="Mobile navigation">
+        <ul class="max-w-5xl mx-auto px-4 py-2.5 flex gap-5 text-sm text-ink-soft overflow-x-auto whitespace-nowrap">
+          <li><a href="/" class="hover:text-gold-dark">Home</a></li>
+          <li><a href="/the-mark-menu/" class="hover:text-gold-dark">The Mark</a></li>
+          <li><a href="/plaza-palm-court-menu/" class="hover:text-gold-dark">Palm Court</a></li>
+          <li><a href="/about/" class="hover:text-gold-dark">About</a></li>
+          <li><a href="/contact/" class="hover:text-gold-dark">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="bg-ink text-cream mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+        <div class="grid gap-8 md:grid-cols-3">
+          <div>
+            <p class="font-display text-xl font-bold">Hotel Menu <span class="text-gold">Guide</span></p>
+            <p class="mt-3 text-sm text-cream/70 leading-relaxed">
+              Independent, original guides to the menus of New York's most famous hotel restaurants.
+              Prices reported as of September 2026 — always verify with the restaurant before visiting.
+            </p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-wider text-gold mb-4">Guides</p>
+            <ul class="space-y-2 text-sm text-cream/80">
+              <li><a href="/the-mark-menu/" class="hover:text-gold transition-colors">The Mark Restaurant — Menu Guide</a></li>
+              <li><a href="/plaza-palm-court-menu/" class="hover:text-gold transition-colors">The Palm Court Afternoon Tea — Guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-wider text-gold mb-4">Site</p>
+            <ul class="space-y-2 text-sm text-cream/80">
+              <li><a href="/about/" class="hover:text-gold transition-colors">About</a></li>
+              <li><a href="/contact/" class="hover:text-gold transition-colors">Contact</a></li>
+              <li><a href="/privacy-policy/" class="hover:text-gold transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms-of-service/" class="hover:text-gold transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 pt-6 border-t border-cream/15 text-xs text-cream/50 flex flex-col sm:flex-row justify-between gap-2">
+          <p>© 2026 Hotel Menu Guide. All content original.</p>
+          <p>Not affiliated with any hotel or restaurant mentioned.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

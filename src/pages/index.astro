@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Hotel Menu Guide",
+  url: "https://hotel-menu-guide.pages.dev/",
+  description:
+    "Independent, original guides to the menus of New York's most famous hotel restaurants — what to order, what it costs, and how to plan your visit.",
+};
+---
+
+<BaseLayout
+  title="Hotel Menu Guide — NYC's Famous Hotel Restaurant Menus, Explained"
+  description="Independent, original guides to New York's most famous hotel restaurant menus: The Mark by Jean-Georges and The Palm Court afternoon tea at The Plaza. What to order, what it costs, and how to visit."
+  path="/"
+  jsonLd={jsonLd}
+  ogImage="/images/hero-home.webp"
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <img
+      src="/images/hero-home.webp"
+      alt="Illustration of an elegant New York hotel dining room at dusk"
+      class="w-full h-[320px] sm:h-[420px] object-cover"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/30 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12">
+        <h1 class="font-display text-3xl sm:text-5xl font-bold text-cream leading-tight max-w-2xl">
+          New York's great hotel restaurants, decoded.
+        </h1>
+        <p class="mt-4 text-cream/85 text-base sm:text-lg max-w-2xl leading-relaxed">
+          Independent guides to the menus of the city's most famous hotel dining rooms —
+          what to order, what it costs, and how to plan your visit. All written in our own words.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured guides -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-12 sm:mt-16">
+    <h2 class="font-display text-2xl sm:text-3xl font-bold">Featured guides</h2>
+    <p class="mt-2 text-ink-soft">Two New York icons, covered in depth.</p>
+
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      <a
+        href="/the-mark-menu/"
+        class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <img
+          src="/images/the-mark-dining.webp"
+          alt="Illustration of fine dining at The Mark restaurant"
+          class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">Upper East Side · Jean-Georges</p>
+          <h3 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+            The Mark Restaurant — Menu Guide
+          </h3>
+          <p class="mt-3 text-ink-soft text-sm leading-relaxed">
+            Starters, salads, pizzas, pastas and entrées with reported prices, our picks for what to order,
+            and practical visiting advice for the dining room inside The Mark hotel.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+        </div>
+      </a>
+
+      <a
+        href="/plaza-palm-court-menu/"
+        class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <img
+          src="/images/palm-court-tea.webp"
+          alt="Illustration of afternoon tea under the Palm Court's glass dome"
+          class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">The Plaza · Fifth Avenue</p>
+          <h3 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+            The Palm Court Afternoon Tea — Guide
+          </h3>
+          <p class="mt-3 text-ink-soft text-sm leading-relaxed">
+            Everything about the legendary afternoon tea under the stained-glass dome: the experience,
+            reported prices, what to expect, and how to book.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-14 sm:mt-20">
+    <div class="rounded-2xl bg-parchment border border-line p-6 sm:p-10">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold">Why hotel restaurant menus deserve a guide</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3 text-sm leading-relaxed text-ink-soft">
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">They're destinations, not amenities</h3>
+          <p>
+            In New York, the great hotel dining rooms — The Mark, the Palm Court, and their peers —
+            are restaurants people cross the city for. Their menus carry the same weight as any
+            standalone fine-dining institution.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Prices are hard to pin down</h3>
+          <p>
+            Menus change with the seasons and prices move with them. We collect the reported figures,
+            date them honestly, and tell you when sources disagree — so there are no surprises at the table.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Original writing, always</h3>
+          <p>
+            We never copy a restaurant's menu text or photos. Every guide here is written in our own words
+            from publicly reported facts — an independent second opinion, not a reprint.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accuracy note -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 mt-10">
+    <div class="rounded-xl border border-gold/40 bg-gold/10 p-5 sm:p-6 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">A note on prices</p>
+      <p>
+        All prices on this site are <strong>reported as of September 2026</strong>, gathered from the
+        restaurants' official published materials and reputable public sources. Menus and prices change
+        frequently — please verify with the restaurant before visiting.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
