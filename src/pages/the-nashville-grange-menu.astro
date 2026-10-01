@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Nashville Grange",
+  servesCuisine: ["Southern", "American"],
+  priceRange: "$$$",
+  telephone: "+1-615-622-1234",
+  url: "https://thenashvillegrange.com/food-and-drink/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1000 Broadway",
+    addressLocality: "Nashville",
+    addressRegion: "TN",
+    postalCode: "37203",
+    addressCountry: "US",
+  },
+  description:
+    "The Nashville Grange at the Grand Hyatt Nashville — a Southern-inspired 'Tennessee-to-table' all-day dining room on the lobby level, serving breakfast, lunch, dinner, and a weekend brunch.",
+};
+---
+
+<BaseLayout
+  title="The Nashville Grange Menu Guide (2026) — Southern Hotel Dining in Nashville | Hotel Menu Guide"
+  description="An independent guide to The Nashville Grange at the Grand Hyatt Nashville: Southern-inspired menu highlights, hours, third-party reported prices, and visiting tips."
+  path="/the-nashville-grange-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/nashville-grange-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/nashville-grange-dining.webp"
+      alt="Illustration of a contemporary Southern-inspired hotel restaurant dining room with city views (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Nashville
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Nashville Grange — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Nashville Grange is the Grand Hyatt Nashville's all-day dining room on the lobby
+      level — a Southern-inspired, "Tennessee-to-table" restaurant that runs from breakfast
+      through dinner, with a weekend brunch. (It's the hotel's <strong>current</strong>
+      restaurant in this space: Sean Brock's The Continental closed permanently in
+      September 2023, and its replacement Bar Continental closed in May 2024 — the Grange
+      is what replaced them.) The restaurant names <strong>no executive chef
+      publicly</strong>, and we found <strong>no verified awards</strong> for it — so
+      expect honest, straightforward hotel dining rather than a trophy room. Everything
+      below is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">1000 Broadway, Nashville, TN 37203 (inside the Grand Hyatt Nashville, lobby level)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">None named publicly — the restaurant lists no executive chef</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Southern-inspired / American ("Tennessee-to-table")</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$ — restaurant publishes no prices; third-party reported items (~2026 era) run $18–$26</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via Resy or 615-622-1234</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">None verified — no awards found</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official thenashvillegrange.com (accessed October 2026):
+        <strong>daily — breakfast 7:00–11:00 AM, lunch 11:00 AM–2:00 PM, dinner
+        5:30–10:00 PM; weekend brunch Sat–Sun 7:00 AM–2:00 PM.</strong>
+      </p>
+
+      <h2>Menu highlights — official site, no prices</h2>
+      <p>
+        The restaurant's official site lists current dishes but <strong>publishes no
+        prices</strong>. Highlights, in our own words:
+      </p>
+      <ul>
+        <li><strong>Breakfast:</strong> chicken chorizo chilaquiles, omelets, avocado toast, and a cinnamon pancake stack.</li>
+        <li><strong>Lunch:</strong> sweet tea brined chicken, hot crab dip, and shrimp and grits.</li>
+        <li><strong>Dinner:</strong> lamb ribs, bavette steak, and fish 'n chips.</li>
+        <li><strong>Weekend brunch:</strong> smoked sausage gravy with biscuits, a strawberry and dark chocolate buttermilk buckwheat waffle, plus a biscuit board and Bloody Mary bar.</li>
+      </ul>
+
+      <h2>Reported prices</h2>
+      <p>
+        From a third-party menu PDF (menuweb, ~2026 era — labeled as such):
+      </p>
+      <ul>
+        <li><strong>Buffet — $26</strong>.</li>
+        <li><strong>Burger — $18</strong>.</li>
+      </ul>
+      <p>
+        Third-party reviewers also keep naming these diner favorites (reported, not
+        official): <strong>Double Smashed Burger</strong>, <strong>Fried Chicken
+        Benedict</strong>, <strong>Charcoal Beef Lettuce Wraps</strong>,
+        <strong>Chilean sea bass</strong>, and <strong>Muscovy duck</strong>.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one day here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Morning:</strong> the chicken chorizo chilaquiles or the cinnamon pancake stack.</li>
+        <li><strong>Midday:</strong> the sweet tea brined chicken or the Double Smashed Burger ($18, third-party reported).</li>
+        <li><strong>Evening:</strong> the lamb ribs or the bavette steak.</li>
+        <li><strong>Weekend:</strong> the brunch spread with the biscuit board and Bloody Mary bar.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>No published prices:</strong> the restaurant doesn't post prices online — call 615-622-1234 or check Resy before you commit.</li>
+        <li><strong>Book via Resy</strong> — that's the reservation channel listed on the official site.</li>
+        <li><strong>Set expectations:</strong> no named chef and no verified awards — this is a solid all-day hotel restaurant, not a destination tasting room.</li>
+        <li><strong>Pairing it:</strong> for a splurge night instead, see our <a href="/yolan-menu/" class="text-gold-dark font-semibold hover:underline">Yolan guide</a> — Nashville's Forbes Star Award-winning Italian room.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://thenashvillegrange.com/food-and-drink/" target="_blank" rel="noopener">Official restaurant site — The Nashville Grange</a></li>
+        <li><a href="https://www.hyatt.com/grand-hyatt/en-US/bnarn-grand-hyatt-nashville" target="_blank" rel="noopener">Hotel dining page — Grand Hyatt Nashville</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The Nashville Grange <strong>publishes no prices on its official site</strong>, so
+        the figures on this page come from a <strong>third-party menu PDF (menuweb,
+        ~2026 era)</strong>. They may be outdated or incomplete — always verify with the
+        restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Tennessee guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-tennessee/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Tennessee →</a></li>
+        <li><a href="/marsh-house-menu/" class="text-gold-dark font-semibold hover:underline">Marsh House</a> <span class="text-ink-soft">— Nashville seafood house</span></li>
+        <li><a href="/henley-menu/" class="text-gold-dark font-semibold hover:underline">Henley</a> <span class="text-ink-soft">— Kimpton Aertson Hotel</span></li>
+        <li><a href="/yolan-menu/" class="text-gold-dark font-semibold hover:underline">Yolan</a> <span class="text-ink-soft">— The Joseph, Forbes Star Award-winning</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Marsh House",
+  servesCuisine: ["Seafood", "Southern"],
+  priceRange: "$$$",
+  telephone: "+1-615-262-6001",
+  url: "https://www.marshhouserestaurant.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "401 11th Ave S",
+    addressLocality: "Nashville",
+    addressRegion: "TN",
+    postalCode: "37203",
+    addressCountry: "US",
+  },
+  description:
+    "Marsh House at Thompson Nashville — a coastal Southern seafood restaurant led by executive chef Brack May, with a raw bar, seafood towers, and a weekday oyster happy hour.",
+};
+---
+
+<BaseLayout
+  title="Marsh House Nashville Menu Guide (2026) — Prices, Seafood & What to Order | Hotel Menu Guide"
+  description="An independent guide to Marsh House at Thompson Nashville: coastal Southern seafood, reported prices (clearly dated as third-party), oyster happy hour, and visiting tips."
+  path="/marsh-house-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/marsh-house-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/marsh-house-dining.webp"
+      alt="Illustration of a stylish coastal Southern seafood restaurant dining room with coastal decor at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Nashville
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Marsh House — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Marsh House is the seafood-driven restaurant inside Thompson Nashville, led by
+      executive chef <strong>Brack May</strong> with pastry from executive pastry chef
+      <strong>Natalie Moorer</strong> (per the official site). The restaurant holds a
+      4.6–4.7 OpenTable rating and events were listed through October–November 2026,
+      confirming it is open. We found no independently verified awards — the official site
+      self-describes an "award-winning wine program," which we label as self-described.
+      <strong>There is no official menu with prices</strong>, so all figures below are
+      <strong>2026-era third-party reports</strong> (TripAdvisor and delivery listings),
+      clearly dated. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">401 11th Ave S, Nashville, TN 37203 (inside Thompson Nashville)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Brack May; executive pastry chef Natalie Moorer</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Coastal Southern seafood</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$ — reported starters $15–$25, mains to ~$50, towers $40–$155</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via OpenTable, or 615-262-6001</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">OpenTable 4.6–4.7; no independently verified awards</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official marshhouserestaurant.com:
+        <strong>dinner Sun–Thu 5:00–9:00 PM, Fri–Sat 5:00–10:00 PM;
+        brunch Mon–Thu 7:00 AM–2:00 PM, Fri–Sun 8:00 AM–2:00 PM;
+        bar &amp; lounge Mon–Thu 2:00–5:00 PM, Fri–Sat 2:00–10:00 PM.</strong>
+      </p>
+
+      <h2>Raw bar &amp; starters</h2>
+      <p>
+        No official menu with prices exists; figures below are <strong>2026-era
+        third-party reports</strong> (TripAdvisor and delivery listings):
+      </p>
+      <ul>
+        <li><strong>Mussels — $18</strong>; <strong>Crispy Oyster Mushrooms — $15</strong>.</li>
+        <li><strong>Crispy Crab Cake — $19</strong>; <strong>Fishermen's Meatballs — $16</strong>.</li>
+        <li><strong>Tuna Tartare — $22</strong>; <strong>Shrimp Toast — $19.25</strong>.</li>
+        <li><strong>Fried Gulf Oysters — $22</strong>.</li>
+        <li><strong>Seafood towers — $40 / $80 / $155</strong> by tier.</li>
+      </ul>
+
+      <h2>Mains</h2>
+      <ul>
+        <li><strong>Maine House Lobster Roll — $42</strong>: the headline sandwich.</li>
+        <li><strong>Besh Barbecue Shrimp — $24.75</strong>; <strong>Squid Ink Garganelli — $24.75</strong>.</li>
+        <li><strong>Shrimp &amp; Grits — $30.25</strong>: the Southern classic.</li>
+        <li><strong>Snapper Courtbouillon — $49.50</strong>: the most ambitious plate on the reported menu.</li>
+      </ul>
+
+      <h2>Oyster happy hour</h2>
+      <p>
+        The restaurant runs an <strong>Oyster Happy Hour Mon–Fri 5:00–7:00 PM</strong>
+        (per the official site). A 2026 diner review reported <strong>$1.50 oysters</strong>
+        during that window — confirm the current deal with the restaurant, as happy-hour
+        pricing changes.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Time it right:</strong> arrive Mon–Fri 5:00–7:00 PM for oyster happy hour (reported $1.50 oysters in a 2026 diner review).</li>
+        <li><strong>The shareable:</strong> a seafood tower ($40/$80/$155 by tier, reported 2026) to cover the raw bar in one shot.</li>
+        <li><strong>The main:</strong> shrimp &amp; grits ($30.25 reported) for the Southern play, or the lobster roll ($42 reported) for the coastal one.</li>
+        <li><strong>The ambitious pick:</strong> snapper courtbouillon ($49.50 reported) if you want the kitchen's showpiece.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>No official prices</strong> — every figure here is third-party reported (2026 era); call 615-262-6001 or check OpenTable for the current menu.</li>
+        <li><strong>Brunch is a full service:</strong> it runs Mon–Thu 7:00 AM–2:00 PM and Fri–Sun 8:00 AM–2:00 PM — an easy lighter alternative to dinner.</li>
+        <li><strong>Bar &amp; lounge gaps:</strong> the bar runs 2:00–5:00 PM Mon–Thu (the afternoon window) and to 10:00 PM Fri–Sat.</li>
+        <li><strong>Parking:</strong> valet is available at Thompson Nashville.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.marshhouserestaurant.com/" target="_blank" rel="noopener">Official restaurant site — Marsh House</a></li>
+        <li><a href="https://www.opentable.com/r/marsh-house-nashville" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        <strong>There is no official menu with prices.</strong> All figures above are
+        <strong>2026-era third-party reports</strong> (TripAdvisor and delivery listings;
+        the $1.50 oyster figure comes from a 2026 diner review). Always verify current
+        prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Tennessee guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-tennessee/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Tennessee →</a></li>
+        <li><a href="/bourbon-steak-nashville-menu/" class="text-gold-dark font-semibold hover:underline">Bourbon Steak Nashville</a> <span class="text-ink-soft">— Michael Mina's 34th-floor steakhouse</span></li>
+        <li><a href="/henley-menu/" class="text-gold-dark font-semibold hover:underline">Henley</a> <span class="text-ink-soft">— Nashville</span></li>
+        <li><a href="/the-nashville-grange-menu/" class="text-gold-dark font-semibold hover:underline">The Nashville Grange</a> <span class="text-ink-soft">— Nashville</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

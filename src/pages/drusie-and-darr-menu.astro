@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Drusie & Darr by Jean-Georges",
+  servesCuisine: ["American", "French"],
+  priceRange: "$$$$",
+  telephone: "+1-615-345-7116",
+  url: "https://thehermitagehotel.com/nashville-dining/jean-georges-restaurant/",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Nashville",
+    addressRegion: "TN",
+    addressCountry: "US",
+  },
+  description:
+    "Drusie & Darr by Jean-Georges at The Hermitage Hotel in downtown Nashville — Jean-Georges Vongerichten's Southern-accented dining room with a six-course tasting menu and three daily meal services.",
+};
+---
+
+<BaseLayout
+  title="Drusie & Darr Menu Guide (2026) — Tasting Menu, Hours & What to Order | Hotel Menu Guide"
+  description="An independent guide to Drusie & Darr by Jean-Georges at The Hermitage Hotel: the six-course tasting lineup, hours, reported prices (clearly dated), and visiting tips."
+  path="/drusie-and-darr-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/drusie-and-darr-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/drusie-and-darr-dining.webp"
+      alt="Illustration of a grand historic Southern hotel dining room with high ceilings and chandeliers at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Nashville
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Drusie &amp; Darr — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Drusie &amp; Darr is the current dining room of The Hermitage Hotel in downtown
+      Nashville — the hotel's former Capitol Grille is permanently closed — and it carries
+      the name of the legendary chef <strong>Jean-Georges Vongerichten</strong>, who leads
+      the kitchen per the hotel's official page. The hotel describes him as a
+      Michelin-starred chef with roughly 40 restaurants worldwide; that is his personal
+      credential, not a verified award for this restaurant, and we found no independently
+      verified awards for Drusie &amp; Darr itself. <strong>The official hotel page
+      publishes no prices</strong>, so below we give the official six-course tasting
+      lineup plus reported prices that are clearly dated as 2022-era third-party figures.
+      Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">Inside The Hermitage Hotel, downtown Nashville</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Jean-Georges Vongerichten (lead chef, per the official hotel page)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">American / French, Southern-accented</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — current prices unpublished; 2022-era third-party reports below</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended — via Resy, or 615-345-7116</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">No verified restaurant awards; chef's Michelin-starred reputation is personal</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official hotel page:
+        <strong>Mon–Fri breakfast 7:00–11:00 AM, lunch 11:30 AM–2:00 PM, dinner
+        5:00–10:00 PM; Sat–Sun breakfast 7:00–11:00 AM, brunch 11:00 AM–2:00 PM, dinner
+        5:00–10:00 PM.</strong> The bar runs daily with small-bites service 2:00–5:00 PM.
+      </p>
+
+      <h2>Six-course tasting lineup</h2>
+      <p>
+        The official hotel page lists this six-course tasting sequence (no prices
+        published):
+      </p>
+      <ul>
+        <li><strong>Egg Toast</strong> with Petrossian JG Select Caviar</li>
+        <li><strong>Ahi Tuna Tartare</strong></li>
+        <li><strong>Mushroom Risotto</strong></li>
+        <li><strong>Black Sea Bass</strong></li>
+        <li><strong>Prime Beef Tenderloin</strong></li>
+        <li><strong>Warm Chocolate Cake</strong></li>
+      </ul>
+
+      <h2>Reported prices (dated)</h2>
+      <p>
+        The official page does not publish current prices. These figures are
+        <strong>2022-era third-party reports</strong> (MenuCollectors.com), so treat them
+        as historical context, not today's numbers:
+      </p>
+      <ul>
+        <li><strong>Ahi Tuna Tartare — $24</strong>; <strong>Crispy Sushi — $21</strong>; <strong>Black Truffle Pizza — $25</strong>.</li>
+        <li><strong>Faroe Island Salmon — $36</strong>; <strong>Roasted Black Sea Bass — $38</strong>; <strong>Fried Organic Chicken — $34</strong>.</li>
+        <li><strong>NY Strip Steak — $62</strong>; <strong>Maine Lobster — $68</strong>; <strong>Grilled Prime Filet of Beef — $52</strong>.</li>
+        <li><strong>Six-course tasting menu — $118+ per person</strong> (reported by The Tennessean, 2022).</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The tasting menu:</strong> six courses is the house's headline format — if the budget fits, that's the move.</li>
+        <li><strong>The fish course at heart:</strong> the black sea bass anchors both the tasting lineup and the 2022 reported menu.</li>
+        <li><strong>The land side:</strong> the prime beef tenderloin (tasting) or the NY strip (reported $62, 2022 era).</li>
+        <li><strong>The indulgence opener:</strong> the egg toast with Petrossian JG Select Caviar is the most Jean-Georges signature on the lineup.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Call for prices</strong> — with no published menu prices, confirm current tasting and à la carte pricing before you book (615-345-7116).</li>
+        <li><strong>Capitol Grille note:</strong> the hotel's former Capitol Grille is permanently closed — Drusie &amp; Darr is the current dining room.</li>
+        <li><strong>Brunch windows:</strong> brunch runs Sat–Sun 11:00 AM–2:00 PM; the bar's small-bites window (2:00–5:00 PM daily) is the lightest way in.</li>
+        <li><strong>Setting:</strong> the dining room sits inside Nashville's landmark Hermitage Hotel — the room itself is part of the experience.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://thehermitagehotel.com/nashville-dining/jean-georges-restaurant/" target="_blank" rel="noopener">Official restaurant page — The Hermitage Hotel</a></li>
+        <li><a href="https://resy.com/cities/bna/drusie-and-darr" target="_blank" rel="noopener">Reservations — Resy</a></li>
+        <li><a href="https://thehermitagehotel.com/restaurant_menus/drusie-darr/page/10/" target="_blank" rel="noopener">Seasonal menus — The Hermitage Hotel</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        <strong>The official page publishes no current prices.</strong> The figures above
+        are <strong>2022-era third-party reports</strong> (MenuCollectors.com for dishes,
+        The Tennessean for the $118+ tasting menu) — they are historical context only.
+        Always verify current prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Tennessee guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-tennessee/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Tennessee →</a></li>
+        <li><a href="/bourbon-steak-nashville-menu/" class="text-gold-dark font-semibold hover:underline">Bourbon Steak Nashville</a> <span class="text-ink-soft">— Michael Mina's 34th-floor steakhouse</span></li>
+        <li><a href="/yolan-menu/" class="text-gold-dark font-semibold hover:underline">Yolan</a> <span class="text-ink-soft">— Nashville</span></li>
+        <li><a href="/henley-menu/" class="text-gold-dark font-semibold hover:underline">Henley</a> <span class="text-ink-soft">— Nashville</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

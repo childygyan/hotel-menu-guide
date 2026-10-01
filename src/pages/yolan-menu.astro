@@ -1,0 +1,174 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Yolan",
+  servesCuisine: ["Italian"],
+  priceRange: "$$$$",
+  telephone: "+1-615-231-0405",
+  url: "https://www.yolannashville.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "403 4th Avenue South",
+    addressLocality: "Nashville",
+    addressRegion: "TN",
+    postalCode: "37201",
+    addressCountry: "US",
+  },
+  description:
+    "Yolan at The Joseph (a Luxury Collection Hotel) in Nashville — an Italian fine-dining room directed by Tony Mantuano with chef de cuisine Liam Byres, and Nashville's only Forbes Star Award-winning restaurant per OpenTable editors.",
+};
+---
+
+<BaseLayout
+  title="Yolan Menu Guide (2026) — Italian Fine Dining, Prices & Hours in Nashville | Hotel Menu Guide"
+  description="An independent guide to Yolan at The Joseph, Nashville: Italian fine dining directed by Tony Mantuano, menus (Sicilia season), 2026-era event prices, hours, and visiting tips."
+  path="/yolan-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/yolan-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/yolan-dining.webp"
+      alt="Illustration of a refined Italian fine-dining room with soft candlelight at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Nashville
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Yolan — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Yolan is the Italian fine-dining room inside The Joseph (a Luxury Collection Hotel)
+      at 403 4th Avenue South in Nashville. The restaurant is <strong>directed by Tony
+      Mantuano</strong>, with <strong>Chef de Cuisine Liam Byres</strong> running the
+      kitchen (per the restaurant's official events page, August 2026). Mantuano's
+      personal credentials — <strong>James Beard Best Chef Midwest 2005</strong> and the
+      Michelin-starred Spiaggia in Chicago — are his own, not awards held by Yolan.
+      Recognition for the restaurant itself, per OpenTable editors: <strong>"Nashville's
+      only Forbes Star Award-winning restaurant"</strong>, OpenTable Icon in both 2024
+      and 2025, and OpenTable's Top 100 Hotel Restaurants in America; pastry chef
+      <strong>Noelle Marchetti</strong> was a 2023 James Beard semifinalist (per OpenTable
+      editors). The Joseph hotel holds AAA Four Diamond — a hotel-level award, kept
+      separate from the restaurant's honors. Everything below is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">403 4th Avenue South, Nashville, TN 37201 (inside The Joseph, a Luxury Collection Hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Directed by Tony Mantuano; Chef de Cuisine Liam Byres</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Italian fine dining (regional seasonal menus — Sicilia as of Oct 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — 2026-era event menus ranged $48–$165 per person; tasting menus are the splurge</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via OpenTable or 615-231-0405 — demand is high (OpenTable 4.6, "Booked 33 times today" in Sep 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">Forbes Star Award (per OpenTable editors); OpenTable Icon 2024 &amp; 2025; OpenTable Top 100 Hotel Restaurants in America</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official yolannashville.com (accessed October 2026):
+        <strong>dinner Mon–Fri 5:00–10:00 PM; Sat–Sun brunch 10:00 AM–2:00 PM plus dinner
+        5:00–10:00 PM; weekday lunch Mon–Thu 11:00 AM–3:00 PM; breakfast Mon–Thu 7:00–11:00
+        AM and Fri–Sun 7:00 AM–3:00 PM; Aperitivo daily 3:00–5:00 PM; espresso bar daily
+        6:00 AM–3:00 PM.</strong>
+      </p>
+
+      <h2>Current menu — Sicilia season</h2>
+      <p>
+        Yolan rotates its menu by Italian region; as of October 2026 the season is
+        <strong>Sicilia</strong>. The restaurant's main menus page publishes dish names
+        but <strong>no prices</strong>. Current dishes include:
+      </p>
+      <ul>
+        <li><strong>Melanzane Fritte</strong>.</li>
+        <li><strong>Gnocchi alla Trapanese</strong>.</li>
+        <li><strong>Busiate con Salsiccia e Sparacelli</strong>.</li>
+        <li><strong>Halibut</strong> with couscous alla Trapanese.</li>
+        <li><strong>Tennessee oak wood-fired Sanchoku Wagyu steaks</strong>.</li>
+        <li><strong>Esperienza Yolan</strong>: the five-course tasting menu.</li>
+      </ul>
+
+      <h2>Prices — from official 2026-era event menus</h2>
+      <p>
+        The main menus page carries no prices, but the restaurant's official event PDFs
+        do. Each figure below is labeled with the event it came from:
+      </p>
+      <ul>
+        <li><strong>Brunch</strong> (official event menu, 2026 era): Short Rib Hash $26; Yolan Burger $25; Risotto alla Milanese $28.</li>
+        <li><strong>Aperitivo Alpino</strong> (February 2026 event): Pesce Fritto di Missoltini $18; Polenta Taragna Fritta $12; Northern Italian wine flight $40.</li>
+        <li><strong>Valentine's 2026</strong>: Oven-Roasted Mere Point Oysters $26; Lobster Fra Diavolo $32; 14oz Bear Creek Wagyu Strip Steak $120.</li>
+        <li><strong>Dine Nashville 2026</strong>: three-course lunch $48.</li>
+        <li><strong>Feast of the Seven Fishes</strong> (December 2025): five courses $165.</li>
+      </ul>
+
+      <h2>Reviewer favorites</h2>
+      <p>
+        Third-party reviewers keep naming the same dishes — these are reported, not
+        official recommendations: <strong>black truffle gnocchi</strong>,
+        <strong>cacio e pepe</strong>, <strong>wild boar chop</strong>,
+        <strong>Cotoletta alla Milanese</strong>, and
+        <strong>Culurgiones all'aragosta</strong>.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The Sicilia play:</strong> start with the Melanzane Fritte, then the Gnocchi alla Trapanese.</li>
+        <li><strong>The splurge:</strong> the five-course Esperienza Yolan tasting menu, or the Tennessee oak wood-fired Sanchoku Wagyu steak.</li>
+        <li><strong>The before:</strong> arrive for the daily 3–5 PM Aperitivo hour.</li>
+        <li><strong>The after:</strong> the espresso bar runs daily 6 AM–3 PM — plan a coffee visit separately.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book early</strong> — OpenTable showed "Booked 33 times today" in September 2026, and the restaurant held OpenTable Icon status in 2024 and 2025; 615-231-0405.</li>
+        <li><strong>Menus are seasonal and regional</strong> — check the current season on the official menus page before you go, since Sicilia will eventually rotate to a new region.</li>
+        <li><strong>Credential clarity:</strong> Mantuano's James Beard and Spiaggia Michelin credentials are personal; Yolan's own honors are the Forbes Star Award and the OpenTable lists, as reported by OpenTable's editors.</li>
+        <li><strong>Pairing it:</strong> compare with our <a href="/the-nashville-grange-menu/" class="text-gold-dark font-semibold hover:underline">Nashville Grange guide</a> for a lower-key hotel-dining alternative the same night.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.yolannashville.com/" target="_blank" rel="noopener">Official restaurant site — Yolan</a></li>
+        <li><a href="https://www.yolannashville.com/menus" target="_blank" rel="noopener">Official menus page — Yolan</a></li>
+        <li><a href="https://www.opentable.com/r/yolan-nashville" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Yolan's <strong>main menus page publishes no prices</strong>. The figures above
+        come from <strong>official Yolan event PDFs (2026 era)</strong>, each labeled with
+        its event — event pricing isn't regular à la carte pricing. Menus rotate by
+        season, so always verify current offerings and prices with the restaurant before
+        visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Tennessee guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-tennessee/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Tennessee →</a></li>
+        <li><a href="/bourbon-steak-nashville-menu/" class="text-gold-dark font-semibold hover:underline">Bourbon Steak Nashville</a> <span class="text-ink-soft">— JW Marriott steakhouse</span></li>
+        <li><a href="/drusie-and-darr-menu/" class="text-gold-dark font-semibold hover:underline">Drusie &amp; Darr</a> <span class="text-ink-soft">— Hermitage Hotel</span></li>
+        <li><a href="/the-nashville-grange-menu/" class="text-gold-dark font-semibold hover:underline">The Nashville Grange</a> <span class="text-ink-soft">— Grand Hyatt Nashville</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

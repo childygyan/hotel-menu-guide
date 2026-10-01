@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Henley",
+  servesCuisine: ["American", "European"],
+  priceRange: "$$$",
+  telephone: "+1-615-340-6378",
+  url: "https://www.henleynashville.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2023 Broadway",
+    addressLocality: "Nashville",
+    addressRegion: "TN",
+    postalCode: "37203",
+    addressCountry: "US",
+  },
+  description:
+    "Henley at the Kimpton Aertson Hotel in Nashville — a modern European-leaning restaurant led by Executive Chef Kristin Beringson, an Eater readers'-choice honoree, serving breakfast through dinner plus a daily happy hour.",
+};
+---
+
+<BaseLayout
+  title="Henley Menu Guide (2026) — Prices, Hours & What to Order in Nashville | Hotel Menu Guide"
+  description="An independent guide to Henley at the Kimpton Aertson Hotel in Nashville: menu highlights, 2026-era third-party reported prices (Biscuit Beignets, French Toast, cheeseburger), hours, and visiting tips."
+  path="/henley-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/henley-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/henley-dining.webp"
+      alt="Illustration of a chic modern European-style hotel restaurant dining room with marble tables and candlelight at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Nashville
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Henley — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Henley is the signature restaurant of the Kimpton Aertson Hotel at 2023 Broadway in
+      Nashville's Music Row corridor — a modern European-leaning dining room that runs from
+      breakfast through dinner, plus a daily happy hour. The kitchen is currently led by
+      <strong>Executive Chef Kristin Beringson</strong>, per the restaurant's current
+      OpenTable listing (older press named Daniel Gorman). The restaurant was recognized
+      with Eater's <strong>"Restaurant of the Year Readers' Choice"</strong> and
+      <strong>"New Bar Program of the Year Readers' Choice"</strong> honors — these are
+      readers'-choice awards reported by the hotel, not Michelin or AAA designations.
+      Everything below is written in our own words; Henley publishes no official menu with
+      prices, so all figures are third-party reported and era-dated.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">2023 Broadway, Nashville, TN 37203 (inside the Kimpton Aertson Hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Kristin Beringson (current, per OpenTable)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern European / American</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$ — third-party reported 2026-era breakfast items run $12–$16; happy hour $7 bites / $8 drinks</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via Tock or (615) 340-6378</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">Eater readers'-choice awards, as reported by the hotel (not critic or Michelin awards)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official Kimpton Aertson hotel dining page (accessed October 2026):
+        <strong>Sun–Thu 7:00 AM–10:00 PM; Fri–Sat 7:00 AM–midnight.</strong> A daily
+        happy hour runs <strong>4:00–6:00 PM</strong> (diner-reported, 2026 era) with
+        $7 bites and $8 drinks.
+      </p>
+
+      <h2>Breakfast &amp; brunch</h2>
+      <p>
+        Prices below are from 2026-era third-party reports (TripAdvisor), since Henley
+        publishes no official menu with prices:
+      </p>
+      <ul>
+        <li><strong>Biscuit Beignets — $12</strong>: a recurring diner favorite that opens many meals here.</li>
+        <li><strong>Strawberries &amp; Coconut Cream Power Bowl — $16</strong>.</li>
+        <li><strong>Meyer Lemon and Almond French Toast — $16</strong>.</li>
+        <li><strong>Peach Cobbler Oatmeal — $14</strong>.</li>
+      </ul>
+
+      <h2>All-day signatures</h2>
+      <p>
+        Also drawn from 2026-era third-party reports (no prices published for these):
+      </p>
+      <ul>
+        <li><strong>KLD Farm Cheeseburger</strong>: the recurring diner favorite among the mains.</li>
+        <li><strong>Pork Milanese</strong>: the European-leaning entrée on the menu.</li>
+        <li><strong>Nashville "Hot" Shrimp &amp; Grits</strong>: the local nod on the menu.</li>
+        <li><strong>French Toast Monte Cristo</strong>.</li>
+        <li><strong>Lemon Pound Cake</strong> (with black currant and crispy kataifi): the dessert that diners keep mentioning.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one day here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the Biscuit Beignets ($12, third-party reported) — they're the house signature bite.</li>
+        <li><strong>Morning:</strong> the Meyer Lemon and Almond French Toast ($16, third-party reported).</li>
+        <li><strong>Later:</strong> the KLD Farm Cheeseburger — the dish repeat diners ask for.</li>
+        <li><strong>Finish:</strong> the Lemon Pound Cake with black currant and crispy kataifi.</li>
+        <li><strong>Between:</strong> the daily 4–6 PM happy hour — $7 bites and $8 drinks (diner-reported).</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via Tock</strong> — that's the restaurant's official reservation channel, or call (615) 340-6378.</li>
+        <li><strong>No official prices:</strong> Henley doesn't publish a menu with prices, so treat every figure here as third-party reported — confirm with the restaurant before you go.</li>
+        <li><strong>Weekend hours run later</strong> — Fri–Sat the room stays open until midnight, versus 10 PM Sun–Thu.</li>
+        <li><strong>Pairing it:</strong> it's a short ride from Music Row to downtown — pair this guide with our <a href="/the-nashville-grange-menu/" class="text-gold-dark font-semibold hover:underline">Nashville Grange guide</a> for a one-night Broadway-area dinner plan.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.henleynashville.com/" target="_blank" rel="noopener">Official restaurant site — Henley</a></li>
+        <li><a href="https://www.exploretock.com/henley/" target="_blank" rel="noopener">Reservations — Tock</a></li>
+        <li><a href="https://www.aertsonhotel.com/music-row-restaurants/" target="_blank" rel="noopener">Hotel dining page — Kimpton Aertson</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Henley <strong>publishes no official menu with prices</strong>, so every price on
+        this page comes from <strong>2026-era third-party reports (TripAdvisor and
+        diner-reported happy hour figures)</strong>. Menus and prices change — always
+        verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Tennessee guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-tennessee/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Tennessee →</a></li>
+        <li><a href="/marsh-house-menu/" class="text-gold-dark font-semibold hover:underline">Marsh House</a> <span class="text-ink-soft">— Nashville seafood house</span></li>
+        <li><a href="/the-nashville-grange-menu/" class="text-gold-dark font-semibold hover:underline">The Nashville Grange</a> <span class="text-ink-soft">— Grand Hyatt Nashville</span></li>
+        <li><a href="/drusie-and-darr-menu/" class="text-gold-dark font-semibold hover:underline">Drusie &amp; Darr</a> <span class="text-ink-soft">— Hermitage Hotel</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

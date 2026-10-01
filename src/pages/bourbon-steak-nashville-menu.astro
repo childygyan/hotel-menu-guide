@@ -1,0 +1,164 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Bourbon Steak Nashville",
+  servesCuisine: ["American", "Steakhouse"],
+  priceRange: "$$$$",
+  telephone: "+1-629-208-8440",
+  url: "https://nashvillebourbonsteak.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "201 8th Ave S",
+    addressLocality: "Nashville",
+    addressRegion: "TN",
+    postalCode: "37203",
+    addressCountry: "US",
+  },
+  description:
+    "Bourbon Steak at the JW Marriott Nashville — Michael Mina's modern American steakhouse on the 34th floor, with a reported 900+ selection wine program and cuts from 8oz filet mignon to a 40oz Wagyu tomahawk.",
+};
+---
+
+<BaseLayout
+  title="Bourbon Steak Nashville Menu Guide (2026) — Prices, Steaks & What to Order | Hotel Menu Guide"
+  description="An independent guide to Bourbon Steak at the JW Marriott Nashville: Michael Mina's 34th-floor steakhouse, official dinner menu prices (August 2026 edition), hours, and visiting tips."
+  path="/bourbon-steak-nashville-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/bourbon-steak-nashville-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/bourbon-steak-nashville-dining.webp"
+      alt="Illustration of an elegant modern American steakhouse dining room with warm wood and leather at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Nashville
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Bourbon Steak Nashville — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Bourbon Steak sits on the 34th floor of the JW Marriott Nashville, a modern American
+      steakhouse in chef <strong>Michael Mina</strong>'s nationwide portfolio, run day to day
+      by executive chef <strong>Travis Tanner</strong>. Mina's own credentials (per the official
+      site): a Michelin star at MICHAEL MINA from 2012–2018, the James Beard Foundation's
+      "Who's Who of Food &amp; Beverage" in 2013, and Bon Appétit Chef of the Year in 2005.
+      The restaurant touts an "award-winning" 900+ selection wine program — that's the
+      restaurant's own claim, not an independently verified award. Below is our independent
+      walkthrough of the menu, with prices taken from the <strong>official dinner menu PDF,
+      August 2026 edition</strong>, fetched 2026-10-01, and dated honestly. Everything is
+      written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">201 8th Ave S, Nashville, TN 37203 (34th floor, JW Marriott Nashville)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Michael Mina (managing); executive chef Travis Tanner</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern American steakhouse</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — steaks $66–$115 (tomahawk $325), starters from $26</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended — via SevenRooms from the official site, or 629-208-8440</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">No independently verified restaurant awards; Mina's personal honors listed above</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official bourbonsteak.com Nashville page:
+        <strong>dinner Sun–Thu 5:00–10:00 PM, Fri–Sat 5:00–10:30 PM;
+        bar Sun–Thu 5:00–11:00 PM, Fri–Sat 5:00 PM–midnight.</strong>
+      </p>
+
+      <h2>To start</h2>
+      <p>
+        Prices below are from the official dinner menu PDF (August 2026 edition):
+      </p>
+      <ul>
+        <li><strong>'Instant' Bacon — $26</strong>: heritage pork belly, the house's playful take on a steakhouse opener.</li>
+        <li><strong>Wagyu Steak Tartare — $28</strong>: hand-cut Wagyu prepared tableside-style.</li>
+      </ul>
+
+      <h2>From the sea</h2>
+      <ul>
+        <li><strong>Faroe Islands Salmon — $48</strong>.</li>
+        <li><strong>Maine Harbor Scallops — $48</strong>.</li>
+        <li><strong>Miso Glazed Sea Bass — $59</strong>.</li>
+        <li><strong>Maine Lobster Pot Pie — $98</strong>: the indulgent seafood centerpiece.</li>
+      </ul>
+
+      <h2>From the land</h2>
+      <ul>
+        <li><strong>Joyce Farms Brick Chicken — $53</strong>.</li>
+        <li><strong>8 oz Filet Mignon — $66</strong>.</li>
+        <li><strong>12 oz NY Strip — $75</strong>.</li>
+        <li><strong>16 oz Delmonico Ribeye — $87</strong>.</li>
+      </ul>
+
+      <h2>The splurges</h2>
+      <ul>
+        <li><strong>22 oz 50-day Dry-Aged 'Cowboy' Ribeye — $115</strong>.</li>
+        <li><strong>Wagyu Surf &amp; Turf — $115</strong>.</li>
+        <li><strong>40 oz Tomahawk (Black Hawk Farms Wagyu) — $325</strong>: the room's statement cut.</li>
+        <li><strong>Japanese A5 NY Strip — $36–$75/oz</strong>: priced by the ounce, so confirm the cut weight before ordering.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the 'Instant' Bacon ($26) — it's the signature opener and a conversation piece.</li>
+        <li><strong>The fish play:</strong> the miso glazed sea bass ($59) if you want off the red-meat path.</li>
+        <li><strong>Steakhouse mode:</strong> the 16 oz Delmonico ribeye ($87) — the sweet spot before the splurge tier.</li>
+        <li><strong>The splurge:</strong> the 22 oz dry-aged 'Cowboy' ribeye ($115), ideally split.</li>
+        <li><strong>After dinner:</strong> linger over the skyline from the 34th floor — the view is half the point of this room.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book ahead</strong> — reservations are recommended; the bar area runs later than the dining room on weekends.</li>
+        <li><strong>A5 by the ounce:</strong> the Japanese A5 NY Strip is $36–$75/oz (August 2026 menu), so the final number depends on the cut — ask first.</li>
+        <li><strong>The view:</strong> request a window table when booking if the skyline matters to your night.</li>
+        <li><strong>Parking:</strong> valet is available at the JW Marriott Nashville.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://nashvillebourbonsteak.com/" target="_blank" rel="noopener">Official restaurant site — Bourbon Steak Nashville</a> (reservations via SevenRooms from the site)</li>
+        <li><a href="https://nashvillebourbonsteak.com/wp-content/uploads/2026/08/08222026_BOOK_Dinner_FULL-MENU.pdf" target="_blank" rel="noopener">Official dinner menu (PDF) — August 2026 edition</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>official dinner menu PDF, August 2026
+        edition</strong>, fetched 2026-10-01. Menus are seasonal and prices can drift
+        between editions — always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Tennessee guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-tennessee/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Tennessee →</a></li>
+        <li><a href="/drusie-and-darr-menu/" class="text-gold-dark font-semibold hover:underline">Drusie &amp; Darr by Jean-Georges</a> <span class="text-ink-soft">— at The Hermitage Hotel</span></li>
+        <li><a href="/marsh-house-menu/" class="text-gold-dark font-semibold hover:underline">Marsh House</a> <span class="text-ink-soft">— seafood at Thompson Nashville</span></li>
+        <li><a href="/yolan-menu/" class="text-gold-dark font-semibold hover:underline">Yolan</a> <span class="text-ink-soft">— Nashville</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>
