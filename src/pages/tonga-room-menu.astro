@@ -1,0 +1,162 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Tonga Room & Hurricane Bar",
+  servesCuisine: ["Polynesian", "Asian Fusion"],
+  priceRange: "$$",
+  telephone: "+1-415-772-5278",
+  url: "https://www.tongaroom.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "950 Mason St",
+    addressLocality: "San Francisco",
+    addressRegion: "CA",
+    postalCode: "94108",
+    addressCountry: "US",
+  },
+  description:
+    "Historic tiki bar and restaurant inside the Fairmont San Francisco, built in the hotel's former 75-foot indoor pool, with Polynesian-Asian fusion food, classic tiki cocktails, live music, and indoor rainstorms.",
+};
+---
+
+<BaseLayout
+  title="Tonga Room Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to the Tonga Room & Hurricane Bar in San Francisco: menu items with reported prices, tiki cocktails, the cover charge, hours, and visiting tips. Dish prices from a published 2024 menu."
+  path="/tonga-room-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/tonga-room-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/tonga-room-dining.webp"
+      alt="Illustration of the Tonga Room's tiki bar with its lagoon pool in San Francisco"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · San Francisco
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Tonga Room &amp; Hurricane Bar — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Deep inside the Fairmont San Francisco sits one of the strangest and most beloved dining
+      rooms in America: a tiki bar built inside the hotel's former 75-foot swimming pool, with
+      a lagoon where the deep end used to be, a band playing from a floating boat, and a
+      thunderstorm that rolls through every half hour. Anthony Bourdain called it "the greatest
+      place in the history of the world." The food is Polynesian-Asian fusion bar fare, the
+      drinks are classic tiki, and the whole thing has been running since 1945. Below is our
+      independent guide to what it costs and how to plan a night here — written in our own
+      words, with prices reported from published sources, not copied from a menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">950 Mason St, San Francisco, CA 94108 (inside Fairmont San Francisco)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Polynesian / Asian-fusion tiki bar</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$ — casual; $20 cover once live music starts</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Wed–Thu 5–10 PM; Fri–Sat 5–11 PM; live music from 7 PM; 21+ after 10 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Limited bookings via the Tablz app; first-come first-served otherwise</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (415) 772-5278</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Food</h2>
+      <p>
+        The menu is tiki-bar comfort: shareable starters, poke, and a few heartier plates. The
+        prices below come <strong>from the official Fairmont menu PDF published around March
+        2024</strong> — they're dated and may have changed, so treat them as a guide to the
+        price band, not today's numbers. Descriptions below are our own paraphrase of the
+        dishes, not the menu's wording.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price (2024 menu)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Pork siu mai — steamed pork-and-shrimp dumplings</td><td class="px-4 py-3 text-right whitespace-nowrap">$15</td></tr>
+            <tr><td class="px-4 py-3">Coconut shell spicy tuna poke — ahi tuna with macadamia, taro chips</td><td class="px-4 py-3 text-right whitespace-nowrap">$18</td></tr>
+            <tr><td class="px-4 py-3">Curried crab won tacos — dungeness crab, yellow curry, pickled daikon</td><td class="px-4 py-3 text-right whitespace-nowrap">$16</td></tr>
+            <tr><td class="px-4 py-3">Tonga pupu platter — the big shareable spread</td><td class="px-4 py-3 text-right whitespace-nowrap">$66</td></tr>
+            <tr><td class="px-4 py-3">Tonga grilled ribeye</td><td class="px-4 py-3 text-right whitespace-nowrap">$54</td></tr>
+            <tr><td class="px-4 py-3">Marinated Korean short rib</td><td class="px-4 py-3 text-right whitespace-nowrap">$26</td></tr>
+            <tr><td class="px-4 py-3">Vegetable pot stickers — cabbage, black mushroom, ginger</td><td class="px-4 py-3 text-right whitespace-nowrap">$14</td></tr>
+            <tr><td class="px-4 py-3">Peel &amp; eat prawns — wok-fried with jalapeño, garlic, yuzu mayo</td><td class="px-4 py-3 text-right whitespace-nowrap">$12</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Our take: eat here like it's a bar with great snacks, not a restaurant with a bar. The
+        pupu platter is built for a group; the poke and the crab tacos are the two dishes that
+        justify the trip on their own.
+      </p>
+
+      <h2>Cocktails</h2>
+      <p>
+        The drinks program is classic tiki, and it's the main event for most visitors. Reported
+        signature cocktails include the <strong>Mai Tai 1944</strong>, the <strong>Zombie</strong>
+        (made with five rums), the <strong>Tiki Hunter</strong>, and the <strong>Wiki
+        Wiki</strong>. <strong>Cocktail prices are unverified</strong> — a January 2025 review
+        noted $2–4 per-drink increases, which suggests the list has moved since the 2024 food
+        menu was published. Ask for current prices at the bar.
+      </p>
+
+      <h2>The experience</h2>
+      <p>
+        This is the part no other hotel restaurant can match. The Tonga Room opened in
+        <strong>1945</strong>, converted from the hotel's 75-foot indoor swimming pool — "The
+        Plunge," built in 1929 — by MGM set designer Mel Melvin into a tropical lagoon. Since
+        the 1950s, an indoor rainstorm — thunder, lightning, rain over the water — has rolled
+        through roughly every 30 minutes, and it's still running. The house band plays from a
+        floating boat stage in the middle of the lagoon. It's been called the most unusual
+        restaurant in California, and the Bourdain line — "the greatest place in the history of
+        the world" — is on the official site for a reason: people who go once talk about it
+        for years.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one night here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>To drink:</strong> start with the Mai Tai 1944 — it's the tiki canon — then let the bartender talk you into a Zombie if you're staying a while.</li>
+        <li><strong>To eat:</strong> the curried crab won tacos and the coconut-shell poke to start; the pupu platter if you're three or more.</li>
+        <li><strong>Time it for the storm.</strong> Get there before 7 PM when the live music starts, settle in, and let the rainstorm roll through mid-drink — that's the whole show.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Hours are limited:</strong> Wednesday–Thursday 5–10 PM, Friday–Saturday 5–11 PM. Closed Sunday through Tuesday — don't plan a weekend trip around it without checking.</li>
+        <li><strong>The cover:</strong> $20 per person once live music starts at 7 PM, applied to all seated guests regardless of when they arrived. It's waived for registered Fairmont hotel guests.</li>
+        <li><strong>Reservations</strong> are limited and handled through the Tablz app; otherwise seating is first-come, first-served — arriving early on Friday or Saturday is the move.</li>
+        <li><strong>21+ after 10 PM.</strong> All ages are welcome from 5–10 PM, so families can do the early evening.</li>
+        <li><strong>Dress code</strong> is casual — this is a tiki bar, not a tasting room.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Dish prices above are <strong>from a published 2024 menu and may have changed</strong> —
+        the restaurant's official site notes the menu is subject to change. Cocktail prices are
+        <strong>unverified</strong>. Always confirm current prices with the restaurant before
+        visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

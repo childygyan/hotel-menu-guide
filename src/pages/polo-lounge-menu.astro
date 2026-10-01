@@ -1,0 +1,184 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Polo Lounge",
+  servesCuisine: ["American", "Italian"],
+  priceRange: "$$$$",
+  telephone: "+1-310-887-2777",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "9641 Sunset Blvd",
+    addressLocality: "Beverly Hills",
+    addressRegion: "CA",
+    postalCode: "90210",
+    addressCountry: "US",
+  },
+  description:
+    "The legendary dining room inside The Beverly Hills Hotel, serving American cuisine with an Italian edge since Hollywood's deal-making era.",
+};
+---
+
+<BaseLayout
+  title="Polo Lounge Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to the Polo Lounge at The Beverly Hills Hotel: the $165 Sunday Jazz Brunch, the famous McCarthy salad, signatures, the official dress code, and visiting tips."
+  path="/polo-lounge-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/polo-lounge-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/polo-lounge-dining.webp"
+      alt="Illustration of the Polo Lounge's pink-and-green dining room in Beverly Hills"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Beverly Hills
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Polo Lounge — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Inside the Beverly Hills Hotel — the "Pink Palace" that opened in 1912 — the Polo Lounge has
+      been the favorite breakfast spot and watering hole for generations of stars and Hollywood
+      deal-makers. The pink-and-green dining room serves what the hotel calls American cuisine with
+      an Italian edge, and its most famous export is a chopped salad that hasn't changed in
+      decades. Below is our independent walkthrough of the menu, the official dress code, and what
+      we'd order. Everything is written in our own words; the hotel publishes almost no per-dish
+      prices, so we flag exactly where each figure comes from.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">9641 Sunset Blvd, Beverly Hills, CA 90210 (inside The Beverly Hills Hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">American with an Italian edge</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Expensive — the Sunday brunch is $165/person; expect $100+ per person at lunch and dinner</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Accepted online via the official reservation page</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (310) 887-2777</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Breakfast 7–11am · Lunch 11am–3pm · Dinner 5–11pm · Sunday Jazz Brunch 11am–3pm (official site)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Sunday Jazz Brunch — $165 (current)</h2>
+      <p>
+        This is the one price the hotel publishes outright, and it's current: the Sunday Jazz Brunch
+        is a <strong>$165 per person</strong> three-course prix fixe that includes one complimentary
+        beverage, served Sundays 11am–3pm with a jazz trio playing on the patio. If you want the full
+        Polo Lounge experience with no menu anxiety, this is the booking to make. Prices reported as
+        of October 2026, per the hotel's official brunch page.
+      </p>
+
+      <h2>Breakfast</h2>
+      <p>
+        Reported breakfast prices below come from a third-party menu listing dated around
+        <strong>January 2025 (dated)</strong> — usable as a rough sense of the range, but likely to
+        have moved since.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price (~Jan 2025, dated)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Classic Cereal with Bananas</td><td class="px-4 py-3 text-right whitespace-nowrap">$19.90</td></tr>
+            <tr><td class="px-4 py-3">Hollywood Farmers' Market Seasonal Fruit</td><td class="px-4 py-3 text-right whitespace-nowrap">$29.80</td></tr>
+            <tr><td class="px-4 py-3">Southern California Omelet</td><td class="px-4 py-3 text-right whitespace-nowrap">$34.80</td></tr>
+            <tr><td class="px-4 py-3">Polo Lounge Avocado Toast</td><td class="px-4 py-3 text-right whitespace-nowrap">$35.80</td></tr>
+            <tr><td class="px-4 py-3">Green Market Scrambled Eggs</td><td class="px-4 py-3 text-right whitespace-nowrap">$35.80</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Lemon blueberry ricotta pancakes are another reported breakfast signature; their price is
+        unverified.
+      </p>
+
+      <h2>The McCarthy salad</h2>
+      <p>
+        The room's signature dish: a chopped salad created in the 1940s and named for polo player
+        Neil McCarthy, reportedly unchanged on the menu for decades. A 2020 report put it at about
+        <strong>$40 (dated)</strong>; more recent press (December 2024) says the kitchen turns out
+        roughly 600 a week. For the hotel's 110th anniversary in December 2024, the Polo Lounge
+        offered a <strong>$1,912</strong> gold-leaf anniversary edition — finished with lobster,
+        caviar and Dom Pérignon, and served with a take-home Bernardaud bowl. Treat the $40 as a
+        dated reference point and confirm the current price when you book.
+      </p>
+
+      <h2>Signatures without published prices</h2>
+      <p>
+        The official site publishes no prices for the rest of the lunch and dinner menu, so we
+        describe these without figures — ask when booking rather than trusting old numbers:
+      </p>
+      <ul>
+        <li><strong>Chocolate soufflé</strong> — the famous dessert, arriving on its own little red carpet according to diner reports.</li>
+        <li><strong>Dover sole meunière</strong> — the classic tableside-feeling fish preparation.</li>
+        <li><strong>"Polo"-branded American Wagyu burger</strong> — the power-lunch burger.</li>
+        <li><strong>Chicken tortilla soup</strong> — the California-Italian crossover starter regulars swear by.</li>
+        <li><strong>Steak tartare</strong> and <strong>ahi tuna tartare</strong> — the raw-bar pair.</li>
+        <li><strong>Old-fashioned chocolate cake</strong> — the other dessert worth knowing about.</li>
+      </ul>
+
+      <h2>Dress code &amp; house rules</h2>
+      <p>
+        The Polo Lounge publishes an unusually specific dress code (current, from the official site),
+        so read it before you go:
+      </p>
+      <ul>
+        <li><strong>Not allowed:</strong> baseball hats, beanies, ripped or shredded denim, crop tops, nightwear, swimwear, men's sleeveless shirts, clothing with offensive messages, flip-flops (Birkenstocks included), and sportswear or tracksuits.</li>
+        <li><strong>After 4pm:</strong> no shorts for men; women may wear tailored non-denim shorts.</li>
+        <li><strong>Fine:</strong> sweatshirts and hoodies, as long as the hood stays down.</li>
+        <li>The code does not apply to children under 12.</li>
+      </ul>
+      <p>
+        Two more house realities: piano accompaniment plays at lunch and dinner daily, and
+        photography is frowned upon inside — this is a room built on celebrity discretion, and the
+        regulars like it that way.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The non-negotiable:</strong> the McCarthy salad. It's the dish the room is famous for, and it's been made the same way for decades.</li>
+        <li><strong>At lunch:</strong> the Wagyu burger or the chicken tortilla soup — the two signatures that feel most like the room.</li>
+        <li><strong>On Sunday:</strong> the $165 Jazz Brunch. It's the one price you can plan around, and the patio jazz trio is the experience.</li>
+        <li><strong>To finish:</strong> the chocolate soufflé — the red-carpet arrival is half the fun.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book the brunch early</strong> if that's your plan — Sundays 11am–3pm is the headline reservation of the week.</li>
+        <li><strong>Dress to the code.</strong> It's specific and enforced; when in doubt, overdress slightly rather than risk the beanie-and-flip-flops rejection.</li>
+        <li><strong>Leave the camera in your pocket.</strong> Photography is discouraged, and the room rewards discretion.</li>
+        <li><strong>Budget blind spots:</strong> beyond the $165 brunch, per-dish prices aren't published — ask about current prices when you reserve so the bill holds no surprises.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The <strong>$165 Sunday Jazz Brunch is current</strong> — reported as of October 2026 from
+        the hotel's official brunch page. The McCarthy salad's ~$40 figure is from a <strong>2020
+        report (dated)</strong>, and the breakfast prices from a third-party listing dated around
+        <strong>January 2025 (dated)</strong>. The hotel publishes no other per-dish prices, and we
+        do not print figures for dishes we couldn't verify. Always confirm current prices when
+        booking.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Chateau Marmont",
+  servesCuisine: ["American"],
+  priceRange: "$$$",
+  telephone: "+1-323-656-1010",
+  url: "https://www.chateaumarmont.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "8221 Sunset Blvd",
+    addressLocality: "West Hollywood",
+    addressRegion: "CA",
+    postalCode: "90046",
+    addressCountry: "US",
+  },
+  description:
+    "Historic hotel restaurant on the Sunset Strip in West Hollywood, led by executive chef Dean Yasharian.",
+};
+---
+
+<BaseLayout
+  title="Chateau Marmont Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to the Chateau Marmont restaurant in West Hollywood: chef Dean Yasharian's American menu with dated reported prices, hours, reservations, and visiting tips. Verify prices before visiting."
+  path="/chateau-marmont-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/chateau-marmont-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/chateau-marmont-dining.webp"
+      alt="Illustration of the Chateau Marmont's garden terrace restaurant at dusk"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · West Hollywood
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Chateau Marmont — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The dining room at the Chateau Marmont sits inside one of the most mythologized buildings in
+      Los Angeles: a 1929 apartment house modeled on a Loire Valley royal residence, converted to a
+      hotel during the Depression and famous ever since as a hideaway for Greta Garbo, Marilyn Monroe,
+      Clark Gable, Elizabeth Taylor, Jim Morrison, and Mick Jagger. Columbia Pictures founder Harry
+      Cohn once said, "If you must get in trouble, do it at the Chateau Marmont." The restaurant
+      itself is far calmer than the legend — American comfort food in a casual-elegant room (and on
+      the famous garden terrace), led by executive chef Dean Yasharian. Below is our independent
+      walkthrough of the menu, hours, and what we'd order. Everything is written in our own words;
+      prices are reported figures, not a copy of the restaurant's menu — and the itemized prices
+      below come from a published 2022 menu, so treat them as dated.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">8221 Sunset Blvd, West Hollywood, CA 90046 (inside Chateau Marmont)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Dean Yasharian</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">American (dining style: casual elegant)</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">No current published prices; the 2022 menu ran roughly $15–$46 per dish — verify before visiting</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via Resy through the official site; not bookable on OpenTable — the hotel asks guests to call ahead</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (323) 656-1010</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours (reported)</h2>
+      <p>
+        The reported schedule, from the restaurant's OpenTable listing, is: breakfast Monday–Friday
+        6:30–11:00 AM and Saturday–Sunday 6:30 AM–12:00 PM; lunch Monday–Friday 11:00 AM–5:00 PM and
+        Saturday–Sunday 12:00–5:00 PM; dinner daily 5:00 PM–12:00 midnight. These hours are undated in
+        the source, so confirm with the restaurant before planning around them.
+      </p>
+
+      <h2>Starters &amp; small plates</h2>
+      <p>
+        The opening section reads like classic hotel-dining comfort: an iceberg wedge with bacon,
+        walnuts and blue cheese dressing; a Caesar; beef carpaccio; crispy calamari; a charcuterie
+        and cheese board with pickles and celeriac rémoulade; and a falafel plate. Reported prices
+        from the published <strong>2022 menu (dated)</strong> run roughly <strong>$15–$26</strong>.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price (2022, dated)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Spaghetti Bolognese</td><td class="px-4 py-3 text-right whitespace-nowrap">$15</td></tr>
+            <tr><td class="px-4 py-3">Caesar Salad</td><td class="px-4 py-3 text-right whitespace-nowrap">$16</td></tr>
+            <tr><td class="px-4 py-3">Crispy Calamari</td><td class="px-4 py-3 text-right whitespace-nowrap">$16</td></tr>
+            <tr><td class="px-4 py-3">Bucatini &amp; Clams</td><td class="px-4 py-3 text-right whitespace-nowrap">$16</td></tr>
+            <tr><td class="px-4 py-3">Iceberg Wedge</td><td class="px-4 py-3 text-right whitespace-nowrap">$17</td></tr>
+            <tr><td class="px-4 py-3">Mushroom Ravioli</td><td class="px-4 py-3 text-right whitespace-nowrap">$17</td></tr>
+            <tr><td class="px-4 py-3">Beef Carpaccio</td><td class="px-4 py-3 text-right whitespace-nowrap">$21</td></tr>
+            <tr><td class="px-4 py-3">Grilled Octopus</td><td class="px-4 py-3 text-right whitespace-nowrap">$22</td></tr>
+            <tr><td class="px-4 py-3">Charcuterie &amp; Cheese</td><td class="px-4 py-3 text-right whitespace-nowrap">$26</td></tr>
+            <tr><td class="px-4 py-3">Falafel</td><td class="px-4 py-3 text-right whitespace-nowrap">$26</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Our take: the grilled octopus — paired with watermelon, arugula and lemon vinaigrette on the
+        2022 menu — is the most interesting plate here, and the charcuterie board is the easy
+        crowd-pleaser if the table wants to graze.
+      </p>
+
+      <h2>Mains</h2>
+      <p>
+        The main courses stay in comfort territory: pastas, a burger, a Sunday fried chicken, and a
+        handful of fish and meat plates. Reported <strong>2022 (dated)</strong> prices run roughly
+        <strong>$20–$46</strong>.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price (2022, dated)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Black Truffle Risotto</td><td class="px-4 py-3 text-right whitespace-nowrap">$20</td></tr>
+            <tr><td class="px-4 py-3">Chateau Burger</td><td class="px-4 py-3 text-right whitespace-nowrap">$23</td></tr>
+            <tr><td class="px-4 py-3">Buttermilk Fried Chicken (Sundays)</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Roasted Chicken</td><td class="px-4 py-3 text-right whitespace-nowrap">$32</td></tr>
+            <tr><td class="px-4 py-3">King Salmon</td><td class="px-4 py-3 text-right whitespace-nowrap">$33</td></tr>
+            <tr><td class="px-4 py-3">Bouillabaisse</td><td class="px-4 py-3 text-right whitespace-nowrap">$35</td></tr>
+            <tr><td class="px-4 py-3">White Sea Bass</td><td class="px-4 py-3 text-right whitespace-nowrap">$35</td></tr>
+            <tr><td class="px-4 py-3">Lamb</td><td class="px-4 py-3 text-right whitespace-nowrap">$42</td></tr>
+            <tr><td class="px-4 py-3">Steak Frites</td><td class="px-4 py-3 text-right whitespace-nowrap">$46</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The steak frites — a dry-aged New York strip with fries and béarnaise — sat at the top of
+        the 2022 menu. The bouillabaisse brings saffron fish broth with tiger prawns, mussels and
+        rouille, and the Sunday-only buttermilk fried chicken comes with kale, mashed potatoes and
+        gravy, a biscuit and spiced honey. Dessert on the 2022 menu was a tapioca pudding with
+        spiced pineapple, lime financier and coconut sorbet, reported at <strong>$12 (dated)</strong>.
+      </p>
+
+      <h2>Breakfast</h2>
+      <p>
+        Reported breakfast prices come from an <strong>undated</strong> third-party listing, so treat
+        them as rough figures only: eggs Benedict, huevos rancheros, breakfast burrito and bagel
+        &amp; lox around <strong>$22</strong>; croque madame <strong>$20</strong>; a three-egg omelette
+        <strong>$21</strong>; buttermilk pancakes <strong>$17</strong>; Chateau granola <strong>$15</strong>;
+        and coffee <strong>$6–$10</strong>.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>To start:</strong> the grilled octopus — the most distinctive plate on the reported menu.</li>
+        <li><strong>The main event:</strong> steak frites on a regular night; the Sunday buttermilk fried chicken if you're lucky enough to be there on a Sunday.</li>
+        <li><strong>The value move:</strong> the Chateau burger — the lowest-priced main on the 2022 menu, and a proper hotel burger with cheddar, house pickle and fries.</li>
+        <li><strong>To finish:</strong> the tapioca pudding — the one dessert the old menu offered, and it sounds like the kind of retro dish that suits this room.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book through Resy</strong> via the official site — the restaurant isn't on OpenTable, and the hotel asks guests to call ahead for restaurant or bar reservations.</li>
+        <li><strong>Confirm hours and prices before you go.</strong> The only itemized menu we found was last updated in February 2022, and the hours come from an undated listing — a quick call to +1 (323) 656-1010 clears both up.</li>
+        <li><strong>Dress code</strong> is listed as smart casual, with valet parking available.</li>
+        <li><strong>Celebrity-discretion culture applies</strong> — this is a room where famous people go to be left alone, so keep the camera down in the dining room.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are reported figures, <strong>not current prices</strong>. The itemized menu
+        prices come from a menu published in <strong>February 2022 (dated)</strong> and are almost
+        certainly higher today; the breakfast figures come from an undated third-party listing. We
+        could not find a current published menu. Always verify current prices — and hours — with the
+        restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

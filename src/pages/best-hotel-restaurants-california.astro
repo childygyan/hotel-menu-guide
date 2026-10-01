@@ -1,0 +1,166 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Best Hotel Restaurants in California",
+  description:
+    "Our picks for the best hotel restaurants in California, each with an original menu guide.",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, url: "https://hotel-menu-guide.pages.dev/chateau-marmont-menu/", name: "Chateau Marmont" },
+    { "@type": "ListItem", position: 2, url: "https://hotel-menu-guide.pages.dev/polo-lounge-menu/", name: "The Polo Lounge at The Beverly Hills Hotel" },
+    { "@type": "ListItem", position: 3, url: "https://hotel-menu-guide.pages.dev/cut-menu/", name: "CUT by Wolfgang Puck at Beverly Wilshire" },
+    { "@type": "ListItem", position: 4, url: "https://hotel-menu-guide.pages.dev/sierra-mar-menu/", name: "Sierra Mar at Post Ranch Inn" },
+    { "@type": "ListItem", position: 5, url: "https://hotel-menu-guide.pages.dev/addison-menu/", name: "Addison at Fairmont Grand Del Mar" },
+    { "@type": "ListItem", position: 6, url: "https://hotel-menu-guide.pages.dev/tonga-room-menu/", name: "Tonga Room & Hurricane Bar at Fairmont San Francisco" },
+  ],
+};
+
+const guides = [
+  {
+    href: "/chateau-marmont-menu/",
+    img: "/images/chateau-marmont-dining.webp",
+    alt: "Illustration of the Chateau Marmont's garden terrace restaurant at dusk",
+    tag: "West Hollywood · Chateau Marmont",
+    title: "Chateau Marmont",
+    text: "Hollywood's most storied hotel dining room — the garden terrace where stars have eaten since 1929. Our guide covers the comfort-classic menu, reported prices, hours, and how to get a table.",
+  },
+  {
+    href: "/polo-lounge-menu/",
+    img: "/images/polo-lounge-dining.webp",
+    alt: "Illustration of the Polo Lounge's pink-and-green dining room in Beverly Hills",
+    tag: "Beverly Hills · The Beverly Hills Hotel",
+    title: "The Polo Lounge",
+    text: "The Pink Palace's legendary power-dining room — the McCarthy salad, unchanged since the 1940s, and the $165 Sunday jazz brunch. Our guide walks through the menu and the room's famous rules.",
+  },
+  {
+    href: "/cut-menu/",
+    img: "/images/cut-dining.webp",
+    alt: "Illustration of CUT's sleek modern steakhouse dining room in Beverly Hills",
+    tag: "Beverly Hills · Beverly Wilshire",
+    title: "CUT by Wolfgang Puck",
+    text: "Wolfgang Puck's flagship steakhouse — Michelin-starred, celebrating 20 years, with the $95 'First CUT' early prix fixe. Our guide covers how the menu works and what to order.",
+  },
+  {
+    href: "/sierra-mar-menu/",
+    img: "/images/sierra-mar-dining.webp",
+    alt: "Illustration of Sierra Mar's cliffside dining room overlooking the Pacific at Big Sur",
+    tag: "Big Sur · Post Ranch Inn",
+    title: "Sierra Mar",
+    text: "Big Sur's cliffside tasting-menu room — $185 dinner over the Pacific, a Michelin Green Star, and one of America's great wine cellars. Our guide explains the format and how to book.",
+  },
+  {
+    href: "/addison-menu/",
+    img: "/images/addison-dining.webp",
+    alt: "Illustration of Addison's elegant modern dining room in San Diego",
+    tag: "San Diego · Fairmont Grand Del Mar",
+    title: "Addison",
+    text: "Southern California's first and only three-Michelin-star restaurant — a $398 ten-course tasting from chef William Bradley. Our guide covers the experience and the booking reality.",
+  },
+  {
+    href: "/tonga-room-menu/",
+    img: "/images/tonga-room-dining.webp",
+    alt: "Illustration of the Tonga Room's tiki bar with its lagoon pool in San Francisco",
+    tag: "San Francisco · Fairmont",
+    title: "Tonga Room & Hurricane Bar",
+    text: "San Francisco's tiki legend since 1945 — indoor rainstorms over a former hotel pool, Mai Tais, and pupu platters. Our guide covers the menu, the cover charge, and the show.",
+  },
+];
+---
+
+<BaseLayout
+  title="Best Hotel Restaurants in California — 6 Great Guides"
+  description="Our picks for the best hotel restaurants in California: Chateau Marmont, the Polo Lounge, CUT, Sierra Mar, Addison, and the Tonga Room — each with an original menu guide."
+  path="/best-hotel-restaurants-california/"
+  jsonLd={jsonLd}
+  ogImage="/images/chateau-marmont-dining.webp"
+>
+  <article class="max-w-5xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/chateau-marmont-dining.webp"
+      alt="Illustration of a glamorous California hotel dining terrace at dusk"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+    <p class="mt-10 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Pillar Guide · California
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight max-w-3xl">
+      The Best Hotel Restaurants in California
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed max-w-3xl">
+      California's hotel dining rooms are the stuff of legend: the Chateau Marmont's
+      star-filled terrace, the Polo Lounge's pink-and-green power scene, a cliffside
+      tasting room in Big Sur, and a tiki bar with indoor rainstorms in San Francisco.
+      We've written an original, independent guide to each of the six below: what the
+      menu looks like, what it costs, and what we'd order. Prices are reported figures,
+      dated honestly — never copied menus.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {guides.map((g) => (
+        <a
+          href={g.href}
+          class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+        >
+          <img
+            src={g.img}
+            alt={g.alt}
+            class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">{g.tag}</p>
+            <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+              {g.title}
+            </h2>
+            <p class="mt-3 text-ink-soft text-sm leading-relaxed">{g.text}</p>
+            <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-parchment border border-line p-6 sm:p-10">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold">How we chose these six</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3 text-sm leading-relaxed text-ink-soft">
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Search interest, then notability</h3>
+          <p>
+            We checked Google Trends (United States, past 12 months) for California
+            hotel-restaurant menu queries: "chateau marmont menu" averaged 17.8 and
+            "polo lounge menu" 9.8 — the two clear leaders, and both headline this list.
+            The rest earned their spots through awards, press, and history.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Three regions, one list</h3>
+          <p>
+            Los Angeles (Chateau Marmont, Polo Lounge, CUT), the Bay Area and Big Sur
+            (Tonga Room, Sierra Mar), and San Diego (Addison). Two picks per region
+            keeps the list honest — these are the rooms that define hotel dining in
+            California.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Original writing, always</h3>
+          <p>
+            We never copy a restaurant's menu text or photos. Every guide is written in our own words
+            from publicly reported facts — prices dated honestly, with a nudge to verify before you visit.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 sm:p-6 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">A note on prices</p>
+      <p>
+        All prices on this site are <strong>reported as of 2026</strong>, gathered from the
+        restaurants' official published materials and reputable public sources. Menus and prices change
+        frequently — please verify with the restaurant before visiting.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

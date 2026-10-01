@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "CUT by Wolfgang Puck",
+  servesCuisine: ["American", "Steakhouse"],
+  priceRange: "$$$$",
+  telephone: "+1-310-276-8500",
+  url: "https://www.wolfgangpuck.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "9500 Wilshire Blvd",
+    addressLocality: "Beverly Hills",
+    addressRegion: "CA",
+    postalCode: "90212",
+    addressCountry: "US",
+  },
+  description:
+    "Wolfgang Puck's flagship modern American steakhouse inside the Beverly Wilshire, A Four Seasons Hotel, led by executive chef Drew Rosenberg.",
+};
+---
+
+<BaseLayout
+  title="CUT by Wolfgang Puck Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to CUT by Wolfgang Puck in Beverly Hills: the $95 'First CUT' early prix fixe, signature steaks and desserts, hours, and visiting tips. Prices reported as of October 2026."
+  path="/cut-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/cut-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/cut-dining.webp"
+      alt="Illustration of CUT's sleek modern steakhouse dining room in Beverly Hills"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Beverly Hills
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      CUT by Wolfgang Puck — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The original and flagship CUT sits inside the Beverly Wilshire, A Four Seasons Hotel — the
+      room that started Wolfgang Puck's steakhouse empire when it opened in 2006, and which
+      celebrated its 20th anniversary in June 2026. Executive chef Drew Rosenberg runs a
+      contemporary take on the classic steakhouse in a dining room designed by architect Richard
+      Meier (of Getty Center fame), with art by John Baldessari and Martin Schoeller on the walls.
+      The restaurant holds a Michelin star (2019 and 2021) and is unapologetically expensive. Below
+      is our independent walkthrough of what the menu looks like, what we know about prices, and
+      what we'd order. Everything is written in our own words; note up front that the restaurant
+      publishes no à la carte prices, so we describe dishes without figures rather than guessing.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">9500 Wilshire Blvd, Beverly Hills, CA 90212 (inside the Beverly Wilshire, A Four Seasons Hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Drew Rosenberg</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern American steakhouse</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — the early-evening prix fixe is $95/person; à la carte prices are not published</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (310) 276-8500</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported on the restaurant's official page: <strong>closed Sunday and Monday</strong>;
+        Tuesday–Thursday 5:30–10:00 PM; Friday–Saturday 5:00–10:30 PM, with the CUT Lounge running
+        to 11:00 PM on Friday and Saturday. Plan around the Sunday–Monday closure.
+      </p>
+
+      <h2>"The First CUT" — $95 early prix fixe</h2>
+      <p>
+        The one price CUT publishes outright — and the gentlest way into the room. <strong>"The
+        First CUT" is a $95 per person</strong> three-course dinner with a side, available for
+        seatings Tuesday–Thursday between 5:30 and 6:30 PM, running April 7 through December 31,
+        2026. An optional wine pairing adds <strong>$85 per person</strong>. Reported by OpenTable
+        and Haute Living (June 2026) — current as of October 2026. For price context: the
+        anniversary one-night "World of CUT" seven-course dinner in August 2026 ran $295 per
+        person.
+      </p>
+
+      <h2>Signature steaks &amp; dishes</h2>
+      <p>
+        Current à la carte prices are <strong>not published</strong> — not on the official site, not
+        on OpenTable. The only priced menus we found are food-blog posts from 2008–2012, too dated
+        to use responsibly, so we describe the signatures without figures:
+      </p>
+      <ul>
+        <li><strong>Bone Marrow Flan</strong> — the signature starter, set custard with mushroom marmalade and a parsley salad.</li>
+        <li><strong>Snake River Farms Wagyu Tomahawk</strong> — the showpiece cut, built for the table.</li>
+        <li><strong>Brandt NY Strip</strong> — the classic steakhouse move, from a respected California beef program.</li>
+        <li><strong>Prime Sirloin Steak Tartare</strong> — the raw preparation for steak purists.</li>
+        <li><strong>Lobster &amp; Crab "Louis" Cocktail</strong> — the chilled seafood opener.</li>
+        <li><strong>Butter Lettuce Salad</strong> and <strong>Crabcake</strong> — the lighter starters.</li>
+        <li><strong>Creamed Spinach with Egg</strong> and <strong>French Fries</strong> — the essential steakhouse sides.</li>
+      </ul>
+
+      <h2>Desserts</h2>
+      <p>
+        The dessert list leans classic-steakhouse with a twist: <strong>Baked Alaska</strong>,
+        <strong>Basque cheesecake</strong>, <strong>banana cream pie</strong>, and a <strong>dark
+        chocolate soufflé</strong>. Prices for these are not published — ask when you book.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The value move:</strong> "The First CUT" on a Tuesday–Thursday early evening — three courses and a side for $95 is the best deal in the building.</li>
+        <li><strong>To start:</strong> the Bone Marrow Flan. It's the signature for a reason.</li>
+        <li><strong>The main event:</strong> the Wagyu tomahawk if you're going big; the Brandt NY strip for the classic steakhouse play.</li>
+        <li><strong>On the side:</strong> creamed spinach with egg — the steakhouse litmus test, done properly.</li>
+        <li><strong>To finish:</strong> the Baked Alaska — theatrical, shareable, and very much this room.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Closed Sunday and Monday</strong> — the single most important planning fact on this page.</li>
+        <li><strong>Book via OpenTable</strong>; reservations are recommended and Friday–Saturday dinner fills up.</li>
+        <li><strong>Dress code</strong> is listed as business casual, with validated valet parking at $15 for 3 hours.</li>
+        <li><strong>This is a Michelin-starred room</strong> (stars in 2019 and 2021) — expect a polished, formal-steakhouse pace and a bill to match. Since à la carte prices aren't published, ask about current pricing when you reserve.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        <strong>"The First CUT" at $95 per person (plus an optional $85 wine pairing) is
+        current</strong> — reported as of October 2026 from OpenTable and June 2026 press coverage,
+        valid for Tuesday–Thursday early seatings through December 31, 2026. Current à la carte
+        prices are <strong>not published</strong> by the restaurant; the only priced menus we found
+        date to 2008–2012 and are too old to use, so we print no per-dish figures. Always verify
+        current prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

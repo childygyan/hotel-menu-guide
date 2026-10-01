@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Addison",
+  servesCuisine: ["Californian", "French"],
+  priceRange: "$$$$",
+  telephone: "+1-858-314-1900",
+  url: "https://www.addisondelmar.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "5200 Grand Del Mar Way",
+    addressLocality: "San Diego",
+    addressRegion: "CA",
+    postalCode: "92130",
+    addressCountry: "US",
+  },
+  description:
+    "Ten-course tasting-menu restaurant inside Fairmont Grand Del Mar in San Diego, led by Relais & Châteaux Grand Chef William Bradley — Southern California's first and only three-Michelin-star restaurant.",
+};
+---
+
+<BaseLayout
+  title="Addison Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Addison by William Bradley in San Diego: the $398 ten-course tasting with reported prices, signature dishes, the Champagne Lounge, and visiting tips. Prices reported as of October 2026."
+  path="/addison-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/addison-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/addison-dining.webp"
+      alt="Illustration of Addison's elegant modern dining room in San Diego"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · San Diego
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Addison — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Inside the Fairmont Grand Del Mar sits Addison, chef William Bradley's flagship — and
+      Southern California's first and only restaurant to hold three Michelin stars (2024, 2025,
+      and 2026). The room recently marked its 20th anniversary with a full redesign and the
+      addition of a Champagne Lounge. This is a tasting-menu-only restaurant: one ten-course
+      experience, priced on the official site at $398 per person. Below is our independent
+      walkthrough of what the evening costs, what the food is like, and how to get a table —
+      written in our own words, with prices reported from official sources, never copied from
+      a menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">5200 Grand Del Mar Way, San Diego, CA 92130 (inside Fairmont Grand Del Mar)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">William Bradley (Relais &amp; Châteaux Grand Chef)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">California gastronomy with French technique</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — ten-course tasting $398/person, Champagne Lounge $198/person</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Tuesday–Saturday evenings (reservations book months ahead)</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (858) 314-1900</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>The tasting menu</h2>
+      <p>
+        There is one menu: a <strong>ten-course tasting reported at $398 per person</strong> on
+        the restaurant's official site — the current figure, replacing the $385 reported in
+        mid-2026 coverage. Because the menu is tasting-only, there are no individual dish prices
+        to list; the $398 covers the full arc of the evening. Optional supplements — a caviar
+        course add-on and a wagyu upgrade on the quail course have been reported by diners —
+        exist, but their prices are not published, so we don't report them. Ask when booking.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The cooking is precise, French-rooted, and quietly playful. Courses are presented as a
+        sequence rather than a list to choose from, and the lineup evolves — but these are the
+        signature preparations the restaurant is known for, described in our own words:
+      </p>
+      <ul>
+        <li><strong>Chicken liver churro</strong> — a savory twist on the fried-dough classic, finished with bitter chocolate. Rich, crisp, and the course that tells you the kitchen has a sense of humor.</li>
+        <li><strong>"Eggs and rice"</strong> — Koshihikari rice and a smoked sabayon topped with reserve-grade caviar. Comfort food rebuilt at three-star precision.</li>
+        <li><strong>Tom kha goong with king crab</strong> — the Thai coconut soup reimagined sweet-and-sour, built around generous king crab.</li>
+        <li><strong>Kinmedai with crab consommé</strong> — golden eye snapper in a clear, deeply savory crab broth. A study in restraint.</li>
+        <li><strong>Uni chawanmushi</strong> — sea urchin folded into the silky Japanese savory custard.</li>
+        <li><strong>Barbecued squab</strong> — the game course, cooked over fire.</li>
+      </ul>
+
+      <h2>The Champagne Lounge</h2>
+      <p>
+        Part of the 20th-anniversary redesign, the Champagne Lounge is Addison's more casual
+        counterpoint — and notably, it's <strong>walk-in only, first-come first-served</strong>.
+        The Tartelette Menu is reported at <strong>$198 per guest</strong>, with optional
+        <strong>Champagne pairings at $175</strong>. For diners who can't land a dining-room
+        reservation months out, this is the realistic way into the building: arrive early, put
+        your name down, and don't treat the walk-in policy as a fallback — it's the actual
+        system.
+      </p>
+
+      <h2>Why it's famous</h2>
+      <p>
+        Addison is <strong>Southern California's first and only three-Michelin-star
+        restaurant</strong>, holding the rating across the 2024, 2025, and 2026 guides. Chef
+        Bradley holds the Relais &amp; Châteaux Grand Chef title, and the wine program carries
+        the <strong>Wine Spectator Grand Award</strong> with a cellar reported at roughly 10,000
+        bottles. The dining room itself was redesigned for the restaurant's 20th anniversary —
+        the Addison you'll walk into is a new version of a two-decade institution.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>
+        With a single tasting menu, the choices are about how you frame the night, not what you
+        pick:
+      </p>
+      <ul>
+        <li><strong>The full ten courses, no shortcuts.</strong> This is a three-star room; the menu is composed as one piece. Skipping courses defeats the point.</li>
+        <li><strong>Say yes to the caviar supplement if offered.</strong> The price isn't published, so confirm it before you commit — but the kitchen's caviar course is consistently the one diners remember.</li>
+        <li><strong>Budget for the pairing.</strong> Reviewers consistently note that the wine pairings are pricey — which is also the point of a Grand Award cellar. A $398 tasting with a full pairing puts dinner for two near or above four figures.</li>
+        <li><strong>Can't get a table? Do the Champagne Lounge.</strong> The $198 tartelette menu is the best consolation prize in San Diego dining.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book months ahead.</strong> The dining room serves Tuesday through Saturday evenings, and reservations are released far in advance through the restaurant's official website. Last seating is reported around 8:30 PM.</li>
+        <li><strong>Verify hours when booking.</strong> The official site's operating details were not fully confirmable at research time — confirm the evening's schedule with the restaurant.</li>
+        <li><strong>Plan for the full evening.</strong> Ten courses at this level is a three-plus-hour commitment; don't stack plans afterward.</li>
+        <li><strong>Dress the part.</strong> Official dress-code guidance wasn't retrievable; a dated third-party listing suggests jacket-preferred territory — treat this room as formal regardless.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of October 2026</strong>, compiled from the restaurant's
+        official site and Fairmont listing. Addison is tasting-menu only, so there are no à la carte
+        dish prices to report; supplement prices are not published by the restaurant and are not
+        listed here. Menus change and prices move — always verify current prices with the
+        restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

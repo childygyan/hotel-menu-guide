@@ -1,0 +1,161 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Sierra Mar",
+  servesCuisine: ["Californian"],
+  priceRange: "$$$$",
+  telephone: "+1-831-667-2800",
+  url: "https://www.postranchinn.com/dining",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "47900 State Hwy 1",
+    addressLocality: "Big Sur",
+    addressRegion: "CA",
+    postalCode: "93920",
+    addressCountry: "US",
+  },
+  description:
+    "Cliffside fine-dining restaurant inside Post Ranch Inn in Big Sur, led by chef Il Hoon Kang, serving seasonal prix-fixe Californian tasting menus with a celebrated wine program.",
+};
+---
+
+<BaseLayout
+  title="Sierra Mar Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Sierra Mar at Post Ranch Inn in Big Sur: the prix-fixe tasting menu with reported prices, the wine program, what we'd order, and visiting tips. Prices reported as of October 2026."
+  path="/sierra-mar-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/sierra-mar-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/sierra-mar-dining.webp"
+      alt="Illustration of Sierra Mar's cliffside dining room overlooking the Pacific at Big Sur"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Big Sur
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Sierra Mar — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Perched on the cliffs above the Pacific along Highway 1, Sierra Mar is the dining room of
+      Post Ranch Inn — a destination restaurant where the meal is the point of the trip, not an
+      add-on to it. Executive chef Il Hoon Kang serves one prix-fixe tasting menu at dinner and
+      a family-style feast at lunch, both built around organic, seasonal Californian cooking.
+      There is no à la carte menu, so this guide covers what the experience costs, how it works,
+      and what the food is like — all written in our own words, with prices reported from official
+      sources rather than copied from a menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">47900 State Hwy 1, Big Sur, CA 93920 (inside Post Ranch Inn)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Il Hoon Kang</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Organic Californian, seasonal farm-to-table</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — prix fixe only: $85 lunch / $185 dinner, per person</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Lunch daily 12–3 PM; dinner daily 5:30–9 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (831) 667-2800</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>How the meal works</h2>
+      <p>
+        Sierra Mar does not publish an à la carte menu — there are no individual dish prices to
+        list, because you don't order off a menu here. Lunch is a <strong>family-style experience
+        reported at $85 per person</strong>, served daily from 12 to 3 PM. Dinner is a
+        <strong>seasonal tasting menu reported at $185 per person</strong>, served daily from
+        5:30 to 9 PM. A supplemental sustainable caviar service is offered for an additional
+        <strong>reported $220</strong>. The lineup shifts with the seasons, so even the structure
+        of the tasting changes over the year.
+      </p>
+      <p>
+        Advance reservations are required and are bookable on OpenTable; the room is in high
+        demand, so don't count on walking in. Note for non-hotel guests: the inn's gatehouse
+        admits dining guests at most 30 minutes before their reservation, so plan your arrival
+        along Highway 1 accordingly.
+      </p>
+
+      <h2>What the food is like</h2>
+      <p>
+        The cooking is organic, Californian, and relentlessly seasonal — the menu is built
+        around what's ripe in Big Sur and Monterey County right now rather than around signature
+        dishes that stay put year to year. The kitchen describes its approach as a dialogue of
+        balance: between land and sea, richness and restraint, with sustainability as a constant
+        rather than a theme. Expect the meal to move from the garden to the coast and back —
+        vegetables treated with the same seriousness as the fish.
+      </p>
+      <p>
+        The supply chain is part of the story: the restaurant works with local partners including
+        Ad Astra Bread Co., The Cheese Shop in Carmel, Brokaw Farms in Soledad, and Monterey
+        Abalone — growers and producers from the same coastline the dining room overlooks. The
+        whole point is that the meal could only come from here.
+      </p>
+
+      <h2>The wine program</h2>
+      <p>
+        Sierra Mar's cellar is one of the most decorated on the California coast. It holds the
+        <strong>Wine Spectator Grand Award</strong> — the only one in Monterey County — with a
+        reported <strong>3,200+ selections</strong> drawn from a <strong>12,000-bottle cellar</strong>.
+        If you're serious about wine, this is as much a draw as the food: the list runs deep
+        into coastal California and well beyond it. Ask the sommelier to pair with the tasting —
+        that's the room's natural strength.
+      </p>
+
+      <h2>Recognition — one honest note</h2>
+      <p>
+        Sierra Mar holds a <strong>Michelin Green Star</strong>, and we want to be precise about
+        what that is: the Green Star is Michelin's award for <strong>environmental and
+        sustainability practices</strong>, not a culinary star. Press coverage in July 2026 was
+        explicit that the restaurant has not received a Michelin culinary star — the Green Star
+        honors how the kitchen sources, farms, and operates. Separately, it was named
+        <strong>Best Restaurant in Big Sur 2025</strong> in the Monterey County Weekly readers'
+        poll.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>
+        There's only one decision tree here, so think of it as how we'd play the visit rather
+        than what we'd pick off a menu:
+      </p>
+      <ul>
+        <li><strong>Do dinner, not lunch, if you can only go once.</strong> The evening tasting is the full expression of the kitchen — the family-style lunch is excellent, but dinner is the reason the room has its reputation.</li>
+        <li><strong>Add the caviar service.</strong> At a reported $220 supplement on a $185 tasting, it's a serious splurge — but the kitchen's sustainability ethos makes its caviar sourcing genuinely interesting, not just luxurious.</li>
+        <li><strong>Let the sommelier drive.</strong> A 3,200-selection Grand Award list is not meant to be navigated alone. Hand the pairing over and tell them what you like.</li>
+        <li><strong>Book for the light.</strong> A 5:30 PM seating in summer puts you over the Pacific at golden hour — the view is part of the menu.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book well ahead.</strong> Dinner reservations are required and the room fills — OpenTable shows it booking dozens of times a day.</li>
+        <li><strong>Time the drive.</strong> Non-hotel guests are admitted at the gatehouse a maximum of 30 minutes before the reservation; Highway 1 is slow and beautiful, so give yourself more time than the map says.</li>
+        <li><strong>Budget honestly:</strong> $185 per person for the tasting plus the wine program means a comfortable dinner for two lands well above $500 before tip — with the caviar supplement, well above $900.</li>
+        <li><strong>Dress code</strong> is smart casual, and valet parking is available.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of October 2026</strong>, compiled from the restaurant's
+        OpenTable listing and July 2026 press coverage. Sierra Mar is prix-fixe only, so there are
+        no à la carte dish prices to report. Menus change seasonally and prices move — always
+        verify current prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

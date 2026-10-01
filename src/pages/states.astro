@@ -21,13 +21,19 @@ const jsonLd = {
       name: "Ohio",
       url: "https://hotel-menu-guide.pages.dev/best-hotel-restaurants-ohio/",
     },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "California",
+      url: "https://hotel-menu-guide.pages.dev/best-hotel-restaurants-california/",
+    },
   ],
 };
 ---
 
 <BaseLayout
   title="Browse Hotel Restaurant Guides by State"
-  description="Browse our original hotel restaurant menu guides by US state. New York and Ohio covered so far — more states on the way."
+  description="Browse our original hotel restaurant menu guides by US state. New York, Ohio, and California covered so far — more states on the way."
   path="/states/"
   jsonLd={jsonLd}
   ogImage="/images/hero-home.webp"
@@ -95,6 +101,31 @@ const jsonLd = {
             big cities, with menus, prices, and reservation tips.
           </p>
           <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Explore Ohio →</span>
+        </div>
+      </a>
+
+      <a
+        href="/best-hotel-restaurants-california/"
+        class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <img
+          src="/images/chateau-marmont-dining.webp"
+          alt="Illustration of a glamorous California hotel dining terrace at dusk"
+          class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">6 guides</p>
+          <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+            California
+          </h2>
+          <p class="mt-3 text-ink-soft text-sm leading-relaxed">
+            California's hotel dining rooms are the stuff of legend — the Chateau Marmont's
+            star-filled dining room, the Polo Lounge's power-breakfast scene, and San
+            Francisco's grand hotel institutions. Our six guides cover the menus, reported
+            prices, and how to get a table.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Explore California →</span>
         </div>
       </a>
     </div>
