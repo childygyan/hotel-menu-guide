@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Adorn Bar & Restaurant",
+  servesCuisine: ["American", "Contemporary American"],
+  priceRange: "$$$",
+  url: "https://www.fourseasons.com/chicago/dining/restaurants/adorn/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "120 E Delaware Pl, 7th Floor",
+    addressLocality: "Chicago",
+    addressRegion: "IL",
+    postalCode: "60611",
+    addressCountry: "US",
+  },
+  description:
+    "Adorn Bar & Restaurant at Four Seasons Hotel Chicago — refined hotel dining on the 7th floor, led by executive chef Brent Balika.",
+};
+---
+
+<BaseLayout
+  title="Adorn Menu Guide (2026) — Hours, Chef, What to Order | Hotel Menu Guide"
+  description="An independent guide to Adorn Bar & Restaurant at Four Seasons Hotel Chicago: hours, chef, open-evidence, and visiting tips. Adorn opened in October 2020 in the former Allium space; the restaurant publishes no menu prices online."
+  path="/adorn-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/adorn-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/adorn-dining.webp"
+      alt="Illustration of a refined modern hotel dining room with jewel tones (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Chicago
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Adorn — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Adorn Bar &amp; Restaurant is the dining room of the Four Seasons Hotel Chicago, on
+      the 7th floor at 120 E Delaware Pl. It opened on October 1, 2020 in the space of the
+      former Allium, which had closed permanently — Adorn is its direct, on-site successor
+      in the same room. The launch was a collaboration with James Beard award-winning chef
+      Jonathon Sawyer (per a Four Seasons press release, September 2020); the current
+      executive chef is Brent Balika (per the OpenTable listing, crawled ~mid-September
+      2026). The restaurant holds a 4.8 OpenTable rating and serves all day, every day.
+      Adorn publishes no menu prices online, so this guide covers what we verified:
+      hours, chef, setting, and how to plan a visit. Everything is written in our own
+      words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">120 E Delaware Pl, 7th Floor, Chicago, IL 60611 (inside Four Seasons Hotel Chicago)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Brent Balika (per OpenTable, ~Sep 2026; launch chef Jonathon Sawyer, 2020)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Refined contemporary hotel dining</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Daily 7:00 AM–10:00 PM (OpenTable, ~Sep 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Bookable via OpenTable (4.8 rating, bookable September 2026 slots)</dd></div>
+        <div><dt class="font-semibold text-ink">History</dt><dd class="text-ink-soft">Opened October 1, 2020 in the former Allium space (Allium closed permanently)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the OpenTable listing crawled around mid-September 2026: <strong>open daily,
+        7:00 AM–10:00 PM</strong> — breakfast through late-evening dinner, seven days a
+        week. Live bookable inventory in September 2026 ("Booked 17 times today") confirms
+        the restaurant is actively operating.
+      </p>
+
+      <h2>The concept</h2>
+      <p>
+        Adorn debuted October 1, 2020 as the Four Seasons Hotel Chicago's all-day
+        restaurant, launched in collaboration with James Beard award-winning chef Jonathon
+        Sawyer (Four Seasons press release, 2020-09-22). It occupies the same 7th-floor
+        room that housed Allium until that restaurant closed permanently — one line of
+        history, stated plainly: Allium is gone; Adorn is its successor.
+      </p>
+
+      <h2>Menu pricing</h2>
+      <p>
+        Adorn publishes no menu prices on its official page. We did not find a verifiable
+        current price list in our research (October 2026), so we list none here rather
+        than guess. Check the official Four Seasons page or the OpenTable listing before
+        booking.
+      </p>
+
+      <h2>What to expect</h2>
+      <p>From the verified open evidence, here's what we can tell you:</p>
+      <ul>
+        <li><strong>All-day, every-day hours</strong> (7:00 AM–10:00 PM) — rare for a Magnificent Mile fine-dining room.</li>
+        <li><strong>A 4.8 OpenTable rating</strong> with bookable slots in September 2026 — consistently well-reviewed by diners.</li>
+        <li><strong>Chef Brent Balika</strong> leads the kitchen (per OpenTable, ~September 2026), following launch chef Jonathon Sawyer.</li>
+        <li><strong>The same storied room</strong> that held Allium since its 2012 opening — Four Seasons' 7th-floor dining space on Delaware Place.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via OpenTable</strong> — the listing shows live inventory and a 4.8 rating across many reviews.</li>
+        <li><strong>Morning or evening</strong>: with 7:00 AM opening, Adorn works for a hotel breakfast as easily as a full dinner.</li>
+        <li><strong>Verify the menu</strong> on the official Four Seasons page before visiting, since prices and offerings aren't published.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.fourseasons.com/chicago/dining/restaurants/adorn/" target="_blank" rel="noopener">Official restaurant page — Four Seasons Chicago</a> (menu info; no prices published online)</li>
+        <li><a href="https://www.opentable.com/r/adorn-bar-and-restaurant-chicago" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Adorn <strong>publishes no menu prices online</strong>, and our research (October
+        2026) found no verifiable current price list — so this guide lists none rather
+        than guessing. Menus and prices change frequently; always verify with the
+        restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Chicago guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-illinois/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Illinois →</a></li>
+        <li><a href="/torali-menu/" class="text-gold-dark font-semibold hover:underline">Torali at the Ritz-Carlton</a> <span class="text-ink-soft">— modern Italian</span></li>
+        <li><a href="/shanghai-terrace-menu/" class="text-gold-dark font-semibold hover:underline">Shanghai Terrace at The Peninsula</a> <span class="text-ink-soft">— Cantonese</span></li>
+        <li><a href="/travelle-menu/" class="text-gold-dark font-semibold hover:underline">Travelle at The Langham</a> <span class="text-ink-soft">— river-view bistro</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

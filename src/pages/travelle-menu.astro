@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Travelle",
+  servesCuisine: ["American", "Contemporary American"],
+  priceRange: "$$$$",
+  telephone: "+1-312-923-7705",
+  url: "https://www.travellechicago.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "330 N Wabash Avenue, 2nd Floor",
+    addressLocality: "Chicago",
+    addressRegion: "IL",
+    postalCode: "60611",
+    addressCountry: "US",
+  },
+  description:
+    "Travelle at The Langham, Chicago — an all-day American brasserie with Chicago River views, weekend brunch, and a lounge dinner program.",
+};
+---
+
+<BaseLayout
+  title="Travelle Menu Guide (2026) — Prices, Brunch & River Views, What to Order | Hotel Menu Guide"
+  description="An independent guide to Travelle at The Langham Chicago: official menu prices (lobster eggs benedict, burgers, brunch cocktails), hours, and visiting tips. Prices from the official menus, fetched October 2026."
+  path="/travelle-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/travelle-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/travelle-dining.webp"
+      alt="Illustration of a chic bistro dining room with river views at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Chicago
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Travelle — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Travelle is the all-day American brasserie on the 2nd floor of The Langham, Chicago —
+      which occupies floors 2–13 of the Mies van der Rohe–designed IBM Building at 330 N
+      Wabash, with floor-to-ceiling windows over the Chicago River. One of the few downtown
+      fine-casual rooms serving breakfast through late-night lounge dinner seven days a
+      week, it runs a dedicated weekend brunch (lobster benedict, caviar service) and holds
+      a 4.7 OpenTable rating (960 reviews). Current executive chef is Franco Diaz (per the
+      live OpenTable listing). Below is our independent walkthrough of the menu with prices
+      taken directly from the official travellechicago.com menus (fetched October 2026),
+      plus what we'd order. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">330 N Wabash Avenue, 2nd Floor, Chicago, IL 60611 (inside The Langham, Chicago)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Franco Diaz (per current OpenTable listing)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Seasonal / contemporary American</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">OpenTable lists $50 and over; brunch mains $26–$48</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Available via OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Dress code</dt><dd class="text-ink-soft">Casual Elegant / Business Casual (OpenTable)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the OpenTable listing (current) and the official site (fetched October 2026):
+        <strong>breakfast Mon–Fri 6:30–11:00 AM, Sat–Sun 6:30 AM–12:00 PM; lunch Mon–Fri
+        11:00 AM–3:00 PM; weekend brunch Sat–Sun 12:00–3:00 PM; lounge dinner daily —
+        Mon–Fri 3:00–11:00 PM, Sat–Sun 12:00–11:00 PM.</strong>
+      </p>
+
+      <h2>Brunch signatures</h2>
+      <p>
+        Prices below are from the official travellechicago.com brunch menu, fetched October
+        2026:
+      </p>
+      <ul>
+        <li><strong>Lobster Eggs Benedict — $48</strong>: poached eggs with Maine lobster and truffle hollandaise.</li>
+        <li><strong>Petrossian Paris Ossetra caviar service — $185</strong>: the high-roller's brunch move.</li>
+        <li><strong>Champagne risotto — $28</strong> (add shaved truffle for $16); <strong>brown butter clam linguini — $38</strong>.</li>
+        <li><strong>Vesuvio free-range chicken — $32</strong>; <strong>steak frites</strong> (8 oz prime flat iron) — <strong>$42</strong>.</li>
+        <li><strong>Classic smash burger — $28</strong>; <strong>Prime Beef Double Stack — $34</strong>.</li>
+        <li><strong>Everything bagel &amp; lox — $32</strong>; <strong>yellowtail tuna crudo — $26</strong>; <strong>grilled octopus — $28</strong>.</li>
+        <li><strong>Brunch cocktails</strong>: Bellini $18, Bloody Mary $21, Espresso Martini $20.</li>
+        <li><strong>Desserts $14</strong>: sticky date cake, chocolate hazelnut cake, white chocolate cheesecake, malted milk and chocolate; just-baked cookies $5 each.</li>
+      </ul>
+
+      <h2>Breakfast &amp; lunch</h2>
+      <p>
+        From the official menus, fetched October 2026:
+      </p>
+      <ul>
+        <li><strong>Breakfast ($6–$34)</strong>: pastries $6–$8, oatmeal and parfaits $16–$18, eggs and classics $24–$34, English breakfast $34; specialty coffees $8–$10 (matcha $9–$10), fresh juices $10, teas $6.</li>
+        <li><strong>Lunch</strong>: starters $18–$32, handhelds $19–$34 (smash burger $28), salads $22–$36 (ahi tuna power bowl $36), mains up to $42, spirit-free drinks $12.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>At brunch:</strong> the lobster eggs benedict ($48) — the dish Travelle is known for.</li>
+        <li><strong>The casual play:</strong> the classic smash burger ($28) — the best-priced of the meaty mains.</li>
+        <li><strong>The splurge:</strong> the Petrossian caviar service ($185) with a Bellini ($18).</li>
+        <li><strong>To finish:</strong> one of the $14 desserts — the sticky date cake is the classic call.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Ask for a window table</strong> — the floor-to-ceiling windows overlook the Chicago River, and the lounge's 30-foot video screen anchors the bar scene.</li>
+        <li><strong>All-day flexibility:</strong> breakfast, lunch, weekend brunch, and late-night lounge dinner mean you can drop in at almost any hour — Google places data shows daily 6:30 AM–11:00 PM.</li>
+        <li><strong>Family-friendly option:</strong> there is a dedicated kids menu.</li>
+        <li><strong>Ongoing programming:</strong> the hotel runs seasonal food events — a March 2026 St Patrick's Day brunch and the summer 2026 "Ice Cream on the River" pop-up — so check the site before booking.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.travellechicago.com/" target="_blank" rel="noopener">Official restaurant site — Travelle Chicago</a></li>
+        <li><a href="https://www.travellechicago.com/restaurant/" target="_blank" rel="noopener">Official online menus — Travelle Chicago</a> (breakfast, brunch, lunch, lounge dinner, kids; current prices)</li>
+        <li><a href="https://www.opentable.com/r/travelle-at-the-langham-chicago" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>official travellechicago.com menus, fetched
+        October 2026</strong> — the most current source available. Menus and prices change
+        frequently; always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Chicago guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-illinois/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Illinois →</a></li>
+        <li><a href="/shanghai-terrace-menu/" class="text-gold-dark font-semibold hover:underline">Shanghai Terrace at The Peninsula</a> <span class="text-ink-soft">— Cantonese</span></li>
+        <li><a href="/adorn-menu/" class="text-gold-dark font-semibold hover:underline">Adorn at Four Seasons</a> <span class="text-ink-soft">— refined hotel dining</span></li>
+        <li><a href="/torali-menu/" class="text-gold-dark font-semibold hover:underline">Torali at the Ritz-Carlton</a> <span class="text-ink-soft">— modern Italian</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

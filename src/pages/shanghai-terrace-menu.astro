@@ -1,0 +1,163 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Shanghai Terrace",
+  servesCuisine: ["Cantonese", "Chinese", "Shanghainese", "Sichuanese"],
+  priceRange: "$$$",
+  telephone: "+1-312-573-6744",
+  url: "https://www.peninsula.com/en/chicago/hotel-fine-dining/shanghai-terrace-cantonese",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "108 East Superior Street",
+    addressLocality: "Chicago",
+    addressRegion: "IL",
+    postalCode: "60611",
+    addressCountry: "US",
+  },
+  description:
+    "Shanghai Terrace at The Peninsula Chicago — Cantonese dining in a 1930s Shanghai supper-club setting, led by executive chef Elmo Han.",
+};
+---
+
+<BaseLayout
+  title="Shanghai Terrace Menu Guide (2026) — Prices, Peking Duck, What to Order | Hotel Menu Guide"
+  description="An independent guide to Shanghai Terrace at The Peninsula Chicago: Cantonese prices (Peking duck, dim sum, noodle soups), hours, and visiting tips. Prices date-labeled from a 2025-era third-party menu listing and diner reviews — the restaurant publishes no official prices online."
+  path="/shanghai-terrace-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/shanghai-terrace-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/shanghai-terrace-dining.webp"
+      alt="Illustration of an elegant Cantonese dining room with red lanterns and skyline views (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Chicago
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Shanghai Terrace — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Peninsula Chicago's Cantonese dining room channels 1930s Shanghai glamour — ebony,
+      gold, and scarlet rooms with mahogany screens — and is widely considered one of the
+      most atmospheric Chinese dining rooms in the city. Executive chef Elmo Han runs a menu
+      of Cantonese dishes with contemporary nods to Shanghainese and Sichuanese classics.
+      The restaurant ranked #46 on Chicago Magazine's 50 Best Restaurants list in July 2024.
+      Note: Shanghai Terrace publishes no official menu prices online, so the figures below
+      are all date-labeled from a 2025-era third-party listing and recent diner reviews.
+      Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">108 East Superior Street, Chicago, IL 60611 (inside The Peninsula Chicago)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Elmo Han</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Cantonese (with Shanghainese and Sichuanese influences)</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Upscale — OpenTable lists $31–$50 per person; dim sum $16–$21 (2025-era listing)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Awards</dt><dd class="text-ink-soft">Chicago Magazine 50 Best Restaurants 2024 — #46</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official peninsula.com page (fetched October 2026): dinner is served
+        <strong>Sunday, Wednesday, and Thursday, 5:00–10:00 PM</strong> (last food order
+        9:30 PM), and <strong>Friday–Saturday, 5:00–11:00 PM</strong> (last food order
+        10:00 PM). Lunch runs <strong>Friday–Sunday, 11:30 AM–2:30 PM</strong> (OpenTable
+        listing, current). The restaurant is <strong>closed Monday and Tuesday</strong>
+        (per a September 2026 third-party hours listing).
+      </p>
+
+      <h2>The signature: Peking duck</h2>
+      <p>
+        The Peking duck is the headline dish. One recent diner review cites it as a
+        <strong>~$78 dish</strong> (review crawled around June 2026; the review's own date
+        is unknown — treat this as "reported in a recent review, exact date unknown").
+        Chicago Magazine (July 2024) called it "a classic done just right, happiness in a
+        pancake."
+      </p>
+
+      <h2>Dim sum &amp; more</h2>
+      <p>
+        The figures below come from a third-party menu listing dated "Updated November
+        2025" (not official):
+      </p>
+      <ul>
+        <li><strong>Dim sum, $16–$21</strong>: dumplings including a lobster-and-chicken one with black truffle ($21), pork siewmai with black truffle ($20), green chive shrimp dumpling ($19), Shanghai-style steamed pork dumpling ($19), crab wonton ($18), barbecue pork bun ($17), shrimp spring roll ($17), spicy beef pot sticker ($17), vegetable dumpling ($16), and vegetable spring roll ($16).</li>
+        <li><strong>Noodle soups, $28</strong>: braised beef, prawn and wild mushrooms, and roasted duck.</li>
+        <li><strong>Salads and soups</strong>: Chilean sea bass in pumpkin soup $18; Peking duck salad $22; phoenix roasted chicken salad $22; wonton soup $16 (same 2025-era listing).</li>
+      </ul>
+
+      <h2>Critic's favorites</h2>
+      <ul>
+        <li><strong>Dong po pork belly</strong> — singled out by Chicago Magazine (July 2024) as a standout, a tender cut of meat wrapped around braised seasoned taro.</li>
+        <li><strong>"Happy Red Rice"</strong> — red rice with pistachios and egg, which Chicago Magazine (July 2024) called "a revelation."</li>
+        <li><strong>Golden Shrimp</strong> — deep-fried shrimp with vegetables and walnuts, flagged as a house favorite in multiple recent diner reviews.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The signature:</strong> the Peking duck (~$78 per a recent diner review) — it's the dish the restaurant is known for.</li>
+        <li><strong>To start:</strong> a couple of dim sum plates in the $16–$21 range from the 2025-era listing — the truffle-topped options are the interesting ones.</li>
+        <li><strong>The critic's pick:</strong> the dong po pork belly and the Happy Red Rice that Chicago Magazine praised in 2024.</li>
+        <li><strong>For the table:</strong> Golden Shrimp, the house favorite in diner reviews.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Request the terrace</strong> when you book — in warmer months seating moves to an urban-garden terrace with skyline views; guests are asked to state their seating preference.</li>
+        <li><strong>Parking:</strong> $35 flat rate with validation (per OpenTable).</li>
+        <li><strong>Dress code:</strong> listed as Casual Elegant / Smart Casual (OpenTable).</li>
+        <li><strong>Private dining:</strong> a private room for up to 30 guests with set menus (OpenTable).</li>
+        <li><strong>Tradition:</strong> the Peninsula's handmade egg-custard mooncakes are made in-house — a legacy of Dim Sum Ambassador Chef Yip's 26-year tenure at The Peninsula Hong Kong's Spring Moon.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.peninsula.com/en/chicago/hotel-fine-dining/shanghai-terrace-cantonese" target="_blank" rel="noopener">Official restaurant page — Peninsula Chicago</a> (menu info; no prices published online)</li>
+        <li><a href="https://www.opentable.com/shanghai-terrace" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+        <li><a href="https://www.chicagomag.com/chicago-magazine/august-2024/50-best-restaurants/shanghai-terrace/" target="_blank" rel="noopener">Chicago Magazine 50 Best Restaurants 2024 — entry</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Shanghai Terrace <strong>publishes no official menu prices online</strong>. The
+        prices above are labeled by source: dim sum, noodle soups, and salads/soups from a
+        <strong>third-party menu listing dated "Updated November 2025" (not official)</strong>,
+        and the ~$78 Peking duck figure from a <strong>recent diner review (exact review
+        date unknown)</strong>. Menus and prices change frequently; always verify with the
+        restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Chicago guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-illinois/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Illinois →</a></li>
+        <li><a href="/travelle-menu/" class="text-gold-dark font-semibold hover:underline">Travelle at The Langham</a> <span class="text-ink-soft">— river-view bistro</span></li>
+        <li><a href="/adorn-menu/" class="text-gold-dark font-semibold hover:underline">Adorn at Four Seasons</a> <span class="text-ink-soft">— refined hotel dining</span></li>
+        <li><a href="/torali-menu/" class="text-gold-dark font-semibold hover:underline">Torali at the Ritz-Carlton</a> <span class="text-ink-soft">— modern Italian</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

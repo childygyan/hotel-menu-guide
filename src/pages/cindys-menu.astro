@@ -1,0 +1,174 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Cindy's",
+  servesCuisine: ["American", "Contemporary American"],
+  priceRange: "$$",
+  telephone: "+1-312-792-3502",
+  url: "http://www.cindysrooftop.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "12 S Michigan Ave",
+    addressLocality: "Chicago",
+    addressRegion: "IL",
+    postalCode: "60603",
+    addressCountry: "US",
+  },
+  description:
+    "Cindy's — the glass-atrium rooftop restaurant at the Chicago Athletic Association hotel, operated by Boka Restaurant Group, overlooking Millennium Park and Lake Michigan.",
+};
+---
+
+<BaseLayout
+  title="Cindy's Menu Guide (2026) — Prices, Rooftop Atrium, What to Order | Hotel Menu Guide"
+  description="An independent guide to Cindy's rooftop at the Chicago Athletic Association hotel: the glass atrium, Boka Restaurant Group operation, current menus (prices not published), and dated 2022 price anchors. Menu overview from cindysrooftop.com, October 2026."
+  path="/cindys-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/cindys-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/cindys-dining.webp"
+      alt="Illustration of a glass-enclosed rooftop restaurant overlooking the city at sunset (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Chicago
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Cindy's — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Cindy's is the rooftop restaurant at the historic Chicago Athletic Association hotel
+      (12 S Michigan Ave, an 1893 club building by architect Henry Ives Cobb), sitting
+      under a glass atrium on the 13th floor. The view is the headliner: Millennium Park,
+      the Art Institute, and Lake Michigan — guests watch Cloud Gate (the Bean) from above.
+      The kitchen is operated by Boka Restaurant Group, which took over the hotel's food
+      &amp; beverage operations in March 2025 (NRN, May 2026). One honesty note up front:
+      the current official site publishes menus but <strong>no prices</strong>, so this
+      guide describes the current menu and anchors prices to dated sources, clearly
+      labeled. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">12 S Michigan Ave, Chicago, IL 60603 (13th floor, Chicago Athletic Association hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Kitchen operated by Boka Restaurant Group (opening-era chef Christian Ragano; current chef unverified)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary American / comfort food / seafood</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$31–$50 per person average spend (OpenTable 2026; current menu prices not published)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable (booked 93–158 times daily, late Sep 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1-312-792-3502 (official site, October 2026)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per OpenTable (2026), consistent with the official site:
+        <strong>Monday–Thursday 11:00 AM–11:00 PM; Friday 11:00 AM–midnight; Saturday
+        10:00 AM–midnight; Sunday 10:00 AM–11:00 PM</strong>. The official site splits
+        service into lunch (M–F until 2 PM), dinner (5–10 PM), and weekend brunch (Sat
+        &amp; Sun until 2 PM). Dress code: Smart Casual.
+      </p>
+
+      <h2>Lunch (current menu — prices not published)</h2>
+      <p>
+        From cindysrooftop.com, fetched October 2026. The site lists dishes without
+        prices:
+      </p>
+      <ul>
+        <li>East Coast and Pink Moon oysters with seasonal mignonette.</li>
+        <li>Grilled cheese &amp; tomato soup (sourdough miche, fontina).</li>
+        <li>Caesar salad with little gem lettuce, parmigiano reggiano, and garlic streusel.</li>
+        <li>Smashburger — two 3 oz patties with caramelized onion, aged cheddar, dijonnaise, house pickle, and fries.</li>
+      </ul>
+
+      <h2>Dinner (current menu — prices not published)</h2>
+      <ul>
+        <li>Bar Harbor mussels with lillet blanc, tomato, and herbes de Provence.</li>
+        <li>Duck pot pie with muscovy duck confit, mirepoix, and thyme.</li>
+        <li>Branzino with lemon beurre blanc and spinach.</li>
+        <li>Half smoked chicken with piri piri sauce and ramp relish.</li>
+      </ul>
+
+      <h2>Bar snacks &amp; the signature burger</h2>
+      <ul>
+        <li>Bar snacks (2:30–5 PM): the <strong>"Not So Secret" Secret Burger</strong> — the signature dish, with pimento cheese, gouda, bacon jam, B&amp;B pickles, and salsa macha aioli — plus local cheese &amp; charcuterie and oysters on the half shell (dish names from the official site; prices not published).</li>
+        <li>Older-era guests also praise the fish fry and herbed spätzle.</li>
+      </ul>
+
+      <h2>Dated price anchors (spring 2022 menu)</h2>
+      <p>
+        The only published prices we've verified are from a <strong>spring 2022 official
+        dinner PDF</strong> — dated, for era reference only:
+      </p>
+      <ul>
+        <li>Traditional rigatoni Bolognese $42; roasted pork chop $45/$90; chicken shawarma $25/$50.</li>
+        <li>Porterhouse au poivre for two $160; queso fundido $16; fried potatoes $14.</li>
+        <li>S'mores baked Alaska $10; strawberry éclair $10.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one visit here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The signature:</strong> the "Not So Secret" Secret Burger at bar-snack hour — it's the dish the room is known for. (Current price not published; check the menu in person.)</li>
+        <li><strong>For the view-first lunch:</strong> the smashburger with fries.</li>
+        <li><strong>For dinner:</strong> the Bar Harbor mussels or the duck pot pie.</li>
+        <li><strong>Time it right:</strong> come at sunset — the glass atrium faces Millennium Park, and the Bean-from-above view is the real draw.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Year-round rooftop:</strong> the enclosed glass atrium plus open-air terrace makes Cindy's a true four-season rooftop — unusual for Chicago.</li>
+        <li><strong>Book ahead:</strong> the OpenTable listing shows 93–158 bookings a day in late September 2026 — weekends go fast.</li>
+        <li><strong>It's in a historic hotel:</strong> the Chicago Athletic Association building dates to 1893 (architect Henry Ives Cobb); the hotel is part of Hyatt's Unbound Collection.</li>
+        <li><strong>No awards verified:</strong> we found no Michelin stars or formal awards for Cindy's as of October 2026 — we say nothing more on the subject.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="http://www.cindysrooftop.com/" target="_blank" rel="noopener">Official restaurant page — cindysrooftop.com</a></li>
+        <li><a href="https://cindysrooftop.com/menu" target="_blank" rel="noopener">Official menu index</a></li>
+        <li><a href="https://cindysrooftop.com/dinner-menu" target="_blank" rel="noopener">Official dinner menu</a></li>
+        <li><a href="https://cindysrooftop.com/lunch-menu" target="_blank" rel="noopener">Official lunch menu</a></li>
+        <li><a href="https://www.opentable.com/r/cindys-rooftop-chicago" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Cindy's <strong>current official site publishes menus without prices</strong>
+        (checked October 2026). The $31–$50 per-person figure is OpenTable's current
+        average-spend band. The dollar figures above come from a <strong>spring 2022
+        official dinner PDF</strong> and are era anchors only — not current prices.
+        Menus and prices change frequently; always verify with the restaurant before
+        visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Chicago guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-illinois/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Illinois →</a></li>
+        <li><a href="/the-ives-menu/" class="text-gold-dark font-semibold hover:underline">The Ives</a> <span class="text-ink-soft">— modern grill room in the same hotel</span></li>
+        <li><a href="/travelle-menu/" class="text-gold-dark font-semibold hover:underline">Travelle at The Langham</a> <span class="text-ink-soft">— river-view bistro</span></li>
+        <li><a href="/torali-menu/" class="text-gold-dark font-semibold hover:underline">Torali</a> <span class="text-ink-soft">— Italian-steakhouse at The Ritz-Carlton</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

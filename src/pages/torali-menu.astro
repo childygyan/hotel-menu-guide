@@ -1,0 +1,176 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Torali",
+  servesCuisine: ["Italian", "Steakhouse"],
+  priceRange: "$$$",
+  telephone: "+1-312-573-5160",
+  url: "https://www.toralichicago.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "160 East Pearson Street",
+    addressLocality: "Chicago",
+    addressRegion: "IL",
+    postalCode: "60611",
+    addressCountry: "US",
+  },
+  description:
+    "Torali — the modern Italian-steakhouse on the 12th floor of The Ritz-Carlton, Chicago, led by executive chef Damion Henry.",
+};
+---
+
+<BaseLayout
+  title="Torali Menu Guide (2026) — Prices, Ritz-Carlton Italian-Steakhouse, What to Order | Hotel Menu Guide"
+  description="An independent guide to Torali at The Ritz-Carlton, Chicago (12th floor, 160 E Pearson St): official dinner menu prices (house-made pastas, grilled steaks), hours, and visiting tips. Prices from the official dinner menu PDF, October 2026."
+  path="/torali-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/torali-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/torali-dining.webp"
+      alt="Illustration of a bright modern Italian dining room with marble tables (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Chicago
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Torali — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      First, the correction that matters: Torali is <strong>not</strong> a Waldorf Astoria
+      restaurant. It is the signature restaurant on the <strong>12th floor of The
+      Ritz-Carlton, Chicago</strong>, above the Magnificent Mile, with skyline views, warm
+      wood tones and glowing marble. In mid-2026 the restaurant unveiled refreshed
+      breakfast, lunch, dinner and bar menus under newly appointed Executive Chef Damion
+      Henry, pitched as merging the boldness of a contemporary steakhouse with the bright
+      flavors of coastal Italian cuisine (FSR magazine, ~July 2026). Below is our
+      independent walkthrough with prices from the official dinner menu PDF (fetched
+      October 2026) and dated breakfast/lunch figures, plus what we'd order. Everything is
+      written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">160 E Pearson St, Chicago, IL 60611 (12th floor, The Ritz-Carlton, Chicago)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Damion Henry (appointed mid-2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern Italian-steakhouse</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Expensive — pastas $28–$32, grilled mains $38–$58</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable (4.4 rating, 538 reviews as of late Sep 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1-312-573-5160 (third-party directory, Aug 2026)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per OpenTable (late Sep 2026), with toralichicago.com showing the same:
+        <strong>daily 7:00 AM–2:00 PM; Tuesday–Saturday 5:00–10:00 PM</strong>. Dress code:
+        Smart Casual.
+      </p>
+
+      <h2>Antipasti</h2>
+      <p>
+        Prices below are from the official dinner menu PDF, fetched October 2026:
+      </p>
+      <ul>
+        <li>Poached shrimp with cocktail sauce — <strong>$24</strong>; lobster bruschetta — <strong>$24</strong>; tartufi flatbread — <strong>$24</strong>.</li>
+        <li>Charcuterie board — <strong>$20</strong>; formaggio board — <strong>$20</strong>.</li>
+        <li>Burrata with jamón serrano — <strong>$22</strong>; whipped ricotta — <strong>$16</strong>; arrabiata lamb meatballs — <strong>$18</strong>.</li>
+        <li>Soups &amp; salads — <strong>$14–$20</strong>: Carabaccia Tuscan onion soup ($14), gem lettuce Caesar ($18), burrata salad ($20), Torali arugula salad ($18).</li>
+      </ul>
+
+      <h2>House-made pastas</h2>
+      <ul>
+        <li>Creamy pesto potato gnocchi — <strong>$28</strong>; whole wheat penne with lamb meatball — <strong>$30</strong>; spaghetti carbonara — <strong>$30</strong>; pappardelle Bolognese — <strong>$30</strong>.</li>
+        <li>Squid ink casarecce scampi — <strong>$32</strong>, the priciest pasta on the menu.</li>
+      </ul>
+
+      <h2>From the grill</h2>
+      <ul>
+        <li>Grilled Ora King salmon — <strong>$40</strong>; striped bass — <strong>$38</strong>.</li>
+        <li>Grilled beef tenderloin — <strong>$58</strong>; NY strip steak — <strong>$54</strong>; balsamic braised short rib — <strong>$48</strong>.</li>
+        <li>Berkshire pork chop — <strong>$44</strong>; Australian lamb chops — <strong>$38</strong>; chicken Marsala — <strong>$36</strong>.</li>
+      </ul>
+
+      <h2>Desserts</h2>
+      <ul>
+        <li>Strawberry ricotta cheesecake — <strong>$12</strong>; tiramisu crepe cake — <strong>$12</strong>; spumoni tartufo — <strong>$12</strong>.</li>
+        <li>Crostata al limone — <strong>$14</strong>; triple chocolate layer cake — <strong>$14</strong>; chocolate hazelnut budino — <strong>$14</strong>.</li>
+        <li>The pastry program has pedigree: executive pastry chef Toni Roberts is a Jean Banchet Award winner, per the restaurant's own description.</li>
+      </ul>
+
+      <h2>Breakfast &amp; lunch (refreshed-menu era)</h2>
+      <p>
+        These figures come from FSR magazine's ~mid-2026 report on the refreshed menus, not
+        the October 2026 dinner PDF:
+      </p>
+      <ul>
+        <li><strong>Breakfast:</strong> croissant French toast $28; truffled egg toast $28; smoked salmon Benedict $32; crab omelet with jumbo lump crab and Mornay $35; prime flat iron steak &amp; eggs $42.</li>
+        <li><strong>Lunch:</strong> fregola bowl $26; cacio e pepe $28; fish and chips $32; roasted Faroe Island salmon $42; Maine lobster roll $52; Westholme wagyu steak frites $59.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The signature order:</strong> the squid ink casarecce scampi ($32) — the most distinctive pasta on the menu.</li>
+        <li><strong>The steakhouse move:</strong> the grilled beef tenderloin ($58), or the NY strip ($54).</li>
+        <li><strong>To start:</strong> the burrata with jamón serrano ($22) — 2026 reviewers call the Di Stefano burrata "amazing."</li>
+        <li><strong>To finish:</strong> the tiramisu crepe cake ($12) or the triple chocolate layer cake ($14).</li>
+        <li><strong>For lunch:</strong> the Maine lobster roll ($52, FSR mid-2026) — the splurge play.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Three spaces in one:</strong> the dining room plus a bar, a rooftop lounge, and a greenhouse-inspired café — ask about the rooftop if the weather's right.</li>
+        <li><strong>Brunch and tea:</strong> the restaurant runs brunch with bottomless mimosas and occasional high-tea events (per 2026 guests), and takes Thanksgiving take-home pre-orders (per OpenTable Q&amp;A).</li>
+        <li><strong>An attentive room:</strong> in 2026, management (Leo Enriquez, Director of Food &amp; Beverage) personally responds to OpenTable reviews within days — a good sign of an alive, well-managed restaurant.</li>
+        <li><strong>No Michelin listing verified:</strong> we found no Michelin star or Michelin Guide listing for Torali as of October 2026 — we are not claiming one.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.toralichicago.com/" target="_blank" rel="noopener">Official restaurant page — toralichicago.com</a></li>
+        <li><a href="https://www.opentable.com/r/torali-ritz-carlton-chicago?originId=35fdcf1d-9b1b-4837-8577-039f75cf64c4&corrid=35fdcf1d-9b1b-4837-8577-039f75cf64c4&avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+        <li><a href="https://www.ritzcarlton.com/content/dam/marriott-digital/rz/us-canada/hws/c/chirz/en_us/document/assets/torali_dinner_menu.pdf" target="_blank" rel="noopener">Official dinner menu (PDF) — Ritz-Carlton</a></li>
+        <li><a href="https://www.ritzcarlton.com/content/dam/marriott-digital/rz/us-canada/hws/c/chirz/en_us/document/assets/torali_lunch_menu.pdf" target="_blank" rel="noopener">Official lunch menu (PDF) — Ritz-Carlton</a></li>
+        <li><a href="https://www.ritzcarlton.com/content/dam/marriott-digital/rz/us-canada/hws/c/chirz/en_us/document/assets/torali_breakfast_menu.pdf" target="_blank" rel="noopener">Official breakfast menu (PDF) — Ritz-Carlton</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Dinner prices above are from the <strong>official Ritz-Carlton dinner menu PDF,
+        fetched October 2026</strong>. Breakfast and lunch prices come from an FSR magazine
+        report on the refreshed menus (~mid-2026) and may have changed since. Menus and
+        prices change frequently; always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Chicago guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-illinois/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Illinois →</a></li>
+        <li><a href="/adorn-menu/" class="text-gold-dark font-semibold hover:underline">Adorn at Four Seasons</a> <span class="text-ink-soft">— refined hotel dining</span></li>
+        <li><a href="/shanghai-terrace-menu/" class="text-gold-dark font-semibold hover:underline">Shanghai Terrace at The Peninsula</a> <span class="text-ink-soft">— Cantonese</span></li>
+        <li><a href="/cindys-menu/" class="text-gold-dark font-semibold hover:underline">Cindy's</a> <span class="text-ink-soft">— rooftop at Chicago Athletic Association</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

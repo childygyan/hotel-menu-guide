@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Ives",
+  servesCuisine: ["American", "Prime Rib"],
+  priceRange: "$$$$",
+  url: "https://www.bokagrp.com/restaurants/the-ives",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "12 S Michigan Ave",
+    addressLocality: "Chicago",
+    addressRegion: "IL",
+    postalCode: "60603",
+    addressCountry: "US",
+  },
+  description:
+    "The Ives — Boka Restaurant Group's modern grill room and supper club at the Chicago Athletic Association hotel, chef-partner Chris Pandel, opened May 19, 2026.",
+};
+---
+
+<BaseLayout
+  title="The Ives Menu Guide (2026) — Prices, Modern Supper Club, What to Order | Hotel Menu Guide"
+  description="An independent guide to The Ives, Boka's modern grill room at the Chicago Athletic Association hotel: tableside wagyu prime rib price, relish cart, hours, and visiting tips. Price figures from an August 2026 diner review and May 2026 press."
+  path="/the-ives-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/the-ives-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/the-ives-dining.webp"
+      alt="Illustration of a moody modern grill room with dark wood and brass lighting (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Chicago
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Ives — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Ives is a modern grill room — a self-described "modern version of the classic
+      supper club" — inside the historic Chicago Athletic Association hotel (12 S Michigan
+      Ave). It <strong>opened May 19, 2026 in the space formerly occupied by the Cherry
+      Circle Room</strong> (now closed), and is Boka Restaurant Group's second concept at
+      the hotel since Boka took over the hotel's food &amp; beverage in March 2025 (NRN,
+      May 2026). Chef-partner Chris Pandel runs the kitchen. One honesty note up front:
+      there is <strong>no official online menu with prices</strong>, so this guide labels
+      every figure by its source. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">12 S Michigan Ave, Chicago, IL 60603 (Chicago Athletic Association hotel, Loop)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Chef-partner Chris Pandel (OpenTable 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">American / prime rib / modern supper club</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$50 and over (OpenTable 2026); wagyu prime rib menu said $82 / bill was $84</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable (4.5 rating, 56 reviews as of late Sep 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Awards</dt><dd class="text-ink-soft">None verified — opened May 2026, too new</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per OpenTable (2026) and Chicago Magazine (May 2026): <strong>dinner only —
+        Monday–Thursday 5:00–10:00 PM; Friday–Saturday 5:00–11:00 PM; closed
+        Sunday</strong>. Dress code: Smart Casual. Private events: TheIvesEvents@caa.bokagrp.com.
+      </p>
+
+      <h2>The signature: tableside wagyu prime rib</h2>
+      <p>
+        The centerpiece of the room is <strong>wagyu prime rib carved tableside</strong> —
+        A4 wagyu, cured for days, slow-cooked with a peppercorn crust, served with a jus
+        seasoned with star anise, cinnamon, and chiles (Chicago Magazine, May 2026). Price:
+        <strong>the menu said $82; an OpenTable reviewer dined August 29, 2026 reported a
+        bill of $84</strong>. The same reviewer notes sides are extra — "forcing patrons
+        to buy side dishes" — with the potato side at $14 and wilted greens at $12, and a
+        4% surcharge on the bill (one reviewer's report, not stated official policy).
+      </p>
+
+      <h2>The roving carts</h2>
+      <ul>
+        <li><strong>Relish cart — $38 per person</strong> (NRN, May 2026): a roving cart of rotating small bites — mini sandwiches, deviled eggs, spring onion tea sandwiches, chicken liver mousse.</li>
+        <li><strong>Champagne cart and chocolate trolley</strong> also work the room; the chocolate trolley is finished by executive pastry chef Kristine Antonian (NRN / OpenTable blog, May–Aug 2026).</li>
+        <li><strong>Baked Alaska flamed tableside</strong> and <strong>chocolate toast</strong> — crispy bread with chocolate shaved tableside (Chicago Magazine, May 2026; OpenTable blog).</li>
+        <li>Other desserts (no prices): key lime tart, banana crème brûlée.</li>
+      </ul>
+
+      <h2>The rest of the menu</h2>
+      <ul>
+        <li><strong>Starters</strong> (no prices): beef tartare with celery and mustard; baked Jonah crab dip with artichoke and potato chips; "1909 salad" with frisée, cress, and deviled ham.</li>
+        <li><strong>Mains</strong> (no prices): burger; French dip; roast half chicken; pork chop schnitzel with dill, caper, and horseradish; strip steak with black truffle jus; filet mignon au poivre.</li>
+        <li><strong>Bar snacks</strong>: crispy smelts with tartar sauce, smoked whitefish dip, housemade ranch crudités, housemade chicken nuggets (Chicago Magazine, May 2026).</li>
+        <li><strong>Cocktails</strong>: Old Fashioned, Hemingway Daiquiri, New York Sour, Dirty Martini; beverage manager Javaughn Marshall (NRN, May 2026).</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The whole point of the room:</strong> the tableside wagyu prime rib (~$82–84 per the August 2026 report) — the signature.</li>
+        <li><strong>The supper-club experience:</strong> the $38-per-person relish cart (NRN, May 2026) for the roaming-bite ritual.</li>
+        <li><strong>To finish:</strong> the tableside-flamed baked Alaska or the chocolate toast.</li>
+        <li><strong>To drink:</strong> a Hemingway Daiquiri or a Dirty Martini — the supper-club move.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Dinner only, closed Sunday</strong> — plan around that.</li>
+        <li><strong>Budget for the theater:</strong> the experience pricing (relish cart, tableside prime rib, surcharge reported by one diner) stacks up — OpenTable's "$50 and over" band is the floor, not the ceiling.</li>
+        <li><strong>Same bones, new green:</strong> Boka kept the room's iconic giant wrap-around bar and architectural bones — more green accents, less carpet — a nod of continuity to the Cherry Circle Room era (Chicago Magazine, May 2026).</li>
+        <li><strong>The name:</strong> "The Ives" honors Henry Ives Cobb, the original architect of the 1893 Chicago Athletic Association building (official bokagrp.com page, 2026).</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.bokagrp.com/restaurants/the-ives" target="_blank" rel="noopener">Official restaurant page — Boka Restaurant Group</a></li>
+        <li><a href="https://www.opentable.com/r/the-ives-boka-chicago" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The Ives <strong>publishes no official online menu with prices</strong>. The wagyu
+        prime rib and side figures come from an <strong>OpenTable diner review (dined
+        August 29, 2026)</strong>; the $38 relish cart comes from <strong>Nation's
+        Restaurant News (May 2026)</strong>. These are reported figures, not official
+        prices — always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Chicago guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-illinois/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Illinois →</a></li>
+        <li><a href="/cindys-menu/" class="text-gold-dark font-semibold hover:underline">Cindy's</a> <span class="text-ink-soft">— rooftop in the same hotel</span></li>
+        <li><a href="/torali-menu/" class="text-gold-dark font-semibold hover:underline">Torali</a> <span class="text-ink-soft">— Italian-steakhouse at The Ritz-Carlton</span></li>
+        <li><a href="/adorn-menu/" class="text-gold-dark font-semibold hover:underline">Adorn at Four Seasons</a> <span class="text-ink-soft">— refined hotel dining</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

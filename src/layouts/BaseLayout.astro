@@ -19,6 +19,7 @@ const states = [
   { label: "Ohio", href: "/best-hotel-restaurants-ohio/" },
   { label: "California", href: "/best-hotel-restaurants-california/" },
   { label: "Nevada", href: "/best-hotel-restaurants-nevada/" },
+  { label: "Illinois", href: "/best-hotel-restaurants-illinois/" },
 ];
 
 // Individual hotel-restaurant guides, grouped by state. Add a new
@@ -71,6 +72,17 @@ const restaurants = [
       { label: "Jean Georges Steakhouse", href: "/jean-georges-steakhouse-menu/" },
     ],
   },
+  {
+    state: "Illinois",
+    guides: [
+      { label: "Shanghai Terrace", href: "/shanghai-terrace-menu/" },
+      { label: "Travelle", href: "/travelle-menu/" },
+      { label: "Adorn", href: "/adorn-menu/" },
+      { label: "Torali", href: "/torali-menu/" },
+      { label: "Cindy's", href: "/cindys-menu/" },
+      { label: "The Ives", href: "/the-ives-menu/" },
+    ],
+  },
 ];
 ---
 
@@ -81,6 +93,7 @@ const restaurants = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />
@@ -282,7 +295,7 @@ const restaurants = [
             <p class="font-display text-xl font-bold">Hotel Menu <span class="text-gold">Guide</span></p>
             <p class="mt-3 text-sm text-cream/70 leading-relaxed">
               Independent, original guides to the menus of the most famous hotel restaurants
-              in New York, Ohio, California, and Nevada. Prices reported as of 2026 — always verify with the
+              in New York, Ohio, California, Nevada, and Illinois. Prices reported as of 2026 — always verify with the
               restaurant before visiting.
             </p>
           </div>
@@ -320,6 +333,13 @@ const restaurants = [
               <li><a href="/nobu-menu/" class="hover:text-gold transition-colors">Nobu — Menu Guide</a></li>
               <li><a href="/carbone-menu/" class="hover:text-gold transition-colors">Carbone — Menu Guide</a></li>
               <li><a href="/jean-georges-steakhouse-menu/" class="hover:text-gold transition-colors">Jean Georges Steakhouse — Menu Guide</a></li>
+              <li><a href="/best-hotel-restaurants-illinois/" class="hover:text-gold transition-colors">Best Hotel Restaurants in Illinois</a></li>
+              <li><a href="/shanghai-terrace-menu/" class="hover:text-gold transition-colors">Shanghai Terrace — Menu Guide</a></li>
+              <li><a href="/travelle-menu/" class="hover:text-gold transition-colors">Travelle — Menu Guide</a></li>
+              <li><a href="/adorn-menu/" class="hover:text-gold transition-colors">Adorn — Menu Guide</a></li>
+              <li><a href="/torali-menu/" class="hover:text-gold transition-colors">Torali — Menu Guide</a></li>
+              <li><a href="/cindys-menu/" class="hover:text-gold transition-colors">Cindy's — Menu Guide</a></li>
+              <li><a href="/the-ives-menu/" class="hover:text-gold transition-colors">The Ives — Menu Guide</a></li>
             </ul>
           </div>
           <div>
