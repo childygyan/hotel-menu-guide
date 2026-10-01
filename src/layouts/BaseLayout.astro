@@ -10,6 +10,14 @@ interface Props {
 const { title, description, path = "/", jsonLd, ogImage = "/images/hero-home.webp" } = Astro.props;
 const site = "https://hotel-menu-guide.pages.dev";
 const canonical = new URL(path, site).toString();
+
+// States with hotel-restaurant coverage. Add a new { label, href } entry
+// here and it appears in the desktop dropdown, the mobile menu, and (via
+// the pillar pages) the /states/ index — no other changes needed.
+const states = [
+  { label: "New York", href: "/best-hotel-restaurants-nyc/" },
+  { label: "Ohio", href: "/best-hotel-restaurants-ohio/" },
+];
 ---
 
 <!doctype html>
@@ -43,6 +51,50 @@ const canonical = new URL(path, site).toString();
           <li><a href="/" class="hover:text-gold-dark transition-colors">Home</a></li>
           <li><a href="/the-mark-menu/" class="hover:text-gold-dark transition-colors">The Mark</a></li>
           <li><a href="/plaza-palm-court-menu/" class="hover:text-gold-dark transition-colors">Palm Court</a></li>
+          <li class="relative" data-dropdown>
+            <button
+              type="button"
+              data-dropdown-button
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="states-menu-desktop"
+              class="inline-flex items-center gap-1 hover:text-gold-dark transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark rounded-sm cursor-pointer"
+            >
+              States
+              <svg data-dropdown-chevron class="w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6l4 4 4-4" />
+              </svg>
+            </button>
+            <ul
+              id="states-menu-desktop"
+              data-dropdown-menu
+              role="menu"
+              aria-label="States"
+              hidden
+              class="absolute left-0 top-full mt-2 w-60 rounded-xl border border-line bg-white py-2 shadow-lg"
+            >
+              {states.map((s) => (
+                <li role="none">
+                  <a
+                    role="menuitem"
+                    href={s.href}
+                    class="block px-4 py-2 text-sm text-ink-soft hover:bg-parchment hover:text-gold-dark focus-visible:outline-2 focus-visible:outline-gold-dark"
+                  >
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+              <li role="none" class="mt-1 border-t border-line pt-1">
+                <a
+                  role="menuitem"
+                  href="/states/"
+                  class="block px-4 py-2 text-sm font-semibold text-gold-dark hover:bg-parchment focus-visible:outline-2 focus-visible:outline-gold-dark"
+                >
+                  All states →
+                </a>
+              </li>
+            </ul>
+          </li>
           <li><a href="/about/" class="hover:text-gold-dark transition-colors">About</a></li>
           <li><a href="/contact/" class="hover:text-gold-dark transition-colors">Contact</a></li>
         </ul>
@@ -50,14 +102,45 @@ const canonical = new URL(path, site).toString();
           Guides
         </a>
       </nav>
-      <nav class="md:hidden border-t border-line" aria-label="Mobile navigation">
+      <nav class="md:hidden border-t border-line" aria-label="Mobile navigation" data-dropdown>
         <ul class="max-w-5xl mx-auto px-4 py-2.5 flex gap-5 text-sm text-ink-soft overflow-x-auto whitespace-nowrap">
           <li><a href="/" class="hover:text-gold-dark">Home</a></li>
+          <li>
+            <button
+              type="button"
+              data-dropdown-button
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="states-menu-mobile"
+              class="inline-flex items-center gap-1 hover:text-gold-dark focus-visible:outline-2 focus-visible:outline-gold-dark rounded-sm cursor-pointer"
+            >
+              States
+              <svg data-dropdown-chevron class="w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6l4 4 4-4" />
+              </svg>
+            </button>
+          </li>
           <li><a href="/the-mark-menu/" class="hover:text-gold-dark">The Mark</a></li>
           <li><a href="/plaza-palm-court-menu/" class="hover:text-gold-dark">Palm Court</a></li>
           <li><a href="/about/" class="hover:text-gold-dark">About</a></li>
           <li><a href="/contact/" class="hover:text-gold-dark">Contact</a></li>
         </ul>
+        <div id="states-menu-mobile" data-dropdown-menu hidden class="border-t border-line bg-white">
+          <ul class="max-w-5xl mx-auto px-4 py-2 text-sm" aria-label="States">
+            {states.map((s) => (
+              <li>
+                <a href={s.href} class="block py-2.5 text-ink-soft hover:text-gold-dark border-b border-line/60 last:border-0">
+                  {s.label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="/states/" class="block py-2.5 font-semibold text-gold-dark">
+                All states →
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -79,6 +162,7 @@ const canonical = new URL(path, site).toString();
           <div>
             <p class="text-sm font-semibold uppercase tracking-wider text-gold mb-4">Guides</p>
             <ul class="space-y-2 text-sm text-cream/80">
+              <li><a href="/states/" class="hover:text-gold transition-colors">Browse Guides by State</a></li>
               <li><a href="/best-hotel-restaurants-nyc/" class="hover:text-gold transition-colors">Best Hotel Restaurants in NYC</a></li>
               <li><a href="/the-mark-menu/" class="hover:text-gold transition-colors">The Mark Restaurant — Menu Guide</a></li>
               <li><a href="/plaza-palm-court-menu/" class="hover:text-gold transition-colors">The Palm Court Afternoon Tea — Guide</a></li>
@@ -113,5 +197,63 @@ const canonical = new URL(path, site).toString();
         </div>
       </div>
     </footer>
+
+    <script>
+      // States dropdowns (desktop + mobile): click to toggle, Escape closes,
+      // outside click closes, focus leaving the dropdown closes it.
+      (function () {
+        var dropdowns = document.querySelectorAll("[data-dropdown]");
+
+        function setOpen(dropdown, open) {
+          var button = dropdown.querySelector("[data-dropdown-button]");
+          var menu = dropdown.querySelector("[data-dropdown-menu]");
+          var chevron = dropdown.querySelector("[data-dropdown-chevron]");
+          if (!button || !menu) return;
+          menu.hidden = !open;
+          button.setAttribute("aria-expanded", open ? "true" : "false");
+          if (chevron) chevron.classList.toggle("rotate-180", open);
+        }
+
+        function closeAll() {
+          dropdowns.forEach(function (d) {
+            setOpen(d, false);
+          });
+        }
+
+        dropdowns.forEach(function (dropdown) {
+          var button = dropdown.querySelector("[data-dropdown-button]");
+          var menu = dropdown.querySelector("[data-dropdown-menu]");
+          if (!button || !menu) return;
+
+          button.addEventListener("click", function (e) {
+            e.stopPropagation();
+            var willOpen = menu.hidden;
+            closeAll();
+            setOpen(dropdown, willOpen);
+          });
+
+          dropdown.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+              setOpen(dropdown, false);
+              button.focus();
+            }
+          });
+
+          dropdown.addEventListener("focusout", function (e) {
+            if (!dropdown.contains(e.relatedTarget)) setOpen(dropdown, false);
+          });
+        });
+
+        document.addEventListener("click", function (e) {
+          dropdowns.forEach(function (d) {
+            if (!d.contains(e.target)) setOpen(d, false);
+          });
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeAll();
+        });
+      })();
+    </script>
   </body>
 </html>

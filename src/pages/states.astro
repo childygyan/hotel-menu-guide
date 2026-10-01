@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Hotel Restaurant Guides by State",
+  description:
+    "Original guides to famous hotel restaurant menus, organized by US state.",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "New York",
+      url: "https://hotel-menu-guide.pages.dev/best-hotel-restaurants-nyc/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Ohio",
+      url: "https://hotel-menu-guide.pages.dev/best-hotel-restaurants-ohio/",
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Browse Hotel Restaurant Guides by State"
+  description="Browse our original hotel restaurant menu guides by US state. New York and Ohio covered so far — more states on the way."
+  path="/states/"
+  jsonLd={jsonLd}
+  ogImage="/images/hero-home.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Browse by State
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Hotel Restaurant Guides by State
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Pick a state to see every hotel restaurant we've covered there — each guide walks
+      through the menu in our own words, with reported prices, what we'd order, and
+      practical advice for planning your visit. Prices are reported figures, not copies
+      of restaurant menus, and we always recommend confirming current prices with the
+      restaurant itself.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      <a
+        href="/best-hotel-restaurants-nyc/"
+        class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <img
+          src="/images/hero-home.webp"
+          alt="Illustration of an elegant New York hotel dining room at dusk"
+          class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">8 guides</p>
+          <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+            New York
+          </h2>
+          <p class="mt-3 text-ink-soft text-sm leading-relaxed">
+            New York is where this project started — the city with the most famous hotel
+            dining rooms in America, from the Upper East Side's clubby institutions to
+            downtown's design hotels. Our eight guides cover The Mark, the Palm Court,
+            King Cole Bar, Café Carlyle, and more.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Explore New York →</span>
+        </div>
+      </a>
+
+      <a
+        href="/best-hotel-restaurants-ohio/"
+        class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <img
+          src="/images/ohio-hotel-dining.webp"
+          alt="Illustration of a grand Ohio hotel dining room"
+          class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">6 guides</p>
+          <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+            Ohio
+          </h2>
+          <p class="mt-3 text-ink-soft text-sm leading-relaxed">
+            Ohio's hotel dining scene punches above its weight, from Cincinnati's
+            art-filled 21c Museum Hotel to Cleveland's grand downtown dining rooms and
+            Columbus's chef-driven kitchens. Our six guides span the state's three
+            big cities, with menus, prices, and reservation tips.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Explore Ohio →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More states coming</h2>
+      <p class="mt-2 text-ink-soft text-sm leading-relaxed">
+        We're expanding state by state, starting with the cities whose hotel restaurants
+        people actually search for. If there's a hotel dining room you think we should
+        cover next, <a href="/contact/" class="text-gold-dark font-semibold hover:underline">let us know</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>
