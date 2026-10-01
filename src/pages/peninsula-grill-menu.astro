@@ -1,0 +1,165 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Peninsula Grill",
+  servesCuisine: ["Modern American", "Lowcountry"],
+  priceRange: "$$$$",
+  telephone: "+1-843-723-0700",
+  url: "https://peninsulagrill.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "112 North Market Street",
+    addressLocality: "Charleston",
+    addressRegion: "SC",
+    postalCode: "29401",
+    addressCountry: "US",
+  },
+  description:
+    "Peninsula Grill at Planters Inn, Charleston — the Lowcountry fine-dining landmark famous for its 12-layer Ultimate Coconut Cake. TEMPORARILY CLOSED since August 31, 2026 for a property-wide renovation; reopening expected fall 2026.",
+};
+---
+
+<BaseLayout
+  title="Peninsula Grill Menu Guide (2026) — Planters Inn, Charleston | Hotel Menu Guide"
+  description="An independent guide to Peninsula Grill at Planters Inn, Charleston: temporarily closed since Aug 31, 2026 for renovation (reopening fall 2026); signature dishes, pre-renovation era prices, and official links."
+  path="/peninsula-grill-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/peninsula-grill-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/peninsula-grill-dining.webp"
+      alt="Illustration of an elegant historic Charleston courtyard restaurant with gas lanterns and candlelit tables at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <!-- Temporary closure notice -->
+    <div class="mt-8 rounded-2xl border-2 border-gold bg-gold/10 p-6 sm:p-8">
+      <p class="text-xs font-bold uppercase tracking-widest text-gold-dark">
+        ⚠️ Temporary closure notice
+      </p>
+      <h2 class="!mt-2 font-display text-2xl font-bold">
+        Closed since August 31, 2026 — reopening fall 2026
+      </h2>
+      <p class="mt-3 text-ink-soft leading-relaxed">
+        Peninsula Grill is <strong>temporarily closed for a renovation</strong> while
+        Planters Inn undergoes a property-wide refresh (the hotel's first in
+        decades). The restaurant's own site says it looks forward to "welcoming
+        guests back <strong>this fall</strong>" — no exact reopening date has been
+        published. This is <strong>not a permanent closure</strong>: executive chef
+        John Ondo continues leading the culinary program. <strong>Do not plan a
+        visit until the reopening is announced</strong> — check peninsulagrill.com
+        for the latest. Everything below describes the pre-renovation era, and
+        prices may change when the doors reopen.
+      </p>
+    </div>
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Charleston, SC
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Peninsula Grill — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Peninsula Grill is the fine-dining landmark of <strong>Planters Inn</strong> at
+      112 North Market Street — modern American cooking with Lowcountry roots, a
+      celebrated Champagne Bar, and the most famous dessert in Charleston: the
+      12-layer <strong>Ultimate Coconut Cake</strong>. The honest headline first:
+      <strong>prices below are pre-renovation era figures</strong> — the restaurant
+      published no dedicated menu page, and the fall 2026 reopening may bring a new
+      menu and new prices. Everything is written in our own words, dated honestly.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">112 N Market St, Charleston, SC 29401 (Planters Inn)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef John Ondo</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern American / Lowcountry fine dining</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — OpenTable band $50+ per person (pre-renovation era)</dd></div>
+        <div><dt class="font-semibold text-ink">Status</dt><dd class="text-ink-soft">Temporarily closed since Aug 31, 2026; reopening expected fall 2026</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">AAA Four Diamond per the restaurant's own site; OpenTable Icon 2025 &amp; 2026</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours (pre-closure era)</h2>
+      <p>
+        Per the official reservations page before the closure:
+        <strong>Champagne Bar 5:30–10:00 PM; dining room 5:30–9:00 PM daily</strong>,
+        business-casual attire. These will likely be revisited when the restaurant
+        reopens — confirm on peninsulagrill.com before planning anything.
+      </p>
+
+      <h2>Signature dishes (pre-renovation era)</h2>
+      <ul>
+        <li><strong>Ultimate Coconut Cake</strong>: the 12-layer icon — the dessert the restaurant is famous for.</li>
+        <li><strong>Crackling Crusted Scallops</strong>: a longtime signature starter.</li>
+        <li><strong>16 oz Rib-Eye</strong>: the steakhouse-leaning centerpiece.</li>
+        <li><strong>Opulent Spud</strong>: the caviar-and-gold-leaf loaded potato, per OpenTable editors.</li>
+        <li><strong>She Crab Soup</strong>: reviewers call it among the best in the city.</li>
+        <li><strong>Champagne Bar bites</strong>: oysters, lobster, foie gras, caviar, and duck pâté.</li>
+      </ul>
+
+      <h2>The only price figures available (pre-renovation era)</h2>
+      <p>
+        These are the reported figures from before the closure — treat them as
+        history, not a current menu:
+      </p>
+      <ul>
+        <li><strong>Ultimate Coconut Cake — $18/slice</strong>: third-party diner report, 2025 era (older eras: $15, ~2023; $10, era uncertain).</li>
+        <li><strong>Seared foie gras $25; lobster tail add-on $35</strong>: third-party, ~2023 era.</li>
+        <li><strong>Sides $10; desserts $15</strong>: third-party, ~2023 era.</li>
+      </ul>
+
+      <h2>Planning your visit — when it reopens</h2>
+      <ul>
+        <li><strong>Wait for the announcement:</strong> no exact reopening date is published; monitor peninsulagrill.com.</li>
+        <li><strong>Expect changes:</strong> the refreshed interiors may come with a refreshed menu and new prices — don't anchor on the old figures.</li>
+        <li><strong>The cake:</strong> the 12-layer Ultimate Coconut Cake has defined this restaurant for years; it would be the first thing we'd order back.</li>
+        <li><strong>Phone:</strong> 843-723-0700 for reservations once bookings reopen.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://peninsulagrill.com/" target="_blank" rel="noopener">Official restaurant site — Peninsula Grill</a></li>
+        <li><a href="https://peninsulagrill.com/reservations/" target="_blank" rel="noopener">Official reservations page</a> (temporarily closed as of this writing)</li>
+        <li><a href="https://www.opentable.com/peninsula-grill" target="_blank" rel="noopener">OpenTable listing</a> (currently titled "Temporarily Closed")</li>
+        <li><a href="https://plantersinn.com" target="_blank" rel="noopener">Official hotel site — Planters Inn</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Peninsula Grill published <strong>no dedicated online menu page with
+        prices</strong>. Every figure here is a <strong>pre-renovation era</strong>
+        third-party report (2023–2025 era) — the fall 2026 reopening may bring
+        different dishes and prices. Said plainly, not guessed. Always verify with
+        the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More South Carolina guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-south-carolina/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in South Carolina →</a></li>
+        <li><a href="/palmetto-cafe-menu/" class="text-gold-dark font-semibold hover:underline">The Palmetto Cafe</a> <span class="text-ink-soft">— Lowcountry dining at The Charleston Place</span></li>
+        <li><a href="/circa-1886-menu/" class="text-gold-dark font-semibold hover:underline">Circa 1886</a> <span class="text-ink-soft">— tasting-menu fine dining at Wentworth Mansion</span></li>
+        <li><a href="/iron-rose-menu/" class="text-gold-dark font-semibold hover:underline">Iron Rose</a> <span class="text-ink-soft">— Southern coastal at Mills House</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

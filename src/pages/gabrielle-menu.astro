@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Gabrielle",
+  servesCuisine: ["Southern", "American"],
+  priceRange: "$$$$",
+  telephone: "+1-843-990-5460",
+  url: "https://hotelbennett.com/dining-and-lounges/gabrielle",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "404 King Street",
+    addressLocality: "Charleston",
+    addressRegion: "SC",
+    postalCode: "29403",
+    addressCountry: "US",
+  },
+  description:
+    "Gabrielle at Hotel Bennett, Charleston — executive chef Edgar Kano's \"Stylishly Southern\" restaurant opening onto Marion Square, serving breakfast, lunch, dinner, and weekend brunch.",
+};
+---
+
+<BaseLayout
+  title="Gabrielle Menu Guide (2026) — Hotel Bennett, Charleston | Hotel Menu Guide"
+  description="An independent guide to Gabrielle at Hotel Bennett, Charleston: hours, signature dishes, official menu prices (Feb 2024 era), and reservations."
+  path="/gabrielle-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/gabrielle-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/gabrielle-dining.webp"
+      alt="Illustration of a chic French brasserie dining room with rattan chairs, marble tables and tall windows in daylight (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Charleston, SC
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Gabrielle — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Gabrielle is the flagship restaurant of <strong>Hotel Bennett</strong> at 404
+      King Street — the hotel's own term for the cooking is <strong>"Stylishly
+      Southern,"</strong> and the restaurant claims the distinction of being
+      Charleston's only restaurant opening directly onto Marion Square. Executive
+      chef <strong>Edgar Kano</strong> leads the kitchen (with pastry chef Rémy
+      Fünfrock), serving breakfast, lunch, dinner, and weekend brunch. Unlike most
+      of its peers, Gabrielle's official menu PDFs carry real prices — but note the
+      era: the latest official dinner menu is <strong>February 2024</strong>, so call
+      ahead to confirm. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">404 King St, Charleston, SC 29403 (Hotel Bennett, on Marion Square)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Edgar Kano; pastry chef Rémy Fünfrock</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">"Stylishly Southern" (hotel's own term)</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — official Feb 2024 dinner PDF: steaks $58–$70</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Resy (bookable) or 843-990-5460</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">2024 OpenTable Diners' Choice (per Charleston Living Magazine)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official Hotel Bennett dining page, crawled ~Sep 2026:
+        <strong>breakfast daily 7:00–10:30 AM; lunch daily 11:30 AM–3:00 PM;
+        dinner daily 5:00–10:00 PM; brunch Saturday–Sunday 11:30 AM–3:00 PM.</strong>
+        The lounge and plaza run Sun–Thu 11 AM–11 PM and Fri–Sat 11 AM–midnight,
+        with live music Friday–Saturday 6–9 PM.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The press-verified signatures:
+      </p>
+      <ul>
+        <li><strong>Bigeye tuna tiradito</strong>: with kombu-chile ponzu.</li>
+        <li><strong>King's Tower</strong>: the seafood tower — $200 on the official breakfast-era menu.</li>
+        <li><strong>Hotel Bennett Royal Ossetra caviar</strong>: 30g $100 / 50g $160 (official menu).</li>
+        <li><strong>Eggs Bennett</strong>: $39 — the namesake breakfast plate.</li>
+        <li><strong>Seared golden tilefish</strong>: in lemon beurre blanc (Charleston Magazine).</li>
+        <li><strong>She-crab soup</strong> and <strong>mushroom pasta</strong>: the Southern comfort anchors.</li>
+      </ul>
+
+      <h2>Official prices (February 2024 era)</h2>
+      <p>
+        These are the restaurant's own figures from its official menu PDFs —
+        <strong>February 2024 era, not 2026</strong>. Confirm current pricing before
+        visiting:
+      </p>
+      <ul>
+        <li><strong>Dinner:</strong> 16oz boneless ribeye $70; 8oz filet mignon $62; 14oz veal chop $62; red wine braised short ribs $58.</li>
+        <li><strong>Breakfast:</strong> Eggs Bennett $39; avocado toast $24; buttermilk waffle $19; brioche French toast $19; Bennett Continental $20.</li>
+        <li><strong>From the Oct 2023 dinner menu:</strong> citrus-crusted Maine scallops $42; Pommery-crusted Australian rack of lamb $55; sides $12–14.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the bigeye tuna tiradito — it's the dish the press keeps naming.</li>
+        <li><strong>The splurge:</strong> the King's Tower or the ossetra caviar for the full Marion Square occasion.</li>
+        <li><strong>The steak play:</strong> the 16oz ribeye (reported $70, Feb 2024 era).</li>
+        <li><strong>Brunch:</strong> the Eggs Bennett — it's the namesake for a reason.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book on Resy</strong> — the venue page is live and bookable — or call 843-990-5460.</li>
+        <li><strong>Prices are 2024-era:</strong> the official menu PDFs date to February 2024; ask about current pricing when you book.</li>
+        <li><strong>Marion Square:</strong> the hotel's own claim is that Gabrielle is the only restaurant opening onto the square — ask for a square-facing table.</li>
+        <li><strong>Weekend brunch</strong> runs 11:30 AM–3:00 PM Saturday and Sunday.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://hotelbennett.com/dining-and-lounges/gabrielle" target="_blank" rel="noopener">Official restaurant page — Gabrielle at Hotel Bennett</a> (hours, events)</li>
+        <li><a href="https://resy.com/cities/charleston-sc/venues/gabrielle-at-hotel-bennett" target="_blank" rel="noopener">Reservations on Resy</a> (bookable; or call 843-990-5460)</li>
+        <li><a href="https://www.hotelbennett.com/pdf/Gab Dinner 2.24.pdf" target="_blank" rel="noopener">Official dinner menu (PDF, Feb 2024 era)</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The figures above are <strong>official — but February 2024 era</strong>,
+        from the restaurant's own menu PDFs hosted on hotelbennett.com. They are
+        the latest official published prices we could verify, but they are not
+        2026 prices. Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More South Carolina guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-south-carolina/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in South Carolina →</a></li>
+        <li><a href="/iron-rose-menu/" class="text-gold-dark font-semibold hover:underline">Iron Rose</a> <span class="text-ink-soft">— Southern coastal at Mills House</span></li>
+        <li><a href="/frannie-and-the-fox-menu/" class="text-gold-dark font-semibold hover:underline">Frannie &amp; The Fox</a> <span class="text-ink-soft">— wood-fired Italian at The Emeline</span></li>
+        <li><a href="/palmetto-cafe-menu/" class="text-gold-dark font-semibold hover:underline">The Palmetto Cafe</a> <span class="text-ink-soft">— Lowcountry dining at The Charleston Place</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

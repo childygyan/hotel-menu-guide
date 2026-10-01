@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Circa 1886",
+  servesCuisine: ["Contemporary Lowcountry", "Southern"],
+  priceRange: "$$$$",
+  telephone: "+1-843-853-7828",
+  url: "http://circa1886.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "149 Wentworth Street",
+    addressLocality: "Charleston",
+    addressRegion: "SC",
+    postalCode: "29401",
+    addressCountry: "US",
+  },
+  description:
+    "Circa 1886 at Wentworth Mansion, Charleston — executive chef Marc Collins' tasting-menu dining room in the mansion's original carriage house, with Ashley and Cooper six-course menus.",
+};
+---
+
+<BaseLayout
+  title="Circa 1886 Menu Guide (2026) — Wentworth Mansion, Charleston | Hotel Menu Guide"
+  description="An independent guide to Circa 1886 at Wentworth Mansion, Charleston: the Ashley and Cooper tasting menus, hours, and the honest story on prices (no official itemized prices published)."
+  path="/circa-1886-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/circa-1886-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/circa-1886-dining.webp"
+      alt="Illustration of a Victorian mansion fine-dining room with dark wood paneling, chandelier and candlelight at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Charleston, SC
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Circa 1886 — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Circa 1886 is the fine-dining restaurant of <strong>Wentworth Mansion</strong>,
+      set in the mansion's original carriage house at 149 Wentworth Street. Under
+      the continuous leadership of executive chef <strong>Marc Collins</strong> since
+      2001, it serves a refined interpretation of Lowcountry cuisine built around
+      two six-course tasting menus — the <strong>Ashley</strong> and the
+      <strong>Cooper</strong> — alongside an à la carte list and seasonal showpieces
+      like the seasonal soufflé and the chocolate "Old Fashioned." The honest
+      headline first: <strong>the restaurant publishes no itemized online price
+      menu</strong> — the official site confirms the two tasting menus but not what
+      they cost — so every figure below is an era-dated third-party report.
+      Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">149 Wentworth St, Charleston, SC 29401 (Wentworth Mansion carriage house)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Marc Collins (since 2001); executive pastry chef Perla Anguiano</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary Lowcountry / refined Southern fine dining</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — tasting menus reported at $135/person (2025 era); no official prices published</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Resy (per third-party profiles) or phone — 843-853-7828</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">Forbes Four Star (2006–present) and AAA Four Diamond (2004–present) per third-party listings — not claimed on the restaurant's own site; see disclosure</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official site, fetched 2026-10-01:
+        <strong>Monday, Tuesday, Thursday–Saturday 5:00–9:00 PM; closed Wednesday
+        and Sunday.</strong> Tasting menus change seasonally.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <ul>
+        <li><strong>The Ashley and Cooper tasting menus</strong>: two six-course tasting lineups — the core of the restaurant.</li>
+        <li><strong>Seasonal soufflé</strong>: changes with the season, per the restaurant's own posts.</li>
+        <li><strong>Chocolate "Old Fashioned"</strong>: a 2026 dessert menu item.</li>
+        <li><strong>Smoked Storey Farms chicken</strong>: with potato pavé, parsley velouté, and blackberry gel (Cooper menu, 2026).</li>
+        <li><strong>Fried Poulet Rouge</strong>: with caviar and gold leaf (Ashley menu, per guest reports).</li>
+        <li><strong>Lobster brioche "roll"</strong>: with lobster bisque (Ashley menu, per guest reports).</li>
+        <li><strong>Chicken Fried Lobster</strong>: with white cheddar grits — an à la carte signature (third-party era menus, $33 reported).</li>
+      </ul>
+
+      <h2>The only price figures available</h2>
+      <p>
+        Circa 1886 publishes no prices on its official site. The reported figures:
+      </p>
+      <ul>
+        <li><strong>Tasting menus — $135 per person</strong>: third-party diner reports, 2025 era.</li>
+        <li><strong>Wine pairing — $90</strong>: third-party, 2025 era (tasting with wine ~$220–225/person total per ~2024-era guest reports).</li>
+        <li><strong>À la carte (third-party, era uncertain):</strong> appetizers $8–$13, mains $23–$35, desserts $10–$12.</li>
+      </ul>
+      <p>
+        Note: the official site confirms "two imaginative six-course tasting menus"
+        — older reviews referenced five courses, so the format has evolved.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The full experience:</strong> one of the two six-course tasting menus — it's the restaurant's reason for being.</li>
+        <li><strong>The pairing:</strong> add the wine pairing if it's a special night (reported $90, 2025 era).</li>
+        <li><strong>The sweet finish:</strong> whatever the seasonal soufflé is that night — it's a house tradition.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book ahead:</strong> this is a small, special-occasion room — reserve via Resy or call 843-853-7828.</li>
+        <li><strong>No public price list:</strong> since no itemized prices are published, ask about current tasting-menu pricing when you book.</li>
+        <li><strong>Closed Wed &amp; Sun</strong> — plan around it.</li>
+        <li><strong>Award disclosure:</strong> Forbes Four Star and AAA Four Diamond appear in third-party listings (e.g. americascuisine.com) but not on circa1886.com itself — we're reporting the sourcing honestly rather than presenting them as house claims.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="http://circa1886.com/" target="_blank" rel="noopener">Official restaurant site — Circa 1886</a></li>
+        <li><a href="https://wentworthmansion.com/hotel-amenities/" target="_blank" rel="noopener">Official hotel page — Wentworth Mansion amenities</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Circa 1886 publishes <strong>no itemized online price menu</strong> — said
+        plainly, not guessed. The $135 tasting menu and $90 wine pairing figures are
+        2025-era third-party diner reports, and à la carte figures are from
+        third-party menus of uncertain era. Always verify with the restaurant
+        before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More South Carolina guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-south-carolina/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in South Carolina →</a></li>
+        <li><a href="/peninsula-grill-menu/" class="text-gold-dark font-semibold hover:underline">Peninsula Grill</a> <span class="text-ink-soft">— Lowcountry fine dining at Planters Inn (temporarily closed for renovation)</span></li>
+        <li><a href="/palmetto-cafe-menu/" class="text-gold-dark font-semibold hover:underline">The Palmetto Cafe</a> <span class="text-ink-soft">— Lowcountry dining at The Charleston Place</span></li>
+        <li><a href="/gabrielle-menu/" class="text-gold-dark font-semibold hover:underline">Gabrielle</a> <span class="text-ink-soft">— "Stylishly Southern" at Hotel Bennett</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Frannie & The Fox",
+  servesCuisine: ["Italian"],
+  priceRange: "$$$",
+  telephone: "+1-843-577-2644",
+  url: "https://hotelemeline.com/frannie-and-the-fox",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "181 Church Street",
+    addressLocality: "Charleston",
+    addressRegion: "SC",
+    postalCode: "29401",
+    addressCountry: "US",
+  },
+  description:
+    "Frannie & The Fox at The Emeline, Charleston — a wood-fired Italian eatery from chef Tim Morton with a dog-friendly courtyard and The Den late-night concept. No official itemized price menu is published.",
+};
+---
+
+<BaseLayout
+  title="Frannie & The Fox Menu Guide (2026) — The Emeline, Charleston | Hotel Menu Guide"
+  description="An independent guide to Frannie & The Fox at The Emeline, Charleston: wood-fired Italian, hours, The Den late-night concept, and the honest story on prices (third-party reported figures only)."
+  path="/frannie-and-the-fox-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/frannie-and-the-fox-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/frannie-and-the-fox-dining.webp"
+      alt="Illustration of a rustic wood-fired Italian restaurant with an open hearth oven, terracotta tiles and warm firelight at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Charleston, SC
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Frannie &amp; The Fox — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Frannie &amp; The Fox is the wood-fired Italian eatery of <strong>The
+      Emeline</strong> at 181 Church Street — chef <strong>Tim Morton's</strong>
+      "Italian sensibilities" cooking with regional ingredients, served in one of
+      Charleston's most-loved hotel courtyards (dog-friendly, per the hotel).
+      There's also <strong>The Den</strong>, the campfire/wood-burning late-night
+      concept running Tuesday–Saturday. The honest headline first: <strong>the
+      restaurant publishes no itemized price menu on its official site</strong> —
+      every figure below is a third-party reported price (SinglePlatform
+      syndicated menu, crawled September 2026), labeled as such. Everything is
+      written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">181 Church St, Charleston, SC 29401 (The Emeline)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Tim Morton (most recent sources; executive chef of The Emeline)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Wood-fired Italian</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$ — third-party reported: pizzas $19–$35, salads $16–$18</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Resy (bookable, parties up to 13+) or 843-577-2644</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">None verified — an editorial Conde Nast Traveler mention, not an award</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official Emeline page, fetched 2026-10-01:
+        <strong>breakfast Mon–Fri 7–11 AM; brunch Sat–Sun 8 AM–2 PM; lunch Mon–Fri
+        11 AM–3 PM; dinner daily 5–10 PM</strong> (bar open until 11 PM Sun–Thu,
+        midnight Fri–Sat). <strong>Late night Fri–Sat 10–11 PM</strong> (caviar
+        bumps, salads, meatballs, Neapolitan and Roman pizzas). <strong>The Den:
+        Tue–Thu 5–11 PM, Fri–Sat 5 PM–midnight.</strong>
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The press- and review-verified signatures:
+      </p>
+      <ul>
+        <li><strong>Beef &amp; pork meatballs</strong>: with whipped ricotta ($20 reported).</li>
+        <li><strong>Taleggio pizza</strong>: with burnt honey and black pepper ($22 reported).</li>
+        <li><strong>Caviar pizza</strong>: hackleback caviar, smoked salmon, crème fraîche, and chive ($35 reported).</li>
+        <li><strong>Rigatoni with lamb ragù</strong>: the pasta anchor.</li>
+        <li><strong>Blue crab fritters</strong> and <strong>mozzarella plate</strong>: the starters to share.</li>
+        <li><strong>Roman pizza by the slice</strong>: $12 reported (toppings +$1–2).</li>
+        <li><strong>The Den:</strong> Fritto Misto, Granita Oyster, and caviar service — the late-night play.</li>
+      </ul>
+
+      <h2>Reported prices (third-party, September 2026)</h2>
+      <p>
+        From the SinglePlatform syndicated menu (third-party — <strong>not</strong>
+        the restaurant's own figures), crawled ~September 24, 2026:
+      </p>
+      <ul>
+        <li><strong>Pizzas:</strong> Margherita $19; pepperoni $21; Taleggio $22; caviar pizza $35; Roman slice $12.</li>
+        <li><strong>Salads &amp; starters:</strong> Caesar $16; Pizzaiolo chopped salad $18; meatballs $20.</li>
+        <li><strong>Desserts:</strong> olive oil cake $13; tiramisu to go $12; strawberry Nutella cannoli $5.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the meatballs with whipped ricotta — the dish reviewers name most.</li>
+        <li><strong>The pizza play:</strong> the Taleggio with burnt honey, or the caviar pizza for the occasion.</li>
+        <li><strong>The pasta:</strong> rigatoni with lamb ragù.</li>
+        <li><strong>Late night:</strong> come back Fri–Sat 10–11 PM for The Den's caviar bumps and Roman slices.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book on Resy</strong> — the official site says reservations are recommended — or call 843-577-2644.</li>
+        <li><strong>No public price list:</strong> since the official site publishes no prices, ask about current pricing when you book.</li>
+        <li><strong>Dog-friendly courtyard:</strong> one of the few fine-ish hotel courtyards where dogs are welcome.</li>
+        <li><strong>The Den</strong> runs Tue–Sat evenings — a separate late-night concept in the same building.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://hotelemeline.com/frannie-and-the-fox" target="_blank" rel="noopener">Official restaurant page — Frannie &amp; The Fox</a> (hours, The Den)</li>
+        <li><a href="https://resy.com/cities/charleston-sc/venues/frannie-and-the-fox" target="_blank" rel="noopener">Reservations on Resy</a> (bookable; or call 843-577-2644)</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Frannie &amp; The Fox publishes <strong>no itemized price menu on its
+        official site</strong> — said plainly, not guessed. Every figure here comes
+        from a <strong>third-party syndicated menu (SinglePlatform), crawled
+        September 2026</strong> — the restaurant's own numbers, not ours. Always
+        verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More South Carolina guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-south-carolina/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in South Carolina →</a></li>
+        <li><a href="/iron-rose-menu/" class="text-gold-dark font-semibold hover:underline">Iron Rose</a> <span class="text-ink-soft">— Southern coastal at Mills House</span></li>
+        <li><a href="/gabrielle-menu/" class="text-gold-dark font-semibold hover:underline">Gabrielle</a> <span class="text-ink-soft">— "Stylishly Southern" at Hotel Bennett</span></li>
+        <li><a href="/circa-1886-menu/" class="text-gold-dark font-semibold hover:underline">Circa 1886</a> <span class="text-ink-soft">— tasting-menu fine dining at Wentworth Mansion</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Iron Rose",
+  servesCuisine: ["Southern Coastal", "American"],
+  priceRange: "$$$",
+  telephone: "+1-843-805-1054",
+  url: "https://www.ironroserestaurant.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "115 Meeting Street",
+    addressLocality: "Charleston",
+    addressRegion: "SC",
+    postalCode: "29401",
+    addressCountry: "US",
+  },
+  description:
+    "Iron Rose at Mills House, Charleston — executive chef Suzy Castelloe's Southern coastal restaurant with a full official priced menu: dinner bites from $10, mains $18–$32, daily happy hour 4–6 PM.",
+};
+---
+
+<BaseLayout
+  title="Iron Rose Menu Guide (2026) — Mills House, Charleston | Hotel Menu Guide"
+  description="An independent guide to Iron Rose at Mills House, Charleston: hours, signature dishes, official current menu prices, happy hour, and reservations."
+  path="/iron-rose-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/iron-rose-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/iron-rose-dining.webp"
+      alt="Illustration of a dark romantic restaurant dining room with moody lighting, candlelit tables and lush plants at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Charleston, SC
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Iron Rose — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Iron Rose is the restaurant of <strong>Mills House</strong> (Curio Collection
+      by Hilton) at 115 Meeting Street — Southern coastal cooking under executive
+      chef <strong>Suzy Castelloe</strong>, a Carolina native appointed in February
+      2026 who previously cooked at the Charleston Grill. The name is the hotel's
+      own homage to two Charleston things: the Noisette rose and the city's
+      wrought-iron tradition. The good news for price transparency: Iron Rose is
+      the rare Charleston hotel restaurant with a <strong>full official priced menu
+      online</strong> (ironroserestaurant.com/menus, current as of October 2026).
+      Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">115 Meeting St, Charleston, SC 29401 (Mills House, Curio Collection by Hilton)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Suzy Castelloe (appointed Feb 2026; ex–Charleston Grill)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Southern coastal / elevated Southern</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$ — official current menu: dinner bites $10–$24, lunch mains $18–$32</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Resy (bookable) or 843-805-1054</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">None verified for the restaurant itself — said plainly</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per millshouse.com (crawled 2026-10-01):
+        <strong>breakfast Mon–Fri 7:30–10:30 AM; brunch Sat–Sun 8 AM–2 PM; lunch
+        Mon–Fri 11:30 AM–2 PM; bar snacks daily 2–5 PM; happy hour daily
+        4–6 PM; dinner Sun–Thu 5–9 PM (bar to 11 PM), Fri–Sat 5–10 PM (bar to
+        1 AM).</strong> Weekend brunch comes with live acoustic music 11 AM–2 PM.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The press-verified signatures:
+      </p>
+      <ul>
+        <li><strong>Blue Crab Fritters ($22)</strong>: the signature starter.</li>
+        <li><strong>Tuna tartare</strong>: with benne crackers, pistachio, curry essence, and pomegranate.</li>
+        <li><strong>Local Market Fish</strong>: with roasted sunchokes, hen-of-the-woods mushrooms, mustard greens, and salsa verde.</li>
+        <li><strong>Roasted Black Grouper</strong>: the Lowcountry fish play.</li>
+        <li><strong>Jumbo Lump Crab Benedict</strong>: the brunch signature.</li>
+        <li><strong>The Iron Rose cocktail</strong>: the espresso-martini-style house drink (Tia Maria cold brew, vodka, fresh espresso).</li>
+      </ul>
+
+      <h2>Official prices (current — October 2026)</h2>
+      <p>
+        From the official menu page (ironroserestaurant.com/menus, fetched
+        2026-10-01):
+      </p>
+      <ul>
+        <li><strong>Dinner bites:</strong> tuna crudo $20; charred octopus $20; blue crab fritters $22; butterbean hummus $12; pimento cheese $12; old bay kettle chips $10.</li>
+        <li><strong>Lunch mains:</strong> market fish $28; grilled flat iron "Steak Frites" $32; 8oz CAB burger $21; buttermilk fried grouper sandwich $24; The Club $18.</li>
+        <li><strong>Breakfast mains:</strong> steak &amp; eggs $28; chicken &amp; waffles $24; Holy City Breakfast $20; tres leches French toast $17; sides $6.</li>
+        <li><strong>Happy hour (daily 4–6 PM):</strong> martinis $10; draft beers $5; house wine $6; smoked fish dip, butterbean hummus, pimento cheese, and kettle chips $6 each.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the blue crab fritters — the signature.</li>
+        <li><strong>The fish play:</strong> the local market fish ($28) or roasted black grouper.</li>
+        <li><strong>The value play:</strong> happy hour 4–6 PM — $10 martinis and $6 bites are the cheapest seat in the room.</li>
+        <li><strong>Brunch:</strong> the jumbo lump crab Benedict.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book on Resy</strong> (parties of 1–9+) or call 843-805-1054.</li>
+        <li><strong>Happy hour daily 4–6 PM</strong> is the best value in the building.</li>
+        <li><strong>New chef era:</strong> Suzy Castelloe took over in February 2026 — menus may still be evolving; the official menu page is the source of truth.</li>
+        <li><strong>No award claims:</strong> we found no verified restaurant-level awards for Iron Rose — its draw is the room, the room's location, and the transparent pricing.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.ironroserestaurant.com" target="_blank" rel="noopener">Official restaurant site — Iron Rose</a></li>
+        <li><a href="https://www.ironroserestaurant.com/menus" target="_blank" rel="noopener">Official menus with prices</a> (current)</li>
+        <li><a href="https://resy.com/cities/charleston-sc/venues/iron-rose" target="_blank" rel="noopener">Reservations on Resy</a></li>
+        <li><a href="https://www.millshouse.com/dine/iron-rose/" target="_blank" rel="noopener">Hotel dining page — Mills House</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Iron Rose publishes a <strong>full official priced menu online</strong> —
+        the figures above come from ironroserestaurant.com/menus, fetched
+        2026-10-01, and are current as of this writing. Menus change seasonally;
+        always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More South Carolina guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-south-carolina/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in South Carolina →</a></li>
+        <li><a href="/gabrielle-menu/" class="text-gold-dark font-semibold hover:underline">Gabrielle</a> <span class="text-ink-soft">— "Stylishly Southern" at Hotel Bennett</span></li>
+        <li><a href="/frannie-and-the-fox-menu/" class="text-gold-dark font-semibold hover:underline">Frannie &amp; The Fox</a> <span class="text-ink-soft">— wood-fired Italian at The Emeline</span></li>
+        <li><a href="/peninsula-grill-menu/" class="text-gold-dark font-semibold hover:underline">Peninsula Grill</a> <span class="text-ink-soft">— Lowcountry fine dining at Planters Inn (temporarily closed for renovation)</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

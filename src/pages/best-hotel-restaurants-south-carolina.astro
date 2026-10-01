@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Best Hotel Restaurants in South Carolina",
+  description:
+    "Our picks for the best hotel restaurants in South Carolina, each with an original menu guide.",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, url: "https://hotel-menu-guide.pages.dev/palmetto-cafe-menu/", name: "The Palmetto Cafe at The Charleston Place" },
+    { "@type": "ListItem", position: 2, url: "https://hotel-menu-guide.pages.dev/peninsula-grill-menu/", name: "Peninsula Grill at Planters Inn" },
+    { "@type": "ListItem", position: 3, url: "https://hotel-menu-guide.pages.dev/circa-1886-menu/", name: "Circa 1886 at Wentworth Mansion" },
+    { "@type": "ListItem", position: 4, url: "https://hotel-menu-guide.pages.dev/gabrielle-menu/", name: "Gabrielle at Hotel Bennett" },
+    { "@type": "ListItem", position: 5, url: "https://hotel-menu-guide.pages.dev/iron-rose-menu/", name: "Iron Rose at Mills House" },
+    { "@type": "ListItem", position: 6, url: "https://hotel-menu-guide.pages.dev/frannie-and-the-fox-menu/", name: "Frannie & The Fox at The Emeline" },
+  ],
+};
+
+const guides = [
+  {
+    href: "/palmetto-cafe-menu/",
+    img: "/images/palmetto-cafe-dining.webp",
+    alt: "Illustration of a sunlit Southern Lowcountry veranda restaurant with ceiling fans, wicker chairs and white tablecloths at breakfast (illustrative, not the actual restaurant)",
+    tag: "Charleston · The Charleston Place",
+    title: "The Palmetto Cafe",
+    text: "The Charleston Place's sunny Lowcountry dining room — breakfast, lunch, and Sunday brunch around shrimp & grits, she crab soup, and the Palmetto sampler, with the honest note that no itemized prices are published.",
+  },
+  {
+    href: "/peninsula-grill-menu/",
+    img: "/images/peninsula-grill-dining.webp",
+    alt: "Illustration of an elegant historic Charleston courtyard restaurant with gas lanterns and candlelit tables at evening (illustrative, not the actual restaurant)",
+    tag: "Charleston · Planters Inn",
+    title: "Peninsula Grill",
+    text: "The Lowcountry fine-dining landmark famous for its 12-layer Ultimate Coconut Cake — temporarily closed since Aug 31, 2026 for a property-wide renovation, reopening expected fall 2026. Pre-renovation era figures only.",
+  },
+  {
+    href: "/circa-1886-menu/",
+    img: "/images/circa-1886-dining.webp",
+    alt: "Illustration of a Victorian mansion fine-dining room with dark wood paneling, chandelier and candlelight at evening (illustrative, not the actual restaurant)",
+    tag: "Charleston · Wentworth Mansion",
+    title: "Circa 1886",
+    text: "Chef Marc Collins' tasting-menu dining room in the Wentworth Mansion carriage house — the Ashley and Cooper six-course menus, with the honest note that no official prices are published.",
+  },
+  {
+    href: "/gabrielle-menu/",
+    img: "/images/gabrielle-dining.webp",
+    alt: "Illustration of a chic French brasserie dining room with rattan chairs, marble tables and tall windows in daylight (illustrative, not the actual restaurant)",
+    tag: "Charleston · Hotel Bennett",
+    title: "Gabrielle",
+    text: "Hotel Bennett's \"Stylishly Southern\" flagship on Marion Square — chef Edgar Kano, real official menu prices (February 2024 era), and Resy reservations.",
+  },
+  {
+    href: "/iron-rose-menu/",
+    img: "/images/iron-rose-dining.webp",
+    alt: "Illustration of a dark romantic restaurant dining room with moody lighting, candlelit tables and lush plants at evening (illustrative, not the actual restaurant)",
+    tag: "Charleston · Mills House",
+    title: "Iron Rose",
+    text: "Mills House's Southern coastal room under chef Suzy Castelloe — the rare Charleston hotel restaurant with a full official priced menu online, plus daily 4–6 PM happy hour.",
+  },
+  {
+    href: "/frannie-and-the-fox-menu/",
+    img: "/images/frannie-and-the-fox-dining.webp",
+    alt: "Illustration of a rustic wood-fired Italian restaurant with an open hearth oven, terracotta tiles and warm firelight at evening (illustrative, not the actual restaurant)",
+    tag: "Charleston · The Emeline",
+    title: "Frannie & The Fox",
+    text: "The Emeline's wood-fired Italian eatery with a dog-friendly courtyard and The Den late-night concept — third-party reported prices only, labeled honestly.",
+  },
+];
+---
+
+<BaseLayout
+  title="Best Hotel Restaurants in South Carolina — 6 Great Guides"
+  description="Our picks for the best hotel restaurants in South Carolina: The Palmetto Cafe, Peninsula Grill, Circa 1886, Gabrielle, Iron Rose, and Frannie & The Fox — each with an original menu guide."
+  path="/best-hotel-restaurants-south-carolina/"
+  jsonLd={jsonLd}
+  ogImage="/images/south-carolina-hotel-dining.webp"
+>
+  <article class="max-w-5xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/south-carolina-hotel-dining.webp"
+      alt="Illustration of a grand historic Charleston hotel dining room with high ceilings, chandeliers and tall windows at evening (illustrative, not the actual restaurants)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+    <p class="mt-10 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Pillar Guide · South Carolina
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight max-w-3xl">
+      The Best Hotel Restaurants in South Carolina
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed max-w-3xl">
+      Charleston is the South's great hotel-dining city, and these are the six rooms
+      we'd send a friend to first: The Palmetto Cafe's Lowcountry breakfasts at The
+      Charleston Place, the landmark Peninsula Grill at Planters Inn
+      (<strong>temporarily closed since August 31, 2026 for a property-wide
+      renovation — reopening expected fall 2026</strong>), the Ashley and Cooper
+      tasting menus at Circa 1886 in Wentworth Mansion, "Stylishly Southern"
+      Gabrielle at Hotel Bennett, Southern coastal Iron Rose at Mills House, and
+      wood-fired Italian at Frannie &amp; The Fox in The Emeline. We've written an
+      original, independent guide to each: what the menu looks like, what it costs,
+      and what we'd order. Prices are reported figures, dated honestly — never
+      copied menus.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {guides.map((g) => (
+        <a
+          href={g.href}
+          class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+        >
+          <img
+            src={g.img}
+            alt={g.alt}
+            class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">{g.tag}</p>
+            <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+              {g.title}
+            </h2>
+            <p class="mt-3 text-ink-soft text-sm leading-relaxed">{g.text}</p>
+            <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-parchment border border-line p-6 sm:p-10">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold">How we chose these six</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3 text-sm leading-relaxed text-ink-soft">
+        <div>
+          <p class="font-semibold text-ink mb-2">Search interest</p>
+          <p>
+            We research every expansion state with Google Trends (US, 12 months) before
+            writing a word. South Carolina posted a state mean of <strong>1.3</strong>
+            in our earlier research — the best remaining unbuilt option, ahead of DC,
+            Pennsylvania, and Massachusetts. One honest caveat: the interest is
+            spike-driven, not a flat year-round baseline — real curiosity, but lumpy.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold text-ink mb-2">Verified open — with one flag</p>
+          <p>
+            Five of the six were verified open in October 2026 against official sites,
+            active reservation listings, and recent review activity. Two
+            substitutions: The Charleston Grill closed permanently in August 2025
+            (replaced by same-hotel The Palmetto Cafe), and Henrietta's at The
+            Dewberry is permanently closed per OpenTable. Peninsula Grill is only
+            <strong>temporarily</strong> closed for renovation — its guide says so
+            prominently at the top.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold text-ink mb-2">Our honesty rules</p>
+          <p>
+            Every guide is written in our own words from official and verified sources.
+            Prices are labeled with their date and source — Iron Rose's are official
+            and current, Gabrielle's are official but February 2024 era, and where a
+            restaurant publishes no prices (Palmetto Cafe, Peninsula Grill, Circa
+            1886, Frannie &amp; The Fox), we say so plainly instead of guessing.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

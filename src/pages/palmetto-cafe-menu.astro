@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Palmetto Cafe",
+  servesCuisine: ["Contemporary American", "Southern Lowcountry"],
+  priceRange: "$$$",
+  telephone: "+1-843-724-8131",
+  url: "https://charlestonplace.com/food-beverage/the-palmetto-cafe/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "205 Meeting Street",
+    addressLocality: "Charleston",
+    addressRegion: "SC",
+    postalCode: "29401",
+    addressCountry: "US",
+  },
+  description:
+    "The Palmetto Cafe at The Charleston Place — a sunlit Lowcountry dining room serving breakfast, lunch, and Sunday brunch, known for shrimp & grits, she crab soup, and the Palmetto sampler. No official itemized price menu is published.",
+};
+---
+
+<BaseLayout
+  title="The Palmetto Cafe Menu Guide (2026) — The Charleston Place, Charleston | Hotel Menu Guide"
+  description="An independent guide to The Palmetto Cafe at The Charleston Place, Charleston: hours, signature Lowcountry dishes, and the honest story on prices (no official itemized menu prices published)."
+  path="/palmetto-cafe-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/palmetto-cafe-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/palmetto-cafe-dining.webp"
+      alt="Illustration of a sunlit Southern Lowcountry veranda restaurant with ceiling fans, wicker chairs and white tablecloths at breakfast (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Charleston, SC
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Palmetto Cafe — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Palmetto Cafe is the all-day dining room of <strong>The Charleston Place</strong>
+      at 205 Meeting Street — the hotel's sunny, veranda-style answer to Lowcountry
+      cooking, serving breakfast, lunch, and Sunday brunch. It steps into the spotlight
+      this year: the hotel's flagship restaurant, The Charleston Grill, served its final
+      dinner in August 2025 after 36 years, and the Palmetto Cafe now carries the
+      torch as the property's main restaurant (a new Charleston Grill replacement
+      concept is planned but not yet open). The honest headline first: <strong>the
+      restaurant publishes no itemized online price menu</strong> — official pages list
+      dishes and hours, not prices — so this guide covers the menu shape, hours, and
+      era-dated reported figures. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">205 Meeting St, Charleston, SC 29401 (The Charleston Place)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Steven Manall (per OpenTable profile; not on the official site)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary American / Southern Lowcountry</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$ — OpenTable band $31–$50 per person; no official itemized prices published</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">No confirmed online booking link; reserve by phone — 843-724-8131 (restaurant) or 1-800-611-5545</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">AAA Four Diamond per the Charleston Area CVB (not claimed on the restaurant's own site); OpenTable "Top 100 Brunch Restaurants in America" list (2023 era)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official Charleston Place page, fetched 2026-10-01:
+        <strong>breakfast daily 7:00–11:00 AM; lunch daily 12:00–3:00 PM; Sunday
+        à la carte brunch 10:00 AM–3:00 PM.</strong> Note that third-party listings
+        (including OpenTable) show slightly different hours — treat those as stale
+        and go with the hotel's own page.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The dishes reviewers and third-party menus keep coming back to:
+      </p>
+      <ul>
+        <li><strong>Lowcountry Shrimp and Grits</strong>: the house's signature Southern plate.</li>
+        <li><strong>She Crab Soup</strong>: the classic Lowcountry soup, finished with sherry.</li>
+        <li><strong>Seafood Club</strong>: lobster, shrimp, applewood-smoked bacon, smoked salmon, and tomato.</li>
+        <li><strong>Palmetto Sampler</strong>: a tasting plate of crab cake, she crab soup, chicken salad, '21' burger, and fries.</li>
+        <li><strong>Crab Cake Benedict</strong>: a reviewer favorite at breakfast.</li>
+        <li><strong>'21' Burger</strong>: inspired by the '21' Club, the hotel's former sister property.</li>
+      </ul>
+      <p>
+        Third-party 2026-era menus also list eggs Benedict ($18), steak and eggs
+        ($22), a Palmetto omelet with crab and lobster ($19), and a jumbo lump
+        crab cake ($16) — all figures below are reported, not official.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Breakfast:</strong> the crab cake Benedict — it's the dish reviewers name most.</li>
+        <li><strong>Lunch:</strong> the shrimp &amp; grits for the Lowcountry experience, or the seafood club.</li>
+        <li><strong>The sampler play:</strong> the Palmetto sampler ($29 reported) covers four signatures in one plate.</li>
+        <li><strong>Soup first:</strong> start with the she crab soup ($12 reported) with its sherry pour.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Call ahead:</strong> with no confirmed online booking, phone is the reliable path — 843-724-8131.</li>
+        <li><strong>No public price list:</strong> the restaurant publishes no itemized prices, so ask about current pricing when you book if budget matters.</li>
+        <li><strong>Sunday brunch</strong> (10 AM–3 PM) is the week's signature service — and landed the restaurant on OpenTable's national Top 100 brunch list.</li>
+        <li><strong>Same-hotel note:</strong> the Charleston Grill closed in August 2025; don't follow outdated guides to a restaurant that no longer exists.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://charlestonplace.com/food-beverage/the-palmetto-cafe/" target="_blank" rel="noopener">Official restaurant page — The Palmetto Cafe</a> (hours; phone reservations 843-724-8131)</li>
+        <li><a href="https://charlestonplace.com/" target="_blank" rel="noopener">Official hotel page — The Charleston Place</a></li>
+        <li><a href="https://charlestonplace.com/dining/" target="_blank" rel="noopener">All Charleston Place dining</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The Palmetto Cafe publishes <strong>no itemized online price menu</strong> —
+        said plainly, not guessed. The figures referenced here (shrimp &amp; grits
+        $18, she crab soup $12, seafood club $29, Palmetto sampler $29) are
+        third-party reported prices from 2026-era menu aggregators, corroborated by
+        2023-era figures suggesting stable pricing — but they are not the
+        restaurant's own numbers. Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More South Carolina guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-south-carolina/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in South Carolina →</a></li>
+        <li><a href="/peninsula-grill-menu/" class="text-gold-dark font-semibold hover:underline">Peninsula Grill</a> <span class="text-ink-soft">— Lowcountry fine dining at Planters Inn (temporarily closed for renovation)</span></li>
+        <li><a href="/circa-1886-menu/" class="text-gold-dark font-semibold hover:underline">Circa 1886</a> <span class="text-ink-soft">— tasting-menu fine dining at Wentworth Mansion</span></li>
+        <li><a href="/gabrielle-menu/" class="text-gold-dark font-semibold hover:underline">Gabrielle</a> <span class="text-ink-soft">— "Stylishly Southern" at Hotel Bennett</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>
