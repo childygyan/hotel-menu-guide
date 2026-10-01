@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Tavola",
+  servesCuisine: ["Italian"],
+  priceRange: "$$$",
+  telephone: "+1-612-389-2299",
+  url: "https://www.tavolampls.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "823 5th Avenue South",
+    addressLocality: "Minneapolis",
+    addressRegion: "MN",
+    postalCode: "55404",
+    addressCountry: "US",
+  },
+  description:
+    "Tavola at the Elliot Park Hotel, Autograph Collection in Minneapolis — contemporary Italian cooking around a wood-fired oven, with official published prices and 50 wines by the glass.",
+};
+---
+
+<BaseLayout
+  title="Tavola Minneapolis Menu Guide (2026) — Italian at Elliot Park Hotel | Hotel Menu Guide"
+  description="An independent guide to Tavola at the Elliot Park Hotel, Autograph Collection: contemporary Italian around a wood-fired oven, official menu prices (2026), hours, and visiting tips."
+  path="/tavola-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/tavola-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/tavola-dining.webp"
+      alt="Illustration of a contemporary Italian restaurant dining room with a wood-fired oven and warm modern design at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Minneapolis
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Tavola — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Tavola is the flagship restaurant of the <strong>Elliot Park Hotel, Autograph
+      Collection</strong> — Marriott names it as the hotel's on-property restaurant —
+      a contemporary Italian room built around a <strong>wood-fired oven</strong>,
+      with 50 wines by the glass and Wednesdays at 25% off all bottles. The rare
+      good news in this phase: <strong>Tavola publishes official itemized menu
+      prices</strong>, so the numbers below come straight from the restaurant's own
+      dinner menu. No chef name is published on the official site — said plainly.
+      Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">823 5th Avenue South, Minneapolis, MN 55404 (Elliot Park Hotel, Autograph Collection)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">No chef name published on the official site</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary Italian / wine bar</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$ — starters $14–$21, pastas $23–$24, mains $31–$55 (official dinner menu, 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via Tock from the official site, or 612-389-2299</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">No independent awards found — the house's "award-winning wine list" names no awarding body</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the OpenTable listing, crawled ~September 26, 2026: <strong>breakfast
+        Mon–Thu 7:00–11:00 AM, Fri–Sun 8:00 AM–12:00 PM; lunch Mon–Fri 11:00 AM–4:00
+        PM, Sat–Sun 12:00–4:00 PM; bar daily 11:00 AM–10:00 PM; dinner daily
+        4:00–9:00 PM.</strong>
+      </p>
+
+      <h2>To start</h2>
+      <p>
+        Prices below are from the official dinner menu, crawled ~September 4, 2026:
+      </p>
+      <ul>
+        <li><strong>Burrata — $16; Arancini — $15; Fritto Misto — $14</strong>.</li>
+        <li><strong>Crudo (yellowtail) — $21</strong>.</li>
+        <li><strong>Caesar Salad — $14; Arugula Salad — $14</strong>.</li>
+      </ul>
+
+      <h2>Pasta &amp; mains</h2>
+      <ul>
+        <li><strong>Garganelli — $24; Bucatini — $23</strong>: the pasta anchors.</li>
+        <li><strong>Roasted Chicken Breast — $31; Skuna Bay Salmon — $38</strong>.</li>
+        <li><strong>10 oz Dry-Aged Strip Loin — $55</strong>: the top of the menu.</li>
+      </ul>
+
+      <h2>From the wood-fired oven</h2>
+      <ul>
+        <li><strong>Margherita flatbread — $18; Calabrian flatbread — $20; Italian flatbread — $21</strong>.</li>
+        <li><strong>Pommes Frites — $12; Seasonal Vegetable — $12; Pommes Purée — $9</strong>.</li>
+      </ul>
+      <p>
+        The wine program runs deep — 50 by the glass, with names like Joseph Phelps,
+        Biondi-Santi, Ornellaia, and Domaine Serene on the list — and Wednesdays take
+        25% off all bottles.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the burrata ($16) — the safe, correct opener.</li>
+        <li><strong>The pasta play:</strong> the garganelli ($24).</li>
+        <li><strong>The land play:</strong> the dry-aged strip loin ($55) if the night wants a steak.</li>
+        <li><strong>The wine play:</strong> come Wednesday for 25% off bottles.</li>
+        <li><strong>The deal:</strong> watch for Minneapolis–St. Paul Restaurant Week — the 2026 edition ran a 3-course dinner at $40.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via Tock</strong> from tavolampls.com, or call 612-389-2299 (the OpenTable listing is informational only).</li>
+        <li><strong>Wednesday wine:</strong> 25% off all bottles, every Wednesday.</li>
+        <li><strong>Near US Bank Stadium:</strong> the hotel sits by the stadium — game nights fill the room.</li>
+        <li><strong>Parking:</strong> valet is available at the Elliot Park Hotel.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.tavolampls.com/" target="_blank" rel="noopener">Official restaurant site — Tavola</a> (reservations via Tock, or 612-389-2299)</li>
+        <li><a href="https://www.tavolampls.com/menu/dinner/" target="_blank" rel="noopener">Official dinner menu with prices</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>official Tavola dinner menu</strong>,
+        crawled around September 4, 2026. The Restaurant Week figures are from the
+        February/March 2026 promotion and are not current pricing. Menus are seasonal
+        and prices can drift — always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Minnesota guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-minnesota/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Minnesota →</a></li>
+        <li><a href="/mara-minneapolis-menu/" class="text-gold-dark font-semibold hover:underline">Mara</a> <span class="text-ink-soft">— Mediterranean at the Four Seasons Minneapolis</span></li>
+        <li><a href="/tullibee-menu/" class="text-gold-dark font-semibold hover:underline">Tullibee</a> <span class="text-ink-soft">— Nordic farm-to-table at the Hewing Hotel</span></li>
+        <li><a href="/st-paul-grill-menu/" class="text-gold-dark font-semibold hover:underline">St. Paul Grill</a> <span class="text-ink-soft">— the supper-club steakhouse at The Saint Paul Hotel</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

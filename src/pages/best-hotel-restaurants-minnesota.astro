@@ -1,0 +1,171 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Best Hotel Restaurants in Minnesota",
+  description:
+    "Our picks for the best hotel restaurants in Minnesota, each with an original menu guide.",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, url: "https://hotel-menu-guide.pages.dev/mara-minneapolis-menu/", name: "Mara at Four Seasons Hotel Minneapolis" },
+    { "@type": "ListItem", position: 2, url: "https://hotel-menu-guide.pages.dev/st-paul-grill-menu/", name: "The St. Paul Grill at The Saint Paul Hotel" },
+    { "@type": "ListItem", position: 3, url: "https://hotel-menu-guide.pages.dev/tullibee-menu/", name: "Tullibee at the Hewing Hotel, Minneapolis" },
+    { "@type": "ListItem", position: 4, url: "https://hotel-menu-guide.pages.dev/firelake-menu/", name: "FireLake Grill House at Radisson Blu Mall of America, Bloomington" },
+    { "@type": "ListItem", position: 5, url: "https://hotel-menu-guide.pages.dev/mannys-menu/", name: "Manny's Steakhouse at W Minneapolis–The Foshay" },
+    { "@type": "ListItem", position: 6, url: "https://hotel-menu-guide.pages.dev/tavola-menu/", name: "Tavola at Elliot Park Hotel, Minneapolis" },
+  ],
+};
+
+const guides = [
+  {
+    href: "/mara-minneapolis-menu/",
+    img: "/images/mara-minneapolis-dining.webp",
+    alt: "Illustration of an elegant Mediterranean restaurant dining room with warm terracotta tones and candlelight at evening (illustrative, not the actual restaurant)",
+    tag: "Minneapolis · Four Seasons",
+    title: "Mara",
+    text: "Gavin Kaysen's Mediterranean dining room at the Four Seasons Minneapolis — signature dishes, the 2026 wine program ($85 tastings, $195 dinners), and the honest note that no itemized prices are published.",
+  },
+  {
+    href: "/st-paul-grill-menu/",
+    img: "/images/st-paul-grill-dining.webp",
+    alt: "Illustration of a classic American steakhouse supper-club dining room with dark wood paneling and white tablecloths at evening (illustrative, not the actual restaurant)",
+    tag: "St. Paul · The Saint Paul Hotel",
+    title: "St. Paul Grill",
+    text: "The Twin Cities' classic supper-club steakhouse — AAA Four Diamond, executive chef Gheorghe Vatafu, and era-dated reported prices from the walleye ($37.95) to the 30 oz bone-in ribeye ($79.95).",
+  },
+  {
+    href: "/tullibee-menu/",
+    img: "/images/tullibee-dining.webp",
+    alt: "Illustration of a Nordic farm-to-table dining room with light oak and an open wood-fired hearth at evening (illustrative, not the actual restaurant)",
+    tag: "Minneapolis · Hewing Hotel",
+    title: "Tullibee",
+    text: "The Hewing Hotel's Nordic farm-to-table room — not the rooftop — with a daily-changing menu, era-dated official prices from past menus, and the honest note that current prices aren't published.",
+  },
+  {
+    href: "/firelake-menu/",
+    img: "/images/firelake-dining.webp",
+    alt: "Illustration of a rustic-modern American grill dining room with stone and timber and a warm fire glow at evening (illustrative, not the actual restaurant)",
+    tag: "Bloomington · Radisson Blu Mall of America",
+    title: "FireLake Grill House",
+    text: "Minnesota farm-to-table American cooking at the Radisson Blu Mall of America — open 365 days a year, with official published prices from the $9 popovers to the $68 filet mignon.",
+  },
+  {
+    href: "/mannys-menu/",
+    img: "/images/mannys-steakhouse-dining.webp",
+    alt: "Illustration of a grand traditional steakhouse dining room with mahogany and leather booths at evening (illustrative, not the actual restaurant)",
+    tag: "Minneapolis · W Minneapolis–The Foshay",
+    title: "Manny's Steakhouse",
+    text: "The 1988 landmark in the Foshay Tower — OpenTable Icon 2025 and 2026, dry-aged Heritage Beef program, and the honest story that no itemized prices are published.",
+  },
+  {
+    href: "/tavola-menu/",
+    img: "/images/tavola-dining.webp",
+    alt: "Illustration of a contemporary Italian restaurant dining room with a wood-fired oven and warm modern design at evening (illustrative, not the actual restaurant)",
+    tag: "Minneapolis · Elliot Park Hotel",
+    title: "Tavola",
+    text: "The Elliot Park Hotel's Italian flagship around a wood-fired oven — official published prices from the $16 burrata to the $55 dry-aged strip loin, plus 25%-off wine Wednesdays.",
+  },
+];
+---
+
+<BaseLayout
+  title="Best Hotel Restaurants in Minnesota — 6 Great Guides"
+  description="Our picks for the best hotel restaurants in Minnesota: Mara, St. Paul Grill, Tullibee, FireLake Grill House, Manny's Steakhouse, and Tavola — each with an original menu guide."
+  path="/best-hotel-restaurants-minnesota/"
+  jsonLd={jsonLd}
+  ogImage="/images/minnesota-hotel-dining.webp"
+>
+  <article class="max-w-5xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/minnesota-hotel-dining.webp"
+      alt="Illustration of a grand Twin Cities luxury hotel dining room with high ceilings and chandeliers at evening (illustrative, not the actual restaurants)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+    <p class="mt-10 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Pillar Guide · Minnesota
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight max-w-3xl">
+      The Best Hotel Restaurants in Minnesota
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed max-w-3xl">
+      The Twin Cities' great hotel dining rooms run the full range: Gavin Kaysen's
+      Mediterranean Mara at the Four Seasons Minneapolis, the supper-club institution
+      St. Paul Grill, Nordic farm-to-table cooking at Tullibee in the Hewing Hotel,
+      FireLake Grill House at the Radisson Blu Mall of America, the 1988 landmark
+      Manny's Steakhouse in the Foshay Tower, and wood-fired Italian at Tavola in
+      the Elliot Park Hotel. We've written an original, independent guide to each of
+      the six below: what the menu looks like, what it costs, and what we'd order.
+      Prices are reported figures, dated honestly — never copied menus.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {guides.map((g) => (
+        <a
+          href={g.href}
+          class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+        >
+          <img
+            src={g.img}
+            alt={g.alt}
+            class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">{g.tag}</p>
+            <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+              {g.title}
+            </h2>
+            <p class="mt-3 text-ink-soft text-sm leading-relaxed">{g.text}</p>
+            <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-parchment border border-line p-6 sm:p-10">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold">How we chose these six</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3 text-sm leading-relaxed text-ink-soft">
+        <div>
+          <p class="font-semibold text-ink mb-2">Search interest</p>
+          <p>
+            We research every expansion state with Google Trends (US, 12 months) before
+            writing a word. Minnesota won our latest research round with a state mean of
+            <strong>3.0</strong> — <strong>"st paul grill menu" at 6</strong> and
+            <strong>"mara minneapolis menu" at 0</strong> — beating Oregon, Kentucky,
+            Wisconsin, and Connecticut, and every state we'd built before it. One honest
+            caveat: the interest is spike-driven (April, June, and August 2026 spikes
+            for St. Paul Grill; Mara sat at zero all year) — real curiosity, but lumpy,
+            not a flat baseline.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold text-ink mb-2">All verified open</p>
+          <p>
+            Every restaurant here was verified open in October 2026 against its official
+            site, an active reservation listing, and recent review activity. One
+            substitution: the old downtown Radisson Blu is now the Royal Sonesta (its
+            restaurant is Wood + Paddle, not FireLake), so we cover the open FireLake
+            Grill House &amp; Cocktail Bar at the Radisson Blu Mall of America in
+            Bloomington instead.
+          </p>
+        </div>
+        <div>
+          <p class="font-semibold text-ink mb-2">Our honesty rules</p>
+          <p>
+            Every guide is written in our own words from official and verified sources.
+            Prices are labeled with their date and source — and where a restaurant
+            publishes no prices (Mara, St. Paul Grill, Manny's, and current Tullibee
+            menus), we say so plainly instead of guessing.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

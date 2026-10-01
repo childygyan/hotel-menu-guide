@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Tullibee",
+  servesCuisine: ["Scandinavian", "American"],
+  priceRange: "$$$",
+  telephone: "+1-651-468-0400",
+  url: "https://hewinghotel.com/dining/tullibee/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "300 N Washington Ave",
+    addressLocality: "Minneapolis",
+    addressRegion: "MN",
+    postalCode: "55401",
+    addressCountry: "US",
+  },
+  description:
+    "Tullibee at the Hewing Hotel in Minneapolis — Nordic-inspired farm-to-table cooking from a wood-fired hearth under executive chef Nathan Kim, with a menu that changes daily.",
+};
+---
+
+<BaseLayout
+  title="Tullibee Minneapolis Menu Guide (2026) — Nordic Dining at the Hewing Hotel | Hotel Menu Guide"
+  description="An independent guide to Tullibee at the Hewing Hotel in Minneapolis: Nordic-inspired farm-to-table cooking, hours, menu highlights with era-dated official prices, and visiting tips."
+  path="/tullibee-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/tullibee-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/tullibee-dining.webp"
+      alt="Illustration of a Nordic farm-to-table dining room with light oak and an open wood-fired hearth at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Minneapolis
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Tullibee — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Tullibee is the restaurant and bar of the <strong>Hewing Hotel</strong> in
+      Minneapolis's North Loop, a Nordic-inspired farm-to-table room built around a
+      wood-fired hearth and hyper-local sourcing, run by executive chef
+      <strong>Nathan Kim</strong>. Two things to get straight first: Tullibee is
+      <strong>not</strong> the rooftop — the Rooftop at Hewing Hotel is a separate
+      venue — and the <strong>menu changes daily</strong>, so the current official
+      page publishes no itemized prices at all. This guide covers the format, the
+      hours, and era-dated prices from official past menus, all labeled. Everything
+      is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">300 N Washington Ave, Minneapolis, MN 55401 (Hewing Hotel; not the rooftop venue)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Nathan Kim</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Nordic-inspired farm-to-table, wood-fired</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$ — current prices unpublished (daily menu); 2024 official lunch from $8, 2023 dinner mains to $56</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via Resy from the official page, or 651-468-0400</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">4.5 OpenTable (1,490 reviews); no formal awards found — we don't invent any</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official Hewing Hotel page, fetched 2026-10-01:
+        <strong>breakfast daily 7:00–11:00 AM; lunch Mon–Fri 11:00 AM–2:00 PM;
+        dinner daily 5:00–10:00 PM; brunch Sat–Sun 8:00 AM–2:00 PM.</strong>
+        (OpenTable lists Friday/Saturday dinner to 11:00 PM — the official page is
+        canonical here.) The separate Rooftop venue runs daily 5:00 PM–midnight.
+      </p>
+
+      <h2>Dinner format (prices from official May 2023 menu PDF — dated)</h2>
+      <p>
+        No current prices are published, but the official dinner menu PDF of
+        <strong>May 31, 2023</strong> shows the shape of the room:
+      </p>
+      <ul>
+        <li><strong>Chef's Koltboard — $34</strong>: the hearth-driven sharing board.</li>
+        <li><strong>Steelhead Trout — $25; Walleye — $17; Roast Lamb — $19; Rabbit Ragu — $18</strong>.</li>
+        <li><strong>Wild Acres Half Duck — $47; 12 oz dry-aged NY Strip — $56</strong>: the land centerpieces.</li>
+        <li><strong>Chef's Choice tasting — $75 per person</strong>: the full-tour option.</li>
+        <li><strong>Potato Rolls/Oysters — $6; Kale &amp; Date Salad — $8</strong>.</li>
+      </ul>
+
+      <h2>Lunch (prices from official Oct 2024 menu PDF — dated)</h2>
+      <ul>
+        <li><strong>Bitterballen — $8; Country Pâté — $8; Smoked Chicken Wild Rice Soup — $11; Mushroom Toast — $10</strong>.</li>
+        <li><strong>Hewing Burger — $16; Norwegian Salmon — $21; Rainbow Trout — $19</strong>.</li>
+        <li><strong>Bistro Steak — $28; Duck Fat Fries — $9</strong>.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> whatever the hearth is doing that night — the koltboard was the 2023 signature, and the format persists.</li>
+        <li><strong>The sea play:</strong> trout or walleye — Nordic rooms do cold-water fish best.</li>
+        <li><strong>The land play:</strong> the half duck or the dry-aged strip, historically the room's anchors.</li>
+        <li><strong>The experience:</strong> the Chef's Choice tasting ($75pp in the 2023 PDF) if the table wants the full tour.</li>
+        <li><strong>After dinner:</strong> head upstairs — the Rooftop is a separate venue, but it's the natural second act.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>The menu is daily:</strong> treat the prices above as era-dated shape, not today's numbers — ask when you book.</li>
+        <li><strong>Not the rooftop:</strong> Tullibee is the ground-level restaurant and bar; don't book it expecting skyline views.</li>
+        <li><strong>Dinner series:</strong> the hotel runs ticketed "Kindling" dinner-series events (next noted: Oct 29, 2026, via Resy) — worth checking.</li>
+        <li><strong>Parking:</strong> valet is available at the Hewing Hotel.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://hewinghotel.com/dining/tullibee/" target="_blank" rel="noopener">Official restaurant page — Tullibee at the Hewing Hotel</a> (reservations via Resy from the page, or 651-468-0400)</li>
+        <li><a href="https://hewinghotel.com/wp-content/uploads/2023/06/Tullibee-Dinner-Menu-05.31.23.pdf" target="_blank" rel="noopener">Official dinner menu (PDF) — May 2023 edition</a></li>
+        <li><a href="https://hewinghotel.com/wp-content/uploads/2024/10/Tullibee_Lunch-Menu_10.20.24.pdf" target="_blank" rel="noopener">Official lunch menu (PDF) — October 2024 edition</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Tullibee's menu changes daily and the current official page publishes
+        <strong>no itemized prices</strong>. All prices above come from official
+        Hewing Hotel-hosted PDFs — the <strong>May 2023 dinner menu</strong> and the
+        <strong>October 2024 lunch menu</strong> — and must not be read as current.
+        Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Minnesota guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-minnesota/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Minnesota →</a></li>
+        <li><a href="/mannys-menu/" class="text-gold-dark font-semibold hover:underline">Manny's Steakhouse</a> <span class="text-ink-soft">— the landmark steakhouse at W Minneapolis–The Foshay</span></li>
+        <li><a href="/tavola-menu/" class="text-gold-dark font-semibold hover:underline">Tavola</a> <span class="text-ink-soft">— Italian at Elliot Park Hotel</span></li>
+        <li><a href="/mara-minneapolis-menu/" class="text-gold-dark font-semibold hover:underline">Mara</a> <span class="text-ink-soft">— Mediterranean at the Four Seasons Minneapolis</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,152 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "FireLake Grill House & Cocktail Bar",
+  servesCuisine: ["American"],
+  priceRange: "$$",
+  telephone: "+1-952-851-4040",
+  url: "https://firelakerestaurant.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2100 Killebrew Drive",
+    addressLocality: "Bloomington",
+    addressRegion: "MN",
+    postalCode: "55425",
+    addressCountry: "US",
+  },
+  description:
+    "FireLake Grill House & Cocktail Bar at the Radisson Blu Mall of America in Bloomington — Minnesota farm-to-table American cooking from executive chef John Warr, open 365 days a year with official published prices.",
+};
+---
+
+<BaseLayout
+  title="FireLake Grill House Menu Guide (2026) — Radisson Blu Mall of America | Hotel Menu Guide"
+  description="An independent guide to FireLake Grill House & Cocktail Bar at the Radisson Blu Mall of America, Bloomington: Minnesota farm-to-table American cooking, official menu prices (2026), hours, and visiting tips."
+  path="/firelake-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/firelake-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/firelake-dining.webp"
+      alt="Illustration of a rustic-modern American grill dining room with stone and timber and a warm fire glow at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Bloomington
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      FireLake Grill House — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      FireLake Grill House &amp; Cocktail Bar is the restaurant of the
+      <strong>Radisson Blu Mall of America</strong> in Bloomington, Minnesota
+      farm-to-table American cooking under executive chef <strong>John Warr</strong> —
+      open, per the official site, <strong>365 days a year</strong>. One clarification
+      worth making: the old downtown Minneapolis Radisson Blu is now the Royal
+      Sonesta (its restaurant is Wood + Paddle, not FireLake) — the FireLake brand
+      lives on at Mall of America, which is the restaurant this guide covers. The
+      good news for menu-watchers: <strong>FireLake publishes official itemized
+      prices</strong> on its menu page. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">2100 Killebrew Drive, Bloomington, MN 55425 (Radisson Blu Mall of America)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef John Warr</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">American farm-to-table grill</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$ — burgers $17–$22, mains $30–$68, starters from $9 (official menu, 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via OpenTable, or 952-851-4040</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">4.5 OpenTable (980 reviews); "best restaurants in Mall of America" is the house's own claim, not an independent award</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official site, viewed 2026-10-01: <strong>Mon–Thu 7:00–11:00 AM
+        &amp; 3:00–10:00 PM; Fri–Sun 7:00 AM–10:00 PM</strong> — open 365 days a
+        year. (OpenTable lists a wider window; the official site is canonical here.)
+      </p>
+
+      <h2>To start</h2>
+      <p>
+        Prices below are from the official menu page, crawled ~September 29, 2026:
+      </p>
+      <ul>
+        <li><strong>Popovers with whipped smoked honey butter — $9</strong>: the house opener.</li>
+        <li><strong>Minnesota Wild Rice Soup — $9; Chips &amp; Dips — $10; Caesar Salad — $14</strong>.</li>
+        <li><strong>FireLake Walleye Cakes — $15; FireLake Smoked Wings — $16; Dirty Fries — $16; Bison Empanadas — $18; Charcuterie — $22</strong>.</li>
+      </ul>
+
+      <h2>Burgers &amp; mains</h2>
+      <ul>
+        <li><strong>Backyard Angus Beef Burger — $17; Bison Burger — $19; Butcher's Melt — $21; Elk Smashburger — $22</strong>.</li>
+        <li><strong>Flat Iron Frites — $30; Parmesan Corn-Crusted Walleye — $30</strong>.</li>
+        <li><strong>Boar Chops — $45; Filet Mignon — $68</strong>: the top of the grill.</li>
+      </ul>
+      <p>
+        Sourcing is part of the pitch: Red Table Meat Co., Stickney Hill Dairy, and
+        Lift Bridge Brewing Co. are named local partners.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the popovers ($9) — cheap, warm, and the house signature.</li>
+        <li><strong>The Minnesota play:</strong> the wild rice soup ($9) plus the walleye cakes ($15).</li>
+        <li><strong>The grill play:</strong> the bison burger ($19) — the most Minnesotan thing on the burger list.</li>
+        <li><strong>The splurge:</strong> the filet mignon ($68) if the night calls for it.</li>
+        <li><strong>After dinner:</strong> you're at Mall of America — the cocktail bar is the nightcap, the mall is the walk.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Not downtown:</strong> this is the Bloomington / Mall of America location — don't navigate to the old 7th Street address.</li>
+        <li><strong>365 days:</strong> holidays included, per the official site — useful for Thanksgiving/Christmas-week trips.</li>
+        <li><strong>Book ahead</strong> — OpenTable shows steady daily bookings; weekends go fast.</li>
+        <li><strong>Parking:</strong> Mall of America ramps; hotel guests use the Radisson Blu entrance.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://firelakerestaurant.com/" target="_blank" rel="noopener">Official restaurant site — FireLake Grill House</a></li>
+        <li><a href="http://www.firelakerestaurant.com/mall-of-america-menu/" target="_blank" rel="noopener">Official menu with prices — Mall of America location</a></li>
+        <li><a href="https://www.opentable.com/firelake-grill-house-mall-of-america?corrid=6570149f-7e40-4b1b-8d03-7e4f04fb7630&avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>official FireLake menu page</strong>,
+        crawled around September 29, 2026. Menus are seasonal and prices can drift —
+        always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Minnesota guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-minnesota/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Minnesota →</a></li>
+        <li><a href="/mannys-menu/" class="text-gold-dark font-semibold hover:underline">Manny's Steakhouse</a> <span class="text-ink-soft">— the landmark steakhouse at W Minneapolis–The Foshay</span></li>
+        <li><a href="/st-paul-grill-menu/" class="text-gold-dark font-semibold hover:underline">St. Paul Grill</a> <span class="text-ink-soft">— the supper-club steakhouse at The Saint Paul Hotel</span></li>
+        <li><a href="/tullibee-menu/" class="text-gold-dark font-semibold hover:underline">Tullibee</a> <span class="text-ink-soft">— Nordic farm-to-table at the Hewing Hotel</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

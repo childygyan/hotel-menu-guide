@@ -1,0 +1,165 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Manny's Steakhouse",
+  servesCuisine: ["American", "Steakhouse"],
+  priceRange: "$$$$",
+  telephone: "+1-612-339-9900",
+  url: "https://mannyssteakhouse.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "825 S Marquette Ave",
+    addressLocality: "Minneapolis",
+    addressRegion: "MN",
+    postalCode: "55402",
+    addressCountry: "US",
+  },
+  description:
+    "Manny's Steakhouse in the Foshay Tower, home of W Minneapolis–The Foshay — the Twin Cities' landmark steakhouse since 1988, an OpenTable Icon with a Wine Spectator award-winning wine list.",
+};
+---
+
+<BaseLayout
+  title="Manny's Steakhouse Menu Guide (2026) — W Minneapolis–The Foshay | Hotel Menu Guide"
+  description="An independent guide to Manny's Steakhouse at W Minneapolis–The Foshay: the 1988 landmark steakhouse, dry-aged beef program, hours, and the honest story on prices."
+  path="/mannys-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/mannys-steakhouse-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/mannys-steakhouse-dining.webp"
+      alt="Illustration of a grand traditional steakhouse dining room with mahogany and leather booths at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Minneapolis
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Manny's Steakhouse — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Manny's Steakhouse has occupied the landmark <strong>Foshay Tower</strong> —
+      the building that houses <strong>W Minneapolis–The Foshay</strong> — since
+      <strong>1988</strong>, making it the Twin Cities' landmark steakhouse: an
+      <strong>OpenTable Icon for 2025 and 2026</strong> (OpenTable's own program),
+      with a Wine Spectator award-winning wine list and a Zagat food score of 4.8.
+      One honest note on the setup: Manny's is independently operated (Parasole
+      Restaurant Holdings), not a W brand restaurant — but it sits physically inside
+      the Foshay Tower, which is why it's the hotel dining room that matters here.
+      The other honest note: <strong>the official site publishes no itemized menu
+      prices</strong> (menus sit behind an interactive viewer) — so this guide covers
+      the program, the official event figures that do exist, and hours, with every
+      number dated. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">825 S Marquette Ave, Minneapolis, MN 55402 (Foshay Tower; valet at the W Hotel entrance)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Jason Smith</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Steakhouse / seafood</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — "$50 and over" band (OpenTable); no official itemized prices published</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via OpenTable, or 612-339-9900</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">OpenTable Icons 2026 &amp; 2025; Wine Spectator award-winning wine list; Zagat "Top 10 Steakhouses" is the house's own claim</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the OpenTable listing, 2026: <strong>breakfast Mon–Fri 7:00–11:00 AM,
+        Sat–Sun 7:00–10:00 AM; brunch Sat–Sun 10:00 AM–4:00 PM; lunch Mon–Fri
+        11:00 AM–4:00 PM; dinner Mon–Thu &amp; Sun 4:00–9:00 PM, Fri–Sat
+        4:00–10:00 PM.</strong>
+      </p>
+
+      <h2>The beef program</h2>
+      <p>
+        This is what Manny's is built on — USDA-certified dry-aged beef, including
+        the house's <strong>Manny's Heritage Beef™</strong> from its own herds
+        ("bull-to-table," in the restaurant's words). Signatures named on the
+        official site:
+      </p>
+      <ul>
+        <li><strong>The "Bludgeon of beef"</strong>: the house's famous oversized cut.</li>
+        <li><strong>Bone-in ribeye</strong>: the classic-order dry-aged steak.</li>
+        <li><strong>Nova Scotia lobster tail; seafood towers</strong>: the from-the-sea counterweight.</li>
+        <li><strong>Manny's brownie; whiskey-infused bread pudding</strong>: the dessert signatures.</li>
+      </ul>
+
+      <h2>The only official prices available</h2>
+      <p>
+        The official site publishes no item-level prices — the menu viewer shows
+        dishes without numbers. The official figures that do exist:
+      </p>
+      <ul>
+        <li><strong>Game Day Buffet — $54.95 adults / $21.95 kids (3–12)</strong>: official mannyssteakhouse.com page, 2026 NFL season; game-day valet $35/day.</li>
+      </ul>
+      <p>
+        OpenTable lists the price band as <strong>"$50 and over"</strong>. Third-party
+        aggregator prices (e.g. a $22-era steak sandwich) circulate online but are
+        unverified — we don't report them.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The steakhouse answer:</strong> dry-aged bone-in ribeye — it's the cut the program is built around.</li>
+        <li><strong>The legend play:</strong> ask about the "Bludgeon of beef" if the table wants the story.</li>
+        <li><strong>The sea play:</strong> the Nova Scotia lobster tail or a seafood tower to split.</li>
+        <li><strong>The ending:</strong> the whiskey-infused bread pudding.</li>
+        <li><strong>After dinner:</strong> the 27th-floor Prohibition Bar and The Living Room share the building — the natural second act.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book ahead</strong> — an OpenTable Icon room with September 2026 reviews days old; prime times go fast.</li>
+        <li><strong>No public price list:</strong> since the official site publishes no itemized prices, ask about current pricing when you book if budget matters.</li>
+        <li><strong>Game days:</strong> the $54.95 buffet (2026 season) is the price-transparent way in on NFL Sundays.</li>
+        <li><strong>Parking:</strong> valet at the W Hotel entrance on Marquette.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://mannyssteakhouse.com/" target="_blank" rel="noopener">Official restaurant site — Manny's Steakhouse</a></li>
+        <li><a href="https://mannyssteakhouse.com/menu/" target="_blank" rel="noopener">Official menu (interactive viewer — no item prices published)</a></li>
+        <li><a href="https://mannyssteakhouse.com/game-day-buffet/" target="_blank" rel="noopener">Official game-day buffet page — $54.95 adults (2026 NFL season)</a></li>
+        <li><a href="https://www.opentable.com/r/mannys-steakhouse-minneapolis-3?corrid=b8927363-9aa0-4765-8d72-24f2887497be&" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Manny's official site publishes <strong>no itemized menu prices</strong> —
+        said plainly, not guessed. The $54.95/$21.95 game-day buffet figures are
+        official, from the restaurant's 2026 NFL-season page; the "$50 and over" band
+        is OpenTable's. Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Minnesota guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-minnesota/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Minnesota →</a></li>
+        <li><a href="/firelake-menu/" class="text-gold-dark font-semibold hover:underline">FireLake Grill House</a> <span class="text-ink-soft">— farm-to-table at Radisson Blu Mall of America</span></li>
+        <li><a href="/st-paul-grill-menu/" class="text-gold-dark font-semibold hover:underline">St. Paul Grill</a> <span class="text-ink-soft">— the supper-club steakhouse at The Saint Paul Hotel</span></li>
+        <li><a href="/tullibee-menu/" class="text-gold-dark font-semibold hover:underline">Tullibee</a> <span class="text-ink-soft">— Nordic farm-to-table at the Hewing Hotel</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

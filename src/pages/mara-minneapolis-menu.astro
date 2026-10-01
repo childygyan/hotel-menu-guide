@@ -1,0 +1,171 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Mara",
+  servesCuisine: ["Mediterranean"],
+  priceRange: "$$$$",
+  telephone: "+1-612-895-5709",
+  url: "https://www.fourseasons.com/minneapolis/dining/restaurants/mara/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "245 Hennepin Ave",
+    addressLocality: "Minneapolis",
+    addressRegion: "MN",
+    postalCode: "55401",
+    addressCountry: "US",
+  },
+  description:
+    "Mara at the Four Seasons Hotel Minneapolis — Gavin Kaysen's Mediterranean restaurant drawing on 22 countries around the sea, with a Wine Spectator-recognized wine list and a 2026 wine-tasting program from $85 per person.",
+};
+---
+
+<BaseLayout
+  title="Mara Minneapolis Menu Guide (2026) — Mediterranean at the Four Seasons | Hotel Menu Guide"
+  description="An independent guide to Mara at the Four Seasons Hotel Minneapolis: Gavin Kaysen's Mediterranean dining room, hours, signature dishes, and the honest story on prices (no official itemized menu prices published)."
+  path="/mara-minneapolis-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/mara-minneapolis-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/mara-minneapolis-dining.webp"
+      alt="Illustration of an elegant Mediterranean restaurant dining room with warm terracotta tones and candlelight at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Minneapolis
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Mara Minneapolis — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Mara is the signature restaurant of the <strong>Four Seasons Hotel Minneapolis</strong>,
+      chef <strong>Gavin Kaysen</strong>'s Mediterranean dining room drawing on the 22
+      countries surrounding the sea — "land, sea, and craftsmanship" is the house
+      framing. Kaysen (a James Beard Award winner, described as a two-time winner in
+      Four Seasons press — those are his personal honors, not the restaurant's) leads
+      with executive chef <strong>Martín Morelli</strong>, chef de cuisine
+      <strong>Thony Yang</strong> in the Mara kitchen, and executive pastry chef
+      <strong>Kenzie Ross-Timm</strong>. The honest headline first: <strong>Mara
+      publishes no itemized online price menu</strong>. The official page lists signature
+      dishes without prices, so this guide covers what the menu looks like, what the
+      official 2026 wine-program figures are, and what recent diners report — with
+      every figure dated. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">245 Hennepin Ave, Minneapolis, MN 55401 (Four Seasons Hotel Minneapolis)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Gavin Kaysen; executive chef Martín Morelli; chef de cuisine Thony Yang</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Mediterranean (22 countries)</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — no official itemized prices published; wine tastings $85pp, wine dinners $195pp (2026 official events)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Reserve via the official Four Seasons page ("Reserve A Table") or 612-895-5709; wine events via OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">Wine list recognized by Wine Spectator (per Four Seasons press); Kaysen's James Beard honors are personal, not the restaurant's</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official Four Seasons page, fetched 2026-10-01:
+        <strong>breakfast Mon–Sat 7:00–10:30 AM, Sun 7:00–9:30 AM; Sunday brunch
+        9:00 AM–1:30 PM; Saturday afternoon tea 11:00 AM–2:00 PM; lunch Mon–Sat
+        11:00 AM–2:00 PM; dinner daily 5:00–9:30 PM.</strong> Bar Mara serves food
+        Sun–Thu 2:00–10:00 PM and Fri–Sat 2:00–11:00 PM (drinks to 11:00 PM Sun–Thu,
+        midnight Fri–Sat).
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The official page names these signature dishes — <strong>without prices</strong>:
+      </p>
+      <ul>
+        <li><strong>Octopus Carpaccio</strong>: the raw-seafood opener the room is known for.</li>
+        <li><strong>Gazpacho</strong>: the chilled Andalusian classic.</li>
+        <li><strong>Watermelon and Tomato Salad</strong>: a summer-leaning plate.</li>
+        <li><strong>Niman Ranch Striploin</strong>: the land centerpiece.</li>
+        <li><strong>Pistachio Opera</strong>: the pastry team's signature dessert.</li>
+      </ul>
+      <p>
+        Recent diners (aggregator reviews, 2026) also call out the <strong>lobster
+        bucatini</strong>, <strong>salt-baked branzino</strong>, <strong>whipped
+        hummus</strong>, and <strong>lamb chops</strong>. Treat these as direction,
+        not a fixed menu — the kitchen cooks seasonally.
+      </p>
+
+      <h2>The only official prices available</h2>
+      <p>
+        Because Mara publishes no itemized menu prices, the only current official
+        figures we can report come from the restaurant's own 2026 programming:
+      </p>
+      <ul>
+        <li><strong>Wine tastings — $85 per person</strong>: Four Seasons press release, May–Jul 2026 events.</li>
+        <li><strong>Wine dinners — $195 per person</strong>: same 2026 official program.</li>
+      </ul>
+      <p>
+        Older official-era anchors, labeled: a two-course prix-fixe lunch at
+        <strong>$32</strong> (Four Seasons press, 2023 era) and private-dining
+        three-course menus from <strong>$115 per person</strong> (undated getbento
+        PDF, circa 2023). Do not treat either as current pricing.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the octopus carpaccio — it's the dish the room hangs its name on.</li>
+        <li><strong>The sea play:</strong> the lobster bucatini, per the diner consensus.</li>
+        <li><strong>The land play:</strong> the Niman Ranch striploin or the lamb chops.</li>
+        <li><strong>The experience:</strong> if timing lines up, the $85 wine tasting (2026 program) is the most price-transparent way in.</li>
+        <li><strong>After dinner:</strong> end with the pistachio opera from the pastry team.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book ahead</strong> — use the "Reserve A Table" button on the official Four Seasons page or call 612-895-5709.</li>
+        <li><strong>No public price list:</strong> since Mara publishes no itemized prices, ask about current pricing when you book if budget matters.</li>
+        <li><strong>Saturday tea:</strong> the 11:00 AM–2:00 PM Saturday afternoon tea is a distinct, cheaper way to see the room.</li>
+        <li><strong>Parking:</strong> valet is available at the Four Seasons Hotel Minneapolis.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.fourseasons.com/minneapolis/dining/restaurants/mara/" target="_blank" rel="noopener">Official restaurant page — Mara at Four Seasons Minneapolis</a> (reservations via the "Reserve A Table" button or 612-895-5709)</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Mara publishes <strong>no itemized online price menu</strong> — said plainly,
+        not guessed. The $85 wine tastings and $195 wine dinners are official
+        figures from the Four Seasons' May–Jul 2026 program announcements; the $32
+        prix-fixe lunch and $115 private-dining figures are 2023-era and should not be
+        treated as current. Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Minnesota guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-minnesota/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Minnesota →</a></li>
+        <li><a href="/tavola-menu/" class="text-gold-dark font-semibold hover:underline">Tavola</a> <span class="text-ink-soft">— Italian at Elliot Park Hotel</span></li>
+        <li><a href="/st-paul-grill-menu/" class="text-gold-dark font-semibold hover:underline">St. Paul Grill</a> <span class="text-ink-soft">— the supper-club steakhouse at The Saint Paul Hotel</span></li>
+        <li><a href="/tullibee-menu/" class="text-gold-dark font-semibold hover:underline">Tullibee</a> <span class="text-ink-soft">— Nordic farm-to-table at the Hewing Hotel</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>
