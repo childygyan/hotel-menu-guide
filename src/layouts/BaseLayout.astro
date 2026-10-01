@@ -19,6 +19,47 @@ const states = [
   { label: "Ohio", href: "/best-hotel-restaurants-ohio/" },
   { label: "California", href: "/best-hotel-restaurants-california/" },
 ];
+
+// Individual hotel-restaurant guides, grouped by state. Add a new
+// { label, href } entry here and it appears in the desktop "Restaurants"
+// dropdown and the mobile expandable panel — no other changes needed.
+const restaurants = [
+  {
+    state: "New York",
+    guides: [
+      { label: "The Mark", href: "/the-mark-menu/" },
+      { label: "Palm Court", href: "/plaza-palm-court-menu/" },
+      { label: "King Cole Bar", href: "/king-cole-bar-menu/" },
+      { label: "Café Carlyle", href: "/cafe-carlyle-menu/" },
+      { label: "Locanda Verde", href: "/locanda-verde-menu/" },
+      { label: "Temple Court", href: "/temple-court-menu/" },
+      { label: "Majorelle", href: "/majorelle-menu/" },
+      { label: "Perrine", href: "/perrine-menu/" },
+    ],
+  },
+  {
+    state: "Ohio",
+    guides: [
+      { label: "Metropole", href: "/metropole-menu/" },
+      { label: "The Burnham", href: "/burnham-menu/" },
+      { label: "Adega", href: "/adega-menu/" },
+      { label: "TURN Bar + Kitchen", href: "/turn-bar-kitchen-menu/" },
+      { label: "The Guild House", href: "/guild-house-menu/" },
+      { label: "The Keep", href: "/keep-menu/" },
+    ],
+  },
+  {
+    state: "California",
+    guides: [
+      { label: "Chateau Marmont", href: "/chateau-marmont-menu/" },
+      { label: "Polo Lounge", href: "/polo-lounge-menu/" },
+      { label: "CUT", href: "/cut-menu/" },
+      { label: "Sierra Mar", href: "/sierra-mar-menu/" },
+      { label: "Addison", href: "/addison-menu/" },
+      { label: "Tonga Room", href: "/tonga-room-menu/" },
+    ],
+  },
+];
 ---
 
 <!doctype html>
@@ -50,8 +91,48 @@ const states = [
         </a>
         <ul class="hidden md:flex items-center gap-6 text-sm font-medium text-ink-soft">
           <li><a href="/" class="hover:text-gold-dark transition-colors">Home</a></li>
-          <li><a href="/the-mark-menu/" class="hover:text-gold-dark transition-colors">The Mark</a></li>
-          <li><a href="/plaza-palm-court-menu/" class="hover:text-gold-dark transition-colors">Palm Court</a></li>
+          <li class="relative" data-dropdown>
+            <button
+              type="button"
+              data-dropdown-button
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="restaurants-menu-desktop"
+              class="inline-flex items-center gap-1 hover:text-gold-dark transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark rounded-sm cursor-pointer"
+            >
+              Restaurants
+              <svg data-dropdown-chevron class="w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6l4 4 4-4" />
+              </svg>
+            </button>
+            <ul
+              id="restaurants-menu-desktop"
+              data-dropdown-menu
+              role="menu"
+              aria-label="Restaurants"
+              hidden
+              class="absolute left-0 top-full mt-2 w-72 max-h-[70vh] overflow-y-auto rounded-xl border border-line bg-white py-2 shadow-lg"
+            >
+              {restaurants.map((group) => (
+                <Fragment>
+                  <li role="presentation" class="px-4 pt-2 pb-1 text-[11px] font-bold uppercase tracking-widest text-ink-soft/70">
+                    {group.state}
+                  </li>
+                  {group.guides.map((g) => (
+                    <li role="none">
+                      <a
+                        role="menuitem"
+                        href={g.href}
+                        class="block px-4 py-2 text-sm text-ink-soft hover:bg-parchment hover:text-gold-dark focus-visible:outline-2 focus-visible:outline-gold-dark"
+                      >
+                        {g.label}
+                      </a>
+                    </li>
+                  ))}
+                </Fragment>
+              ))}
+            </ul>
+          </li>
           <li class="relative" data-dropdown>
             <button
               type="button"
@@ -121,8 +202,21 @@ const states = [
               </svg>
             </button>
           </li>
-          <li><a href="/the-mark-menu/" class="hover:text-gold-dark">The Mark</a></li>
-          <li><a href="/plaza-palm-court-menu/" class="hover:text-gold-dark">Palm Court</a></li>
+          <li>
+            <button
+              type="button"
+              data-dropdown-button
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="restaurants-menu-mobile"
+              class="inline-flex items-center gap-1 hover:text-gold-dark focus-visible:outline-2 focus-visible:outline-gold-dark rounded-sm cursor-pointer"
+            >
+              Restaurants
+              <svg data-dropdown-chevron class="w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6l4 4 4-4" />
+              </svg>
+            </button>
+          </li>
           <li><a href="/about/" class="hover:text-gold-dark">About</a></li>
           <li><a href="/contact/" class="hover:text-gold-dark">Contact</a></li>
         </ul>
@@ -141,6 +235,26 @@ const states = [
               </a>
             </li>
           </ul>
+        </div>
+        <div id="restaurants-menu-mobile" data-dropdown-menu hidden class="border-t border-line bg-white max-h-[70vh] overflow-y-auto">
+          <div class="max-w-5xl mx-auto px-4 py-2 text-sm">
+            {restaurants.map((group) => (
+              <div>
+                <p class="pt-3 pb-1 text-[11px] font-bold uppercase tracking-widest text-ink-soft/70">
+                  {group.state}
+                </p>
+                <ul aria-label={group.state + " restaurants"}>
+                  {group.guides.map((g) => (
+                    <li>
+                      <a href={g.href} class="block py-2.5 text-ink-soft hover:text-gold-dark border-b border-line/60 last:border-0">
+                        {g.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </nav>
     </header>
@@ -207,55 +321,61 @@ const states = [
     </footer>
 
     <script>
-      // States dropdowns (desktop + mobile): click to toggle, Escape closes,
-      // outside click closes, focus leaving the dropdown closes it.
+      // Nav dropdowns (desktop + mobile): click to toggle, Escape closes,
+      // outside click closes, focus leaving the button+menu closes it.
+      // Each button is linked to its menu via aria-controls, so several
+      // dropdowns may share one container.
       (function () {
-        var dropdowns = document.querySelectorAll("[data-dropdown]");
-
-        function setOpen(dropdown, open) {
-          var button = dropdown.querySelector("[data-dropdown-button]");
-          var menu = dropdown.querySelector("[data-dropdown-menu]");
-          var chevron = dropdown.querySelector("[data-dropdown-chevron]");
-          if (!button || !menu) return;
-          menu.hidden = !open;
-          button.setAttribute("aria-expanded", open ? "true" : "false");
-          if (chevron) chevron.classList.toggle("rotate-180", open);
-        }
-
-        function closeAll() {
-          dropdowns.forEach(function (d) {
-            setOpen(d, false);
-          });
-        }
-
-        dropdowns.forEach(function (dropdown) {
-          var button = dropdown.querySelector("[data-dropdown-button]");
-          var menu = dropdown.querySelector("[data-dropdown-menu]");
-          if (!button || !menu) return;
-
-          button.addEventListener("click", function (e) {
-            e.stopPropagation();
-            var willOpen = menu.hidden;
-            closeAll();
-            setOpen(dropdown, willOpen);
-          });
-
-          dropdown.addEventListener("keydown", function (e) {
-            if (e.key === "Escape") {
-              setOpen(dropdown, false);
-              button.focus();
-            }
-          });
-
-          dropdown.addEventListener("focusout", function (e) {
-            if (!dropdown.contains(e.relatedTarget)) setOpen(dropdown, false);
+        var pairs = [];
+        document.querySelectorAll("[data-dropdown-button]").forEach(function (button) {
+          var menu = document.getElementById(button.getAttribute("aria-controls") || "");
+          if (!menu) return;
+          pairs.push({
+            button: button,
+            menu: menu,
+            chevron: button.querySelector("[data-dropdown-chevron]"),
           });
         });
 
-        document.addEventListener("click", function (e) {
-          dropdowns.forEach(function (d) {
-            if (!d.contains(e.target)) setOpen(d, false);
+        function setOpen(pair, open) {
+          pair.menu.hidden = !open;
+          pair.button.setAttribute("aria-expanded", open ? "true" : "false");
+          if (pair.chevron) pair.chevron.classList.toggle("rotate-180", open);
+        }
+
+        function closeAll() {
+          pairs.forEach(function (p) {
+            setOpen(p, false);
           });
+        }
+
+        pairs.forEach(function (pair) {
+          pair.button.addEventListener("click", function (e) {
+            e.stopPropagation();
+            var willOpen = pair.menu.hidden;
+            closeAll();
+            setOpen(pair, willOpen);
+          });
+
+          function onKey(e) {
+            if (e.key === "Escape") {
+              setOpen(pair, false);
+              pair.button.focus();
+            }
+          }
+          pair.button.addEventListener("keydown", onKey);
+          pair.menu.addEventListener("keydown", onKey);
+
+          function onFocusOut(e) {
+            var t = e.relatedTarget;
+            if (!t || (t !== pair.button && !pair.menu.contains(t))) setOpen(pair, false);
+          }
+          pair.button.addEventListener("focusout", onFocusOut);
+          pair.menu.addEventListener("focusout", onFocusOut);
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!e.target.closest("[data-dropdown]")) closeAll();
         });
 
         document.addEventListener("keydown", function (e) {
