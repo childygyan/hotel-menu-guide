@@ -27,13 +27,19 @@ const jsonLd = {
       name: "California",
       url: "https://hotel-menu-guide.pages.dev/best-hotel-restaurants-california/",
     },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Nevada",
+      url: "https://hotel-menu-guide.pages.dev/best-hotel-restaurants-nevada/",
+    },
   ],
 };
 ---
 
 <BaseLayout
   title="Browse Hotel Restaurant Guides by State"
-  description="Browse our original hotel restaurant menu guides by US state. New York, Ohio, and California covered so far — more states on the way."
+  description="Browse our original hotel restaurant menu guides by US state. New York, Ohio, California, and Nevada covered so far — more states on the way."
   path="/states/"
   jsonLd={jsonLd}
   ogImage="/images/hero-home.webp"
@@ -126,6 +132,31 @@ const jsonLd = {
             prices, and how to get a table.
           </p>
           <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Explore California →</span>
+        </div>
+      </a>
+
+      <a
+        href="/best-hotel-restaurants-nevada/"
+        class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <img
+          src="/images/nevada-hotel-dining.webp"
+          alt="Illustration of a glamorous Las Vegas hotel dining terrace at dusk"
+          class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">6 guides</p>
+          <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+            Nevada
+          </h2>
+          <p class="mt-3 text-ink-soft text-sm leading-relaxed">
+            Nevada won our search-interest comparison outright — and Las Vegas has the
+            densest collection of great hotel restaurants in America. Our six guides cover
+            Joël Robuchon, SW Steakhouse, Restaurant Guy Savoy, Nobu, Carbone, and Jean
+            Georges Steakhouse, with menus, prices, and reservation tips.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Explore Nevada →</span>
         </div>
       </a>
     </div>

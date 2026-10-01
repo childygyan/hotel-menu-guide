@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Nobu",
+  servesCuisine: ["Japanese", "Japanese-Peruvian"],
+  priceRange: "$$$$",
+  telephone: "+1-702-785-6628",
+  url: "https://www.caesars.com/caesars-palace/restaurants/nobu",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3570 Las Vegas Blvd S",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+    postalCode: "89109",
+    addressCountry: "US",
+  },
+  description:
+    "Nobu at Caesars Palace, Las Vegas — Nobu Matsuhisa's Japanese-Peruvian fine-dining restaurant inside the world's first Nobu Hotel.",
+};
+---
+
+<BaseLayout
+  title="Nobu Las Vegas Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Nobu at Caesars Palace Las Vegas: official menu prices (black cod miso $49, omakase $250), hours, and visiting tips. Prices from the official Nobu menu, October 2026."
+  path="/nobu-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/nobu-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/nobu-dining.webp"
+      alt="Illustration of a sleek modern Japanese restaurant with dark wood and warm lighting (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Las Vegas
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Nobu — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Caesars Palace outpost of Nobu Matsuhisa's global empire sits inside the
+      <strong>world's first Nobu Hotel</strong> — opened in 2013 as a venture between
+      Matsuhisa, Caesars Palace, Robert De Niro, and Meir Teper, in a David Rockwell-designed
+      space. It was reported at opening as the world's largest Nobu restaurant, and it
+      remains the <strong>only Nobu in the United States with teppan tables</strong>, where
+      the teppanyaki omakase is cooked in front of you. OpenTable has named it an Icon in
+      2024, 2025, and 2026. A note on stars: the previous Nobu location at the old Hard
+      Rock held a Michelin star in the 2008–2009 Vegas guides, but the Caesars Palace
+      location earned no star in the inaugural 2026 Michelin Guide Southwest. Below is our
+      independent walkthrough with prices from the current official Nobu menu (fetched
+      October 2026), plus what we'd order. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">3570 Las Vegas Blvd S, Las Vegas, NV 89109 (inside Caesars Palace / Nobu Hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Nobu Matsuhisa (founder); Jennifer Chow per OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Japanese / Japanese-Peruvian</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — signatures $35–$60; Japanese A5 wagyu $55/oz</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable or +1 (702) 785-6628</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Mon–Thu &amp; Sun 5:00–9:30 PM; Fri–Sat 4:30–10:00 PM (per OpenTable)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported by OpenTable and Caesars.com: <strong>Monday–Thursday and Sunday,
+        5:00–9:30 PM; Friday–Saturday, 4:30–10:00 PM</strong> (Caesars.com lists Friday–Saturday
+        to 10:30 PM — confirm when booking). Dinner only.
+      </p>
+
+      <h2>Signatures &amp; official prices</h2>
+      <p>
+        Prices below are from the <strong>current official Nobu menu</strong> (noburestaurants.com,
+        fetched October 2026):
+      </p>
+      <ul>
+        <li><strong>Black Cod with Miso — $49</strong>: the signature dish, the one order that defines Nobu.</li>
+        <li><strong>Yellowtail Jalapeño — $37</strong>; <strong>Rock Shrimp Tempura — $35</strong>; <strong>Toro Tartare with Caviar — $60</strong>.</li>
+        <li><strong>Japanese A5 Wagyu — $55 per ounce</strong> (tataki, new style, tobanyaki, steak, or flambé).</li>
+        <li><strong>Beef Tenderloin Yuzu Truffle Butter — $110</strong>; <strong>Lobster Wasabi Pepper — $150</strong>.</li>
+        <li><strong>Brick Oven Hamachi Kama — $40</strong>; <strong>Nobu Tacos</strong> — wagyu $20/pc, lobster $18/pc (2-pc minimum).</li>
+        <li><strong>Sushi</strong>: toro $25/pc, Japanese wagyu $25/pc, uni $22/pc; maki from $17 (spicy tuna) to $42 (lobster).</li>
+        <li><strong>Teppanyaki Omakase — $250 per guest</strong>: multi-course, prepared on the teppan grills; the whole table must participate, and it's not available after 9 PM.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Non-negotiable:</strong> the black cod with miso ($49) — the dish that built the brand.</li>
+        <li><strong>The classics:</strong> yellowtail jalapeño ($37) and rock shrimp tempura ($35) — the Nobu canon.</li>
+        <li><strong>The splurge:</strong> A5 wagyu by the ounce ($55/oz) — or the $250 teppanyaki omakase for the full theater.</li>
+        <li><strong>Easy start:</strong> edamame ($10) or shishito peppers ($12) while you decide.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via OpenTable</strong> — it's an OpenTable Icon three years running (2024–2026), and prime slots go fast. Groups of 14+: (866) 733-5827.</li>
+        <li><strong>Dress code:</strong> business casual.</li>
+        <li><strong>Teppanyaki note:</strong> the $250 omakase requires the whole table to participate and isn't available after 9 PM — plan an earlier seating if that's your goal.</li>
+        <li><strong>The vegetarian and "Caesars" omakase</strong> prices aren't published on the official menu — ask when you book.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.caesars.com/caesars-palace/restaurants/nobu" target="_blank" rel="noopener">Official restaurant page — Caesars Palace</a></li>
+        <li><a href="https://www.noburestaurants.com/lasvegascaesars/menus/" target="_blank" rel="noopener">Official menu — noburestaurants.com</a> (current prices)</li>
+        <li><a href="https://www.opentable.com/nobu-caesars-palace-las-vegas" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>current official Nobu menu at
+        noburestaurants.com, fetched October 2026</strong> — the most current source
+        available. Menus and prices change frequently; always verify with the restaurant
+        before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Las Vegas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-nevada/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Nevada →</a></li>
+        <li><a href="/guy-savoy-menu/" class="text-gold-dark font-semibold hover:underline">Restaurant Guy Savoy at Caesars Palace</a> <span class="text-ink-soft">— French fine dining in the same hotel</span></li>
+        <li><a href="/joel-robuchon-menu/" class="text-gold-dark font-semibold hover:underline">Joël Robuchon at MGM Grand</a> <span class="text-ink-soft">— the Strip's other tasting-menu temple</span></li>
+        <li><a href="/carbone-menu/" class="text-gold-dark font-semibold hover:underline">Carbone at Aria</a> <span class="text-ink-soft">— Italian-American glamour</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

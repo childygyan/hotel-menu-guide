@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Carbone",
+  servesCuisine: ["Italian", "Italian-American"],
+  priceRange: "$$$$",
+  telephone: "+1-702-590-2663",
+  url: "https://aria.mgmresorts.com/en/restaurants/carbone.html",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3730 S Las Vegas Blvd",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+    postalCode: "89158",
+    addressCountry: "US",
+  },
+  description:
+    "Carbone at ARIA Resort & Casino, Las Vegas — Major Food Group's Italian-American fine-dining supper club, led by executive chef Jonah Resnick.",
+};
+---
+
+<BaseLayout
+  title="Carbone Las Vegas Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Carbone at ARIA Las Vegas: reported prices (spicy rigatoni ~$36, veal parm ~$65), hours, reservations, and visiting tips. Prices reported as of October 2026."
+  path="/carbone-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/carbone-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/carbone-dining.webp"
+      alt="Illustration of a retro Italian-American supper club with red leather banquettes (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Las Vegas
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Carbone — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Las Vegas outpost of Major Food Group's 2013 Greenwich Village hit — opened at
+      ARIA's Promenade level in October 2015 — Carbone is the Strip's temple of
+      Italian-American maximalism: a mid-century supper club designed by Ken Fulk with red
+      leather booths, tuxedoed captains, tableside Caesar salads, and a vintage-rum cart.
+      Executive chef Jonah Resnick runs the kitchen. It is consistently one of the hardest
+      reservations on the Strip (a sibling, Carbone Riviera, opened at Bellagio in late
+      2025). Below is our independent walkthrough of the menu with reported prices, hours,
+      and what we'd order. Everything is written in our own words; prices below are dated
+      public reports, flagged as such — the restaurant publishes no current menu prices.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">3730 S Las Vegas Blvd, Las Vegas, NV 89158 (Promenade level, ARIA Resort &amp; Casino)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Jonah Resnick</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Italian-American fine dining</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — pastas reported $30–$55, mains $50–$75 (mid-2025 reports)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Essential — book via the ARIA site or +1 (702) 590-2663; not on OpenTable's booking network</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Sun–Thu 5:00–10:30 PM; Fri–Sat 5:00–11:00 PM</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported on the official ARIA page: <strong>Sunday–Thursday, 5:00–10:30 PM;
+        Friday–Saturday, 5:00–11:00 PM</strong>. Dinner only — no lunch service.
+      </p>
+
+      <h2>Menu highlights &amp; reported prices</h2>
+      <p>
+        The restaurant publishes no current prices. The latest dated figures (mid-2025
+        reporting): <strong>spicy rigatoni vodka ~$36</strong>, <strong>veal parmesan
+        ~$65</strong>, antipasti $20–$40, pastas $30–$55, main courses $50–$75, sides
+        $15–$25, desserts $15–$25. An older official press kit listed appetizers $18–$45
+        and mains $37–$120 — treat as dated. Signatures to know:
+      </p>
+      <ul>
+        <li><strong>Spicy Rigatoni Vodka</strong> — the dish that made Carbone famous.</li>
+        <li><strong>Veal Parmesan</strong> — the red-sauce canon, elevated.</li>
+        <li><strong>Chicken Scarpariello</strong> — sweet-and-sour peppers, sausage, chicken.</li>
+        <li><strong>Lobster Fra Diavola</strong> — the luxury pasta move.</li>
+        <li><strong>Octopus Pizzaiolo</strong> — the seafood starter people talk about.</li>
+        <li><strong>Tableside Caesar salad</strong> — prepared at the table, old-school showmanship.</li>
+        <li><strong>Bananas foster flambé</strong> and the <strong>tableside vintage-rum cart</strong> — the sweet finish (rare rums, including vintage Appleton).</li>
+      </ul>
+
+      <h2>The room &amp; the wine</h2>
+      <p>
+        Ken Fulk's design leans hard into mid-century Italian-American glamour — red leather,
+        warm light, tuxedoed service. The wine list runs to some 550 labels with vintages
+        back to 1929. This is a see-and-be-seen room where the theater is part of what
+        you're paying for.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Non-negotiable:</strong> the spicy rigatoni vodka — it's the signature for a reason.</li>
+        <li><strong>The classic:</strong> veal parmesan — the dish that defines the genre.</li>
+        <li><strong>To start:</strong> the octopus pizzaiolo or the tableside Caesar.</li>
+        <li><strong>To finish:</strong> the bananas foster flambé — and ask about the rum cart.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book ~30 days out</strong> — this is routinely one of the Strip's toughest tables. Reserve through the ARIA site's reservation flow or call +1 (702) 590-2663.</li>
+        <li><strong>Not on OpenTable's booking network</strong> — OpenTable's own listing says to contact the restaurant directly (its page carries reviews only).</li>
+        <li><strong>Dinner only</strong>, and expect a lively, loud, celebratory room — this is not the quiet fine-dining pick.</li>
+        <li><strong>Prices are reported, not published</strong> — the figures above are mid-2025 reports; verify current prices when you book.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://aria.mgmresorts.com/en/restaurants/carbone.html" target="_blank" rel="noopener">Official restaurant page — ARIA</a> (reservations and current hours)</li>
+        <li><a href="https://www.opentable.com/carbone-las-vegas" target="_blank" rel="noopener">OpenTable listing</a> (reviews; not bookable — reserve via ARIA)</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The restaurant <strong>publishes no current menu prices</strong>. Figures above
+        (spicy rigatoni ~$36, veal parm ~$65, pasta/main/side/dessert bands) come from
+        <strong>mid-2025 public reporting</strong>; the older press-kit bands ($18–$120)
+        are dated further back. Always verify current prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Las Vegas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-nevada/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Nevada →</a></li>
+        <li><a href="/jean-georges-steakhouse-menu/" class="text-gold-dark font-semibold hover:underline">Jean Georges Steakhouse at Aria</a> <span class="text-ink-soft">— the steakhouse in the same hotel</span></li>
+        <li><a href="/nobu-menu/" class="text-gold-dark font-semibold hover:underline">Nobu at Caesars Palace</a> <span class="text-ink-soft">— Japanese fine dining from a global name</span></li>
+        <li><a href="/sw-steakhouse-menu/" class="text-gold-dark font-semibold hover:underline">SW Steakhouse at Wynn</a> <span class="text-ink-soft">— the lake-view steakhouse alternative</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

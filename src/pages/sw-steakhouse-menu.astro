@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "SW Steakhouse",
+  servesCuisine: ["American", "Steakhouse"],
+  priceRange: "$$$$",
+  telephone: "+1-702-770-3325",
+  url: "https://www.wynnlasvegas.com/dining/fine-dining/sw-steakhouse",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3131 Las Vegas Blvd S",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+    postalCode: "89109",
+    addressCountry: "US",
+  },
+  description:
+    "SW Steakhouse at Wynn Las Vegas — the Forbes Four-Star steakhouse on the Lake of Dreams, led by executive chef Mark LoRusso.",
+};
+---
+
+<BaseLayout
+  title="SW Steakhouse Menu Guide (2026) — Prices, Wagyu, What to Order | Hotel Menu Guide"
+  description="An independent guide to SW Steakhouse at Wynn Las Vegas: official menu prices (Japanese A5 wagyu, porterhouse, tomahawk), hours, and visiting tips. Prices from the official Wynn menu, October 2026."
+  path="/sw-steakhouse-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/sw-steakhouse-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/sw-steakhouse-dining.webp"
+      alt="Illustration of a steakhouse terrace overlooking a glowing lake with fountains at night (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Las Vegas
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      SW Steakhouse — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      One of Wynn Las Vegas's original restaurants — open since the resort's May 2005 grand
+      opening and renovated in 2025 in a "vintage ocean liner" theme — SW Steakhouse is the
+      classic Strip steakhouse with the best view in the business: it overlooks the Lake of
+      Dreams, with a 90-foot waterfall and nightly multimedia shows. Executive chef Mark
+      LoRusso runs a reinterpreted American steakhouse that holds a Forbes Travel Guide
+      Four-Star rating, and the restaurant is one of only three in the US offering certified
+      authentic Japanese Kobe beef. Below is our independent walkthrough of the menu with
+      prices taken directly from the official Wynn online menu (fetched October 2026), plus
+      what we'd order. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">3131 Las Vegas Blvd S, Las Vegas, NV 89109 (inside Wynn Las Vegas)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Mark LoRusso</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">American steakhouse</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — prime steaks $89–$148, Japanese A5 wagyu from $300 per 4 oz</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Awards</dt><dd class="text-ink-soft">Forbes Travel Guide Four-Star</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported on the official Wynn menu page and OpenTable: <strong>Monday–Thursday and
+        Sunday, 5:30–10:00 PM; Friday–Saturday, 5:30–11:00 PM</strong>. Children under 5 are
+        not permitted.
+      </p>
+
+      <h2>Starters &amp; showpieces</h2>
+      <p>
+        Prices below are from the official Wynn online menu, fetched October 2026:
+      </p>
+      <ul>
+        <li><strong>Seafood Spectacular — $199</strong>: Maine lobster, king crab legs, jumbo shrimp, oysters, crab cocktail, tuna crudo, and scallop ceviche.</li>
+        <li><strong>Jumbo Bone Marrow Flambé — $65</strong>: the guest-favorite showpiece.</li>
+        <li><strong>Regiis Ova Caviar Service</strong>: Osetra $195 (28g) / $300 (50g); Golden Osetra $250 / $375.</li>
+      </ul>
+
+      <h2>The steaks</h2>
+      <ul>
+        <li><strong>Japanese Wagyu A5</strong> — Yonezawa Gyu Oguni Beef (Yamagata Prefecture), <strong>$345 for 4 oz</strong> ($85 per additional oz); Hokkaido Snow Beef, <strong>$300 for 4 oz</strong> ($75 per additional oz). Marble score 8–12; Wynn calls the Yonezawa offering exclusive to Wynn Las Vegas.</li>
+        <li><strong>Snake River Farms Gold American Wagyu</strong> — 10 oz dry-aged NY strip, <strong>$148</strong>.</li>
+        <li><strong>Prime cuts</strong> — filet mignon 9/12 oz, $89/$118; boneless ribeye 18 oz, $104; NY strip 16 oz, $94; bone-in ribeye 26 oz, $148; 45-day dry-aged bone-in NY 18 oz, $110.</li>
+        <li><strong>For two</strong> — 45-day dry-aged porterhouse 40 oz, <strong>$245</strong>; tomahawk 48 oz, <strong>$295</strong>; pepper-crusted chateaubriand 20 oz, <strong>$185</strong>.</li>
+      </ul>
+
+      <h2>Beyond steak</h2>
+      <ul>
+        <li><strong>Broiled Red King Crab — $195</strong> and <strong>Butter Poached Maine Lobster — $165</strong> for the seafood-first diner.</li>
+        <li><strong>Pan Roasted Dover Sole — $105</strong>; <strong>Diver Sea Scallops — $58</strong>.</li>
+        <li><strong>Sides</strong> run $20–$29: Maine lobster Sardinian gnocchi ($29), loaded baked potato tater tots ($24).</li>
+        <li><strong>Desserts</strong> $20–$32: Bananas Foster cheesecake ($32), chocolate chip cookie soufflé ($25), crème brûlée ($20).</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The splurge:</strong> the 45-day dry-aged porterhouse for two ($245) — the best value among the big-format cuts.</li>
+        <li><strong>The connoisseur's move:</strong> 4 oz of Yonezawa A5 wagyu ($345) — certified authentic Japanese beef, exclusive to Wynn.</li>
+        <li><strong>To start:</strong> the bone marrow flambé ($65) — theater and richness in one.</li>
+        <li><strong>To finish:</strong> the Bananas Foster cheesecake ($32).</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Request the terrace</strong> when you book — the open-air seats facing the Lake of Dreams are the prime view, but they're not guaranteed.</li>
+        <li><strong>Book via OpenTable</strong>; Friday–Saturday dinner fills up.</li>
+        <li><strong>No children under 5</strong> — plan accordingly.</li>
+        <li><strong>Note:</strong> the chili-rubbed double rib eye once featured on Food Network no longer appears on the current menu; the ribeye lineup above is what's listed now.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.wynnlasvegas.com/dining/fine-dining/sw-steakhouse" target="_blank" rel="noopener">Official restaurant page — Wynn Las Vegas</a></li>
+        <li><a href="https://www.wynnlasvegas.com/menus/sw-steakhouse/main" target="_blank" rel="noopener">Official online menu — Wynn Las Vegas</a> (current prices)</li>
+        <li><a href="https://www.opentable.com/sw-steakhouse-wynn-las-vegas" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>official Wynn Las Vegas online menu, fetched
+        October 2026</strong> — the most current source available. Menus and prices change
+        frequently; always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Las Vegas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-nevada/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Nevada →</a></li>
+        <li><a href="/jean-georges-steakhouse-menu/" class="text-gold-dark font-semibold hover:underline">Jean Georges Steakhouse at Aria</a> <span class="text-ink-soft">— the other great Strip steakhouse</span></li>
+        <li><a href="/carbone-menu/" class="text-gold-dark font-semibold hover:underline">Carbone at Aria</a> <span class="text-ink-soft">— Italian-American glamour next door</span></li>
+        <li><a href="/joel-robuchon-menu/" class="text-gold-dark font-semibold hover:underline">Joël Robuchon at MGM Grand</a> <span class="text-ink-soft">— for the special-occasion alternative</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

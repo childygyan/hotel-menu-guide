@@ -1,0 +1,167 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Best Hotel Restaurants in Nevada",
+  description:
+    "Our picks for the best hotel restaurants in Nevada, each with an original menu guide.",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, url: "https://hotel-menu-guide.pages.dev/joel-robuchon-menu/", name: "Joël Robuchon at MGM Grand" },
+    { "@type": "ListItem", position: 2, url: "https://hotel-menu-guide.pages.dev/sw-steakhouse-menu/", name: "SW Steakhouse at Wynn Las Vegas" },
+    { "@type": "ListItem", position: 3, url: "https://hotel-menu-guide.pages.dev/guy-savoy-menu/", name: "Restaurant Guy Savoy at Caesars Palace" },
+    { "@type": "ListItem", position: 4, url: "https://hotel-menu-guide.pages.dev/nobu-menu/", name: "Nobu at Caesars Palace" },
+    { "@type": "ListItem", position: 5, url: "https://hotel-menu-guide.pages.dev/carbone-menu/", name: "Carbone at ARIA" },
+    { "@type": "ListItem", position: 6, url: "https://hotel-menu-guide.pages.dev/jean-georges-steakhouse-menu/", name: "Jean Georges Steakhouse at ARIA" },
+  ],
+};
+
+const guides = [
+  {
+    href: "/joel-robuchon-menu/",
+    img: "/images/joel-robuchon-dining.webp",
+    alt: "Illustration of an elegant French fine-dining room with purple art-deco decor",
+    tag: "Las Vegas · MGM Grand",
+    title: "Joël Robuchon",
+    text: "The Strip's temple of French fine dining — two 2026 Michelin stars, a 16-course dégustation reported at ~$445–$500, and the legendary bread and dessert carts. Our guide walks through the menu and the rituals.",
+  },
+  {
+    href: "/sw-steakhouse-menu/",
+    img: "/images/sw-steakhouse-dining.webp",
+    alt: "Illustration of a steakhouse terrace overlooking a glowing lake with fountains at night",
+    tag: "Las Vegas · Wynn",
+    title: "SW Steakhouse",
+    text: "Wynn's lake-view steakhouse since 2005 — Japanese A5 wagyu from $300 per 4 oz, a $245 porterhouse for two, and official menu prices we verified. Our guide covers the steaks and the terrace.",
+  },
+  {
+    href: "/guy-savoy-menu/",
+    img: "/images/guy-savoy-dining.webp",
+    alt: "Illustration of a grand classic French dining room with golden lighting",
+    tag: "Las Vegas · Caesars Palace",
+    title: "Restaurant Guy Savoy",
+    text: "Guy Savoy's only restaurant outside France — 20 years old in 2026, one Michelin star, and a 14-course Prestige tasting reported at $385. Our guide covers the menu and the famous carts.",
+  },
+  {
+    href: "/nobu-menu/",
+    img: "/images/nobu-dining.webp",
+    alt: "Illustration of a sleek modern Japanese restaurant with dark wood and warm lighting",
+    tag: "Las Vegas · Caesars Palace",
+    title: "Nobu",
+    text: "Inside the world's first Nobu Hotel — the black cod miso ($49), A5 wagyu at $55/oz, and the only Nobu in America with teppan tables. Our guide uses the current official menu prices.",
+  },
+  {
+    href: "/carbone-menu/",
+    img: "/images/carbone-dining.webp",
+    alt: "Illustration of a retro Italian-American supper club with red leather banquettes",
+    tag: "Las Vegas · ARIA",
+    title: "Carbone",
+    text: "The Strip's hardest reservation — Major Food Group's red-sauce supper club with the famous spicy rigatoni (~$36 reported), tableside Caesar, and a vintage-rum cart. Our guide covers how to get in.",
+  },
+  {
+    href: "/jean-georges-steakhouse-menu/",
+    img: "/images/jean-georges-steakhouse-dining.webp",
+    alt: "Illustration of a sleek modern steakhouse dining room with dark wood and brass",
+    tag: "Las Vegas · ARIA",
+    title: "Jean Georges Steakhouse",
+    text: "Jean-Georges Vongerichten's modern steakhouse — apricot-wood grills, a certified Japanese beef program, and tableside-carved tomahawks. Our guide explains the menu and the midweek closure.",
+  },
+];
+---
+
+<BaseLayout
+  title="Best Hotel Restaurants in Nevada — 6 Great Guides"
+  description="Our picks for the best hotel restaurants in Nevada: Joël Robuchon, SW Steakhouse, Restaurant Guy Savoy, Nobu, Carbone, and Jean Georges Steakhouse — each with an original menu guide."
+  path="/best-hotel-restaurants-nevada/"
+  jsonLd={jsonLd}
+  ogImage="/images/nevada-hotel-dining.webp"
+>
+  <article class="max-w-5xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/nevada-hotel-dining.webp"
+      alt="Illustration of a glamorous Las Vegas hotel dining terrace at dusk with the Strip skyline glowing"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+    <p class="mt-10 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Pillar Guide · Nevada
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight max-w-3xl">
+      The Best Hotel Restaurants in Nevada
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed max-w-3xl">
+      Nevada means Las Vegas, and Las Vegas means the densest concentration of great hotel
+      restaurants in America: two-Michelin-star French tasting temples, lake-view
+      steakhouses, the world's first Nobu Hotel, and the hardest Italian reservation on
+      the Strip. We've written an original, independent guide to each of the six below:
+      what the menu looks like, what it costs, and what we'd order. Prices are reported
+      figures, dated honestly — never copied menus.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {guides.map((g) => (
+        <a
+          href={g.href}
+          class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+        >
+          <img
+            src={g.img}
+            alt={g.alt}
+            class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">{g.tag}</p>
+            <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+              {g.title}
+            </h2>
+            <p class="mt-3 text-ink-soft text-sm leading-relaxed">{g.text}</p>
+            <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-parchment border border-line p-6 sm:p-10">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold">How we chose these six</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3 text-sm leading-relaxed text-ink-soft">
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Search interest, then notability</h3>
+          <p>
+            We checked Google Trends (United States, past 12 months) for hotel-restaurant
+            menu queries across five states. Nevada won clearly: "joel robuchon menu"
+            averaged 6.9 and "sw steakhouse menu" 2.9, for a Nevada mean of 4.9 — ahead of
+            Illinois (2.4), Texas (1.4), South Carolina (1.3), and Louisiana (0.6). Both
+            leaders headline this list; the rest earned their spots through awards, press,
+            and history.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">One city, six rooms</h3>
+          <p>
+            All six are on the Las Vegas Strip — MGM Grand, Wynn, Caesars Palace (twice),
+            and ARIA (twice). That's where Nevada's hotel dining lives, from French
+            tasting temples to steakhouses to the Strip's great Italian and Japanese rooms.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Original writing, always</h3>
+          <p>
+            We never copy a restaurant's menu text or photos. Every guide is written in our own words
+            from publicly reported facts — prices dated honestly, with a nudge to verify before you visit.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 sm:p-6 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">A note on prices</p>
+      <p>
+        All prices on this site are <strong>reported as of 2026</strong>, gathered from the
+        restaurants' official published materials and reputable public sources. Menus and prices change
+        frequently — please verify with the restaurant before visiting.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

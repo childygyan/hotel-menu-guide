@@ -1,0 +1,161 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Restaurant Guy Savoy",
+  servesCuisine: ["French"],
+  priceRange: "$$$$",
+  telephone: "+1-702-731-7286",
+  url: "https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3570 S Las Vegas Blvd",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+    postalCode: "89109",
+    addressCountry: "US",
+  },
+  description:
+    "Restaurant Guy Savoy at Caesars Palace, Las Vegas — Chef Guy Savoy's Michelin-starred French fine-dining restaurant, celebrating its 20th anniversary in 2026.",
+};
+---
+
+<BaseLayout
+  title="Restaurant Guy Savoy Menu Guide (2026) — Prices, Tastings | Hotel Menu Guide"
+  description="An independent guide to Restaurant Guy Savoy at Caesars Palace Las Vegas: the Prestige tasting menu (reported ~$385), signature dishes, hours, and visiting tips. Prices reported as of October 2026."
+  path="/guy-savoy-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/guy-savoy-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/guy-savoy-dining.webp"
+      alt="Illustration of a grand classic French dining room with golden lighting (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Las Vegas
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Restaurant Guy Savoy — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Tucked into a quiet corner of the Augustus Tower's second floor at Caesars Palace,
+      Restaurant Guy Savoy is chef Guy Savoy's only restaurant outside France — and it
+      celebrated its <strong>20th anniversary in 2026</strong>. The room holds a <strong>2026
+      Michelin star</strong> (it carried two in the 2008–2009 Vegas guides), plus Forbes
+      Five-Star, AAA Five Diamond, and Wine Spectator Grand Award honors every year since
+      2008; it was named the highest-ranking Las Vegas restaurant in La Liste's 2026 Top
+      1,000 and is an OpenTable Icon for 2024, 2025, and 2026. The dining room, with Strip
+      views and a 2,800-plus-selection wine list, is famous for its stately procession of
+      carts — bread, champagne, and cheese. Below is our independent walkthrough of how the
+      menu works, what we know about prices, and what we'd order. Everything is written in
+      our own words; the restaurant publishes no current prices, so every figure below is a
+      dated third-party report, flagged as such.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">3570 S Las Vegas Blvd, Las Vegas, NV 89109 (second floor, Augustus Tower, Caesars Palace)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Chef Guy Savoy</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary French</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — the 14-course Prestige tasting was reported at $385 per person (2025-era); the restaurant publishes no current prices</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable or +1 (702) 731-7286</dd></div>
+        <div><dt class="font-semibold text-ink">Awards</dt><dd class="text-ink-soft">2026 Michelin Guide Southwest ★ · Forbes Five-Star · AAA Five Diamond · Wine Spectator Grand Award (since 2008)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported by Caesars location data and OpenTable: <strong>Tuesday–Saturday, 5:00 PM
+        to about 9:00 PM</strong> (OpenTable lists last seatings around 8:45 PM). Closed
+        Sunday and Monday.
+      </p>
+
+      <h2>The tasting menus — reported ~$385 per person</h2>
+      <p>
+        The menu is tasting-menu driven. The headline <strong>Prestige tasting menu (14
+        courses)</strong> was reported at <strong>$385 per person</strong> in a 2025-era
+        review ("dinner for two came to over $1,000"); another undated review put a chef's
+        tasting around <strong>$300 per person</strong> food-only, with an optional
+        <strong>$555 wine pairing</strong>. Older tiers (a $555 Celebration menu and $455
+        white-truffle menu, November 2020; ~2014-era $348/$258/$120 menus) are historical
+        reference only. And for the truly once-in-a-lifetime: a chef-hosted "Symphony Menu"
+        event ran <strong>November 18–21, 2026</strong> at <strong>$680 per person</strong>
+        without wine pairing (up to <strong>$1,000</strong> with premium pairing and cognac),
+        including a photo, signed book, and kitchen tour.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The restaurant publishes no à la carte prices, so we describe the signatures without
+        figures:
+      </p>
+      <ul>
+        <li><strong>Artichoke and Black Truffle Soup</strong> — served with toasted mushroom brioche and truffle butter; the restaurant's most famous dish.</li>
+        <li><strong>Colors of Caviar</strong> — a layered caviar parfait with caviar vinaigrette and caviar sabayon.</li>
+        <li><strong>The rolling bread cart</strong> — legendary in its own right, alongside champagne and cheese carts that make a stately procession through the room.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The full experience:</strong> the Prestige tasting — fourteen courses is the way this kitchen wants to be experienced.</li>
+        <li><strong>Don't miss:</strong> the artichoke and black truffle soup — it's the signature for a reason.</li>
+        <li><strong>Say yes</strong> to the carts — bread, champagne, cheese. They're part of the theater.</li>
+        <li><strong>On wine:</strong> with 2,800+ selections and a Grand Award list, tell the sommelier your budget and let them drive.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Closed Sunday and Monday</strong> — plan around it.</li>
+        <li><strong>Book via OpenTable</strong> or call +1 (702) 731-7286; this is a small, special-occasion room.</li>
+        <li><strong>No current prices are published</strong> — ask about the tasting menu price when you reserve.</li>
+        <li><strong>Fun fact for the table:</strong> Gordon Ramsay trained under Guy Savoy and calls him his culinary mentor — and Savoy voiced a chef in the French version of Pixar's <em>Ratatouille</em>.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.caesars.com/caesars-palace/restaurants/restaurant-guy-savoy" target="_blank" rel="noopener">Official restaurant page — Caesars Palace</a></li>
+        <li><a href="https://www.opentable.com/r/restaurant-guy-savoy-caesars-palace-las-vegas" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+        <li><a href="https://www.caesars.com/caesars-palace" target="_blank" rel="noopener">Caesars Palace — official hotel site</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The restaurant <strong>publishes no current prices</strong>. The Prestige tasting at
+        <strong>$385 per person</strong> comes from a 2025-era third-party review; the
+        <strong>$300 tasting / $555 pairing</strong> figures from an undated review (likely
+        2024–2025); the <strong>$555/$455</strong> menus from November 2020; and the
+        <strong>$680–$1,000 Symphony event</strong> from its November 2026 OpenTable listing.
+        Always verify current prices with the restaurant when you book.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Las Vegas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-nevada/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Nevada →</a></li>
+        <li><a href="/joel-robuchon-menu/" class="text-gold-dark font-semibold hover:underline">Joël Robuchon at MGM Grand</a> <span class="text-ink-soft">— the other great French fine-dining room on the Strip</span></li>
+        <li><a href="/nobu-menu/" class="text-gold-dark font-semibold hover:underline">Nobu at Caesars Palace</a> <span class="text-ink-soft">— Japanese fine dining from a global name</span></li>
+        <li><a href="/sw-steakhouse-menu/" class="text-gold-dark font-semibold hover:underline">SW Steakhouse at Wynn</a> <span class="text-ink-soft">— the lake-view steakhouse alternative</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

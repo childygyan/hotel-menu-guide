@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Jean Georges Steakhouse",
+  servesCuisine: ["American", "Steakhouse"],
+  priceRange: "$$$$",
+  telephone: "+1-702-590-8660",
+  url: "https://www.aria.com/en/restaurants/jean-georges-steakhouse.html",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3730 S Las Vegas Blvd",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+    postalCode: "89158",
+    addressCountry: "US",
+  },
+  description:
+    "Jean Georges Steakhouse at ARIA Resort & Casino, Las Vegas — Jean-Georges Vongerichten's modern steakhouse with certified Japanese beef.",
+};
+---
+
+<BaseLayout
+  title="Jean Georges Steakhouse Menu Guide (2026) — Prices, Wagyu | Hotel Menu Guide"
+  description="An independent guide to Jean Georges Steakhouse at ARIA Las Vegas: reported prices (F1 wagyu, porterhouse, JG cheeseburger), hours, and visiting tips. Prices reported as of October 2026."
+  path="/jean-georges-steakhouse-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/jean-georges-steakhouse-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/jean-georges-steakhouse-dining.webp"
+      alt="Illustration of a sleek modern steakhouse dining room with dark wood and brass (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Las Vegas
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Jean Georges Steakhouse — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Jean-Georges Vongerichten's modern steakhouse at ARIA is the thinking person's Strip
+      steakhouse: steaks grilled over sustainable apricot wood and mesquite, finished with
+      rendered beef fat, in a black-and-gold Art-Deco-inspired dining room entered through
+      an Art-Deco gate. The Japanese certified beef program — F1 wagyu cuts plus Hyogo
+      Prefecture A5 Kobe, one of very few US restaurants licensed to serve it — is the
+      draw, alongside tableside-carved shareable cuts like the 42 oz wagyu tomahawk. Note
+      the distinction: this ARIA steakhouse is <strong>not</strong> the Michelin-starred
+      "Jean-Georges" at Waldorf Astoria Las Vegas — a different restaurant. Below is our
+      independent walkthrough with reported prices, hours, and what we'd order. Everything
+      is written in our own words; prices are dated public reports, flagged as such.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">3730 S Las Vegas Blvd, Las Vegas, NV 89158 (ARIA Resort &amp; Casino)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Jean-Georges Vongerichten (chef/owner)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern American steakhouse</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — F1 wagyu reported $130–$190 (2023-era); verify current prices</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable or +1 (702) 590-8660</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Mon–Tue &amp; Fri–Sun 5:00–10:30 PM; closed Wednesday–Thursday</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported on the official ARIA page: <strong>Monday–Tuesday and Friday–Sunday,
+        5:00–10:30 PM; closed Wednesday and Thursday</strong>. Dinner only, and the
+        midweek closure is easy to miss — check the day before you plan around it.
+        Private dining rooms (Boardroom, Chef's Table, wine alcove) seat parties of 7+.
+      </p>
+
+      <h2>Menu highlights &amp; reported prices</h2>
+      <p>
+        Current published menu prices could not be verified — the latest itemized figures
+        come from a spring-2023-era menu listing (menucollectors.com). Treat these as the
+        latest dated reference, not current prices:
+      </p>
+      <ul>
+        <li><strong>F1 Wagyu Filet 6 oz — $130</strong>; <strong>F1 Wagyu NY Strip 10 oz — $155</strong>; <strong>F1 Wagyu Ribeye 16 oz — $190</strong> (2023-era).</li>
+        <li><strong>36 oz Prime Porterhouse — $141</strong> (2023-era); tableside-carved shareables include the 42 oz wagyu tomahawk and 32 oz porterhouse.</li>
+        <li><strong>JG Cheeseburger — $36</strong> (2023-era) — the bar-menu legend.</li>
+        <li><strong>Chilean Sea Bass — $51</strong>; <strong>Seared Salmon — $49</strong> (2023-era).</li>
+        <li><strong>Sides — $18 each</strong> (2023-era): black truffle mac 'n' cheese, grilled asparagus, trumpet mushrooms.</li>
+        <li><strong>Starters</strong> (2023-era): oysters on the half shell $28, crispy sushi sampler $25, seared foie gras $32, bacon-wrapped shrimp $30.</li>
+        <li><strong>Warm Valrhona chocolate cake</strong> — the frequently cited dessert standout.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The connoisseur's move:</strong> an F1 wagyu cut — this beef program is the reason to come.</li>
+        <li><strong>The shareable:</strong> a tableside-carved tomahawk or porterhouse if you're dining as a group.</li>
+        <li><strong>To start:</strong> the crispy sushi sampler — the JG global touch on a steakhouse menu.</li>
+        <li><strong>To finish:</strong> the warm Valrhona chocolate cake.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Closed Wednesday and Thursday</strong> — the single most important planning fact on this page.</li>
+        <li><strong>Book via OpenTable</strong> (4.7 from ~2,100 reviews) or call +1 (702) 590-8660.</li>
+        <li><strong>Dress code:</strong> smart casual — no athletic or beach wear.</li>
+        <li><strong>Don't confuse it</strong> with the Michelin-starred Jean-Georges at Waldorf Astoria — different restaurant, different building.</li>
+        <li><strong>Prices are dated</strong> — the figures above are spring-2023-era; ask about current pricing when you reserve.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.aria.com/en/restaurants/jean-georges-steakhouse.html" target="_blank" rel="noopener">Official restaurant page — ARIA</a></li>
+        <li><a href="https://www.opentable.com/r/jean-georges-steakhouse-aria-mgm-resorts" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Current published menu prices <strong>could not be verified</strong>. All figures
+        above (F1 wagyu $130–$190, porterhouse $141, JG cheeseburger $36, sides $18) come
+        from a <strong>spring-2023-era menu listing</strong> — the latest dated reference we
+        found. A 2011-era $85 chef's tasting is historical only. Always verify current
+        prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Las Vegas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-nevada/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Nevada →</a></li>
+        <li><a href="/sw-steakhouse-menu/" class="text-gold-dark font-semibold hover:underline">SW Steakhouse at Wynn</a> <span class="text-ink-soft">— the other great Strip steakhouse</span></li>
+        <li><a href="/carbone-menu/" class="text-gold-dark font-semibold hover:underline">Carbone at Aria</a> <span class="text-ink-soft">— Italian-American glamour in the same hotel</span></li>
+        <li><a href="/nobu-menu/" class="text-gold-dark font-semibold hover:underline">Nobu at Caesars Palace</a> <span class="text-ink-soft">— Japanese fine dining from a global name</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

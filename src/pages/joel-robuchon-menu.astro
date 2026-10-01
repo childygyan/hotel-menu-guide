@@ -1,0 +1,167 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Joël Robuchon",
+  servesCuisine: ["French"],
+  priceRange: "$$$$",
+  telephone: "+1-702-891-7925",
+  url: "https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3799 S Las Vegas Blvd",
+    addressLocality: "Las Vegas",
+    addressRegion: "NV",
+    postalCode: "89109",
+    addressCountry: "US",
+  },
+  description:
+    "Joël Robuchon's two-Michelin-star French fine-dining restaurant inside MGM Grand, Las Vegas, led by executive chef Eleazar Villanueva.",
+};
+---
+
+<BaseLayout
+  title="Joël Robuchon Menu Guide (2026) — Prices, Tastings, What to Order | Hotel Menu Guide"
+  description="An independent guide to Joël Robuchon at MGM Grand Las Vegas: the 16-course dégustation (reported ~$445–$500), signature dishes, hours, and visiting tips. Prices reported as of October 2026."
+  path="/joel-robuchon-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/joel-robuchon-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/joel-robuchon-dining.webp"
+      alt="Illustration of an elegant French fine-dining room with purple art-deco decor (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Las Vegas
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Joël Robuchon — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The first American restaurant of the late Joël Robuchon — the chef who held 32 Michelin
+      stars at his peak, more than anyone in history — sits inside MGM Grand in an intimate,
+      12-table dining room styled like a luxurious Art Deco townhouse, all purple velvet,
+      marble floors, and a garden terrace. It opened in 2006, was Las Vegas's first
+      three-Michelin-star restaurant in the 2008–2009 guides, and in 2026 earned <strong>two
+      Michelin stars</strong> in the inaugural Michelin Guide Southwest — the only two-star
+      restaurant in that edition — with general manager Sean Christopher also taking the 2026
+      Michelin Service Award. Executive chef Eleazar Villanueva, a 2025 James Beard Award
+      finalist for Best Chef: Southwest, runs the kitchen. Below is our independent walkthrough
+      of how the menu works, what we know about prices, and what we'd order. Everything is
+      written in our own words; the restaurant publishes no prices, so every figure below is a
+      dated third-party report, flagged as such.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">3799 S Las Vegas Blvd, Las Vegas, NV 89109 (inside MGM Grand)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Eleazar Villanueva</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">French fine dining</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — the 16-course dégustation is reported at roughly $445–$500 per person (2024–2026 reports); the restaurant publishes no prices</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Essential; book through the official MGM Grand page or call +1 (702) 891-7925</dd></div>
+        <div><dt class="font-semibold text-ink">Awards</dt><dd class="text-ink-soft">2026 Michelin Guide Southwest ★★ · Forbes Travel Guide Five-Star · AAA Five Diamond · Wine Spectator Grand Award</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported on the restaurant's official MGM Grand page: <strong>Tuesday–Saturday,
+        5:00–9:30 PM</strong>; closed Sunday and Monday. Plan around the two-day closure —
+        this is not a walk-in room on any night.
+      </p>
+
+      <h2>The dégustation — roughly $445–$500 per person</h2>
+      <p>
+        The menu is built around tasting menus, and the headline is the <strong>16-course
+        dégustation</strong>. Reported figures: <strong>$445 per person</strong> in a diner
+        review (likely 2024–2025), and "nearly <strong>$500 per person</strong>" on a
+        2026-published site. Wine pairings were reported at <strong>$225–$950 per
+        person</strong> on an April 2025 published menu. Older tiers ($160 three-course,
+        $240 six-course, circa 2019) are historical reference only — expect the current
+        dégustation to be the main way in, and confirm the current price when you book.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The restaurant publishes no à la carte prices, so we describe the signatures without
+        figures:
+      </p>
+      <ul>
+        <li><strong>Le Caviar Impérial</strong> — osetra caviar over crab in crustacean gelée with cauliflower purée.</li>
+        <li><strong>Le Crab Royal</strong> — a farm chicken egg stuffed with king crab and osetra caviar.</li>
+        <li><strong>Les Asperges</strong> — green asparagus with tomato water, seasonal vegetables, and caviar.</li>
+        <li><strong>Pommes purée</strong> — the legendary silky mashed potatoes (roughly two parts butter to potato), a Robuchon signature worldwide.</li>
+        <li><strong>Truffled langoustine ravioli</strong> — the luxurious pasta course.</li>
+      </ul>
+
+      <h2>The bread and dessert carts</h2>
+      <p>
+        Two of the most famous rituals in Las Vegas dining happen here at the table. A
+        three-tiered <strong>bread cart</strong> rolls through with over a dozen breads —
+        Comté cheese bread, Gruyère brioche, saffron focaccia — and the meal bookends with a
+        <strong>dessert and mignardise cart</strong>. Save room; this is not the night to skip
+        either cart.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The full experience:</strong> the 16-course dégustation — this is a once-in-a-while room, and the tasting menu is the point.</li>
+        <li><strong>Don't miss:</strong> the pommes purée and the caviar courses — the dishes that made the Robuchon name.</li>
+        <li><strong>Say yes</strong> to the bread cart and the dessert cart — they're part of the show, not an afterthought.</li>
+        <li><strong>On pairings:</strong> the wine list holds a Wine Spectator Grand Award; ask the sommelier about a glass pairing if the full pairing tiers ($225–$950 reported, April 2025) feel steep.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Closed Sunday and Monday</strong> — the single most important planning fact on this page.</li>
+        <li><strong>Book well ahead</strong> through the official MGM Grand restaurant page or by phone at +1 (702) 891-7925 (large parties of 7+: 702-891-1133). MGM Rewards Gold+ members get priority online reservations.</li>
+        <li><strong>No prices are published</strong> — ask about the current dégustation price when you reserve so the bill holds no surprises.</li>
+        <li><strong>Dress for the room:</strong> this is one of America's most formal dining rooms — jacket-level polish is the safe choice.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://mgmgrand.mgmresorts.com/en/restaurants/joel-robuchon-french-restaurant.html" target="_blank" rel="noopener">Official restaurant page — MGM Grand</a> (reservations and current hours)</li>
+        <li><a href="https://mgmgrand.mgmresorts.com/" target="_blank" rel="noopener">MGM Grand Las Vegas — official hotel site</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The restaurant <strong>publishes no prices</strong>. The 16-course dégustation at
+        roughly <strong>$445–$500 per person</strong> comes from third-party diner reports
+        (2024–2026 era), and the <strong>$225–$950 wine pairing</strong> range from an April
+        2025 published menu. Older figures ($160/$240/$450 tiers, circa 2019) are historical
+        only. Always verify current prices with the restaurant when you book.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Las Vegas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-nevada/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Nevada →</a></li>
+        <li><a href="/guy-savoy-menu/" class="text-gold-dark font-semibold hover:underline">Restaurant Guy Savoy at Caesars Palace</a> <span class="text-ink-soft">— the other great French fine-dining room on the Strip</span></li>
+        <li><a href="/nobu-menu/" class="text-gold-dark font-semibold hover:underline">Nobu at Caesars Palace</a> <span class="text-ink-soft">— Japanese fine dining from a global name</span></li>
+        <li><a href="/sw-steakhouse-menu/" class="text-gold-dark font-semibold hover:underline">SW Steakhouse at Wynn</a> <span class="text-ink-soft">— the lake-view steakhouse alternative</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>
