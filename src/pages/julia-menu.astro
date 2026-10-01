@@ -1,0 +1,151 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Julia — A Spirited Restaurant & Bar",
+  servesCuisine: ["Southwestern", "American"],
+  priceRange: "$$$$",
+  telephone: "+1-505-986-0000",
+  url: "https://www.laposadadesantafe.com/dining/julia-spirited-restaurant-bar/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "330 East Palace Avenue",
+    addressLocality: "Santa Fe",
+    addressRegion: "NM",
+    postalCode: "87501",
+    addressCountry: "US",
+  },
+  description:
+    "Julia — A Spirited Restaurant & Bar at La Posada de Santa Fe — Southwestern-American comfort dining inside a 19th-century Victorian mansion, under chef Edgar Jiminez.",
+};
+---
+
+<BaseLayout
+  title="Julia Menu Guide (2026) — La Posada de Santa Fe | Hotel Menu Guide"
+  description="An independent guide to Julia — A Spirited Restaurant & Bar at La Posada de Santa Fe: hours, signature dishes, reported prices, and reservations."
+  path="/julia-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/julia-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/julia-dining.webp"
+      alt="Illustration of a 19th-century Victorian mansion dining room with vintage elegance, a garden patio with kiva fireplaces and candlelit tables at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Santa Fe, NM
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Julia — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Julia — A Spirited Restaurant &amp; Bar is the dining room of <strong>La
+      Posada de Santa Fe</strong> at 330 East Palace Avenue, set inside the 1882
+      Victorian mansion of Julia Staab herself. Chef <strong>Edgar Jiminez</strong>
+      cooks polished Southwestern-American comfort food — duck breast, seared
+      scallops, chicken corn chowder — with a full bar pouring the Juliarita
+      margarita, made with apricots from a tree Julia planted in the 1880s. The
+      restaurant publishes no menu prices; everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">330 East Palace Avenue, Santa Fe, NM 87501 (La Posada de Santa Fe)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Chef Edgar Jiminez (per OpenTable, Sep 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Southwestern-American comfort dining</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — OpenTable band $31–$50 (Sep 2026); no menu prices published</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">OpenTable or 505-986-0000</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">Travel + Leisure's "coziest bar" honor belongs to the sibling Staab House bar, not Julia — we don't attribute it here</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official hotel Julia page (updated ~April/May 2026), matching
+        OpenTable: <strong>breakfast daily 7:00–11:00 AM; dinner daily 5:00–9:00
+        PM.</strong> The bar hosts live Spanish-guitar performances on the first
+        Wednesday of each month.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The dishes guests keep naming in recent reviews:
+      </p>
+      <ul>
+        <li><strong>Chicken corn chowder</strong>: the recurring guest favorite, still on the current menu per OpenTable (Sep 2026).</li>
+        <li><strong>Duck breast special</strong>: called "as good as anything I have eaten in France" in an August 2026 verified review.</li>
+        <li><strong>Seared scallops</strong>: with bread-and-butters, praised in August 2026 reviews.</li>
+        <li><strong>Beet salad and caramel cheesecake</strong>: the lighter and sweeter anchors (Aug 2026 reviews).</li>
+        <li><strong>The Juliarita margarita</strong>: tequila infused with homemade apricot liqueur from apricots off Julia Staab's own 1880s tree.</li>
+      </ul>
+
+      <h2>Reported prices</h2>
+      <p>
+        Julia publishes <strong>no menu prices</strong> — OpenTable lists a typical
+        band of <strong>$31–$50 per person</strong> (September 2026). The only
+        published figure is a one-time event:
+      </p>
+      <ul>
+        <li><strong>Vara Wine Dinner:</strong> $150 per person including tax and gratuity, September 24, 2026 (one-night event).</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the chicken corn chowder — it's the dish regulars name.</li>
+        <li><strong>The plate:</strong> the duck breast special if it's on.</li>
+        <li><strong>The drink:</strong> the Juliarita — the apricot story is worth the order.</li>
+        <li><strong>Finish:</strong> the caramel cheesecake.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Dinner only, evenings:</strong> the restaurant serves breakfast and dinner daily — no lunch service.</li>
+        <li><strong>No published prices:</strong> budget around the $31–$50 band and confirm when you book.</li>
+        <li><strong>The mansion is the draw:</strong> La Posada's adobe grounds and the Staab House bar next door make this a full evening — plan a pre-dinner drink.</li>
+        <li><strong>First Wednesdays:</strong> live Spanish guitar in the bar.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.laposadadesantafe.com/dining/julia-spirited-restaurant-bar/" target="_blank" rel="noopener">Official restaurant page — Julia at La Posada de Santa Fe</a> (hours, story)</li>
+        <li><a href="https://www.juliarestaurantsf.com/" target="_blank" rel="noopener">Julia's own site</a> (linked from the official hotel page)</li>
+        <li><a href="https://www.opentable.com/julia-a-spirited-restaurant-and-bar" target="_blank" rel="noopener">Reservations on OpenTable</a> (bookable; or call 505-986-0000)</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Julia publishes <strong>no menu prices</strong>, so we report the OpenTable
+        typical band ($31–$50, September 2026) and the dated event figure instead of
+        guessing. Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More New Mexico guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-new-mexico/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in New Mexico →</a></li>
+        <li><a href="/agave-menu/" class="text-gold-dark font-semibold hover:underline">Agave</a> <span class="text-ink-soft">— Santa Fe's famous happy hour at Eldorado Hotel &amp; Spa</span></li>
+        <li><a href="/terra-menu/" class="text-gold-dark font-semibold hover:underline">Terra</a> <span class="text-ink-soft">— Four Seasons Rancho Encantado's mountain-view dining room</span></li>
+        <li><a href="/level-5-menu/" class="text-gold-dark font-semibold hover:underline">Level 5</a> <span class="text-ink-soft">— Albuquerque's rooftop dining room at Hotel Chaco</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

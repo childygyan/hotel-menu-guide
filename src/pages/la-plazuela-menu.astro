@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "La Plazuela",
+  servesCuisine: ["Southwestern", "Mexican"],
+  priceRange: "$$$",
+  telephone: "+1-505-995-2334",
+  url: "https://www.lafondasantafe.com/la-plazuela",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "100 E San Francisco St",
+    addressLocality: "Santa Fe",
+    addressRegion: "NM",
+    postalCode: "87501",
+    addressCountry: "US",
+  },
+  description:
+    "La Plazuela at La Fonda on the Plaza, Santa Fe — the landmark hotel's sunlit Southwestern dining room around a courtyard fountain, serving breakfast, lunch, and dinner under executive chef Lane Warner.",
+};
+---
+
+<BaseLayout
+  title="La Plazuela Menu Guide (2026) — La Fonda on the Plaza, Santa Fe | Hotel Menu Guide"
+  description="An independent guide to La Plazuela at La Fonda on the Plaza, Santa Fe: hours, signature dishes, reported prices, and reservations."
+  path="/la-plazuela-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/la-plazuela-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/la-plazuela-dining.webp"
+      alt="Illustration of a historic Santa Fe Southwestern restaurant dining room with adobe walls, a glowing kiva fireplace, Talavera tiles and candlelit tables at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Santa Fe, NM
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      La Plazuela — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      La Plazuela is the signature dining room of <strong>La Fonda on the Plaza</strong>
+      at 100 E San Francisco Street — Santa Fe's landmark hotel right on the Plaza.
+      The room is built around a sunlit courtyard with a fountain and wrought-iron
+      chandelier, and the cooking under executive chef <strong>Lane Warner</strong> is
+      classic Southwestern and contemporary Mexican: tableside guacamole, red-chile
+      bisque, enchiladas, and chile rellenos. Breakfast, lunch, and dinner are all
+      served daily. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">100 E San Francisco St, Santa Fe, NM 87501 (La Fonda on the Plaza, on the Plaza)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Lane Warner (per OpenTable)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Southwestern / contemporary Mexican</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$ — OpenTable band $31–$50 (Sep 2026); no regular menu prices published</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">OpenTable or 505-995-2334</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">None restaurant-specific found — the room's fame is the history itself</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per OpenTable (viewed late September 2026), matching the official La Fonda page:
+        <strong>breakfast daily 7:00–10:30 AM; lunch Monday–Friday 11:00 AM–2:00 PM and
+        Saturday–Sunday 11:00 AM–3:00 PM; dinner daily 5:00–9:00 PM.</strong>
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The dishes guests keep naming in reviews:
+      </p>
+      <ul>
+        <li><strong>Tableside guacamole</strong>: made to order at the table — the dish the room is known for.</li>
+        <li><strong>Lobster red chile bisque</strong>: the signature soup.</li>
+        <li><strong>Spare ribs with green chile glaze</strong>: a house staple.</li>
+        <li><strong>Shredded beef enchiladas</strong>: the classic plate.</li>
+        <li><strong>Hatch chile relleno</strong>: ask for it "Christmas" style (red and green).</li>
+        <li><strong>Huevos rancheros</strong>: the breakfast order.</li>
+        <li><strong>Sopaipillas</strong>: the obligatory finish.</li>
+        <li><strong>Prickly pear margarita</strong>: the cocktail to start with.</li>
+      </ul>
+
+      <h2>Reported prices</h2>
+      <p>
+        La Plazuela publishes <strong>no itemized menu prices</strong> for its regular
+        menu — OpenTable lists a typical band of <strong>$31–$50 per person</strong>
+        (September 2026). The only published figures are special events:
+      </p>
+      <ul>
+        <li><strong>Thanksgiving prix fixe:</strong> $94 per person, November 26, 2026 (OpenTable Experiences listing).</li>
+        <li><strong>Duckhorn 50th Anniversary wine dinner:</strong> $249 per person, September 23, 2026 (one-night event).</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the tableside guacamole — it's the ritual.</li>
+        <li><strong>The soup:</strong> the lobster red chile bisque.</li>
+        <li><strong>The plate:</strong> the spare ribs with green chile glaze, or the Hatch chile relleno Christmas-style.</li>
+        <li><strong>Finish:</strong> sopaipillas — non-negotiable.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book on OpenTable</strong> — the venue page is live and heavily booked — or call 505-995-2334.</li>
+        <li><strong>No published prices:</strong> the regular menu carries no itemized prices online; budget around the $31–$50 band and confirm when you book.</li>
+        <li><strong>The room is the show:</strong> the courtyard fountain and lighted trees make even a simple plate feel like an occasion — ask for a courtyard table.</li>
+        <li><strong>Holiday note:</strong> the Thanksgiving prix fixe sells out; it was listed at $94 for 2026.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.lafondasantafe.com/la-plazuela" target="_blank" rel="noopener">Official restaurant page — La Plazuela at La Fonda on the Plaza</a> (hours, events)</li>
+        <li><a href="https://www.opentable.com/la-plazuela-at-la-fonda-on-the-plaza" target="_blank" rel="noopener">Reservations on OpenTable</a> (bookable; or call 505-995-2334)</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        La Plazuela publishes <strong>no itemized prices for its regular menu</strong>,
+        so we report the OpenTable typical band ($31–$50, September 2026) and the
+        dated special-event figures instead of guessing. Always verify with the
+        restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More New Mexico guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-new-mexico/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in New Mexico →</a></li>
+        <li><a href="/anasazi-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">Anasazi Restaurant</a> <span class="text-ink-soft">— refined Southwestern at Rosewood Inn of the Anasazi</span></li>
+        <li><a href="/agave-menu/" class="text-gold-dark font-semibold hover:underline">Agave</a> <span class="text-ink-soft">— Santa Fe's famous happy hour at Eldorado Hotel &amp; Spa</span></li>
+        <li><a href="/terra-menu/" class="text-gold-dark font-semibold hover:underline">Terra</a> <span class="text-ink-soft">— Four Seasons Rancho Encantado's mountain-view dining room</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

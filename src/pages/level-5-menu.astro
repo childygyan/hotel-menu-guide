@@ -1,0 +1,153 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Level 5",
+  servesCuisine: ["American", "Southwestern"],
+  priceRange: "$$$$",
+  telephone: "+1-505-246-9989",
+  url: "https://www.hotelchaco.com/eat_drink/level-5/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2000 Bellamah Ave NW",
+    addressLocality: "Albuquerque",
+    addressRegion: "NM",
+    postalCode: "87104",
+    addressCountry: "US",
+  },
+  description:
+    "Level 5 at Hotel Chaco, Albuquerque — a rooftop restaurant and lounge with panoramic Sandia Mountain views, serving modern American cooking with a New Mexican lens under chef Goran Basarov.",
+};
+---
+
+<BaseLayout
+  title="Level 5 Menu Guide (2026) — Hotel Chaco, Albuquerque | Hotel Menu Guide"
+  description="An independent guide to Level 5 at Hotel Chaco, Albuquerque: hours, signature dishes, reported prices, and reservations."
+  path="/level-5-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/level-5-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/level-5-dining.webp"
+      alt="Illustration of a rooftop restaurant at dusk with Sandia Mountain and city views, modern lounge seating, fire features and candlelit tables (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Albuquerque, NM
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Level 5 — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Level 5 is the rooftop restaurant and lounge of <strong>Hotel Chaco</strong>
+      at 2000 Bellamah Ave NW — Albuquerque's big-view dining room, with the
+      Sandias, downtown, and Old Town spread out below. Chef <strong>Goran
+      Basarov</strong> cooks modern American through a New Mexican lens: green
+      chile, carne adovada, and regional ranch beef treated with European
+      technique. Dinner is nightly; weekend brunch runs Saturday–Sunday. The
+      restaurant publishes no regular menu prices. Everything is written in our
+      own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">2000 Bellamah Ave NW, Albuquerque, NM 87104 (Hotel Chaco, rooftop)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Chef Goran Basarov (per the official hotel page and OpenTable)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern American, New Mexican lens</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — OpenTable band $50 and over (Oct 2026); no regular menu prices published</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">OpenTable (required for holiday menus) or 505-246-9989</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">OpenTable Diners' Choice categories (year unstated); the hotel's AAA Four Diamond is hotel-level, not a restaurant award</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per OpenTable (viewed September 30, 2026): <strong>brunch Saturday–Sunday
+        8:00 AM–1:00 PM; dinner daily 5:00–10:00 PM</strong> (last seating 9:00 PM).
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The dishes verified diners keep naming:
+      </p>
+      <ul>
+        <li><strong>Matanza confit suckling pig</strong>: slow-cooked young pork — the most-cited standout.</li>
+        <li><strong>Duck mole</strong>: duck with dark mole, another reviewer favorite.</li>
+        <li><strong>Watermelon burrata salad</strong>: fresh watermelon with creamy burrata.</li>
+        <li><strong>Ramon Perez Ranch New York strip</strong>: a 14 oz cut from a named New Mexico ranch.</li>
+        <li><strong>New Mexico omelet</strong> (brunch): folded around slow-braised carne adovada with Tucumcari cheddar.</li>
+        <li><strong>Level 5 smashburger</strong> (brunch): topped with green chile and bacon jam.</li>
+      </ul>
+
+      <h2>Reported prices</h2>
+      <p>
+        Level 5 publishes <strong>no regular menu prices</strong> — OpenTable lists
+        a typical band of <strong>"$50 and over"</strong> (October 2026). The only
+        published figures are holiday events:
+      </p>
+      <ul>
+        <li><strong>Christmas Eve / Christmas Day menu:</strong> $145 per person + tax + 22% gratuity, reservations required via OpenTable (official hotel page, current).</li>
+        <li><strong>Diner-reported (August 2026, unverified):</strong> one OpenTable reviewer mentioned "$70 steaks" — a diner claim, not an official price.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the duck mole or the watermelon burrata.</li>
+        <li><strong>The plate:</strong> the Matanza confit suckling pig — it's the dish people remember.</li>
+        <li><strong>The steak play:</strong> the Ramon Perez Ranch strip.</li>
+        <li><strong>The view:</strong> book at sunset — the Sandias do the rest.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book on OpenTable</strong> — the venue is heavily booked ("Booked 29 times today" on Sep 30, 2026).</li>
+        <li><strong>No published prices:</strong> budget at the $50+ band and ask when reserving.</li>
+        <li><strong>Sunset timing matters:</strong> this is a rooftop — a 5:30–6 PM reservation in good weather is the move.</li>
+        <li><strong>Brunch is weekends only:</strong> Sat–Sun 8 AM–1 PM.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.hotelchaco.com/eat_drink/level-5/" target="_blank" rel="noopener">Official restaurant page — Level 5 at Hotel Chaco</a> (hours, holiday menus)</li>
+        <li><a href="https://www.hotelchaco.com/" target="_blank" rel="noopener">Hotel Chaco</a> (hotel site)</li>
+        <li><a href="https://www.opentable.com/r/level-5-rooftop-restaurant-and-lounge-albuquerque" target="_blank" rel="noopener">Reservations on OpenTable</a> (bookable; or call 505-246-9989)</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Level 5 publishes <strong>no regular menu prices</strong>, so we report the
+        OpenTable typical band ($50 and over, October 2026) and the official
+        holiday-menu figure instead of guessing. Always verify with the restaurant
+        before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More New Mexico guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-new-mexico/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in New Mexico →</a></li>
+        <li><a href="/agave-menu/" class="text-gold-dark font-semibold hover:underline">Agave</a> <span class="text-ink-soft">— Santa Fe's famous happy hour at Eldorado Hotel &amp; Spa</span></li>
+        <li><a href="/terra-menu/" class="text-gold-dark font-semibold hover:underline">Terra</a> <span class="text-ink-soft">— Four Seasons Rancho Encantado's mountain-view dining room</span></li>
+        <li><a href="/julia-menu/" class="text-gold-dark font-semibold hover:underline">Julia</a> <span class="text-ink-soft">— Southwestern comfort in a Victorian mansion at La Posada</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

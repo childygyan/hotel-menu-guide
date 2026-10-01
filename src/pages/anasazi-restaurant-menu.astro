@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Anasazi Restaurant",
+  servesCuisine: ["Southwestern", "American"],
+  priceRange: "$$$$",
+  telephone: "+1-505-988-3030",
+  url: "https://www.rosewoodhotels.com/en/inn-of-the-anasazi-santa-fe/dining",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "113 Washington Ave",
+    addressLocality: "Santa Fe",
+    addressRegion: "NM",
+    postalCode: "87501",
+    addressCountry: "US",
+  },
+  description:
+    "Anasazi Restaurant at Rosewood Inn of the Anasazi, Santa Fe — refined Southwestern fine dining under executive chef Cristian Pontiggia, one block from the Plaza.",
+};
+---
+
+<BaseLayout
+  title="Anasazi Restaurant Menu Guide (2026) — Rosewood Inn of the Anasazi, Santa Fe | Hotel Menu Guide"
+  description="An independent guide to Anasazi Restaurant at Rosewood Inn of the Anasazi, Santa Fe: hours, signature dishes, official menu prices, and reservations."
+  path="/anasazi-restaurant-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/anasazi-restaurant-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/anasazi-restaurant-dining.webp"
+      alt="Illustration of a refined contemporary Southwestern fine-dining room with adobe tones, a sculptural kiva fireplace, Native-inspired modern art and white tablecloths at dusk (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Santa Fe, NM
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Anasazi Restaurant — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Anasazi Restaurant is the dining room of <strong>Rosewood Inn of the
+      Anasazi</strong> at 113 Washington Avenue, a block from the Plaza — the most
+      decorated hotel dining room in Santa Fe. Executive chef <strong>Cristian
+      Pontiggia</strong> (with chef de cuisine Oliver Cortez) cooks refined
+      Southwestern food in an adobe room of viga beams and Native textiles: bison
+      carpaccio, the famous mushroom cappuccino, Akaushi beef tenderloin. Unlike
+      most peers, the restaurant's official site carries a real priced menu —
+      though it's the in-room dining menu, so the dining-room figures may differ.
+      Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">113 Washington Ave, Santa Fe, NM 87501 (Rosewood Inn of the Anasazi, one block from the Plaza)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Cristian Pontiggia; chef de cuisine Oliver Cortez (per Rosewood)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Refined Southwestern</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — official menu: starters $19–$23, mains $29–$35 (current, in-room menu)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via Rosewood (Make an Inquiry) or 505-988-3030</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">Rosewood calls it "award-winning" — no specific public award named</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per current listings (October 2026): the restaurant and bar run
+        <strong>daily 7:00 AM–10:00 PM</strong>; the lunch–dinner menu runs
+        <strong>11:00 AM–9:00 PM</strong>.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The dishes Rosewood and its guests keep naming:
+      </p>
+      <ul>
+        <li><strong>Mushroom cappuccino</strong>: the famous one — the dish reviewers call unmissable.</li>
+        <li><strong>Bison carpaccio</strong>: the signature starter, per Rosewood's own copy.</li>
+        <li><strong>Akaushi beef tenderloin</strong>: the prestige cut.</li>
+        <li><strong>Silver Coin margarita</strong>: the signature cocktail.</li>
+        <li><strong>Pear carpaccio</strong>: a lighter signature.</li>
+        <li><strong>Citrus tres leches cake</strong>: the dessert guests photograph.</li>
+      </ul>
+
+      <h2>Official prices (current, in-room dining menu)</h2>
+      <p>
+        These are the restaurant's own figures from the official menu on
+        rosewoodhotels.com — <strong>current as of our October 2026 check</strong>.
+        One honest flag: this is the <strong>in-room dining menu</strong>; the main
+        dining room's menu may carry different items and prices, so confirm when you book:
+      </p>
+      <ul>
+        <li><strong>Starters:</strong> pico and guacamole $21; tortilla soup (roasted corn, asadero) $21; "Not a Caesar" salad $19; jamón serrano $23.</li>
+        <li><strong>Mains:</strong> Anasazi Cobb salad $29 (add chicken $10, shrimp $14); Anasazi smash burger $29 (add bacon $9); tuna poke $29; tuna carpaccio $35; New Mexican sandwich $29.</li>
+        <li><strong>Dessert:</strong> dark chocolate tart $22.</li>
+        <li><strong>Drinks:</strong> coffee $9–$10; juices $9.</li>
+        <li><strong>Special events:</strong> the September 25, 2026 Wine &amp; Chile Fiesta dinner with Hundred Acre wines was listed at CAD 695 per person.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> the mushroom cappuccino — it's the legend.</li>
+        <li><strong>The splurge:</strong> the bison carpaccio followed by the Akaushi tenderloin.</li>
+        <li><strong>The drink:</strong> the Silver Coin margarita.</li>
+        <li><strong>Finish:</strong> the citrus tres leches cake.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Reserve ahead</strong> — via the Rosewood site's inquiry form or 505-988-3030; this is a small, popular room.</li>
+        <li><strong>Prices are official but in-room-menu era:</strong> the figures above come from the official in-room menu; ask about the dining room's current menu when you book.</li>
+        <li><strong>Wine &amp; Chile Fiesta:</strong> Anasazi hosts ticketed wine dinners during Santa Fe's September fiesta — they sell out.</li>
+        <li><strong>The tequila table:</strong> the hotel's exclusive tequila experience is worth asking about.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.rosewoodhotels.com/en/inn-of-the-anasazi-santa-fe/dining" target="_blank" rel="noopener">Official dining page — Rosewood Inn of the Anasazi</a> (restaurant info, reservations inquiry)</li>
+        <li><a href="https://www.rosewoodhotels.com/en/inn-of-the-anasazi-santa-fe/dining/anasazi-restaurant/anasazi-restaurant-menu" target="_blank" rel="noopener">Official menu page — Anasazi Restaurant</a> (priced menu, event menus)</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The figures above are <strong>official and current</strong> (checked October
+        2026) — but they come from the restaurant's <strong>in-room dining
+        menu</strong> on rosewoodhotels.com. The main dining room may serve a
+        different menu at different prices. Always verify with the restaurant
+        before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More New Mexico guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-new-mexico/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in New Mexico →</a></li>
+        <li><a href="/la-plazuela-menu/" class="text-gold-dark font-semibold hover:underline">La Plazuela</a> <span class="text-ink-soft">— the landmark Southwestern room at La Fonda on the Plaza</span></li>
+        <li><a href="/terra-menu/" class="text-gold-dark font-semibold hover:underline">Terra</a> <span class="text-ink-soft">— Four Seasons Rancho Encantado's mountain-view dining room</span></li>
+        <li><a href="/julia-menu/" class="text-gold-dark font-semibold hover:underline">Julia</a> <span class="text-ink-soft">— Southwestern comfort in a Victorian mansion at La Posada</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

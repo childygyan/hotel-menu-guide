@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Terra",
+  servesCuisine: ["American", "Southwestern"],
+  priceRange: "$$$$",
+  telephone: "+1-505-946-5800",
+  url: "https://www.fourseasons.com/santafe/dining/restaurants/terra",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "198 State Road 592",
+    addressLocality: "Santa Fe",
+    addressRegion: "NM",
+    postalCode: "87506",
+    addressCountry: "US",
+  },
+  description:
+    "Terra at Four Seasons Resort Rancho Encantado Santa Fe — contemporary American cooking with a northern New Mexican heart, served with Sangre de Cristo mountain views under executive chef Andrew Fox.",
+};
+---
+
+<BaseLayout
+  title="Terra Menu Guide (2026) — Four Seasons Rancho Encantado, Santa Fe | Hotel Menu Guide"
+  description="An independent guide to Terra at Four Seasons Resort Rancho Encantado Santa Fe: hours, signature dishes, official breakfast prices, and reservations."
+  path="/terra-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/terra-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/terra-dining.webp"
+      alt="Illustration of a desert-modern resort restaurant with panoramic mountain views, a heated patio with fire pits and warm dusk light (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Santa Fe, NM
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Terra — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Terra is the dining room of <strong>Four Seasons Resort Rancho Encantado
+      Santa Fe</strong> at 198 State Road 592 — a high-desert resort wrapped around
+      Sangre de Cristo views. Executive chef <strong>Andrew Fox</strong> cooks
+      contemporary American with a northern New Mexican heart: red and green chile,
+      bison, blue corn, and piñon, in an art-filled room with a heated patio. The
+      official breakfast menu carries real prices; dinner prices aren't published.
+      Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">198 State Road 592, Santa Fe, NM 87506 (Four Seasons Resort Rancho Encantado)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Andrew Fox (per OpenTable, Sep 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary American, northern New Mexican heart</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — OpenTable band $31–$50; official breakfast $12–$32 (Mar 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">OpenTable or 505-946-5800</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">OpenTable Diners' Choice 2024 (per the official Four Seasons page); the resort's AAA 5-Diamond is resort-level, not a restaurant award</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        One honest flag: the sources disagree. Per <strong>OpenTable (September
+        2026)</strong> — which we treat as primary: <strong>breakfast daily
+        7:00–11:30 AM; lunch daily 12:00–2:30 PM; bar daily 12:00–10:00 PM; happy
+        hour daily 3:00–5:00 PM; dinner daily 5:30–9:00 PM</strong>, with live music
+        Friday–Saturday 6–8 PM. The official Four Seasons page shows oddly labeled
+        hours (including a "breakfast 11:00 AM–2:30 PM" that looks mislabeled), so
+        confirm directly when you book.
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        The dishes the resort and its guests keep naming:
+      </p>
+      <ul>
+        <li><strong>Steak For Two</strong>: the official "Signature Dish" — a tomahawk-style steak for two with grilled asparagus and green-chile mac and cheese.</li>
+        <li><strong>Pepita crumble seared scallops</strong>: a frequent guest favorite (per OpenTable).</li>
+        <li><strong>Lamb shank</strong>: praised in August 2026 verified reviews.</li>
+        <li><strong>Poblano leek soup</strong>: praised in August 2026 verified reviews.</li>
+        <li><strong>Green-chile bison meatballs</strong>: a TastingTable-noted signature (2023).</li>
+        <li><strong>Breakfast standouts</strong> (official menu): Beef Sunrise Burrito, Santa Fe Style Chilaquiles, Encantado Sunrise Hash, Prickly Pear &amp; Granola Parfait.</li>
+      </ul>
+
+      <h2>Official prices (breakfast, March 2026 era)</h2>
+      <p>
+        These are the restaurant's own figures from its official breakfast menu PDF
+        — <strong>March 2026 era</strong>. No dinner prices are published anywhere:
+      </p>
+      <ul>
+        <li><strong>Breakfast:</strong> oatmeal $14; eggs Benedict $24; beef sunrise burrito $26; chilaquiles $23; Encantado sunrise hash $32; Encantado breakfast $28; avocado toast $17; prickly pear parfait $12; fresh-squeezed OJ $9.</li>
+        <li><strong>Dinner:</strong> no published prices found — OpenTable lists a typical band of $31–$50 per person (Sep 2026).</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The splurge:</strong> the Steak For Two — it's the official signature for a reason.</li>
+        <li><strong>The starter:</strong> the pepita crumble seared scallops.</li>
+        <li><strong>Happy hour:</strong> 3–5 PM daily at the Terra Bar, on the patio if the weather holds.</li>
+        <li><strong>Breakfast:</strong> the chilaquiles or the sunrise hash — both official-menu items with real prices.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Confirm hours when you book</strong> — OpenTable and the official page disagree on breakfast; OpenTable's 7:00–11:30 AM looks like the real one.</li>
+        <li><strong>It's a drive from the Plaza:</strong> Rancho Encantado sits north of Santa Fe proper — plan a car, not a walk.</li>
+        <li><strong>The patio is the point:</strong> heated, with Sangre de Cristo views — ask for an outside table.</li>
+        <li><strong>No published dinner prices:</strong> budget around the $31–$50 band and ask when reserving.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.fourseasons.com/santafe/dining/restaurants/terra" target="_blank" rel="noopener">Official restaurant page — Terra at Four Seasons Rancho Encantado</a> (hours, events)</li>
+        <li><a href="https://www.fourseasons.com/content/dam/fourseasons/images/web/SSF/PDFs/SSF-Terra-Breakfast-Menu.pdf" target="_blank" rel="noopener">Official breakfast menu (PDF, Mar 2026 era)</a></li>
+        <li><a href="https://www.opentable.com/terra-at-four-seasons-resort-rancho-encantado" target="_blank" rel="noopener">Reservations on OpenTable</a> (bookable; or call 505-946-5800)</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The breakfast figures above are <strong>official — but March 2026
+        era</strong>, from the restaurant's own menu PDF. No dinner prices are
+        published anywhere, so we report the OpenTable typical band instead of
+        guessing. Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More New Mexico guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-new-mexico/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in New Mexico →</a></li>
+        <li><a href="/anasazi-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">Anasazi Restaurant</a> <span class="text-ink-soft">— refined Southwestern at Rosewood Inn of the Anasazi</span></li>
+        <li><a href="/julia-menu/" class="text-gold-dark font-semibold hover:underline">Julia</a> <span class="text-ink-soft">— Southwestern comfort in a Victorian mansion at La Posada</span></li>
+        <li><a href="/la-plazuela-menu/" class="text-gold-dark font-semibold hover:underline">La Plazuela</a> <span class="text-ink-soft">— the landmark Southwestern room at La Fonda on the Plaza</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

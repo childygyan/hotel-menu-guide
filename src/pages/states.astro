@@ -69,13 +69,19 @@ const jsonLd = {
       name: "South Carolina",
       url: "https://hotel-menu-guide.pages.dev/best-hotel-restaurants-south-carolina/",
     },
+    {
+      "@type": "ListItem",
+      position: 11,
+      name: "New Mexico",
+      url: "https://hotel-menu-guide.pages.dev/best-hotel-restaurants-new-mexico/",
+    },
   ],
 };
 ---
 
 <BaseLayout
   title="Browse Hotel Restaurant Guides by State"
-  description="Browse our original hotel restaurant menu guides by US state. New York, Ohio, California, Nevada, Illinois, Florida, Texas, Tennessee, Minnesota, and South Carolina covered so far — more states on the way."
+  description="Browse our original hotel restaurant menu guides by US state. New York, Ohio, California, Nevada, Illinois, Florida, Texas, Tennessee, Minnesota, South Carolina, and New Mexico covered so far — more states on the way."
   path="/states/"
   jsonLd={jsonLd}
   ogImage="/images/hero-home.webp"
@@ -343,6 +349,31 @@ const jsonLd = {
             and Frannie &amp; The Fox, with menus, prices, and reservation tips.
           </p>
           <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Explore South Carolina →</span>
+        </div>
+      </a>
+
+      <a
+        href="/best-hotel-restaurants-new-mexico/"
+        class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+      >
+        <img
+          src="/images/new-mexico-hotel-dining.webp"
+          alt="Illustration of a grand historic Santa Fe luxury hotel dining room with adobe ceilings, kiva fireplaces, wrought-iron chandeliers and candlelit tables at evening (illustrative, not the actual restaurants)"
+          class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+          loading="lazy"
+        />
+        <div class="p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">6 guides</p>
+          <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+            New Mexico
+          </h2>
+          <p class="mt-3 text-ink-soft text-sm leading-relaxed">
+            Santa Fe is the Southwest's great hotel-dining city — and the winner
+            of our latest search-interest research. Our six guides cover La
+            Plazuela, Anasazi Restaurant, Agave, Terra, Julia, and Level 5, with
+            menus, prices, and reservation tips.
+          </p>
+          <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Explore New Mexico →</span>
         </div>
       </a>
     </div>

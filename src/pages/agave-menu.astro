@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Agave Restaurant & Lounge",
+  servesCuisine: ["Southwestern", "American"],
+  priceRange: "$$-$$$",
+  telephone: "+1-505-995-4530",
+  url: "https://www.eldoradohotel.com/eat_drink/agave_lounge/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "309 W San Francisco St",
+    addressLocality: "Santa Fe",
+    addressRegion: "NM",
+    postalCode: "87501",
+    addressCountry: "US",
+  },
+  description:
+    "Agave Restaurant & Lounge at Eldorado Hotel & Spa, Santa Fe — the hotel's Southwestern lounge and home of Santa Fe's famous happy hour, with small plates, margaritas, breakfast, and weekend brunch.",
+};
+---
+
+<BaseLayout
+  title="Agave Menu Guide (2026) — Eldorado Hotel & Spa, Santa Fe | Hotel Menu Guide"
+  description="An independent guide to Agave Restaurant & Lounge at Eldorado Hotel & Spa, Santa Fe: hours, happy-hour menu prices (Sept 2026), signature dishes, and reservations."
+  path="/agave-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/agave-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/agave-dining.webp"
+      alt="Illustration of a lively Santa Fe hotel lounge with a Southwestern bar, turquoise accents, margaritas on the counter, string lights and small plates at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Santa Fe, NM
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Agave — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Agave Restaurant &amp; Lounge is the signature eatery of <strong>Eldorado
+      Hotel &amp; Spa</strong> at 309 W San Francisco Street — and the home of what
+      the hotel calls "Santa Fe's premier happy hour." The format is a New American
+      lounge with a Southwestern tilt: shareable small plates, a margarita-forward
+      bar, plus full breakfast and weekend brunch. It replaces The Old House, the
+      hotel's former fine-dining room, which has closed. No Agave-specific chef is
+      named publicly; the hotel's executive chef is Joshua Gomez. Everything is
+      written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">309 W San Francisco St, Santa Fe, NM 87501 (Eldorado Hotel &amp; Spa)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">No Agave-specific chef published; hotel exec chef Joshua Gomez (per hotel, Sep 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">New American lounge, Southwestern tilt</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$–$$$ — official happy-hour menu: plates $8–$14, cocktails $7–$8 (Sep 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">OpenTable (via the official Agave page) or 505-995-4530</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">None restaurant-specific found — "premier happy hour" is the hotel's own marketing</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official Agave page (October 2026):
+        <strong>lounge Tuesday–Saturday 4:00–9:00 PM; happy hour Tuesday–Saturday
+        4:00–6:00 PM; breakfast Monday–Friday 7:00–11:00 AM; brunch Saturday–Sunday
+        7:00 AM–1:30 PM.</strong>
+      </p>
+
+      <h2>Signature dishes</h2>
+      <p>
+        From the official September 2026 happy-hour menu, plus breakfast:
+      </p>
+      <ul>
+        <li><strong>Agave sliders</strong>: grass-fed beef with Oaxaca cheese, pickled onions, and salsa macha aioli ($14, Sep 2026).</li>
+        <li><strong>Truffled steak frites</strong>: filet medallions with parmesan, chives, and garlic aioli ($13, Sep 2026).</li>
+        <li><strong>Beer-battered cod sandwich</strong>: with lemon-caper aioli and Swiss ($13, Sep 2026).</li>
+        <li><strong>Shredded-beef flautas</strong>: with lime crema and queso fresco ($9, Sep 2026).</li>
+        <li><strong>Fall crudités</strong>: with roasted beet hummus and lavash ($8, Sep 2026).</li>
+        <li><strong>House margarita</strong>: $7 at happy hour; the Honeysuckle and Desert Flame cocktails run $8 (Sep 2026).</li>
+        <li><strong>Breakfast:</strong> buttermilk pancakes and eggs Benedict (per 2026 hotel posts).</li>
+      </ul>
+
+      <h2>Official prices (September 2026 era)</h2>
+      <p>
+        These are the restaurant's own figures from its official happy-hour menu
+        PDF — <strong>September 2026 era, current</strong>:
+      </p>
+      <ul>
+        <li><strong>Happy hour:</strong> cocktails $7–$8; small plates $8–$14.</li>
+        <li><strong>Holiday events:</strong> Christmas Day prix fixe $75 per person + tax + 22% gratuity (official page, year unstated); Valentine's dinner $95 per person.</li>
+        <li><strong>Older archive (November 2022, third-party):</strong> blue corn cakes $14, green-chile cheeseburger $16, shrimp ceviche $15, flourless chocolate cake $9 — dated, not current.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one evening here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Time it right:</strong> arrive 4–6 PM Tuesday–Saturday for happy hour pricing.</li>
+        <li><strong>The plates:</strong> the agave sliders and truffled steak frites — the two best values on the happy-hour menu.</li>
+        <li><strong>The drink:</strong> the house margarita at $7, or the Desert Flame.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Happy hour is the move:</strong> 4–6 PM Tue–Sat — the hotel's own claim is that it's Santa Fe's premier one.</li>
+        <li><strong>Closed Sundays and Mondays for the lounge</strong> — plan evening visits Tue–Sat; breakfast runs weekdays.</li>
+        <li><strong>The Old House is gone:</strong> the hotel's former fine-dining room has closed; Agave is the current signature — don't go looking for the old room.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.eldoradohotel.com/eat_drink/agave_lounge/" target="_blank" rel="noopener">Official restaurant page — Agave at Eldorado Hotel &amp; Spa</a> (hours, menus, OpenTable reservations)</li>
+        <li><a href="https://cdn.prod.website-files.com/6413d060207e02e82004493a/6aa96cc6ddc44ca70fddfc42_Agave-Happy-Hour-Menu-Sept2026.pdf" target="_blank" rel="noopener">Official happy-hour menu (PDF, Sept 2026 era)</a></li>
+        <li><a href="https://www.eldoradohotel.com/" target="_blank" rel="noopener">Eldorado Hotel &amp; Spa</a> (hotel site)</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The happy-hour figures above are <strong>official and current (September
+        2026)</strong>, from the restaurant's own menu PDF. The 2022 figures are a
+        third-party archive and are dated, not current. Always verify with the
+        restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More New Mexico guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-new-mexico/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in New Mexico →</a></li>
+        <li><a href="/la-plazuela-menu/" class="text-gold-dark font-semibold hover:underline">La Plazuela</a> <span class="text-ink-soft">— the landmark Southwestern room at La Fonda on the Plaza</span></li>
+        <li><a href="/julia-menu/" class="text-gold-dark font-semibold hover:underline">Julia</a> <span class="text-ink-soft">— Southwestern comfort in a Victorian mansion at La Posada</span></li>
+        <li><a href="/level-5-menu/" class="text-gold-dark font-semibold hover:underline">Level 5</a> <span class="text-ink-soft">— Albuquerque's rooftop dining room at Hotel Chaco</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>
