@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Best Hotel Restaurants in NYC",
+  description:
+    "Our picks for the best hotel restaurants in New York City, each with an original menu guide.",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, url: "https://hotel-menu-guide.pages.dev/the-mark-menu/", name: "The Mark Restaurant by Jean-Georges" },
+    { "@type": "ListItem", position: 2, url: "https://hotel-menu-guide.pages.dev/plaza-palm-court-menu/", name: "The Palm Court at The Plaza" },
+    { "@type": "ListItem", position: 3, url: "https://hotel-menu-guide.pages.dev/king-cole-bar-menu/", name: "King Cole Bar at The St. Regis" },
+    { "@type": "ListItem", position: 4, url: "https://hotel-menu-guide.pages.dev/cafe-carlyle-menu/", name: "Café Carlyle at The Carlyle" },
+    { "@type": "ListItem", position: 5, url: "https://hotel-menu-guide.pages.dev/locanda-verde-menu/", name: "Locanda Verde at The Greenwich Hotel" },
+    { "@type": "ListItem", position: 6, url: "https://hotel-menu-guide.pages.dev/temple-court-menu/", name: "Temple Court at The Beekman" },
+    { "@type": "ListItem", position: 7, url: "https://hotel-menu-guide.pages.dev/majorelle-menu/", name: "Majorelle at The Lowell" },
+    { "@type": "ListItem", position: 8, url: "https://hotel-menu-guide.pages.dev/perrine-menu/", name: "Perrine at The Pierre" },
+  ],
+};
+
+const guides = [
+  {
+    href: "/the-mark-menu/",
+    img: "/images/the-mark-dining.webp",
+    alt: "Illustration of fine dining at The Mark restaurant",
+    tag: "Upper East Side · Jean-Georges",
+    title: "The Mark Restaurant",
+    text: "Chef Jean-Georges Vongerichten's polished Upper East Side dining room — raw-bar classics, truffle-heavy comfort food, and the famous black-truffle cheeseburger. Our guide covers starters through entrées with reported prices and what we'd order.",
+  },
+  {
+    href: "/plaza-palm-court-menu/",
+    img: "/images/palm-court-tea.webp",
+    alt: "Illustration of afternoon tea under the Palm Court's glass dome",
+    tag: "The Plaza · Fifth Avenue",
+    title: "The Palm Court",
+    text: "The legendary afternoon tea under The Plaza's stained-glass dome — a New York ritual since 1907. Our guide walks through the experience, reported prices, and how to book a table worth the occasion.",
+  },
+  {
+    href: "/king-cole-bar-menu/",
+    img: "/images/king-cole-bar.webp",
+    alt: "Illustration of a historic 1930s hotel cocktail bar with a large mural",
+    tag: "Midtown · The St. Regis",
+    title: "King Cole Bar",
+    text: "Birthplace of the Bloody Mary — created here in 1934 as the Red Snapper. Our guide covers the $25 Bloody Mary selection, the signature cocktail list, bar bites, and the Maxfield Parrish mural you came to see.",
+  },
+  {
+    href: "/cafe-carlyle-menu/",
+    img: "/images/cafe-carlyle.webp",
+    alt: "Illustration of an intimate cabaret supper club with candlelit tables",
+    tag: "Upper East Side · Cabaret",
+    title: "Café Carlyle",
+    text: "New York's legendary cabaret room since 1955 — live music nightly with a $95 two-course prix fixe dinner. Our guide explains the prix fixe, the cover charge (the part people miss), and how to plan the evening.",
+  },
+  {
+    href: "/locanda-verde-menu/",
+    img: "/images/locanda-verde.webp",
+    alt: "Illustration of a warm rustic Italian restaurant dining room",
+    tag: "Tribeca · The Greenwich Hotel",
+    title: "Locanda Verde",
+    text: "Andrew Carmellini's rustic Italian dining room in The Greenwich Hotel — the best value on this list. Our guide covers antipasti, the pasta program, and the fire-roasted garlic chicken, with prices from the 2026 menu.",
+  },
+  {
+    href: "/temple-court-menu/",
+    img: "/images/temple-court.webp",
+    alt: "Illustration of a grand Victorian hotel atrium dining room",
+    tag: "Financial District · The Beekman",
+    title: "Temple Court",
+    text: "Tom Colicchio's restaurant inside The Beekman's breathtaking nine-story atrium. Our guide covers the seasonal American menu, signature dishes like the tomato tarte tatin, and the Bar Room — the lower-key way to drink in the architecture.",
+  },
+  {
+    href: "/majorelle-menu/",
+    img: "/images/majorelle.webp",
+    alt: "Illustration of a chic French restaurant dining room",
+    tag: "Upper East Side · The Lowell",
+    title: "Majorelle",
+    text: "Classic French fine dining inside The Lowell — prix fixe, old-world service, and an OpenTable Top 100 Hotel Restaurants 2026 nod. Our guide walks through the $135–$155 prix fixe structure, the menu highlights, and afternoon tea hours.",
+  },
+  {
+    href: "/perrine-menu/",
+    img: "/images/perrine.webp",
+    alt: "Illustration of an elegant hotel afternoon tea with a tiered stand",
+    tag: "Upper East Side · The Pierre",
+    title: "Perrine",
+    text: "The Pierre's all-day restaurant — a serious breakfast, crisp French-American lunch, and afternoon tea from $125. Our guide covers the masala omelet, the historic coronation chicken, and the tea tiers worth the splurge.",
+  },
+];
+---
+
+<BaseLayout
+  title="Best Hotel Restaurants in NYC — 8 Great Guides"
+  description="Our picks for the best hotel restaurants in New York City: The Mark, Palm Court, King Cole Bar, Café Carlyle, Locanda Verde, Temple Court, Majorelle, and Perrine — each with an original menu guide."
+  path="/best-hotel-restaurants-nyc/"
+  jsonLd={jsonLd}
+  ogImage="/images/hero-home.webp"
+>
+  <article class="max-w-5xl mx-auto px-4 sm:px-6">
+    <p class="mt-10 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Pillar Guide · New York City
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight max-w-3xl">
+      The Best Hotel Restaurants in New York City
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed max-w-3xl">
+      In New York, the great hotel dining rooms aren't amenities — they're destinations. The
+      Bloody Mary was invented in one, cabaret history was made in another, and the city's best
+      afternoon tea happens under a stained-glass dome. We've written an original, independent
+      guide to each of the eight below: what the menu looks like, what it costs, and what we'd
+      order. Prices are reported figures, dated honestly — never copied menus.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {guides.map((g) => (
+        <a
+          href={g.href}
+          class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+        >
+          <img
+            src={g.img}
+            alt={g.alt}
+            class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">{g.tag}</p>
+            <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+              {g.title}
+            </h2>
+            <p class="mt-3 text-ink-soft text-sm leading-relaxed">{g.text}</p>
+            <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-parchment border border-line p-6 sm:p-10">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold">How we chose these eight</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3 text-sm leading-relaxed text-ink-soft">
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Search demand, not hype</h3>
+          <p>
+            We started with Google Trends data on what people actually search for — hotel restaurant
+            menus with real, measurable interest — and built guides around the names that came up.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Rooms with a story</h3>
+          <p>
+            Every room here has one: a cocktail invented in 1934, a cabaret stage from 1955, a
+            nine-story atrium, a stained-glass dome. The food matters, but the story is why you go.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Original writing, always</h3>
+          <p>
+            We never copy a restaurant's menu text or photos. Every guide is written in our own words
+            from publicly reported facts — prices dated honestly, with a nudge to verify before you visit.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 sm:p-6 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">A note on prices</p>
+      <p>
+        All prices on this site are <strong>reported as of 2026</strong>, gathered from the
+        restaurants' official published materials and reputable public sources. Menus and prices change
+        frequently — please verify with the restaurant before visiting.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

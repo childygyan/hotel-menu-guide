@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Majorelle",
+  servesCuisine: ["French", "Mediterranean"],
+  priceRange: "$$$$",
+  telephone: "+1-212-935-2888",
+  url: "https://www.lowellhotel.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "28 E 63rd St",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10065",
+    addressCountry: "US",
+  },
+  description:
+    "French restaurant inside The Lowell hotel on the Upper East Side — prix fixe fine dining, afternoon tea, and old-world service.",
+};
+---
+
+<BaseLayout
+  title="Majorelle Menu Guide — The Lowell, Prices, French NYC"
+  description="Independent guide to Majorelle at The Lowell hotel: the $135–$155 prix fixe, French menu highlights, afternoon tea hours, and visiting tips. Prices from the restaurant's published menu."
+  path="/majorelle-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/majorelle.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/majorelle.webp"
+      alt="Illustration of a chic French restaurant dining room with brass and mirrors — an artist's interpretation, not the actual Majorelle"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Upper East Side · The Lowell
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Majorelle — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Inside The Lowell at 28 East 63rd Street — the discreet Upper East Side hotel beloved by
+      fashion week regulars — Majorelle serves French fine dining in the classic style: a prix
+      fixe menu, a proper cheese-and-sauce vocabulary, and service that remembers your name.
+      (OpenTable named it one of America's Top 100 Hotel Restaurants for 2026.) Below is our
+      independent walkthrough of the menu structure, reported prices, and how to plan the visit.
+      Everything is written in our own words; prices are reported figures, not a copy of the
+      restaurant's menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">28 E 63rd St, New York, NY 10065 (inside The Lowell)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">French with Mediterranean touches</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Prix fixe reported: 2 courses $135, 3 courses $155</dd></div>
+        <div><dt class="font-semibold text-ink">Dinner hours</dt><dd class="text-ink-soft">Reported: Mon–Sat 5–10:30pm; bar Tue–Sat 12–11pm, Sun 1–8pm</dd></div>
+        <div><dt class="font-semibold text-ink">Afternoon tea</dt><dd class="text-ink-soft">Reported: Wed–Sat 12–4:30pm, Sun 1–6pm (prices unverified)</dd></div>
+        <div><dt class="font-semibold text-ink">Dress &amp; contact</dt><dd class="text-ink-soft">Jacket preferred · +1 (212) 935-2888</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>The prix fixe — $135 / $155</h2>
+      <p>
+        Dinner runs as a <strong>prix fixe: two courses reported at $135, three courses at
+        $155</strong> (figures from the restaurant's published Fall 2023 menu — the structure holds,
+        but confirm current pricing when you book). The menu reads like a love letter to classic
+        French technique, with a few Mediterranean turns. Here's what the lineup has included:
+      </p>
+
+      <h2>Appetizers</h2>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Part of prix fixe</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Salade Majorelle — watercress, avocado, haricots verts, lemon vinaigrette</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Burrata "anchoïade" — roasted peppers, anchovy dressing</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Salade de betteraves et ricotta — beets, ricotta, mustard vinaigrette</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">"Crudo" de hamachi — jalapeños, pink peppercorn</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Poulpe grillé "méditerranéenne" — grilled octopus, pearl onions, Taggiasca olives</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Noix de Saint-Jacques — scallops with lentils and chanterelles</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Vol-au-vent d'escargots en persillade — snails in puff pastry, parsley-garlic</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Foie gras sauté with fig compote and brioche</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Main courses</h2>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Part of prix fixe</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Fettuccine "maison" au homard — homemade pasta with lobster</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Ris de veau aux châtaignes et morilles — sweetbreads, chestnuts, morels</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Magret de canard aux cèpes — duck breast with porcini</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Carré d'agneau rôti — rack of lamb, Swiss chard gratin Mornay</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Filet mignon de boeuf, sauce au poivre</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Saumon mariné et poché sur ratatouille — double-cooked salmon</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Cabillaud confit au vin blanc — cod with white wine, brussels sprouts</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Risotto au safran et ossobuco — saffron risotto with ossobuco</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Poulet rôti grand-mère — roast chicken, potato, mushroom, bacon</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Loup de mer grillé, sauce vierge (for two) — grilled branzino</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Sole grillée with haricots verts and mustard sauce</td><td class="px-4 py-3 text-right whitespace-nowrap">+$22 supplement</td></tr>
+            <tr><td class="px-4 py-3">Ossetra caviar and blini</td><td class="px-4 py-3 text-right whitespace-nowrap">$265</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Sides run <strong>$15</strong> — vegetable tajine with couscous, creamed spinach, potato
+        mousseline, brussels sprouts, hand-cut fries. Our take: the fettuccine au homard is the
+        dish to build the meal around, and the three-course prix fixe is the right call — this is a
+        room that rewards the full arc.
+      </p>
+
+      <h2>Afternoon tea</h2>
+      <p>
+        Majorelle also serves afternoon tea — reported hours <strong>Wednesday–Saturday 12–4:30pm
+        and Sunday 1–6pm</strong>. It's a quieter, lovely way into the room. We could not verify
+        current tea prices from public sources at the time of writing, so call ahead for the menu
+        and pricing before planning around it.
+      </p>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>To start:</strong> the vol-au-vent d'escargots — snails in puff pastry is peak old-school French, and this room does it straight.</li>
+        <li><strong>The main:</strong> fettuccine "maison" au homard. Handmade pasta with lobster in a room like this is the whole point.</li>
+        <li><strong>The classicist's pick:</strong> ris de veau — sweetbreads with chestnuts and morels for the adventurous.</li>
+        <li><strong>Format:</strong> three courses. Two courses here feels like leaving early.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Jackets preferred.</strong> This is one of the few rooms left where that still means something — dress accordingly.</li>
+        <li><strong>Confirm the prix fixe price</strong> when booking; the $135/$155 figures come from the published Fall 2023 menu and may have moved.</li>
+        <li><strong>The Lowell bar</strong> (open longer hours than the dining room) is an excellent pre-dinner drink spot.</li>
+        <li><strong>63rd Street is quiet</strong> — it's a five-minute walk from the bustle of Fifth Avenue, which is exactly the appeal.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The prix fixe figures above (<strong>$135 for two courses, $155 for three</strong>) are from
+        the restaurant's <strong>published Fall 2023 menu</strong> — the most recent detailed menu we
+        could verify from public sources. Menus and prices change; afternoon tea prices could not be
+        verified. Always confirm current prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,170 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Café Carlyle",
+  servesCuisine: ["French", "American"],
+  priceRange: "$$$$",
+  telephone: "+1-212-744-1600",
+  url: "https://www.rosewoodhotels.com/en/the-carlyle-new-york/dining/cafe-carlyle",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "35 E 76th St",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10021",
+    addressCountry: "US",
+  },
+  description:
+    "Legendary cabaret supper club inside The Carlyle, A Rosewood Hotel — live music nightly with a two-course prix fixe dinner.",
+};
+---
+
+<BaseLayout
+  title="Café Carlyle Menu Guide — Prices & Cabaret Dining NYC"
+  description="Independent guide to Café Carlyle at The Carlyle hotel: the $95 two-course prix fixe dinner, sides, desserts, cover charges, and how to plan a cabaret night. Prices reported as of October 2026."
+  path="/cafe-carlyle-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/cafe-carlyle.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/cafe-carlyle.webp"
+      alt="Illustration of an intimate cabaret supper club with candlelit tables and a small stage — an artist's interpretation, not the actual Café Carlyle"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Upper East Side · Cabaret
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Café Carlyle — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Tucked inside The Carlyle at 35 East 76th Street, Café Carlyle has been the home of New
+      York cabaret since 1955 — Bobby Short held court at the piano here for decades, and the
+      room's Marcel Vertès murals are landmarks in their own right. Dinner runs as a two-course
+      prix fixe alongside the night's performance, and the bill has two parts: the food and the
+      cover charge. Below is our independent walkthrough of what the menu looks like, what it
+      costs, and how to plan the evening. Everything is written in our own words; prices are
+      reported figures, not a copy of the restaurant's menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">35 E 76th St, New York, NY 10021 (inside The Carlyle, A Rosewood Hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Known for</dt><dd class="text-ink-soft">NYC's legendary cabaret room since 1955; live music nightly</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">French-leaning American supper-club fare</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Two-course prix fixe reported at $95/person, plus a cover charge</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Reported: Tuesday–Saturday, from 6:30 p.m.</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Book through Tock; check the artist calendar for cover charges</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>The two-course prix fixe — $95</h2>
+      <p>
+        Dinner here is structured as a <strong>two-course prix fixe, reported at $95 per person</strong>.
+        Pick one dish from the first-course list and one from the mains. The lineup is classic and
+        seasonally inflected — think bistro staples executed for a room that cares as much about the
+        show as the plate.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">First course (pick one)</th>
+              <th class="px-4 py-3 font-semibold text-right">Included in prix fixe</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Lobster bisque with Armagnac and tarragon crème fraîche</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Baby romaine salad — soft-boiled egg, parmesan, anchovy, preserved lemon</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Puglia burrata with baguette, apple butter, mint</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Sunset tartare — tuna, salmon, avocado, coconut jus, shrimp chips</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Carlyle fall salad — endive, pear, blue cheese, walnuts</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Duck foie gras terrine with black truffle and mostarda</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Main course (pick one)</th>
+              <th class="px-4 py-3 font-semibold text-right">Included in prix fixe</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Faroe Island salmon with squash, zucchini, sorrel sauce</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Branzino with charred broccoli rabe, lemon beurre blanc</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Seafood salad — lobster, shrimp, Jonah crab, lemon vinaigrette</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Chicken Milanese with arugula, parmesan, lemon</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Prime porcini-crusted NY strip, potato gratin, sauce au poivre</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Eggplant Napoleon — plant-based sausage, tofu ricotta, watercress</td><td class="px-4 py-3 text-right whitespace-nowrap">✓</td></tr>
+            <tr><td class="px-4 py-3">Dover sole with brown butter and brioche croutons</td><td class="px-4 py-3 text-right whitespace-nowrap">+$65</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Our take: the Dover sole carries a steep <strong>+$65 supplement</strong> — it's the room's
+        grandest gesture, but the porcini-crusted strip is the better value inside the prix fixe.
+      </p>
+
+      <h2>Sides &amp; desserts</h2>
+      <p>
+        Sides are extra, reported at <strong>$18 each</strong> (truffle fries at $26): creamed spinach,
+        brussels sprouts with bacon and pecans, whipped potatoes, charred broccoli rabe, and grilled
+        asparagus. Desserts run <strong>$24</strong> — flourless chocolate cake with raspberries, New
+        York cheesecake with berries, or an apple tart with salted caramel, meringue and vanilla ice cream.
+      </p>
+
+      <h2>The cover charge</h2>
+      <p>
+        This is the part people miss: dinner is only half the bill. The room charges a <strong>cover
+        charge reported at $80 per person and up, depending on the performing artist</strong>. Big-name
+        residencies cost more; quieter weeknights less. The cover is separate from the prix fixe, and
+        reservations are handled through Tock, where the current artist's terms are listed. Always check
+        the calendar for your night before you book — the total per-person cost swings dramatically with
+        who's on stage.
+      </p>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>To start:</strong> the duck foie gras terrine — the most old-school Carlyle choice on the list.</li>
+        <li><strong>The main:</strong> the porcini-crusted NY strip. Hearty enough to anchor the evening, no supplement.</li>
+        <li><strong>To finish:</strong> the apple tart — salted caramel and meringue is the right kind of theater.</li>
+        <li><strong>The real move:</strong> pick your night by the artist, not the menu. The room is the headliner.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book on Tock</strong> and read the fine print for your artist's cover charge before committing.</li>
+        <li><strong>Budget the full evening:</strong> $95 prix fixe + $80+ cover + drinks + tax and tip adds up fast — plan on $250+ per person for a marquee night.</li>
+        <li><strong>Dress for the room.</strong> Jackets are the norm; this is one of the last places in New York where that still holds.</li>
+        <li><strong>Arrive hungry but unhurried.</strong> Service is timed around the show — you're here for the whole evening, not a quick bite.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of October 2026</strong>, compiled from the restaurant's
+        officially published menu. The prix fixe lineup, supplements, and cover charges change with
+        the season and the artist — always verify current prices and the night's terms with the
+        restaurant (via Tock) before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

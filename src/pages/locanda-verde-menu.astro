@@ -1,0 +1,187 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Locanda Verde",
+  servesCuisine: ["Italian"],
+  priceRange: "$$$",
+  telephone: "+1-212-925-3797",
+  url: "https://www.thegreenwichhotel.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "377 Greenwich St",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10013",
+    addressCountry: "US",
+  },
+  description:
+    "Andrew Carmellini's Italian restaurant inside The Greenwich Hotel in Tribeca — rustic cooking, serious pasta, and a room that buzzes nightly.",
+};
+---
+
+<BaseLayout
+  title="Locanda Verde Menu Guide — Prices & What to Order NYC"
+  description="Independent guide to Locanda Verde at The Greenwich Hotel: antipasti, pasta and secondi with reported prices from the restaurant's 2026 menu, our picks, and visiting tips."
+  path="/locanda-verde-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/locanda-verde.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/locanda-verde.webp"
+      alt="Illustration of a warm rustic Italian restaurant dining room with an open kitchen — an artist's interpretation, not the actual Locanda Verde"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Tribeca · The Greenwich Hotel
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Locanda Verde — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      On the ground floor of The Greenwich Hotel — the Tribeca hotel co-founded by Robert De
+      Niro — chef Andrew Carmellini runs one of downtown's most reliable Italian dining rooms.
+      The cooking is rustic but precise: a proper pasta program, a wood-fired grill, and a room
+      that hums every night of the week. Below is our independent walkthrough of the menu with
+      reported prices from the restaurant's published 2026 menu, plus what we'd order. Everything
+      is written in our own words; prices are reported figures, not a copy of the menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">377 Greenwich St, New York, NY 10013 (inside The Greenwich Hotel, Tribeca)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Andrew Carmellini</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Rustic Italian — antipasti, handmade pasta, wood-fired secondi</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Moderate-upscale — pasta reported $30–39, secondi $42–82</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Strongly recommended; the room fills nightly</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (212) 925-3797</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Ostini &amp; Antipasti</h2>
+      <p>
+        Start at the top of the menu. The ostini (little toasts, reported <strong>$18–25</strong>)
+        are the move with a first drink, and the antipasti run <strong>$15–35</strong>. This is
+        where the kitchen shows its range — from a simple ricotta to a wagyu tartare with black truffle.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Steak tartare Piedmontese — wagyu, hazelnut, black truffle</td><td class="px-4 py-3 text-right whitespace-nowrap">$35</td></tr>
+            <tr><td class="px-4 py-3">Big eye tuna with caperberry tonnato</td><td class="px-4 py-3 text-right whitespace-nowrap">$30</td></tr>
+            <tr><td class="px-4 py-3">Fritto misto with lemon</td><td class="px-4 py-3 text-right whitespace-nowrap">$28</td></tr>
+            <tr><td class="px-4 py-3">Insalata D'Andrea — arugula, apple, almond, asiago</td><td class="px-4 py-3 text-right whitespace-nowrap">$26</td></tr>
+            <tr><td class="px-4 py-3">The Green Caesar with anchovy crouton crumble</td><td class="px-4 py-3 text-right whitespace-nowrap">$25</td></tr>
+            <tr><td class="px-4 py-3">Carpaccio of beets with gorgonzola, clementine, pistachio</td><td class="px-4 py-3 text-right whitespace-nowrap">$24</td></tr>
+            <tr><td class="px-4 py-3">Gabagool &amp; grana</td><td class="px-4 py-3 text-right whitespace-nowrap">$22</td></tr>
+            <tr><td class="px-4 py-3">Focaccia Napoletana — tomato, fior di latte, oregano</td><td class="px-4 py-3 text-right whitespace-nowrap">$15</td></tr>
+            <tr><td class="px-4 py-3">Lamb meatball sliders with caprino and cucumber pickles</td><td class="px-4 py-3 text-right whitespace-nowrap">$16</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Primi</h2>
+      <p>
+        The pasta course is the heart of the restaurant, reported at <strong>$30–39</strong>. Shapes
+        change with the seasons, but the structure holds: a filled pasta, a seafood pasta, a couple of
+        classics, and the grandmother's ravioli that regulars swear by.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Pasta</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Black shells frutti di mare — rock shrimp, scallops, clams</td><td class="px-4 py-3 text-right whitespace-nowrap">$39</td></tr>
+            <tr><td class="px-4 py-3">Pumpkin ravioli with sage, amaretti, mostarda</td><td class="px-4 py-3 text-right whitespace-nowrap">$35</td></tr>
+            <tr><td class="px-4 py-3">Pappardelle — lamb bolognese, ricotta and mint</td><td class="px-4 py-3 text-right whitespace-nowrap">$35</td></tr>
+            <tr><td class="px-4 py-3">My Grandmother's ravioli</td><td class="px-4 py-3 text-right whitespace-nowrap">$34</td></tr>
+            <tr><td class="px-4 py-3">Bucatini all'amatriciana</td><td class="px-4 py-3 text-right whitespace-nowrap">$33</td></tr>
+            <tr><td class="px-4 py-3">Spaghetti con acciughe — anchovy butter, savory breadcrumbs</td><td class="px-4 py-3 text-right whitespace-nowrap">$30</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Our take: the pappardelle is the order if you only eat one pasta — the lamb bolognese with
+        mint is the dish that built this restaurant's reputation.
+      </p>
+
+      <h2>Secondi</h2>
+      <p>
+        Mains come off the wood-fired grill, reported from <strong>$42 to $82</strong>. The
+        fire-roasted garlic chicken is the signature — order the whole bird for the table if there
+        are three or more of you.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Main</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Fire-roasted garlic chicken — whole bird</td><td class="px-4 py-3 text-right whitespace-nowrap">$82</td></tr>
+            <tr><td class="px-4 py-3">Prime NY strip with Sicilian trapanese, salsa verde</td><td class="px-4 py-3 text-right whitespace-nowrap">$72</td></tr>
+            <tr><td class="px-4 py-3">Atlantic halibut alla ghiotta</td><td class="px-4 py-3 text-right whitespace-nowrap">$52</td></tr>
+            <tr><td class="px-4 py-3">Pork chop Lorenzo with pepper sauce and polenta</td><td class="px-4 py-3 text-right whitespace-nowrap">$50</td></tr>
+            <tr><td class="px-4 py-3">Branzino arrabbiata with salsa gialla, fennel relish</td><td class="px-4 py-3 text-right whitespace-nowrap">$45</td></tr>
+            <tr><td class="px-4 py-3">Fire-roasted garlic chicken — half bird</td><td class="px-4 py-3 text-right whitespace-nowrap">$42</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Contorni (sides) run <strong>$17–18</strong> — the roasted brussels sprouts with guanciale
+        and the frico potatoes are the ones worth the supplement.
+      </p>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>To start:</strong> the lamb meatball sliders — small, rich, and gone in four bites.</li>
+        <li><strong>The pasta:</strong> pappardelle with lamb bolognese. Non-negotiable.</li>
+        <li><strong>The main:</strong> the fire-roasted garlic chicken (whole bird for the table) — it's the dish the room is known for.</li>
+        <li><strong>The sleeper:</strong> black shells frutti di mare if you lean seafood — it's the priciest pasta and earns it.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book ahead.</strong> Locanda Verde is a neighborhood institution that happens to be in a hotel — prime-time tables go fast.</li>
+        <li><strong>It's the best value on this list.</strong> Full pasta-and-main dinners here run meaningfully less than the Midtown hotel rooms — a good first stop on a hotel-restaurant tour.</li>
+        <li><strong>Sit where the energy is.</strong> The room runs loud and happy at peak hours; ask for the main dining room over a corner table if you want the buzz.</li>
+        <li><strong>Tribeca parking is rough</strong> — subway or car service beats circling for a spot.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported from the restaurant's published early-2026 menu</strong>.
+        Menus change seasonally and prices move — always verify current prices with the restaurant
+        before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

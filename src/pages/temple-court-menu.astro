@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Temple Court",
+  servesCuisine: ["American", "Contemporary"],
+  priceRange: "$$$$",
+  telephone: "+1-917-728-4685",
+  url: "https://www.templecourtnyc.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "5 Beekman St",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10038",
+    addressCountry: "US",
+  },
+  description:
+    "Tom Colicchio's restaurant inside The Beekman hotel's nine-story Victorian atrium in the Financial District — classic American cooking with a seasonal touch.",
+};
+---
+
+<BaseLayout
+  title="Temple Court Menu Guide — Beekman Hotel, Prices, Picks"
+  description="Independent guide to Temple Court at The Beekman: Tom Colicchio's atrium dining room, reported prices, signature dishes, the Bar Room, and visiting tips. Prices reported as of October 2026."
+  path="/temple-court-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/temple-court.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/temple-court.webp"
+      alt="Illustration of a grand Victorian hotel atrium dining room with a skylight — an artist's interpretation, not the actual Temple Court"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Financial District · The Beekman
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Temple Court — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Step into The Beekman hotel at 5 Beekman Street and the city falls away: a nine-story
+      Victorian atrium rises overhead, capped by a pyramidal skylight. In this setting, Tom
+      Colicchio serves the old-and-new American classics he built his name on — seasonal,
+      precise, and unmistakably his. (The room opened as Fowler &amp; Wells in 2016 and took the
+      Temple Court name in 2017.) Below is our independent walkthrough of the menu, reported
+      prices, and how to plan the visit. Everything is written in our own words; prices are
+      reported figures, not a copy of the restaurant's menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">5 Beekman St, New York, NY 10038 (inside The Beekman, FiDi)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Tom Colicchio</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary American — classics reimagined, seasonal</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Fine dining — a la carte bands reported below; 3-course Restaurant Week $60 (summer 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Reported: breakfast &amp; lunch daily 7am–3pm; dinner Mon &amp; Sun 5:30–9:30pm, Tue–Sat 5:30–10pm</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (917) 728-4685</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>What the menu looks like</h2>
+      <p>
+        Temple Court runs a full-day operation — breakfast, lunch, weekend brunch, and dinner —
+        with dinner as the main event: an a la carte menu of first courses, mains and desserts,
+        plus a five-course tasting menu. Published figures from past seasons put <strong>first
+        courses roughly in the mid-$20s and mains from the high $30s into the $70s</strong>, but the
+        menu changes regularly with the market, so treat those bands as a guide and confirm current
+        prices when you book. One solid recent data point: the restaurant's <strong>Summer 2026
+        Restaurant Week menu offered three courses for $60</strong>.
+      </p>
+
+      <h2>Signature dishes to know</h2>
+      <p>
+        These are the dishes that define the room — reported on the restaurant's seasonal menus and
+        in diners' accounts. Exact preparations change with the market; the ideas recur.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Tomato tarte tatin</td><td class="px-4 py-3 text-right whitespace-nowrap">Signature starter</td></tr>
+            <tr><td class="px-4 py-3">Chestnut agnolotti</td><td class="px-4 py-3 text-right whitespace-nowrap">Signature pasta</td></tr>
+            <tr><td class="px-4 py-3">Foie graffle (foie gras waffle)</td><td class="px-4 py-3 text-right whitespace-nowrap">Signature starter</td></tr>
+            <tr><td class="px-4 py-3">Skate meunière</td><td class="px-4 py-3 text-right whitespace-nowrap">Classic main</td></tr>
+            <tr><td class="px-4 py-3">Smoked wagyu brisket</td><td class="px-4 py-3 text-right whitespace-nowrap">Signature main</td></tr>
+            <tr><td class="px-4 py-3">Dry-aged prime NY strip with roasted sunchokes</td><td class="px-4 py-3 text-right whitespace-nowrap">Steakhouse anchor</td></tr>
+            <tr><td class="px-4 py-3">Chilled corn bisque</td><td class="px-4 py-3 text-right whitespace-nowrap">Seasonal starter</td></tr>
+            <tr><td class="px-4 py-3">Braised lamb shoulder</td><td class="px-4 py-3 text-right whitespace-nowrap">Seasonal main</td></tr>
+            <tr><td class="px-4 py-3">Spanish octopus</td><td class="px-4 py-3 text-right whitespace-nowrap">Seasonal main</td></tr>
+            <tr><td class="px-4 py-3">Corn tres leches</td><td class="px-4 py-3 text-right whitespace-nowrap">Signature dessert</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Our take: the tomato tarte tatin and the corn tres leches are the two dishes most associated
+        with this kitchen — if they're on the menu the night you visit, don't overthink it.
+      </p>
+
+      <h2>The Bar Room</h2>
+      <p>
+        Adjacent to the dining room, The Bar Room sits directly in the atrium — sixteen antique brass
+        and emerald stools, velvet sofas, live jazz on some nights, and a menu of classic cocktails
+        with bar snacks (reported items have included clams casino, steak tartare, and a blueberry
+        millefeuille). If the dining room feels like a commitment, the Bar Room is the lower-key way
+        to drink in the architecture. Bar snack prices were not verifiable from public sources at the
+        time of writing — ask for the current menu at the bar.
+      </p>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>To start:</strong> the tomato tarte tatin — it's the dish the room is known for.</li>
+        <li><strong>The main:</strong> skate meunière or the dry-aged strip, depending on appetite.</li>
+        <li><strong>Dessert:</strong> corn tres leches — Colicchio's sweet signature.</li>
+        <li><strong>The alternative:</strong> a cocktail and bar snacks in the Bar Room, gazing up nine stories. Sometimes that's the better evening.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book dinner ahead</strong> — the atrium is a destination and weekend tables go first.</li>
+        <li><strong>Daytime is a secret.</strong> Breakfast and lunch in the atrium (reported daily 7am–3pm) are calmer, cheaper ways to see the room.</li>
+        <li><strong>Check the tasting menu.</strong> The five-course option has been offered historically; confirm availability and price when reserving, as we could not verify current figures.</li>
+        <li><strong>FiDi at night is quiet</strong> — plan your ride home; the subway is close but the streets empty out early.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of October 2026</strong>. Temple Court's menu changes
+        with the seasons and the market, and published a la carte figures vary across sources — the
+        bands given here come from past published menus and should be treated as a guide. The $60
+        three-course figure is from the restaurant's Summer 2026 Restaurant Week menu. Always verify
+        current prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

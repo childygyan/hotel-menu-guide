@@ -1,0 +1,186 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Perrine",
+  servesCuisine: ["American", "Contemporary"],
+  priceRange: "$$$",
+  telephone: "+1-212-940-8195",
+  url: "https://www.perrinenyc.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2 E 61st St",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10065",
+    addressCountry: "US",
+  },
+  description:
+    "The Pierre hotel's all-day restaurant on the Upper East Side — breakfast, lunch, and afternoon tea with French-American cooking and Indian touches.",
+};
+---
+
+<BaseLayout
+  title="Perrine Menu Guide — The Pierre, Prices & Tea"
+  description="Independent guide to Perrine at The Pierre hotel: breakfast, lunch and afternoon tea ($125–$210) with reported prices, what to order, and visiting tips. Prices reported as of October 2026."
+  path="/perrine-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/perrine.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/perrine.webp"
+      alt="Illustration of an elegant hotel afternoon tea with a tiered stand of sandwiches and pastries — an artist's interpretation, not the actual Perrine"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Upper East Side · The Pierre
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Perrine — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      At 2 East 61st Street, The Pierre's all-day restaurant does something the grander hotel rooms
+      don't: it feeds you from morning to afternoon without ceremony. Breakfast is a serious affair,
+      lunch is crisp French-American cooking, and the afternoon tea is one of the Upper East Side's
+      best-kept rituals. Chef Ashfer Biju's menu carries quiet Indian touches — a masala omelet, a
+      coronation chicken salad, a mango lassi — that set it apart from every other hotel dining room
+      in the neighborhood. Below is our independent walkthrough with reported prices, plus what we'd
+      order. Everything is written in our own words; prices are reported figures, not a copy of the menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">2 E 61st St, New York, NY 10065 (inside The Pierre)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">French-American with Indian touches; serious breakfast</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Breakfast/lunch reported $23–72; afternoon tea $125–$210</dd></div>
+        <div><dt class="font-semibold text-ink">Afternoon tea</dt><dd class="text-ink-soft">Reported from $125/person; seatings vary — confirm when booking</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended, especially for tea; book via Resy</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (212) 940-8195</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Breakfast</h2>
+      <p>
+        This is Perrine's strongest service — a full, classic hotel breakfast menu reported from
+        <strong>$25 to $36</strong>, with the Pierre's own twists. The masala omelet and the corned
+        beef hash are the two dishes you won't find done this well elsewhere on the block.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Steak &amp; eggs — 6oz NY strip, fried eggs, hash browns</td><td class="px-4 py-3 text-right whitespace-nowrap">$36</td></tr>
+            <tr><td class="px-4 py-3">Corned beef hash — classic Pierre recipe, twin poached eggs</td><td class="px-4 py-3 text-right whitespace-nowrap">$31</td></tr>
+            <tr><td class="px-4 py-3">Bagel &amp; lox — Catskills smoked salmon, condiments</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Eggs Benedict — Canadian bacon or smoked salmon</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Avocado toast with twin fried eggs and crispy capers</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Ham &amp; cheese omelet — French ham, Swiss</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Masala omelet — rolled Indian omelet, tomato, cilantro, green chilies</td><td class="px-4 py-3 text-right whitespace-nowrap">$28</td></tr>
+            <tr><td class="px-4 py-3">Egg white omelet with spinach, tomato, asparagus</td><td class="px-4 py-3 text-right whitespace-nowrap">$28</td></tr>
+            <tr><td class="px-4 py-3">Fried egg rancheros with spicy tomato coulis, avocado</td><td class="px-4 py-3 text-right whitespace-nowrap">$28</td></tr>
+            <tr><td class="px-4 py-3">Ancient grains &amp; eggs with mushrooms, kale, poached egg</td><td class="px-4 py-3 text-right whitespace-nowrap">$26</td></tr>
+            <tr><td class="px-4 py-3">Brioche French toast — cinnamon sugar, strawberry compote</td><td class="px-4 py-3 text-right whitespace-nowrap">$25</td></tr>
+            <tr><td class="px-4 py-3">The Pierre Bloody Mary</td><td class="px-4 py-3 text-right whitespace-nowrap">$18</td></tr>
+            <tr><td class="px-4 py-3">Mimosa</td><td class="px-4 py-3 text-right whitespace-nowrap">$16</td></tr>
+            <tr><td class="px-4 py-3">White peach bellini</td><td class="px-4 py-3 text-right whitespace-nowrap">$15</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Lunch — salads, pasta &amp; mains</h2>
+      <p>
+        Lunch salads run <strong>$24–44</strong>, pastas and flatbreads <strong>$23–34</strong>, and
+        mains <strong>$29–72</strong>. The coronation chicken — a curry chicken salad created for
+        Queen Elizabeth II's coronation in the 1950s — is the house legend.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Dish</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Maine lobster salad — endives, radishes, green apple rémoulade</td><td class="px-4 py-3 text-right whitespace-nowrap">$44</td></tr>
+            <tr><td class="px-4 py-3">Black sea bass — seafood broth, fava beans, fines herbes</td><td class="px-4 py-3 text-right whitespace-nowrap">$38</td></tr>
+            <tr><td class="px-4 py-3">Cavatelli with chicken sausage, scallions, white wine</td><td class="px-4 py-3 text-right whitespace-nowrap">$34</td></tr>
+            <tr><td class="px-4 py-3">Roasted salmon — beluga lentils, gribiche, sorrel sauce</td><td class="px-4 py-3 text-right whitespace-nowrap">$34</td></tr>
+            <tr><td class="px-4 py-3">Seared tuna salad — kale, barley, pomegranate, poached egg</td><td class="px-4 py-3 text-right whitespace-nowrap">$32</td></tr>
+            <tr><td class="px-4 py-3">Linguine with white clam sauce, lemon, serrano chilies</td><td class="px-4 py-3 text-right whitespace-nowrap">$32</td></tr>
+            <tr><td class="px-4 py-3">Rainbow chard &amp; goat cheese tart</td><td class="px-4 py-3 text-right whitespace-nowrap">$31</td></tr>
+            <tr><td class="px-4 py-3">Chicken paillard — arugula, artichokes, lemon vinaigrette</td><td class="px-4 py-3 text-right whitespace-nowrap">$31</td></tr>
+            <tr><td class="px-4 py-3">The Pierre burger — grass-fed beef, rémoulade, Rupert cheese, frites</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Grilled shrimp salad — avocado, spiced lemon aïoli</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Upstate farms roasted vegetables with barley and feta</td><td class="px-4 py-3 text-right whitespace-nowrap">$29</td></tr>
+            <tr><td class="px-4 py-3">Coronation chicken — curry chicken salad, raisins, herbs, country bread</td><td class="px-4 py-3 text-right whitespace-nowrap">$24</td></tr>
+            <tr><td class="px-4 py-3">Zucchini blossom flatbread on house-made naan</td><td class="px-4 py-3 text-right whitespace-nowrap">$23</td></tr>
+            <tr><td class="px-4 py-3">Steak frites with watercress salad</td><td class="px-4 py-3 text-right whitespace-nowrap">$49</td></tr>
+            <tr><td class="px-4 py-3">Dover sole, sauce meunière</td><td class="px-4 py-3 text-right whitespace-nowrap">$72</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Sides run <strong>$9–12</strong> (pommes frites, glazed carrots, spiced cauliflower, charred
+        broccoli gratin), and there's a mango lassi at $9 — the Indian touch extends to the drinks.
+      </p>
+
+      <h2>Afternoon tea</h2>
+      <p>
+        Perrine's tea service is the sleeper hit of this list. Reported tiers: <strong>Traditional
+        Afternoon Tea at $125 per person</strong>, the <strong>Pierre Afternoon Tea at $160</strong>
+        (adds champagne and Russian ossetra caviar), and the <strong>Golden Caviar Afternoon Tea at
+        $210</strong> (two glasses of champagne or a demi bottle plus golden ossetra), with a
+        <strong>$75 menu for younger guests</strong>. Expect tea sandwiches, cranberry scones with
+        Devonshire cream, and pastries from the hotel's pâtissiers. Reported service windows have
+        varied (11am–4pm in some listings; fixed seatings in others) — confirm the current schedule
+        when you book.
+      </p>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>Breakfast:</strong> the masala omelet — it's the one dish no other hotel room on this list serves.</li>
+        <li><strong>Lunch:</strong> the coronation chicken. History you can eat, at $24.</li>
+        <li><strong>The splurge:</strong> afternoon tea at the $160 tier — champagne and caviar in The Pierre is the full experience.</li>
+        <li><strong>The burger test:</strong> the Pierre burger is the benchmark for hotel burgers on the Upper East Side.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Tea needs a reservation</strong> — book on Resy and confirm the seating times, which have varied.</li>
+        <li><strong>Breakfast is walk-in friendly</strong> compared to the grander rooms — a good low-commitment first visit.</li>
+        <li><strong>Dress code is polished-casual;</strong> it's The Pierre, but Perrine is the relaxed sibling.</li>
+        <li><strong>Pair it with Central Park</strong> — the hotel sits two blocks from the park's southeast corner, perfect for a post-lunch walk.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of October 2026</strong>, compiled from publicly reported
+        menus and listings. Menus change seasonally and prices move — tea service times and tiers in
+        particular should be confirmed at booking. Always verify current prices with the restaurant
+        before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

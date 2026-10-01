@@ -1,0 +1,180 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "King Cole Bar",
+  servesCuisine: ["American", "Bar Food", "Cocktails"],
+  priceRange: "$$$$",
+  telephone: "+1-212-339-6857",
+  url: "https://www.kingcolebar.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2 E 55th St",
+    addressLocality: "New York",
+    addressRegion: "NY",
+    postalCode: "10022",
+    addressCountry: "US",
+  },
+  description:
+    "Historic cocktail bar inside The St. Regis New York, birthplace of the Bloody Mary (created here in 1934 as the 'Red Snapper').",
+};
+---
+
+<BaseLayout
+  title="King Cole Bar Menu Guide — Bloody Mary Birthplace, NYC"
+  description="Independent guide to King Cole Bar at the St. Regis New York: the famous Red Snapper Bloody Mary ($25), signature cocktails, bar bites with reported prices, history, and visiting tips. Prices reported as of October 2026."
+  path="/king-cole-bar-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/king-cole-bar.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/king-cole-bar.webp"
+      alt="Illustration of a historic 1930s hotel cocktail bar with a large mural — an artist's interpretation, not the actual King Cole Bar"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Midtown · The St. Regis
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      King Cole Bar — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Inside The St. Regis New York at 2 East 55th Street sits one of the most storied bars
+      in cocktail history. This is where the Bloody Mary was born — in 1934, French bartender
+      Fernand Petiot mixed vodka with tomato juice and called it the Red Snapper, because
+      "Bloody Mary" was considered too vulgar for such an elegant room. Below is our independent
+      walkthrough of the drinks menu, reported prices, and how to do the visit justice. Everything
+      is written in our own words; prices are reported figures, not a copy of the bar's menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">2 E 55th St, New York, NY 10022 (inside The St. Regis)</dd></div>
+        <div><dt class="font-semibold text-ink">Known for</dt><dd class="text-ink-soft">Birthplace of the Bloody Mary (1934); Maxfield Parrish's "Old King Cole" mural</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Classic American bar — cocktails and bar bites</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Cocktails reported ~$24–30; the Red Snapper ~$25</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Reported: Mon–Sat 11:30am–midnight; Sun noon–midnight</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (212) 339-6857</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>The Red Snapper &amp; the Bloody Mary selection</h2>
+      <p>
+        This is why you come. The bar offers a Bloody Mary selection reported at <strong>$25</strong>,
+        built around the original Red Snapper — Belvedere vodka, tomato juice, lemon juice and spices,
+        served in a wine glass rather than the usual tumbler. The rest of the selection riffs on the
+        theme, each named for a different St. Regis property around the world.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Drink</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Red Snapper — the original 1934 Bloody Mary, St. Regis New York</td><td class="px-4 py-3 text-right whitespace-nowrap">~$25</td></tr>
+            <tr><td class="px-4 py-3">Bloody Smoke — scotch-based, celery, olives, cracked pepper</td><td class="px-4 py-3 text-right whitespace-nowrap">~$25</td></tr>
+            <tr><td class="px-4 py-3">Harry's Texas Bloody Mary — tequila with Cajun seasoning</td><td class="px-4 py-3 text-right whitespace-nowrap">~$25</td></tr>
+            <tr><td class="px-4 py-3">The Capitol Mary — gin with Old Bay seasoning, oyster crackers</td><td class="px-4 py-3 text-right whitespace-nowrap">~$25</td></tr>
+            <tr><td class="px-4 py-3">Agave Maria — tequila, green jalapeño garnish</td><td class="px-4 py-3 text-right whitespace-nowrap">~$25</td></tr>
+            <tr><td class="px-4 py-3">The Mary Terranean — vodka with olive oil, basil and oregano</td><td class="px-4 py-3 text-right whitespace-nowrap">~$25</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A caveat: published sources list the $25 figure for the selection as a whole, and individual
+        preparations may vary in price. Ask your server before ordering if the exact figure matters to you.
+      </p>
+
+      <h2>Signature cocktails</h2>
+      <p>
+        Beyond the Marys, the cocktail list is a greatest-hits of Midtown classics, mostly reported
+        at <strong>$24</strong>, with one premium pour at $30. The names themselves are a tour of the
+        neighborhood and the hotel's history.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Cocktail</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Fifth And 55th — vodka, lime, cherry preserves (the house premium)</td><td class="px-4 py-3 text-right whitespace-nowrap">$30</td></tr>
+            <tr><td class="px-4 py-3">Old King Cole — gin, vermouth, amaro, burnt orange</td><td class="px-4 py-3 text-right whitespace-nowrap">$24</td></tr>
+            <tr><td class="px-4 py-3">The Maxfield Parrish — rum-based, amaro, vermouth, bitters</td><td class="px-4 py-3 text-right whitespace-nowrap">$24</td></tr>
+            <tr><td class="px-4 py-3">Astor Midnight — blueberry vodka, lavender, sparkling wine</td><td class="px-4 py-3 text-right whitespace-nowrap">$24</td></tr>
+            <tr><td class="px-4 py-3">Best Address — reposado tequila, ginger liqueur, lemon, sriracha bitters</td><td class="px-4 py-3 text-right whitespace-nowrap">$24</td></tr>
+            <tr><td class="px-4 py-3">Madison Avenue — tequila, lime, blood orange soda, salt</td><td class="px-4 py-3 text-right whitespace-nowrap">$24</td></tr>
+            <tr><td class="px-4 py-3">1904 — whiskey, lemon, sage (a nod to the hotel's founding year)</td><td class="px-4 py-3 text-right whitespace-nowrap">$24</td></tr>
+            <tr><td class="px-4 py-3">Midtown Spice — bourbon, apple liqueur, ginger, cherry</td><td class="px-4 py-3 text-right whitespace-nowrap">$24</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Bar bites</h2>
+      <p>
+        This is a bar, not a restaurant — the food list is short and built for drinking alongside.
+        Reported prices run from <strong>$8 to $26</strong>.
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-line my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-parchment text-left">
+              <th class="px-4 py-3 font-semibold">Bite</th>
+              <th class="px-4 py-3 font-semibold text-right">Reported price</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-line bg-white">
+            <tr><td class="px-4 py-3">Grilled lamb merguez with roasted grapes</td><td class="px-4 py-3 text-right whitespace-nowrap">$26</td></tr>
+            <tr><td class="px-4 py-3">"Nizza" spicy eggplant with goat cheese</td><td class="px-4 py-3 text-right whitespace-nowrap">$15</td></tr>
+            <tr><td class="px-4 py-3">Mediterranean olives</td><td class="px-4 py-3 text-right whitespace-nowrap">$9</td></tr>
+            <tr><td class="px-4 py-3">Fried chichi's (chickpea fritters)</td><td class="px-4 py-3 text-right whitespace-nowrap">$8</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>What we'd order</h2>
+      <p>The Red Snapper is non-negotiable — it's the whole point of the pilgrimage:</p>
+      <ul>
+        <li><strong>The ritual:</strong> the Red Snapper, in the wine glass, under the mural. Order it first.</li>
+        <li><strong>The second round:</strong> the Old King Cole — a proper gin drink named for the room itself.</li>
+        <li><strong>With it:</strong> the lamb merguez, the one substantial bite on the menu, built for a second drink.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Look up.</strong> The Maxfield Parrish "Old King Cole" mural (1904) dominates the room — it's the visual centerpiece of the visit.</li>
+        <li><strong>Go at golden hour.</strong> Late afternoon into early evening is when the room glows and the crowd is at its most civilized.</li>
+        <li><strong>Dress smart.</strong> This is a St. Regis bar; the room expects you to make an effort.</li>
+        <li><strong>It's a drink, not dinner.</strong> Pair this with a dinner reservation elsewhere — the food menu is snacks, not a meal.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of October 2026</strong>, compiled from publicly reported
+        menus and listings. Bar menus change and prices move — the Bloody Mary selection in particular
+        has been listed with varying figures. Always verify current prices with the bar before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>
