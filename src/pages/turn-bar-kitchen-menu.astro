@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "TURN Bar + Kitchen",
+  servesCuisine: ["American"],
+  priceRange: "$$",
+  telephone: "+1-216-902-5255",
+  url: "https://www.ritzcarlton.com/en/hotels/clerz-the-ritz-carlton-cleveland/dining/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1515 W 3rd St",
+    addressLocality: "Cleveland",
+    addressRegion: "OH",
+    postalCode: "44113",
+    addressCountry: "US",
+  },
+  description:
+    "All-day restaurant and bar inside The Ritz-Carlton, Cleveland, serving modern American cuisine with smoked cocktails, named for the city's steel-working heritage.",
+};
+---
+
+<BaseLayout
+  title="TURN Bar + Kitchen Menu Guide (2026) — Prices & Picks"
+  description="An independent guide to TURN Bar + Kitchen at The Ritz-Carlton, Cleveland: all-day American menu, smoked cocktails, reported prices, signature dishes, and visiting tips. Prices reported as of October 2026."
+  path="/turn-bar-kitchen-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/turn-bar-kitchen.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/turn-bar-kitchen.webp"
+      alt="Illustration of TURN Bar + Kitchen's bar with a smoked cocktail in Cleveland"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Downtown Cleveland, Ohio
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      TURN Bar + Kitchen at The Ritz-Carlton, Cleveland — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      TURN Bar + Kitchen is the all-day restaurant inside The Ritz-Carlton, Cleveland at 1515
+      West Third Street — a nod, in name and design, to the city's steel-working industry. The
+      menu is modern American built on local ingredients, but the signature move is the bar:
+      smoked cocktails that arrive wreathed in a wisp of theater. It's the hotel's everyday
+      dining room — breakfast through dinner daily — with a smart-casual dress code. Below is
+      our independent walkthrough of the menu, reported prices, and what we'd order.
+      Everything is written in our own words; prices are reported figures, not a copy of the
+      restaurant's menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">1515 W 3rd St, Cleveland, OH 44113 (inside The Ritz-Carlton, Cleveland)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Manikandan Ramalingam</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern American, local ingredients</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$31–$50 per person (OpenTable)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended for dinner; book via OpenTable or +1 (216) 902-5255</dd></div>
+        <div><dt class="font-semibold text-ink">Dress code</dt><dd class="text-ink-soft">Smart casual</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Breakfast, lunch &amp; brunch</h2>
+      <p>
+        TURN runs a full day: breakfast daily 7am–11am, lunch Monday–Friday 11am–2pm, brunch
+        Saturday–Sunday 11am–3pm, and dinner daily 5pm–10pm (the bar stays open 11am–midnight).
+        As the hotel's only all-day restaurant, it's built to handle everything from a working
+        breakfast to a weekend brunch crowd.
+      </p>
+
+      <h2>Dinner &amp; the signature dishes</h2>
+      <p>
+        Dinner is modern American comfort with a Cleveland accent. Published coverage has
+        flagged dishes including a "Not So Much Polish Boy" (reported <strong>$15</strong>) —
+        the kitchen's playful take on the Cleveland classic — peppercorn ahi tuna (reported
+        <strong>$32</strong>), Cattleman's Goulash, and a hangar steak. Reviewers also single
+        out a white chocolate cold soup as an offbeat favorite, and a Northeast Ohio cassata
+        cake (reported <strong>$9</strong>) for dessert.
+      </p>
+      <p>
+        Our take: order the Polish Boy for the story and the tuna for the execution — together
+        they cover the menu's range from playful to polished.
+      </p>
+
+      <h2>The bar: smoked cocktails</h2>
+      <p>
+        The "smoked cocktail" program is TURN's calling card — drinks finished with aromatic
+        smoke that ties back to the steel-town theme. The bar also hosts a daily 6pm "steam
+        whistle" moment marking the end of the workday, a nice ritual worth timing a drink
+        around. For the more adventurous, the hotel also houses Sushi by Bou, an intimate
+        omakase counter open Tuesday–Saturday evenings.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>At the bar first:</strong> a smoked cocktail — it's the signature experience of the room.</li>
+        <li><strong>To eat:</strong> the peppercorn ahi tuna as the refined pick, or the Not So Much Polish Boy for the Cleveland wink.</li>
+        <li><strong>To finish:</strong> the Northeast Ohio cassata cake — a local nod in dessert form.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>It's the easy reservation</strong> — as an all-day hotel restaurant, it absorbs walk-ins better than Cleveland's destination dining rooms.</li>
+        <li><strong>Smart casual holds.</strong> You'll see everything from convention attire to date-night looks; dress one notch above your day.</li>
+        <li><strong>Budget:</strong> $31–$50 per person puts dinner for two comfortably in the mid-hundreds with drinks — Ritz-Carlton service without the tasting-menu price.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of October 2026</strong>, compiled from published
+        dining coverage and the restaurant's official listings. Menus and prices change —
+        always verify current prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/best-hotel-restaurants-ohio/" class="text-gold-dark font-semibold hover:underline">← Back to Ohio hotel restaurants</a>
+    </p>
+  </article>
+</BaseLayout>

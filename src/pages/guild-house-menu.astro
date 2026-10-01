@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Guild House",
+  servesCuisine: ["American", "Contemporary American"],
+  priceRange: "$$",
+  telephone: "+1-614-280-9780",
+  url: "https://theguildhousecolumbus.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "624 N High St",
+    addressLocality: "Columbus",
+    addressRegion: "OH",
+    postalCode: "43215",
+    addressCountry: "US",
+  },
+  description:
+    "Cameron Mitchell artisan eatery in Columbus's Short North Arts District, next to Le Méridien Columbus The Joseph, serving creative New American cuisine from breakfast through dinner.",
+};
+---
+
+<BaseLayout
+  title="The Guild House Menu Guide (2026) — Prices & What to Order"
+  description="An independent guide to The Guild House in Columbus's Short North: signature dishes like Tuna Ribbons and Pork Cheeks, reported price bands, happy hour, and visiting tips. Prices reported as of October 2026."
+  path="/guild-house-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/guild-house-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/guild-house-dining.webp"
+      alt="Illustration of The Guild House's artisan dining room in Columbus's Short North"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Short North, Columbus, Ohio
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Guild House — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Guild House sits at 624 North High Street in the Short North Arts District, next
+      door to the Le Méridien Columbus The Joseph hotel — one important piece of honesty
+      first: it's not inside the hotel, but it serves as its de facto dining room, and it's
+      a Cameron Mitchell restaurant, which in Columbus carries real weight. The concept is a
+      modern artisan eatery: creative New American food served from breakfast through dinner,
+      with repurposed wood, local art, and a strong cocktail program. Below is our independent
+      walkthrough of the menu, reported price bands, and what we'd order. Everything is
+      written in our own words; prices are reported figures, not a copy of the restaurant's
+      menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">624 N High St, Columbus, OH 43215 (Short North, adjacent to Le Méridien Columbus The Joseph)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Sonny Pache (Cameron Mitchell Restaurants)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">New American, artisan / farm-to-table</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$31–$50 per person (OpenTable)</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended for dinner and weekend brunch; book via OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (614) 280-9780</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Signature dishes</h2>
+      <p>
+        The menu turns over with the seasons, but a core set of signatures has defined the
+        restaurant since it opened: <strong>Tuna Ribbons</strong> (ahi tuna, avocado, radish,
+        chili oil, yuzu sesame dressing), <strong>Pork Cheeks</strong> (tomato gravy, spaghetti
+        squash, charred shishito peppers), <strong>Prime Rib Cap</strong> (sweet onion relish,
+        Pointe Reyes blue cheese, mustard vinaigrette), <strong>Scallops</strong> (English peas,
+        baby carrots, parsnip puree, orange vinaigrette), and <strong>Seasonal Doughnuts</strong>.
+        These are the dishes reviewers write home about, and the pork cheeks and prime rib cap
+        are the two to prioritize if it's your first visit.
+      </p>
+
+      <h2>Price bands</h2>
+      <p>
+        Published reviews from earlier years put appetizers around <strong>$12–$17</strong> and
+        entrées around <strong>$21–$34</strong> — think pork cheeks at $15 as a starter, a chicken
+        roulade around $27, and a ribeye near $34. Those figures are dated (from 2015–2020
+        reviews), so treat them as the shape of the menu rather than today's numbers; current
+        prices should be confirmed with the restaurant. Diner favorites that recur in recent
+        reviews include lamb chops with fried rice, the smoked chicken hash at brunch, and a
+        chocolate peanut butter torte for dessert.
+      </p>
+
+      <h2>Hours &amp; happy hour</h2>
+      <ul>
+        <li><strong>Breakfast:</strong> daily, 7am–11am</li>
+        <li><strong>Lunch:</strong> Monday–Friday, 11am–3pm</li>
+        <li><strong>Brunch:</strong> Saturday–Sunday, 11am–3pm</li>
+        <li><strong>Dinner:</strong> Monday–Saturday, 3pm–10pm; Sunday, 3pm–9pm</li>
+        <li><strong>Happy hour:</strong> Monday–Friday, 4pm–6pm</li>
+      </ul>
+      <p>
+        The happy hour is the value play — reviewers consistently call it one of the better
+        deals in the Short North.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>To start:</strong> the Tuna Ribbons — light, precise, and the signature opener.</li>
+        <li><strong>The main event:</strong> the Pork Cheeks. Fork-tender, unctuous, and the dish the kitchen is known for.</li>
+        <li><strong>Or the splurge:</strong> the Prime Rib Cap — an uncommon cut that beef lovers rave about.</li>
+        <li><strong>To finish:</strong> the Seasonal Doughnuts, or the chocolate peanut butter torte if it's on.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>It's a Cameron Mitchell house</strong> — service is polished and the room handles business dinners, dates, and celebrations with equal ease.</li>
+        <li><strong>Book weekend brunch ahead.</strong> Locals call it their number-one brunch spot, and it fills up.</li>
+        <li><strong>Budget:</strong> at $31–$50 per person, it's upscale without being precious — dinner for two with drinks lands in the low-to-mid hundreds.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Individual dish prices above come from <strong>published reviews from 2015–2020</strong>
+        and are likely dated — we present them as the menu's shape, not current figures. Always
+        confirm prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/best-hotel-restaurants-ohio/" class="text-gold-dark font-semibold hover:underline">← Back to Ohio hotel restaurants</a>
+    </p>
+  </article>
+</BaseLayout>

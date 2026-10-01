@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Burnham Restaurant",
+  servesCuisine: ["American", "Contemporary American", "Comfort Food"],
+  priceRange: "$$",
+  telephone: "+1-216-413-5120",
+  url: "https://www.hilton.com/en/hotels/cledohh-hilton-cleveland-downtown/dining/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "100 Lakeside Ave E",
+    addressLocality: "Cleveland",
+    addressRegion: "OH",
+    postalCode: "44114",
+    addressCountry: "US",
+  },
+  description:
+    "Signature restaurant of the Hilton Cleveland Downtown, serving elevated Midwest comfort food for breakfast, lunch, and dinner.",
+};
+---
+
+<BaseLayout
+  title="The Burnham Menu Guide (2026) — Prices & What to Order"
+  description="An independent guide to The Burnham at the Hilton Cleveland Downtown: Midwest comfort food classics, reported prices, signature dishes like the knife-and-fork po'boy, and visiting tips. Prices reported as of October 2026."
+  path="/burnham-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/burnham-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/burnham-dining.webp"
+      alt="Illustration of The Burnham's modern dining room with Lake Erie views"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Downtown Cleveland, Ohio
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Burnham at Hilton Cleveland Downtown — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Burnham is the signature restaurant of the Hilton Cleveland Downtown at 100 Lakeside
+      Avenue East — a 257-seat dining room named for Daniel Burnham, the architect whose 1903
+      Group Plan shaped Cleveland's civic center. The kitchen's brief is "elevated Midwest
+      comfort food": familiar classics rebuilt with modern technique. Cleveland restaurateur
+      Zack Bruell consulted on the menus, and the room runs breakfast and lunch daily with
+      dinner Monday through Saturday. Below is our independent walkthrough of the menu,
+      reported prices, and what we'd order. Everything is written in our own words; prices are
+      reported figures, not a copy of the restaurant's menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">100 Lakeside Ave E, Cleveland, OH 44114 (inside the Hilton Cleveland Downtown)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Brandon Park; menus shaped with consultant Zack Bruell</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">American / Contemporary comfort food</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$31–$50 per person (OpenTable); moderate</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended, especially during conventions; book via OpenTable or the hotel</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (216) 413-5120</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Breakfast &amp; brunch</h2>
+      <p>
+        Breakfast is served daily from 6:30am to 11am, and it's a genuine draw — the breakfast
+        buffet is popular with both hotel guests and locals, and the Bloody Mary gets special
+        attention at brunch. Cleveland Magazine's coverage has flagged the Sunday brunch spread
+        (reported around <strong>$32</strong>) as a highlight, with Cleveland touches like
+        kielbasa and pierogies alongside themed specials, and an apple pie waffle with apple
+        compote and bacon bits (reported <strong>$16</strong>).
+      </p>
+
+      <h2>Lunch &amp; dinner</h2>
+      <p>
+        Lunch runs daily 11:30am–2pm; dinner runs Monday–Saturday 5pm–9pm. The menu reads
+        American but travels: reported dishes from published coverage include a knife-and-fork
+        po'boy (reported <strong>$16</strong>) built from fried oysters, fried gulf shrimp, and
+        coleslaw on a house-made buttermilk biscuit; pork and pineapple fried rice (reported
+        <strong>$14</strong>) with Thai basil sauce; duck leg confit (reported <strong>$24</strong>);
+        fried cheese curds (reported <strong>$12</strong>); and buttermilk-fried calamari
+        (reported <strong>$10</strong>). Crispy-skin salmon, a smash burger, and chicken and
+        waffles are the recurring guest favorites.
+      </p>
+      <p>
+        Our take: the po'boy is the signature lunch order — it's the dish the room is known for,
+        and it shows the kitchen's comfort-food thesis at its best.
+      </p>
+
+      <h2>Drinks &amp; the patio</h2>
+      <p>
+        The 60-seat patio overlooking Lake Erie and Mall B is one of downtown's better outdoor
+        seats. Elsewhere in the hotel, Bar 32 — the 32nd-floor rooftop bar — does the skyline
+        views and craft cocktails (21+), while Eliot's Bar on the second floor covers all-day
+        drinks and bites.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Lunch:</strong> the knife-and-fork po'boy — decadent, messy, and exactly the point.</li>
+        <li><strong>Dinner:</strong> the duck leg confit for something refined, or the smash burger for the comfort-food purist.</li>
+        <li><strong>Brunch:</strong> the Sunday spread with a Bloody Mary, especially if you can score a patio table.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Watch the convention calendar.</strong> The hotel sits next to the convention center; during big events the dining room fills fast.</li>
+        <li><strong>No dinner on Sundays</strong> — plan brunch or look elsewhere for Sunday night.</li>
+        <li><strong>Parking:</strong> $15 valet with a dinner purchase; the free RTA B-Line and C-Line trolleys stop nearby.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of October 2026</strong>, compiled from Cleveland
+        Magazine's published dining coverage and the restaurant's official listings. Individual
+        dish prices come from that published coverage and may have moved since — always verify
+        current prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/best-hotel-restaurants-ohio/" class="text-gold-dark font-semibold hover:underline">← Back to Ohio hotel restaurants</a>
+    </p>
+  </article>
+</BaseLayout>

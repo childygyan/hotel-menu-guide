@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Keep Kitchen & Liquor Bar",
+  servesCuisine: ["French", "American", "Contemporary"],
+  priceRange: "$$$",
+  telephone: "+1-614-224-9500",
+  url: "http://www.thekeepcolumbus.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "50 W Broad St",
+    addressLocality: "Columbus",
+    addressRegion: "OH",
+    postalCode: "43215",
+    addressCountry: "US",
+  },
+  description:
+    "Modern French brasserie and speakeasy-style liquor bar inside the historic LeVeque Tower in downtown Columbus, Ohio.",
+};
+---
+
+<BaseLayout
+  title="The Keep Kitchen Menu Guide (2026) — Prices & Picks"
+  description="An independent guide to The Keep Kitchen & Liquor Bar at Hotel LeVeque in Columbus: French brasserie classics, the speakeasy bar, reported prices, and visiting tips. Prices reported as of October 2026."
+  path="/keep-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/the-keep-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/the-keep-dining.webp"
+      alt="Illustration of The Keep's 1920s art-deco French brasserie in Columbus"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Downtown Columbus, Ohio
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Keep Kitchen &amp; Liquor Bar at Hotel LeVeque — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Keep Kitchen &amp; Liquor Bar sits on the mezzanine level of the historic LeVeque
+      Tower at 50 West Broad Street in downtown Columbus — an art-deco landmark completed in
+      1927, and the setting for one of Ohio's most atmospheric hotel dining rooms. The
+      concept is a modern French brasserie with a speakeasy-style liquor bar: gas lamps,
+      brass, and leather, with classic dishes reinvented using local Ohio ingredients. Next
+      door to the Palace Theatre, it's the natural pre-show dinner. Below is our independent
+      walkthrough of the menu, reported prices, and what we'd order. Everything is written in
+      our own words; prices are reported figures, not a copy of the restaurant's menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">50 W Broad St (mezzanine level, LeVeque Tower), Columbus, OH 43215 — Hotel LeVeque</dd></div>
+        <div><dt class="font-semibold text-ink">Concept</dt><dd class="text-ink-soft">Modern French brasserie + speakeasy liquor bar</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">French classics with Midwestern ingredients</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Upscale; happy hour 4–6pm daily is the value play</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended, especially pre-theatre nights</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (614) 224-9500</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>The menu: French classics, Ohio ingredients</h2>
+      <p>
+        The menu runs the French canon with local sourcing: brie fondue, beef carpaccio,
+        steak frites, beef bourguignon, shrimp linguini, French onion soup, moules, and a
+        bouillabaisse. A 2018 published review priced the moules around <strong>$16</strong>,
+        steak tartare at <strong>$15</strong>, French onion soup at <strong>$8</strong>, the
+        bouillabaisse at <strong>$28</strong>, and steak frites with bordelaise at
+        <strong>$24</strong> — dated figures, but they show the menu's mid-range-to-upscale
+        shape. Recent diners rave about the butterscotch crème brûlée, the brie fondue, and a
+        hot-honey crispy chicken sandwich at lunch.
+      </p>
+      <p>
+        Our take: the French onion soup is the sleeper hit — reviewers call it a contender for
+        the best in the city — and the steak frites is the safe, satisfying center of the menu.
+      </p>
+
+      <h2>The liquor bar</h2>
+      <p>
+        The "liquor bar" half of the name is earned: old-school cocktails get a modern remake
+        with house-made syrups and botanicals, and the barrel-aged Manhattan is the order to
+        know. There's a daily happy hour Monday–Friday from 4pm to 6pm with specially priced
+        drinks and shareable snacks — the smartest way into the room. The bar runs late on
+        weekends (till 1am Friday and Saturday).
+      </p>
+
+      <h2>Hours</h2>
+      <ul>
+        <li><strong>Monday–Thursday:</strong> breakfast 7am–10:30am, lunch 11am–1:30pm, dinner 5pm–9pm</li>
+        <li><strong>Friday:</strong> dinner to 10pm</li>
+        <li><strong>Saturday:</strong> brunch 7am–1:30pm, dinner 5pm–10pm</li>
+        <li><strong>Sunday:</strong> brunch 7am–1:30pm, dinner 5pm–9pm</li>
+        <li><strong>Bar:</strong> Sunday–Thursday 4pm–11pm; Friday–Saturday 3pm–1am</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>To start:</strong> the brie fondue for the table — it's the dish people photograph.</li>
+        <li><strong>The main event:</strong> steak frites with bordelaise, the brasserie staple done right.</li>
+        <li><strong>At the bar:</strong> a barrel-aged Manhattan at happy hour, timed before a Palace Theatre show.</li>
+        <li><strong>To finish:</strong> the butterscotch crème brûlée — the dessert reviewers won't stop talking about.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Pre-theatre timing:</strong> book dinner before a Palace Theatre show — the room is built for it, and the bar does the post-show nightcap.</li>
+        <li><strong>Private dining:</strong> the Coleman Room hosts private events for up to 40 guests.</li>
+        <li><strong>Budget:</strong> upscale but not punishing — plan on a mid-range downtown dinner, less if you lean on happy hour.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Individual dish prices above come from a <strong>published 2018 review</strong> and are
+        likely dated — we present them as the menu's shape, not current figures. Always confirm
+        prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/best-hotel-restaurants-ohio/" class="text-gold-dark font-semibold hover:underline">← Back to Ohio hotel restaurants</a>
+    </p>
+  </article>
+</BaseLayout>

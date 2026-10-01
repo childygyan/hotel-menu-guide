@@ -1,0 +1,142 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Metropole",
+  servesCuisine: ["American", "Contemporary", "Seasonal"],
+  priceRange: "$$",
+  telephone: "+1-513-578-6660",
+  url: "http://metropoleonwalnut.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "609 Walnut St",
+    addressLocality: "Cincinnati",
+    addressRegion: "OH",
+    postalCode: "45202",
+    addressCountry: "US",
+  },
+  description:
+    "Restaurant and bar inside the 21c Museum Hotel in downtown Cincinnati, serving seasonal, locally sourced American cuisine amid rotating contemporary art.",
+};
+---
+
+<BaseLayout
+  title="Metropole Menu Guide (2026) — Prices & What to Order"
+  description="An independent guide to Metropole at the 21c Museum Hotel in Cincinnati: seasonal menu highlights, reported price bands, our picks for what to order, and visiting tips. Prices reported as of October 2026."
+  path="/metropole-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/metropole-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/metropole-dining.webp"
+      alt="Illustration of Metropole's art-filled restaurant dining room in Cincinnati"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Downtown Cincinnati, Ohio
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Metropole at 21c Museum Hotel — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Metropole is the restaurant inside the 21c Museum Hotel at 609 Walnut Street in downtown
+      Cincinnati — a dining room where contemporary art is as present as the food. The concept
+      is straightforward: local, seasonal American cooking, an evolving cocktail and wine list,
+      and a room that doubles as part of the hotel's gallery space. It earned an OpenTable
+      Diners' Choice 2024 nod. Below is our independent walkthrough of the menu, reported
+      prices, and what we'd order. Everything is written in our own words; prices are reported
+      figures, not a copy of the restaurant's menu.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">609 Walnut St, Cincinnati, OH 45202 (inside the 21c Museum Hotel)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Corey Cova</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Seasonal American, local sourcing</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$31–$50 per person (OpenTable); moderately priced</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended for dinner; book via OpenTable or the restaurant's site</dd></div>
+        <div><dt class="font-semibold text-ink">Phone</dt><dd class="text-ink-soft">+1 (513) 578-6660</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Starters &amp; small plates</h2>
+      <p>
+        The opening of the menu sets the tone: approachable, seasonal, and built for sharing.
+        Reported prices for starters sit roughly in the <strong>$10–$22</strong> band, per diner
+        reports. Standbys include a beet salad, octopus with grits, burnt carrot salad, and spicy
+        tuna served over crispy rice — the kind of dish that reads like a small-plate menu but
+        anchors a table.
+      </p>
+      <p>
+        Our take: the spicy tuna crispy rice is the most talked-about small plate here, and the
+        one that best matches the room's playful mood.
+      </p>
+
+      <h2>Pasta &amp; mains</h2>
+      <p>
+        The main courses lean into comfort with a chef's touch. Reported entrée prices land
+        roughly in the <strong>$25–$40</strong> range. Dishes that recur in reviews include
+        cavatelli cacio e pepe, a bison burger, roasted duck breast, steak au poivre, and a
+        jackfruit barbecue shrimp preparation for the plant-forward crowd. The sweet potato
+        pound cake is the dessert name that keeps coming up.
+      </p>
+
+      <h2>Brunch</h2>
+      <p>
+        Brunch runs Saturday and Sunday from 7am to 2pm — a generous window that makes it one of
+        the more relaxed downtown weekend options. Weekday breakfast (Monday–Friday, 7am–11am)
+        serves the hotel crowd and locals alike.
+      </p>
+
+      <h2>Hours</h2>
+      <ul>
+        <li><strong>Breakfast:</strong> Monday–Friday, 7am–11am</li>
+        <li><strong>Brunch:</strong> Saturday–Sunday, 7am–2pm</li>
+        <li><strong>Dinner:</strong> Wednesday–Saturday, 5pm–10pm</li>
+        <li><strong>Lounge:</strong> Wednesday–Thursday, 4pm–10:30pm; Friday–Saturday, 4pm–11:30pm</li>
+      </ul>
+      <p>
+        Note that dinner is only served Wednesday through Saturday — plan accordingly if you're
+        visiting early in the week.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>To start:</strong> the spicy tuna crispy rice — it's the dish that defines the menu's energy.</li>
+        <li><strong>The main event:</strong> roasted duck breast if you're in the mood for classic technique, or the bison burger if you want the crowd-pleaser.</li>
+        <li><strong>Don't skip:</strong> the sweet potato pound cake — an unusual dessert that reviewers single out.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Go early and look around.</strong> The 21c's contemporary art carries into the restaurant — arrive before your reservation to take it in.</li>
+        <li><strong>Dinner is a four-night affair</strong> (Wed–Sat). For Sunday through Tuesday evenings, brunch or the lounge are your options.</li>
+        <li><strong>Budget:</strong> at $31–$50 per person, this is mid-range downtown dining — a comfortable dinner for two lands well under the fine-dining tier.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Prices above are <strong>reported as of October 2026</strong>, compiled from the restaurant's
+        official site and diner reports. The menu is seasonal and prices move — always verify current
+        prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/best-hotel-restaurants-ohio/" class="text-gold-dark font-semibold hover:underline">← Back to Ohio hotel restaurants</a>
+    </p>
+  </article>
+</BaseLayout>

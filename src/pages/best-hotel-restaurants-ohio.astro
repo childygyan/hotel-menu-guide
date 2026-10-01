@@ -1,0 +1,161 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Best Hotel Restaurants in Ohio",
+  description:
+    "Our picks for the best hotel restaurants in Ohio, each with an original menu guide.",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, url: "https://hotel-menu-guide.pages.dev/metropole-menu/", name: "Metropole at 21c Museum Hotel" },
+    { "@type": "ListItem", position: 2, url: "https://hotel-menu-guide.pages.dev/burnham-menu/", name: "The Burnham at Hilton Cleveland Downtown" },
+    { "@type": "ListItem", position: 3, url: "https://hotel-menu-guide.pages.dev/adega-menu/", name: "Adega at the Metropolitan at The 9" },
+    { "@type": "ListItem", position: 4, url: "https://hotel-menu-guide.pages.dev/turn-bar-kitchen-menu/", name: "TURN Bar + Kitchen at The Ritz-Carlton, Cleveland" },
+    { "@type": "ListItem", position: 5, url: "https://hotel-menu-guide.pages.dev/guild-house-menu/", name: "The Guild House" },
+    { "@type": "ListItem", position: 6, url: "https://hotel-menu-guide.pages.dev/keep-menu/", name: "The Keep Kitchen & Liquor Bar at Hotel LeVeque" },
+  ],
+};
+
+const guides = [
+  {
+    href: "/metropole-menu/",
+    img: "/images/metropole-dining.webp",
+    alt: "Illustration of Metropole's art-filled restaurant dining room in Cincinnati",
+    tag: "Cincinnati · 21c Museum Hotel",
+    title: "Metropole",
+    text: "The restaurant inside Cincinnati's 21c Museum Hotel — seasonal local cooking in a dining room that's part of the art gallery. Our guide covers the menu, reported price bands, brunch hours, and what we'd order.",
+  },
+  {
+    href: "/burnham-menu/",
+    img: "/images/burnham-dining.webp",
+    alt: "Illustration of The Burnham's modern dining room with Lake Erie views",
+    tag: "Cleveland · Hilton Downtown",
+    title: "The Burnham",
+    text: "The Hilton Cleveland Downtown's signature restaurant, serving elevated Midwest comfort food — including the famous knife-and-fork po'boy. Our guide covers breakfast through dinner with reported prices and visiting tips.",
+  },
+  {
+    href: "/adega-menu/",
+    img: "/images/adega-dining.webp",
+    alt: "Illustration of Adega's refined Mediterranean dining room in Cleveland",
+    tag: "Cleveland · Metropolitan at The 9",
+    title: "Adega",
+    text: "Cleveland's award-winning Mediterranean hotel dining room — bouillabaisse, Iberico pork chop, and the Monday half-price wine tradition. Our guide walks through the menu and how to plan the visit.",
+  },
+  {
+    href: "/turn-bar-kitchen-menu/",
+    img: "/images/turn-bar-kitchen.webp",
+    alt: "Illustration of TURN Bar + Kitchen's bar with a smoked cocktail in Cleveland",
+    tag: "Cleveland · The Ritz-Carlton",
+    title: "TURN Bar + Kitchen",
+    text: "The Ritz-Carlton Cleveland's all-day restaurant, named for the city's steel-working heritage — modern American food and signature smoked cocktails. Our guide covers the menu, reported prices, and the bar.",
+  },
+  {
+    href: "/guild-house-menu/",
+    img: "/images/guild-house-dining.webp",
+    alt: "Illustration of The Guild House's artisan dining room in Columbus's Short North",
+    tag: "Columbus · Short North",
+    title: "The Guild House",
+    text: "Cameron Mitchell's artisan eatery in the Short North, next to Le Méridien Columbus The Joseph — Tuna Ribbons, Pork Cheeks, and one of the city's best happy hours. Our guide covers signatures, prices, and tips.",
+  },
+  {
+    href: "/keep-menu/",
+    img: "/images/the-keep-dining.webp",
+    alt: "Illustration of The Keep's 1920s art-deco French brasserie in Columbus",
+    tag: "Columbus · Hotel LeVeque",
+    title: "The Keep Kitchen & Liquor Bar",
+    text: "A modern French brasserie and speakeasy bar inside the art-deco LeVeque Tower — steak frites, brie fondue, and barrel-aged Manhattans. Our guide covers the menu, hours, and the pre-theatre play.",
+  },
+];
+---
+
+<BaseLayout
+  title="Best Hotel Restaurants in Ohio — 6 Great Guides"
+  description="Our picks for the best hotel restaurants in Ohio: Metropole in Cincinnati, The Burnham, Adega and TURN in Cleveland, The Guild House and The Keep in Columbus — each with an original menu guide."
+  path="/best-hotel-restaurants-ohio/"
+  jsonLd={jsonLd}
+  ogImage="/images/ohio-hotel-dining.webp"
+>
+  <article class="max-w-5xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/ohio-hotel-dining.webp"
+      alt="Illustration of Ohio hotel dining rooms in Cincinnati, Cleveland, and Columbus"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+    <p class="mt-10 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Pillar Guide · Ohio
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight max-w-3xl">
+      The Best Hotel Restaurants in Ohio
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed max-w-3xl">
+      Ohio's great hotel dining rooms are spread across three cities: a museum-hotel restaurant
+      in Cincinnati, a trio of downtown standouts in Cleveland, and an artisan eatery plus an
+      art-deco brasserie in Columbus. We've written an original, independent guide to each of
+      the six below: what the menu looks like, what it costs, and what we'd order. Prices are
+      reported figures, dated honestly — never copied menus.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {guides.map((g) => (
+        <a
+          href={g.href}
+          class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+        >
+          <img
+            src={g.img}
+            alt={g.alt}
+            class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">{g.tag}</p>
+            <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+              {g.title}
+            </h2>
+            <p class="mt-3 text-ink-soft text-sm leading-relaxed">{g.text}</p>
+            <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-parchment border border-line p-6 sm:p-10">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold">How we chose these six</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3 text-sm leading-relaxed text-ink-soft">
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Notability, not hype</h3>
+          <p>
+            Every room here is the dining room its city talks about — award winners, chef-driven
+            flagships, and restaurants with their own press history, not just hotel amenities.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Three cities, one list</h3>
+          <p>
+            Cincinnati, Cleveland, and Columbus each get their due. Two picks per city keeps the
+            list honest: these are the rooms that define hotel dining in Ohio's three big metros.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Original writing, always</h3>
+          <p>
+            We never copy a restaurant's menu text or photos. Every guide is written in our own words
+            from publicly reported facts — prices dated honestly, with a nudge to verify before you visit.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 sm:p-6 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">A note on prices</p>
+      <p>
+        All prices on this site are <strong>reported as of 2026</strong>, gathered from the
+        restaurants' official published materials and reputable public sources. Menus and prices change
+        frequently — please verify with the restaurant before visiting.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

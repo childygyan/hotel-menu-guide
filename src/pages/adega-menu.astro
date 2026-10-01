@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Adega",
+  servesCuisine: ["Mediterranean", "Seafood"],
+  priceRange: "$$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2017 E 9th St",
+    addressLocality: "Cleveland",
+    addressRegion: "OH",
+    postalCode: "44115",
+    addressCountry: "US",
+  },
+  description:
+    "Mediterranean fine-dining restaurant inside the Metropolitan at The 9 in downtown Cleveland, known for seafood and a strong wine program.",
+};
+---
+
+<BaseLayout
+  title="Adega Menu Guide (2026) — Cleveland's Mediterranean Gem"
+  description="An independent guide to Adega at the Metropolitan at The 9 in Cleveland: Mediterranean seafood dishes, the Monday half-price wine tradition, and visiting tips. Facts reported as of October 2026."
+  path="/adega-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/adega-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/adega-dining.webp"
+      alt="Illustration of Adega's refined Mediterranean dining room in Cleveland"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Downtown Cleveland, Ohio
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Adega at the Metropolitan at The 9 — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Adega is the Mediterranean fine-dining restaurant inside the Metropolitan at The 9 at
+      2017 East 9th Street in downtown Cleveland. It built its reputation on seafood and a
+      serious wine program — Cleveland Magazine gave it a Silver Spoon Award — and it remains
+      one of the city's most-honored hotel dining rooms. Below is our independent walkthrough
+      of the menu's shape, what to expect price-wise, and how to plan a visit. Everything is
+      written in our own words; we are candid below about which price figures are current and
+      which come from older published reviews.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">2017 E 9th St, Cleveland, OH 44115 (inside the Metropolitan at The 9)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Mediterranean, seafood-focused</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Upscale — entrées historically in the $28–$52 range</dd></div>
+        <div><dt class="font-semibold text-ink">Known for</dt><dd class="text-ink-soft">Bouillabaisse, Iberico pork chop, Monday half-price wine bottles</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; the room is small and fine-dining formal</dd></div>
+        <div><dt class="font-semibold text-ink">Dress code</dt><dd class="text-ink-soft">Smart — this is Cleveland's dress-up hotel dining room</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>The menu, by course</h2>
+      <p>
+        Adega's menu is built around the Mediterranean coast: fish and shellfish first, then
+        pork, lamb, and beef, with olive oil, citrus, and herbs doing the heavy lifting. The
+        dishes that recur across published reviews include a bouillabaisse, pan-roasted trout,
+        pork tenderloin medallions, and an Iberico pork chop — a menu of European technique
+        rather than Cleveland comfort.
+      </p>
+      <p>
+        Older published reviews put individual dish prices at roughly <strong>$27 for the
+        trout</strong>, <strong>$28 for pork tenderloin medallions</strong>, <strong>$45 for the
+        Iberico pork chop</strong>, and <strong>$52 for the bouillabaisse</strong>. We label
+        these as dated because they come from earlier published reviews — the current menu's
+        prices should be confirmed directly with the restaurant before you visit.
+      </p>
+
+      <h2>The wine program</h2>
+      <p>
+        Wine is half the reason to come. Adega earned a Wine Spectator award, and the tradition
+        of half-price bottles on Mondays has made it a local ritual: dinner on a Monday is the
+        savvy move if you're buying wine. Expect a list weighted toward Old World bottles that
+        suit the Mediterranean menu.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The signature:</strong> the bouillabaisse — it's the dish the restaurant's reputation rests on.</li>
+        <li><strong>The value play:</strong> the pork tenderloin medallions, historically the most reasonably priced entrée.</li>
+        <li><strong>The timing:</strong> go Monday, order the Iberico pork chop, and drink half-price wine with it.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Confirm current prices.</strong> We could not verify a current published menu — call the restaurant for today's figures before budgeting.</li>
+        <li><strong>Monday is the night</strong> if wine matters to you; it's the half-price-bottle tradition that locals plan around.</li>
+        <li><strong>Occasion dining:</strong> this is the special-occasion pick of downtown Cleveland — anniversaries, proposals, and client dinners.</li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Dish prices above come from <strong>older published reviews</strong> and may have
+        changed — we could not verify a current menu, so treat them as historical context,
+        not current figures. Always confirm prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/best-hotel-restaurants-ohio/" class="text-gold-dark font-semibold hover:underline">← Back to Ohio hotel restaurants</a>
+    </p>
+  </article>
+</BaseLayout>
