@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Los Fuegos by Francis Mallmann",
+  servesCuisine: ["Argentine", "Steakhouse", "South American"],
+  priceRange: "$$$$",
+  telephone: "+1-786-655-5600",
+  url: "https://www.faena.com/miami-beach/dining/los-fuegos-by-francis-mallmann",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3201 Collins Ave",
+    addressLocality: "Miami Beach",
+    addressRegion: "FL",
+    postalCode: "33140",
+    addressCountry: "US",
+  },
+  description:
+    "Los Fuegos by Francis Mallmann at Faena Hotel Miami Beach — Argentine open-fire asado and steakhouse; Mallmann's first restaurant in the United States, with a weekly Sunday Asado.",
+};
+---
+
+<BaseLayout
+  title="Los Fuegos Miami Beach Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Los Fuegos by Francis Mallmann at Faena Hotel Miami Beach: official menu prices (parrillada $305, ribeye $112, Sunday Asado $129), hours, and visiting tips. Everything in our own words."
+  path="/los-fuegos-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/los-fuegos-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/los-fuegos-dining.webp"
+      alt="Illustration of an Argentine open-fire grill restaurant with a glowing wood hearth (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Miami Beach
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Los Fuegos — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Los Fuegos is <strong>Francis Mallmann's</strong> Argentine open-fire restaurant at
+      <strong>Faena Hotel Miami Beach</strong> — the Patagonian chef's <strong>first
+      restaurant in the United States</strong> (he was featured on Netflix's
+      <em>Chef's Table</em>, Season 1, and Esquire once called him "the most interesting
+      chef in the world"). Everything here is cooked over wood fire — the asado way —
+      including Mallmann's hallmark domino potatoes. Below is our independent walkthrough
+      with prices from the <strong>official Faena dinner menu (dated February 4, 2026,
+      fetched October 2026)</strong>, plus the weekly Sunday Asado. Everything is written
+      in our own words. Note: a 20% service charge is added to all checks.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">3201 Collins Ave, Miami Beach, FL 33140 (inside Faena Hotel Miami Beach)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Francis Mallmann (Chef's Table S1; Seven Fires, Mallmann on Fire)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Argentine open-fire asado / steakhouse</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — OpenTable band $50+; 20% service charge added</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable or +1 (786) 655-5600</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Breakfast daily 7–11 AM; lunch daily 12–4 PM; dinner Sun–Thu 6:30–10:30 PM, Fri–Sat 6:30–11 PM (per faena.com)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported by faena.com: <strong>breakfast daily 7:00–11:00 AM; lunch daily
+        12:00–4:00 PM; dinner Sunday–Thursday 6:30–10:30 PM, Friday–Saturday
+        6:30–11:00 PM</strong>. Dress code is "Elegant Chic."
+      </p>
+
+      <h2>Signatures &amp; official prices</h2>
+      <p>
+        Prices below are from the <strong>official Faena dinner menu PDF, dated February
+        4, 2026 (fetched October 2026)</strong>:
+      </p>
+      <ul>
+        <li><strong>Wood-Fired Meat Parrillada (to share) — $305</strong>: skirt steak, prime ribeye, Australian lamb, chorizo, morcilla, domino potato, roasted sweet potato, criolla + chimichurri.</li>
+        <li><strong>Wood-Fired Mixed Parrillada (to share) — $335</strong>: the meats plus Mediterranean branzino, local snapper, and Nigerian tiger prawns.</li>
+        <li><strong>Wood-Fired Fish Parrillada (to share) — $270</strong>: branzino, snapper, Chilean seabass, tiger prawns, Spanish octopus.</li>
+        <li><strong>Wood-Fired Prime Porterhouse (to share) — $245</strong>: chimichurri butter, domino potatoes.</li>
+        <li><strong>Prime Ribeye Steak — $112</strong>: domino potato, chimichurri.</li>
+        <li><strong>Prime Angus Skirt Steak — $49</strong>: quinoa tabbouleh, beet yogurt, roasted hazelnuts.</li>
+        <li><strong>Prime Beef Tenderloin — $89</strong>: wood-fired onion stuffed with potato aligot, truffle beef jus.</li>
+        <li><strong>Mallmann's Beef Tenderloin "Milanesa" — $88</strong>: boulangère potato, soft egg, Dijon mustard.</li>
+        <li><strong>Australian Lamb Rack — $85</strong>: Andes potatoes, mint yogurt, lamb jus, pistachio crumble.</li>
+        <li><strong>Octopus "A La Plancha" — $39</strong>; <strong>Prime Beef Tenderloin Tartare — $35</strong>; <strong>Yellowfin Tuna Crudo — $36</strong>; <strong>Wood-Fired Half Organic Chicken — $46</strong>; <strong>U8 Sea Scallops "A La Plancha" — $59</strong>.</li>
+      </ul>
+      <p>
+        The weekly event: the <strong>Sunday Asado — $129 per person</strong> for a
+        three-course family-style asado with dessert buffet (per the official event page,
+        March 2026), plus an optional 2-hour unlimited beverage package (Perrier-Jouët
+        Grand Brut champagne + Faena wines) at <strong>$65 per person</strong>. Sundays
+        12:00–4:00 PM, with live music from 12:30 PM.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The table move:</strong> the meat parrillada ($305 to share) — the full asado spread with the domino potatoes.</li>
+        <li><strong>Solo steak:</strong> the prime ribeye ($112) — or the skirt steak ($49), the best value on the menu.</li>
+        <li><strong>The Mallmann signature:</strong> the "Milanesa" ($88) — his famous take on the breaded tenderloin.</li>
+        <li><strong>Sunday play:</strong> the $129 Sunday Asado — three courses, dessert buffet, live music.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via OpenTable</strong> — the listing shows same-day bookings, but the parrilladas are shareable, so bring a table.</li>
+        <li><strong>Sunday Asado</strong> runs 12:00–4:00 PM with live music from 12:30 — the most festive seating of the week.</li>
+        <li><strong>Dress code:</strong> Elegant Chic.</li>
+        <li><strong>Remember:</strong> a 20% service charge is added to all checks, on top of these prices.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.faena.com/miami-beach/dining/los-fuegos-by-francis-mallmann" target="_blank" rel="noopener">Official restaurant page — faena.com</a></li>
+        <li><a href="https://www.faena.com/sites/default/files/2026-02/_LosFuegos%20-%20DINNER%2002.04.2026.pdf" target="_blank" rel="noopener">Official dinner menu PDF</a> (dated Feb 4, 2026)</li>
+        <li><a href="https://www.faena.com/miami-beach/things-to-do/event-calendar/sunday-asado-at-los-fuegos" target="_blank" rel="noopener">Sunday Asado — official event page</a></li>
+        <li><a href="https://www.opentable.com/veranda-faena-hotel-miami-beach?corrid=001708a8-c3b0-476f-94f5-a939242e8fce" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>official Faena dinner menu PDF, dated
+        February 4, 2026 and fetched October 2026</strong> (Sunday Asado pricing from the
+        official event page, March 2026) — the most current published sources available.
+        A 20% service charge is added to all checks. Menus and prices change frequently;
+        always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Miami Beach guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-florida/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Florida →</a></li>
+        <li><a href="/pao-menu/" class="text-gold-dark font-semibold hover:underline">Pao at Faena Hotel</a> <span class="text-ink-soft">— Paul Qui's modern Asian in the same hotel</span></li>
+        <li><a href="/jaya-menu/" class="text-gold-dark font-semibold hover:underline">Jaya at The Setai</a> <span class="text-ink-soft">— pan-Asian dining in a tropical courtyard</span></li>
+        <li><a href="/hakkasan-miami-menu/" class="text-gold-dark font-semibold hover:underline">Hakkasan at Fontainebleau</a> <span class="text-ink-soft">— Cantonese fine dining on Collins Ave</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

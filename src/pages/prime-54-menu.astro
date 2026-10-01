@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Prime 54",
+  servesCuisine: ["Steakhouse", "American"],
+  priceRange: "$$$$",
+  telephone: "+1-305-674-4720",
+  url: "https://www.fontainebleau.com/miamibeach/dining/restaurants/prime54/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "4441 Collins Ave",
+    addressLocality: "Miami Beach",
+    addressRegion: "FL",
+    postalCode: "33140",
+    addressCountry: "US",
+  },
+  description:
+    "Prime 54 at Fontainebleau Miami Beach — modern American steakhouse off the grand Chateau lobby, with dry-aged steaks and a landmark 1,400-label wine vault.",
+};
+---
+
+<BaseLayout
+  title="Prime 54 Miami Beach Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Prime 54 at Fontainebleau Miami Beach: official menu prices (filet $74, tomahawk $230, $65 prix fixe), hours, and visiting tips. Everything in our own words."
+  path="/prime-54-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/prime-54-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/prime-54-dining.webp"
+      alt="Illustration of a glamorous Miami Beach steakhouse with leather booths and ocean views (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Miami Beach
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Prime 54 — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Prime 54 is the <strong>Fontainebleau Miami Beach's own modern steakhouse</strong>,
+      located off the grand Chateau lobby. Executive chef <strong>Michael Paley</strong>
+      (formerly of Klaw Miami — Eater/Infatuation's Best New Restaurant 2022 — and Amara
+      at Paraiso — Eater's Restaurant of the Year 2018) runs the kitchen, and the
+      two-story glass-enclosed wine tower — a <strong>1,400-label vault</strong> per
+      Haute Living (October 2025) — is the room's signature. Below is our independent
+      walkthrough with prices from the <strong>official hotel menu page (fetched October
+      2026)</strong>. Everything is written in our own words. Note: a 20% service charge
+      is added to all checks.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">4441 Collins Ave, Miami Beach, FL 33140 (inside Fontainebleau Miami Beach, off the Chateau lobby)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Michael Paley (ex-Klaw, ex-Amara)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern American steakhouse</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — OpenTable band $50+; 20% service charge added</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable or +1 (305) 674-4720</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Sun–Fri 6–10 PM, Sat 6–11 PM (official page); OpenTable shows the restaurant closed Wednesday</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported by the official restaurant page: <strong>6:00–10:00 PM Sunday–Friday,
+        6:00–11:00 PM Saturday</strong>. OpenTable's listing shows the restaurant
+        <strong>closed Wednesday</strong> (Mon/Tue/Thu/Sun 6–10 PM, Fri/Sat 6–11 PM).
+        The $65 prix-fixe menu page itself says "Only offered Sunday-Friday (Closed
+        Wednesday)," so plan around Wednesday being dark. Dress code: Smart Casual.
+      </p>
+
+      <h2>Signatures &amp; official prices</h2>
+      <p>
+        Prices below are from the <strong>official hotel menu page, fetched October
+        2026</strong>:
+      </p>
+      <ul>
+        <li><strong>$65 prix fixe (per person, ++)</strong>: Sunday–Friday, closed Wednesday, dinner only, parties up to 8 — appetizer, main, and dessert (e.g. P54 Caesar, pan-roasted chicken, blueberry cheesecake). The value play of the menu.</li>
+        <li><strong>Wood-fired steaks:</strong> filet $74 · wagyu skirt steak $78 · Delmonico ribeye $85 · bone-in NY strip $85 (Pat LaFrieda, 30–45 day dry age) · bone-in ribeye $135 · wagyu striploin $145 · chateaubriand $150 · porterhouse $175 · tomahawk $230 · Florida grass-fed ribeye $95.</li>
+        <li><strong>Starters:</strong> P54 Caesar $22 · Maine lobster bisque $24 · charred octopus $28 · jumbo crab cake $34 · local burrata $24 · prime beef tartare $28 · Oysters Rockefeller $28.</li>
+        <li><strong>Beyond steak:</strong> blue crab agnolotti $35 · grilled lobster &amp; fries $45/$85 · pan-roasted chicken $38 · Spanish sole $72.</li>
+        <li><strong>Sides:</strong> $15 each — including P54 lobster mac 'n cheese ($95, made with 2 lb of lobster). Children's menu $8–$32.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The value move:</strong> the $65 prix fixe — three courses of steakhouse classics on a Sunday–Friday night.</li>
+        <li><strong>The steak move:</strong> the 30–45-day dry-aged bone-in NY strip ($85) — or the tomahawk ($230) to share.</li>
+        <li><strong>The seafood move:</strong> charred octopus ($28) to start, Spanish sole ($72) as the main.</li>
+        <li><strong>The room move:</strong> arrive early and let the wine tower do its thing — 1,400 labels.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via OpenTable</strong> — note the listing still sits on the legacy "stripsteak" slug; it serves Prime 54's inventory.</li>
+        <li><strong>Wednesday is dark</strong> — the one night the restaurant is closed.</li>
+        <li><strong>Dress code:</strong> Smart Casual — "many guests dress up a touch for anniversaries" per OpenTable.</li>
+        <li><strong>Parking:</strong> $16 validated parking for non-hotel guests.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.fontainebleau.com/miamibeach/dining/restaurants/prime54/" target="_blank" rel="noopener">Official restaurant page — fontainebleau.com</a></li>
+        <li><a href="https://www.fontainebleau.com/prime-54--menus" target="_blank" rel="noopener">Official menu page</a></li>
+        <li><a href="https://www.opentable.com/stripsteak-by-michael-mina" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>official hotel menu page, fetched October
+        2026</strong> — the most current published source available. A 20% service charge
+        is added to all checks. Menus and prices change frequently; always verify with
+        the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Miami Beach guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-florida/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Florida →</a></li>
+        <li><a href="/hakkasan-miami-menu/" class="text-gold-dark font-semibold hover:underline">Hakkasan at Fontainebleau</a> <span class="text-ink-soft">— Cantonese fine dining in the same hotel</span></li>
+        <li><a href="/jaya-menu/" class="text-gold-dark font-semibold hover:underline">Jaya at The Setai</a> <span class="text-ink-soft">— pan-Asian dining in a tropical courtyard</span></li>
+        <li><a href="/pao-menu/" class="text-gold-dark font-semibold hover:underline">Pao at Faena Hotel</a> <span class="text-ink-soft">— Paul Qui's modern Asian</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

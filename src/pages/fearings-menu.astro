@@ -1,0 +1,164 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Fearing's",
+  servesCuisine: ["Southwestern", "American"],
+  priceRange: "$$$$",
+  telephone: "+1-214-922-4848",
+  url: "https://www.fearingsrestaurant.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2121 McKinney Ave",
+    addressLocality: "Dallas",
+    addressRegion: "TX",
+    postalCode: "75201",
+    addressCountry: "US",
+  },
+  description:
+    "Fearing's at The Ritz-Carlton, Dallas — Dean Fearing's Southwestern flagship, Michelin Recommended in the Texas guide, with mesquite-grilled R-C Ranch Wagyu steaks and the famous tortilla soup.",
+};
+---
+
+<BaseLayout
+  title="Fearing's Menu Guide (2026) — Prices, Southwestern Classics & What to Order | Hotel Menu Guide"
+  description="An independent guide to Fearing's at The Ritz-Carlton Dallas: Dean Fearing's menu highlights, official-menu prices (tortilla soup, Wagyu steaks, chicken-fried lobster), hours, and visiting tips."
+  path="/fearings-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/fearings-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/fearings-dining.webp"
+      alt="Illustration of an elegant Southwestern restaurant dining room with warm lighting at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Dallas
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Fearing's — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Fearing's is Dean Fearing's flagship at The Ritz-Carlton, Dallas — the kitchen of the
+      chef widely called the father of Southwestern cuisine (and author of <em>The Texas Food
+      Bible</em>), who previously ran the legendary dining room at The Mansion on Turtle
+      Creek. The restaurant earned a <strong>Michelin Recommended</strong> listing in both
+      editions of the Michelin Guide Texas (2024 and 2025 — Recommended, not starred), and
+      landed on OpenTable's Top 100 Hotel Restaurants for 2025. Below is our independent
+      walkthrough of the menu, with prices taken from the official Ritz-Carlton dinner menu
+      PDFs (crawled in 2026) and dated honestly. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">2121 McKinney Ave, Dallas, TX 75201 (inside The Ritz-Carlton, Dallas)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Dean Fearing — "father of Southwestern cuisine," formerly of The Mansion on Turtle Creek</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Bold Southwestern / modern Texas</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$$$ — starters $17–$29, mains $52–$63, steaks to $91</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Highly recommended — via OpenTable or 214-922-4848</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">Michelin Guide Texas Recommended (2024 &amp; 2025); OpenTable Top 100 Hotel Restaurants 2025</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official fearingsrestaurant.com (accessed October 2026):
+        <strong>breakfast Mon–Fri 7:00–11:00 AM, Sat–Sun 7:00–10:30 AM; weekend brunch
+        11:00 AM–2:00 PM; lunch Mon–Fri 11:30 AM–2:00 PM; dinner Mon–Sat 5:30–10:00 PM,
+        Sunday 5:30–9:00 PM.</strong> The Rattlesnake Bar runs Sun–Thu 11:30 AM–midnight
+        and Fri–Sat to 2:00 AM.
+      </p>
+
+      <h2>Dinner signatures</h2>
+      <p>
+        Prices below are from the official Ritz-Carlton dinner menu PDF (crawled around
+        August 2026; the restaurant's menus are seasonal, so treat these as era-dated):
+      </p>
+      <ul>
+        <li><strong>Dean's Tortilla Soup — $17</strong>: the signature starter Fearing built his reputation on.</li>
+        <li><strong>Southwest Sampler — $29</strong>: crab cakes, a BBQ short rib enchilada, and crispy two-bite lobster tacos — the greatest-hits plate.</li>
+        <li><strong>'MOTC' Lobster Taco — $28</strong>: a nod to his Mansion on Turtle Creek years.</li>
+        <li><strong>Texas Wagyu Beef Carpaccio — $26</strong>; <strong>seared Hudson Valley foie gras — $28</strong>; <strong>Barbequed Gulf Oysters 'Rockefearing' — $22</strong>.</li>
+        <li><strong>Maple/Black Peppercorn Soaked Buffalo Tenderloin — $61</strong>: the headline game-meat dish.</li>
+        <li><strong>BBQ Spiced Beef Filet &amp; Chicken-Fried Maine Lobster — $63</strong>: the surf-and-turf showpiece.</li>
+        <li><strong>Achiote Glazed Broken Arrow Ranch Nilgai Antelope</strong> and <strong>Lamb Loin 'Au Poivre'</strong> round out the wild-game program; <strong>Pheasant/Bacon Roulade — $52</strong>.</li>
+      </ul>
+
+      <h2>Mesquite-grilled steaks</h2>
+      <p>
+        From an earlier 2026 revision of the official menu (crawled around May 2026):
+      </p>
+      <ul>
+        <li><strong>R-C Ranch Wagyu Tenderloin, 7 oz — $65</strong>; <strong>NY Strip, 10 oz — $79</strong>; <strong>Ribeye, 16 oz — $91</strong>, all mesquite fire-grilled.</li>
+        <li><strong>Add-ons</strong>: cognac peppercorn sauce $3; chicken-fried lobster (half tail $14, full $26); truffle lobster mac n' cheese $32.</li>
+      </ul>
+
+      <h2>Lunch</h2>
+      <p>
+        From the official lunch menu (crawled around April 2026): <strong>The 2121 Cobb
+        Salad with Chicken Fried Lobster — $33</strong> and <strong>Tortilla Soup —
+        $17</strong>.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one dinner here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Start with:</strong> Dean's Tortilla Soup ($17) — skipping it at Fearing's would be like skipping the beignets at Café du Monde.</li>
+        <li><strong>The sampler play:</strong> the Southwest Sampler ($29) covers three signatures in one plate.</li>
+        <li><strong>The splurge:</strong> the Buffalo Tenderloin ($61) or the BBQ Filet &amp; Chicken-Fried Lobster ($63).</li>
+        <li><strong>Steakhouse mode:</strong> the 16 oz mesquite-grilled ribeye ($91) with truffle lobster mac n' cheese ($32).</li>
+        <li><strong>After dinner:</strong> a nightcap at the Rattlesnake Bar, open late.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book ahead</strong> — the restaurant itself says reservations are highly recommended (214-922-4848).</li>
+        <li><strong>Michelin nuance:</strong> Fearing's is <em>Recommended</em> in the Michelin Guide Texas, not starred — still a meaningful distinction in a state with very few starred rooms.</li>
+        <li><strong>Two restaurants, one chef lineage:</strong> Fearing ran The Mansion on Turtle Creek's kitchen for years before opening here — pairing this guide with our <a href="/mansion-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">Mansion Restaurant guide</a> makes a great Dallas dining weekend.</li>
+        <li><strong>Parking:</strong> valet is available at The Ritz-Carlton.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.fearingsrestaurant.com/" target="_blank" rel="noopener">Official restaurant site — Fearing's</a></li>
+        <li><a href="https://www.opentable.com/fearings" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+        <li><a href="https://www.ritzcarlton.com/content/dam/marriott-digital/rz/us-canada/hws/d/dalrz/en_us/document/assets/rz-dalrz-fearing-dinner-menu-39702.pdf" target="_blank" rel="noopener">Official dinner menu (PDF) — Ritz-Carlton</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Dinner prices above are from the <strong>official Ritz-Carlton dinner menu PDF,
+        crawled around August 2026</strong>; steak prices from a May 2026 menu revision
+        and lunch prices from an April 2026 menu. The restaurant's menus are seasonal and
+        prices drift between revisions — always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Texas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-texas/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Texas →</a></li>
+        <li><a href="/french-room-menu/" class="text-gold-dark font-semibold hover:underline">The French Room at The Adolphus</a> <span class="text-ink-soft">— afternoon tea &amp; the bar</span></li>
+        <li><a href="/mansion-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">The Mansion Restaurant</a> <span class="text-ink-soft">— Fearing's old kitchen</span></li>
+        <li><a href="/supper-menu/" class="text-gold-dark font-semibold hover:underline">Supper at Hotel Emma</a> <span class="text-ink-soft">— San Antonio</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

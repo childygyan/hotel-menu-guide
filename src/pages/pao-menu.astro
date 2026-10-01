@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Pao by Paul Qui",
+  servesCuisine: ["Asian", "Filipino", "Japanese"],
+  priceRange: "$$$$",
+  telephone: "+1-786-655-5600",
+  url: "https://www.faena.com/miami-beach/dining/pao-by-paul-qui",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "3201 Collins Ave",
+    addressLocality: "Miami Beach",
+    addressRegion: "FL",
+    postalCode: "33140",
+    addressCountry: "US",
+  },
+  description:
+    "Pao by Paul Qui at Faena Hotel Miami Beach — modern Asian fine dining (Filipino, Spanish, Japanese, French influences) under a gold dome, with charcoal and binchotan cooking.",
+};
+---
+
+<BaseLayout
+  title="Pao Miami Beach Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Pao by Paul Qui at Faena Hotel Miami Beach: official menu prices (The Unicorn $48, wagyu short rib $85), hours, and visiting tips. Everything in our own words."
+  path="/pao-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/pao-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/pao-dining.webp"
+      alt="Illustration of a vibrant modern tropical restaurant with an open kitchen (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Miami Beach
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Pao — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Pao is <strong>Paul Qui's</strong> modern Asian restaurant at <strong>Faena Hotel
+      Miami Beach</strong> — the <em>Top Chef</em> Season 9 winner and 2012 James Beard
+      Best Chef: Southwest's first venture outside Austin, opened in 2016. The oval
+      dining room sits under a gold dome anchored by a gilded unicorn sculpture by
+      Damien Hirst, and the cooking leans on charcoal and smoke — including binchotan
+      searing done tableside. Below is our independent walkthrough with prices from the
+      <strong>official Faena dinner menu (dated February 27, 2026, fetched October
+      2026)</strong>. Everything is written in our own words. Note: a 20% service charge
+      is added to all checks.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">3201 Collins Ave, Miami Beach, FL 33140 (inside Faena Hotel Miami Beach)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Paul Qui (Top Chef Season 9 winner; 2012 James Beard Best Chef: Southwest)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern Asian — Filipino, Spanish, Japanese, French influences</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — OpenTable band $50+; 20% service charge added</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable or +1 (786) 655-5600</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Tue–Wed 6:30–10 PM; Thu–Sat 6:30–11 PM; closed Sun–Mon (per faena.com). Dinner only.</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported by faena.com: <strong>Tuesday–Wednesday, 6:30–10:00 PM;
+        Thursday–Saturday, 6:30–11:00 PM; closed Sunday–Monday</strong>. Dinner only,
+        with live music Friday and Saturday from 7:00 PM. Dress code is "Elegant Chic."
+      </p>
+
+      <h2>Signatures &amp; official prices</h2>
+      <p>
+        Prices below are from the <strong>official Faena dinner menu PDF, dated February
+        27, 2026 (fetched October 2026)</strong>:
+      </p>
+      <ul>
+        <li><strong>The Unicorn — $48</strong>: sea urchin with grilled sweet corn pudding, sake aioli, and chile de árbol — the menu calls it Chef Qui's "heavenly and James Beard Award winning pairing of uni &amp; corn."</li>
+        <li><strong>Aguachile Negro — $28</strong>: Ora King salmon, cucumber, squid ink, charred bell pepper, yuzu pearls, charred avocado.</li>
+        <li><strong>Kinilaw — $26</strong>: local fish, heart of palm, coconut milk and vinegar, apple, grapefruit.</li>
+        <li><strong>Fried Chicken — $26</strong>: sweet chili sauce, roasted banana ketchup, jalapeño, Thai herbs.</li>
+        <li><strong>Scallops — $27</strong>: U8 scallop, umami chili crisp, white ponzu, Meyer lemon, potato espuma.</li>
+        <li><strong>Tobanyaki — $47</strong>: Tamaki Gold rice, adobo, Comté espuma, short rib, pickled shallot.</li>
+        <li><strong>Tom Kha Rice — $49</strong>: Tamaki Gold rice, tom kha, burrata, chili oil, trumpet mushrooms, shiitake bacon.</li>
+        <li><strong>Kare Kare — $50</strong>: tiger prawns, roasted almond, bok choy, eggplant, almond salsa macha.</li>
+        <li><strong>72-Hour Wagyu Short Rib — $85</strong>: Japanese sweet potato, nikkiri beurre monté, pickled grapes.</li>
+        <li><strong>Tenderloin Katsu — $75</strong>; <strong>Tuna Toro Katsu — $113</strong>; <strong>Grilled Duck — $57</strong>.</li>
+        <li><strong>Nigiri</strong> (per piece): hamachi $14, akami $10, salmon $12, chu toro $16, toro $18, hotate $14, foie gras $20. <strong>Caviar service</strong>: Classic Osetra $200, Golden Osetra $255.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Non-negotiable:</strong> The Unicorn ($48) — the uni-and-corn pairing that won Qui his Beard.</li>
+        <li><strong>The Filipino side:</strong> kinilaw ($26) and kare kare ($50) — the menu's most personal dishes.</li>
+        <li><strong>The splurge:</strong> the 72-hour wagyu short rib ($85) — or toro katsu ($113) for the full theater.</li>
+        <li><strong>Easy start:</strong> fried chicken ($26) with the banana ketchup while you settle in.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via OpenTable</strong> — the listing shows same-day bookings, but weekend slots under the dome go fast.</li>
+        <li><strong>Closed Sunday–Monday</strong> — plan midweek or Friday–Saturday; live music starts at 7 PM on weekends.</li>
+        <li><strong>Dress code:</strong> Elegant Chic — this is Faena, after all.</li>
+        <li><strong>Miami Spice:</strong> recent press (~September 2026) noted a $65 four-course Miami Spice menu — seasonal, so confirm dates.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.faena.com/miami-beach/dining/pao-by-paul-qui" target="_blank" rel="noopener">Official restaurant page — faena.com</a></li>
+        <li><a href="https://www.faena.com/sites/default/files/2026-03/Pao%20-%20%20DINNER%20MENU%20-%2002.27.26.pdf" target="_blank" rel="noopener">Official dinner menu PDF</a> (dated Feb 27, 2026)</li>
+        <li><a href="https://www.opentable.com/pao-by-paul-qui-faena-hotel-miami-beach?corrid=fb1c4661-f0e6-430b-b902-7ecd98b714d4" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>official Faena dinner menu PDF, dated
+        February 27, 2026 and fetched October 2026</strong> — the most current published
+        source available. A 20% service charge is added to all checks. Menus and prices
+        change frequently; always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Miami Beach guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-florida/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Florida →</a></li>
+        <li><a href="/los-fuegos-menu/" class="text-gold-dark font-semibold hover:underline">Los Fuegos at Faena Hotel</a> <span class="text-ink-soft">— Francis Mallmann's open-fire asado in the same hotel</span></li>
+        <li><a href="/jaya-menu/" class="text-gold-dark font-semibold hover:underline">Jaya at The Setai</a> <span class="text-ink-soft">— pan-Asian dining in a tropical courtyard</span></li>
+        <li><a href="/hakkasan-miami-menu/" class="text-gold-dark font-semibold hover:underline">Hakkasan at Fontainebleau</a> <span class="text-ink-soft">— Cantonese fine dining on Collins Ave</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

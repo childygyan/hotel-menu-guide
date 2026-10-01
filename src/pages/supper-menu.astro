@@ -1,0 +1,153 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Supper",
+  servesCuisine: ["American", "Contemporary American"],
+  priceRange: "$$$",
+  telephone: "+1-210-448-8351",
+  url: "https://www.supperatemma.com/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "136 E Grayson St",
+    addressLocality: "San Antonio",
+    addressRegion: "TX",
+    postalCode: "78215",
+    addressCountry: "US",
+  },
+  description:
+    "Supper at Hotel Emma, San Antonio — chef John Brand's restaurant in the historic Pearl brewery, serving breakfast through dinner with a serious steak program.",
+};
+---
+
+<BaseLayout
+  title="Supper Menu Guide (2026) — Prices, Steaks & Hours at Hotel Emma | Hotel Menu Guide"
+  description="An independent guide to Supper at Hotel Emma, San Antonio: official-menu prices (filet, ribeye, truffle risotto, osetra caviar), hours, and visiting tips. Written in our own words."
+  path="/supper-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/supper-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/supper-dining.webp"
+      alt="Illustration of a rustic-chic restaurant inside a historic brewery building with exposed brick at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · San Antonio
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Supper — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Supper is chef John Brand's restaurant inside Hotel Emma — the landmark hotel built
+      in San Antonio's 1894 Pearl brewery, in the Pearl district on the Museum Reach of
+      the River Walk. It's the all-day anchor of the hotel: breakfast, lunch, weekend
+      brunch, and a dinner service with a proper steak program, holding a 4.7 OpenTable
+      rating across 3,462 reviews. Below is our independent walkthrough of the menu, with
+      prices from the restaurant's own official dinner menu (December 2024) — dated
+      honestly, since the menu changes seasonally. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">136 E Grayson St, San Antonio, TX 78215 (inside Hotel Emma, Pearl district)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef John Brand</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary American with a steakhouse core</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">OpenTable $31–$50 pp; steaks $53–$68</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via OpenTable — 210-448-8351</dd></div>
+        <div><dt class="font-semibold text-ink">Good to know</dt><dd class="text-ink-soft">Smart casual; complimentary valet at Hotel Emma</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official supperatemma.com (accessed October 2026):
+        <strong>Sun–Thu 7:00 AM–10:00 PM; Fri–Sat 7:00 AM–11:00 PM.</strong> Per the
+        OpenTable listing: breakfast Mon–Fri 7–11 AM, Sat–Sun 7–10 AM; brunch Sat–Sun
+        10 AM–2:30 PM; lunch Mon–Fri 11 AM–2:30 PM; dinner Mon–Thu &amp; Sun 5–10 PM,
+        Fri–Sat 5–11 PM.
+      </p>
+
+      <h2>Dinner: starters &amp; small plates</h2>
+      <p>
+        Prices below are from the restaurant's <strong>official dinner menu PDF, dated
+        December 2024</strong> — the menu changes seasonally, so treat these as era-dated:
+      </p>
+      <ul>
+        <li><strong>Osetra caviar kit — $95</strong>: potato chips, chive crème fraîche — the luxe opener.</li>
+        <li><strong>Grilled oysters — $5 each / $24 half-dozen</strong> (spicy mezcal &amp; lime butter, panko); <strong>shrimp cocktail — $26</strong>.</li>
+        <li><strong>Scallop au gratin — $22</strong> (salsa macha verde, quesillo, lime); <strong>beef tartare — $18</strong> (truffle aioli, potato chips).</li>
+        <li><strong>House-made head cheese — $20</strong> (mostarda, petite greens, escabeche); <strong>brussels sprouts — $12</strong> (dijon, white balsamic reduction).</li>
+        <li><strong>Market soup — $15</strong>; <strong>caesar / wedge — $15</strong>.</li>
+      </ul>
+
+      <h2>Dinner: mains &amp; steaks</h2>
+      <p>From the same December 2024 official menu:</p>
+      <ul>
+        <li><strong>Filet mignon, 8 oz — $53</strong>; <strong>NY strip, 12 oz — $62</strong>; <strong>ribeye, 16 oz — $68</strong> (Wagyu selections at market price).</li>
+        <li><strong>Black cod 'al pil pil' — $40</strong> (guindilla peppers, garlic, olive oil).</li>
+        <li><strong>Double-bone pork chop — $39</strong> (apple &amp; pear succotash, maple butter).</li>
+        <li><strong>Stuffed quail — $34</strong> (dirty rice with chicken liver, chicken demi); <strong>chicken ballotine — $30</strong>.</li>
+        <li><strong>Tracy's truffle risotto — $32</strong> (foraged mushrooms, truffle, parmesan).</li>
+        <li><strong>Steak add-ons</strong>: sauce Diane $10; bone marrow verde sauce $12; seared foie gras (3 oz) $20; steak Oscar $20; sides $10 each.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>The move:</strong> grilled oysters ($24 half-dozen) followed by the 16 oz ribeye ($68) — the Pearl-district steakhouse play.</li>
+        <li><strong>The adventurous plate:</strong> stuffed quail ($34) or the house-made head cheese ($20).</li>
+        <li><strong>The splurge:</strong> the osetra caviar kit ($95) to start.</li>
+        <li><strong>Brunch angle:</strong> weekend brunch runs Sat–Sun 10 AM–2:30 PM — a strong alternative to dinner.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>The setting is half the meal:</strong> Hotel Emma occupies the 1894 Pearl brewery — arrive early and walk the Pearl district on the Museum Reach of the River Walk.</li>
+        <li><strong>Valet:</strong> complimentary at the hotel.</li>
+        <li><strong>Seasonal menus:</strong> prices above are from the December 2024 menu; the kitchen changes menus with the seasons, so verify current pricing.</li>
+        <li><strong>Pair it:</strong> our <a href="/1886-cafe-menu/" class="text-gold-dark font-semibold hover:underline">1886 Café &amp; Bakery guide</a> (Austin) and <a href="/geraldines-menu/" class="text-gold-dark font-semibold hover:underline">Geraldine's guide</a> (Austin) cover the other essential Texas hotel dining rooms.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.supperatemma.com/" target="_blank" rel="noopener">Official restaurant site — Supper at Hotel Emma</a></li>
+        <li><a href="https://www.opentable.com/supper-san-antonio?originId=4ebb6765-bb25-4395-8db2-6a3cb570d6ee&" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+        <li><a href="https://cms.supperatemma.com/wp-content/uploads/2023/10/Supper-Dinner-12.03.2024.pdf" target="_blank" rel="noopener">Official dinner menu (PDF, Dec 2024)</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>restaurant's official dinner menu PDF dated
+        December 2024</strong>. Supper's menu changes seasonally, so these figures are
+        era-dated — always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Texas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-texas/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Texas →</a></li>
+        <li><a href="/1886-cafe-menu/" class="text-gold-dark font-semibold hover:underline">1886 Café &amp; Bakery at The Driskill</a> <span class="text-ink-soft">— Austin</span></li>
+        <li><a href="/geraldines-menu/" class="text-gold-dark font-semibold hover:underline">Geraldine's at Hotel Van Zandt</a> <span class="text-ink-soft">— Austin</span></li>
+        <li><a href="/mansion-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">The Mansion Restaurant</a> <span class="text-ink-soft">— Dallas</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

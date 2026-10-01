@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The French Room",
+  servesCuisine: ["French", "Afternoon Tea"],
+  priceRange: "$$$",
+  telephone: "+1-214-651-3615",
+  url: "https://www.adolphus.com/restaurants-bars/the-french-room",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1321 Commerce St",
+    addressLocality: "Dallas",
+    addressRegion: "TX",
+    postalCode: "75202",
+    addressCountry: "US",
+  },
+  description:
+    "The French Room at The Adolphus, Dallas — the 1912 landmark dining room now hosts afternoon tea, with the French Room Bar serving modern-French dinner nightly.",
+};
+---
+
+<BaseLayout
+  title="The French Room Menu Guide (2026) — Afternoon Tea, the Bar & Prices | Hotel Menu Guide"
+  description="An independent guide to The French Room at The Adolphus Dallas: afternoon tea ($75), the French Room Bar menu with prices, hours, and visiting tips. Written in our own words."
+  path="/french-room-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/french-room-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/french-room-dining.webp"
+      alt="Illustration of a grand historic European-style dining room with chandeliers at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Dallas
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The French Room — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The French Room is the 1912 architectural landmark inside The Adolphus hotel — a room
+      that held AAA Five Diamond status for 25+ consecutive years and was long the formal
+      tasting-menu destination of Texas. <strong>Important change for 2026:</strong> per
+      D Magazine (February 2026), the grand dining room is now used only for tea service —
+      the formal tasting-menu restaurant is not operating as such. What you'll find today
+      is <strong>afternoon tea</strong> in the landmark room plus <strong>The French Room
+      Bar</strong>, serving a modern-French dinner menu Monday through Saturday. This guide
+      covers what's actually on offer now, with prices dated honestly. Everything is written
+      in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">1321 Commerce St, Dallas, TX 75202 (inside The Adolphus)</dd></div>
+        <div><dt class="font-semibold text-ink">Current format</dt><dd class="text-ink-soft">Afternoon tea in the dining room + French Room Bar dinner (no formal tasting menu in 2026)</dd></div>
+        <div><dt class="font-semibold text-ink">Heritage</dt><dd class="text-ink-soft">Opened 1912; restored 2017; AAA Five Diamond for 25+ consecutive years (through the 2017–2023 era)</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Afternoon tea $75 pp; bar dinner $16–$39; official indicator $50–$100 pp</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via Resy — 214-651-3615</dd></div>
+        <div><dt class="font-semibold text-ink">Michelin</dt><dd class="text-ink-soft">Not listed in the Michelin Guide Texas (2024 or 2025)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official adolphus.com (accessed October 2026):
+        <strong>Afternoon Tea Mon–Thu 11:00 AM–3:00 PM (last seating), Fri/Sat/Sun 10:00
+        AM–4:30 PM. The French Room Bar Mon–Sat 5:00 PM–midnight (kitchen closes 10 PM),
+        closed Sundays.</strong>
+      </p>
+
+      <h2>Afternoon tea</h2>
+      <p>
+        The main event in the landmark room. Per the Resy "Need to Know" section (page
+        crawled around September 2026):
+      </p>
+      <ul>
+        <li><strong>Afternoon Tea — $75 per person</strong> plus tax &amp; gratuity: a three-course menu (tea sandwiches, scones, pastries) with a glass of bubbles and tea pairings.</li>
+        <li><strong>Loose-leaf teas</strong> from local purveyor Zakti.</li>
+        <li><strong>Add-on:</strong> Petrossian caviar service with buckwheat blinis and crème fraîche (priced separately).</li>
+      </ul>
+
+      <h2>The French Room Bar — dinner</h2>
+      <p>
+        The evening program: modern-French bar dining. Prices below are from the official
+        Adolphus French Room Bar food-menu PDF (uploaded April 2024 — <strong>labeled
+        2024-era; current prices not re-published, so verify</strong>):
+      </p>
+      <ul>
+        <li><strong>Steak Frites — $39</strong> (8 oz prime, béarnaise); <strong>Iberico Pork Chop — $38</strong>; <strong>Chicken Cordon Bleu — $34</strong>.</li>
+        <li><strong>Shrimp Ravioli — $32</strong>; <strong>Halibut — $32</strong>; <strong>Scallops Tartine — $26</strong>.</li>
+        <li><strong>Prime Steak Tartare — $24</strong>; <strong>Oysters Gratinated — $20</strong>; <strong>44 Farms TX French Dip — $20</strong>; <strong>Tuna Niçoise — $18</strong>.</li>
+        <li><strong>French Onion Soup — $16</strong>; <strong>Truffle Fries — $12</strong>.</li>
+        <li><strong>Regiis Ova caviar service — $95 / $165 / $210</strong>.</li>
+      </ul>
+      <p>
+        TripAdvisor brunch listings (crawled around September 2026; likely a stale-era menu):
+        Eggs Benedict $32, Steak Frites $48, Truffle Croque Monsieur $23, French Toast $21.
+      </p>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>The classic experience:</strong> afternoon tea ($75) — it's the reason the room exists in its current form, under the twin Murano chandeliers from the 2017 restoration.</li>
+        <li><strong>The splurge:</strong> add the Petrossian caviar service to tea.</li>
+        <li><strong>Evening:</strong> Steak Frites ($39, 2024-era price) at the Bar — the most French Room dish on the bar menu.</li>
+        <li><strong>The value play:</strong> French Onion Soup ($16) and Truffle Fries ($12) at the Bar.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Set expectations:</strong> come for tea or the bar — the white-tablecloth tasting-menu era is over (as of 2026 reporting).</li>
+        <li><strong>Tea timing:</strong> last seating is 3:00 PM Mon–Thu and 4:30 PM Fri–Sun — book the earlier slot for the fullest experience.</li>
+        <li><strong>The room itself:</strong> opened 1912, restored over 16 months and reopened October 2017 — the architecture is half the draw.</li>
+        <li><strong>Pair it:</strong> Dean Fearing's <a href="/fearings-menu/" class="text-gold-dark font-semibold hover:underline">Fearing's</a> at the Ritz-Carlton is the other essential Dallas hotel dining room.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.adolphus.com/restaurants-bars/the-french-room" target="_blank" rel="noopener">Official restaurant page — The Adolphus</a></li>
+        <li><a href="https://resy.com/cities/dallas-fort-worth-tx/venues/the-french-room" target="_blank" rel="noopener">Reservations — Resy</a></li>
+        <li><a href="https://cdn.adolphus.com/assets/uploads/2024/04/tfr_barfood_4.4.pdf" target="_blank" rel="noopener">Official French Room Bar menu (PDF, 2024)</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The afternoon tea price (<strong>$75 pp</strong>) is from the <strong>Resy listing,
+        crawled around September 2026</strong>. Bar menu prices are from the <strong>official
+        Adolphus PDF uploaded April 2024</strong> and may have changed — the hotel has not
+        re-published current bar prices. Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Texas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-texas/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Texas →</a></li>
+        <li><a href="/fearings-menu/" class="text-gold-dark font-semibold hover:underline">Fearing's at The Ritz-Carlton</a> <span class="text-ink-soft">— Dean Fearing's Southwestern flagship</span></li>
+        <li><a href="/mansion-restaurant-menu/" class="text-gold-dark font-semibold hover:underline">The Mansion Restaurant</a> <span class="text-ink-soft">— Rosewood's historic dining room</span></li>
+        <li><a href="/1886-cafe-menu/" class="text-gold-dark font-semibold hover:underline">1886 Café &amp; Bakery</a> <span class="text-ink-soft">— Austin's historic hotel café</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

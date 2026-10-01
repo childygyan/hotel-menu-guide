@@ -1,0 +1,167 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Best Hotel Restaurants in Florida",
+  description:
+    "Our picks for the best hotel restaurants in Florida, each with an original menu guide.",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, url: "https://hotel-menu-guide.pages.dev/jaya-menu/", name: "Jaya at The Setai Miami Beach" },
+    { "@type": "ListItem", position: 2, url: "https://hotel-menu-guide.pages.dev/hakkasan-miami-menu/", name: "Hakkasan at Fontainebleau Miami Beach" },
+    { "@type": "ListItem", position: 3, url: "https://hotel-menu-guide.pages.dev/prime-54-menu/", name: "Prime 54 at Fontainebleau Miami Beach" },
+    { "@type": "ListItem", position: 4, url: "https://hotel-menu-guide.pages.dev/pao-menu/", name: "Pao by Paul Qui at Faena Hotel Miami Beach" },
+    { "@type": "ListItem", position: 5, url: "https://hotel-menu-guide.pages.dev/nobu-miami-menu/", name: "Nobu Miami Beach at Nobu Hotel Eden Roc" },
+    { "@type": "ListItem", position: 6, url: "https://hotel-menu-guide.pages.dev/los-fuegos-menu/", name: "Los Fuegos by Francis Mallmann at Faena Hotel Miami Beach" },
+  ],
+};
+
+const guides = [
+  {
+    href: "/jaya-menu/",
+    img: "/images/jaya-dining.webp",
+    alt: "Illustration of a tropical hotel restaurant dining room with a lush courtyard at night",
+    tag: "Miami Beach · The Setai",
+    title: "Jaya",
+    text: "The Setai's pan-Asian restaurant — chef Vijayudu Veena's $110 weekend brunch, Peking duck reported at $48, and a dining room wrapped in a tropical courtyard. Our guide walks through the menu highlights.",
+  },
+  {
+    href: "/hakkasan-miami-menu/",
+    img: "/images/hakkasan-miami-dining.webp",
+    alt: "Illustration of a dramatic dark-modern Cantonese restaurant with lattice screens and moody lighting",
+    tag: "Miami Beach · Fontainebleau",
+    title: "Hakkasan",
+    text: "The Fontainebleau's Cantonese flagship — the whole Peking duck at $128 from the official menu, black pepper beef tenderloin $68, and a 20% service charge. Our guide covers the full menu.",
+  },
+  {
+    href: "/prime-54-menu/",
+    img: "/images/prime-54-dining.webp",
+    alt: "Illustration of a glamorous Miami Beach steakhouse with leather booths and ocean views",
+    tag: "Miami Beach · Fontainebleau",
+    title: "Prime 54",
+    text: "The Fontainebleau's own modern steakhouse — the successor to the closed Stripsteak — with a filet at $74, a tomahawk at $230, a $65 prix fixe, and a 1,400-label wine vault. Our guide has the details.",
+  },
+  {
+    href: "/pao-menu/",
+    img: "/images/pao-dining.webp",
+    alt: "Illustration of a vibrant modern tropical restaurant with an open kitchen",
+    tag: "Miami Beach · Faena Hotel",
+    title: "Pao",
+    text: "Paul Qui's modern Asian dining room under the gold dome — The Unicorn (uni and corn) at $48, 72-hour wagyu short rib at $85, all from the official menu. Our guide covers dinner start to finish.",
+  },
+  {
+    href: "/nobu-miami-menu/",
+    img: "/images/nobu-miami-dining.webp",
+    alt: "Illustration of an upscale Japanese-Peruvian restaurant dining room at night",
+    tag: "Miami Beach · Nobu Hotel Eden Roc",
+    title: "Nobu Miami Beach",
+    text: "Nobu Matsuhisa's 'New Style Japanese' in the landmark 1956 Eden Roc tower — the black cod miso reported at $52, a 10-seat teppanyaki room, and official prices on the oyster bar. Our guide covers it all.",
+  },
+  {
+    href: "/los-fuegos-menu/",
+    img: "/images/los-fuegos-dining.webp",
+    alt: "Illustration of an Argentine open-fire grill restaurant with a glowing wood hearth",
+    tag: "Miami Beach · Faena Hotel",
+    title: "Los Fuegos",
+    text: "Francis Mallmann's open-fire asado at Faena — the $305 meat parrillada, prime ribeye at $112, and the $129 Sunday Asado, all from the official menu. Our guide covers the fire.",
+  },
+];
+---
+
+<BaseLayout
+  title="Best Hotel Restaurants in Florida — 6 Great Guides"
+  description="Our picks for the best hotel restaurants in Florida: Jaya, Hakkasan, Prime 54, Pao, Nobu Miami Beach, and Los Fuegos — each with an original menu guide."
+  path="/best-hotel-restaurants-florida/"
+  jsonLd={jsonLd}
+  ogImage="/images/florida-hotel-dining.webp"
+>
+  <article class="max-w-5xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/florida-hotel-dining.webp"
+      alt="Illustration of a grand Florida resort hotel dining room with palm trees at sunset"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+    <p class="mt-10 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Pillar Guide · Florida
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight max-w-3xl">
+      The Best Hotel Restaurants in Florida
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed max-w-3xl">
+      Florida means Miami Beach, and Miami Beach's grand hotels hold some of America's
+      most famous dining rooms: pan-Asian fine dining at the Setai, Cantonese and
+      steakhouse classics at the Fontainebleau, Top Chef and Chef's Table legends at
+      Faena, and Nobu Matsuhisa's flagship in the landmark Eden Roc tower. We've written
+      an original, independent guide to each of the six below: what the menu looks like,
+      what it costs, and what we'd order. Prices are reported figures, dated honestly —
+      never copied menus.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-2">
+      {guides.map((g) => (
+        <a
+          href={g.href}
+          class="group block rounded-2xl overflow-hidden border border-line bg-white shadow-sm hover:shadow-lg transition-shadow"
+        >
+          <img
+            src={g.img}
+            alt={g.alt}
+            class="w-full h-52 sm:h-60 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <p class="text-xs font-semibold uppercase tracking-widest text-gold-dark">{g.tag}</p>
+            <h2 class="font-display text-xl sm:text-2xl font-bold mt-2 group-hover:text-gold-dark transition-colors">
+              {g.title}
+            </h2>
+            <p class="mt-3 text-ink-soft text-sm leading-relaxed">{g.text}</p>
+            <span class="inline-block mt-4 text-sm font-semibold text-gold-dark">Read the guide →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 rounded-2xl bg-parchment border border-line p-6 sm:p-10">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold">How we chose these six</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3 text-sm leading-relaxed text-ink-soft">
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Search interest, then notability</h3>
+          <p>
+            We checked Google Trends (United States, past 12 months) for hotel-restaurant
+            menu queries across five states. Florida won with a mean of 1.6 — "jaya setai
+            menu" averaged 6.2 and "hakkasan miami menu" 1.7 — ahead of Texas (1.4), South
+            Carolina (1.3), Washington DC (1.2), and Colorado (1.1). Both leaders headline
+            this list; the rest earned their spots through chefs, awards, and history.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">One beach, five hotels</h3>
+          <p>
+            All six are in Miami Beach — the Setai, the Fontainebleau (twice), Faena Hotel
+            (twice), and Nobu Hotel Eden Roc. That's where Florida's hotel dining lives,
+            from binchotan-seared Asian small plates to wood-fired Argentine asado.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-ink mb-2">Original writing, always</h3>
+          <p>
+            We never copy a restaurant's menu text or photos. Every guide is written in our own words
+            from publicly reported facts — prices dated honestly, with a nudge to verify before you visit.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 sm:p-6 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">A note on prices</p>
+      <p>
+        All prices on this site are <strong>reported as of 2026</strong>, gathered from the
+        restaurants' official published materials and reputable public sources. Menus and prices change
+        frequently — please verify with the restaurant before visiting.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

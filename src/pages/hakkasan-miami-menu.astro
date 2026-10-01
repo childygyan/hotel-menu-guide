@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Hakkasan",
+  servesCuisine: ["Cantonese", "Chinese", "Dim Sum"],
+  priceRange: "$$$$",
+  telephone: "+1-786-276-1404",
+  url: "https://www.fontainebleau.com/dining/hakkasan/miami-beach-restaurant-menus",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "4441 Collins Ave",
+    addressLocality: "Miami Beach",
+    addressRegion: "FL",
+    postalCode: "33140",
+    addressCountry: "US",
+  },
+  description:
+    "Hakkasan at Fontainebleau Miami Beach — modern Cantonese fine dining and dim sum in a 4th-floor rooftop enclave; the brand's US debut location.",
+};
+---
+
+<BaseLayout
+  title="Hakkasan Miami Beach Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Hakkasan at Fontainebleau Miami Beach: official menu prices (Peking duck $128, dim sum platter $40), hours, and visiting tips. Everything in our own words."
+  path="/hakkasan-miami-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/hakkasan-miami-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/hakkasan-miami-dining.webp"
+      alt="Illustration of a moody upscale Cantonese restaurant with dark wood lattice screens (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Miami Beach
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Hakkasan — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Miami outpost of Hakkasan sits in a <strong>4th-floor rooftop enclave at the
+      Fontainebleau</strong> — and this is where the brand made its <strong>US
+      debut</strong>. The format is modern Cantonese: dim sum, Peking duck, wok dishes,
+      and seafood, in the dark-lacquered, lattice-screened room the brand is known for.
+      Founded in London in 2001 by Alan Yau, Hakkasan's original Hanway Place was the
+      first Chinese restaurant ever to earn a Michelin star (2003, held for 20 years) —
+      a note of honesty: both London branches lost their stars in the 2024 Michelin
+      Guide, so don't read "Michelin-starred" claims about the current brand at face
+      value. Below is our independent walkthrough with prices from the
+      <strong>official Fontainebleau menu page, fetched September 2026</strong> — the
+      strongest official-sourced data of our Florida set. Everything is written in our
+      own words. Note: a 20% service charge is added to all checks.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">4441 Collins Ave, Miami Beach, FL 33140 (Fontainebleau, 4th-floor rooftop enclave)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Chee Ping Chang (per OpenTable)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern Cantonese / dim sum</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — OpenTable band $50+; 20% service charge added</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable or (786) 276-1404</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Mon–Thu &amp; Sun 6–10 PM; Fri–Sat 6–11 PM (per OpenTable). Dinner only.</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported by OpenTable: <strong>Monday–Thursday and Sunday, 6:00–10:00 PM;
+        Friday–Saturday, 6:00–11:00 PM</strong>. Dinner only; dress code is business casual.
+      </p>
+
+      <h2>Signatures &amp; official prices</h2>
+      <p>
+        Prices below are from the <strong>official Fontainebleau menu page
+        (fontainebleau.com, fetched September 2026)</strong>:
+      </p>
+      <ul>
+        <li><strong>Traditional Roasted Peking Duck — $128</strong> (whole) / <strong>$78</strong> (half); a <strong>$228</strong> version with 28g Osetra caviar.</li>
+        <li><strong>Dim sum platter — $40</strong>: har gau, scallop shumai, shrimp &amp; chicken Chinese chive dumpling, black pepper duck &amp; pumpkin dumpling.</li>
+        <li><strong>Pan-fried chicken dumpling with foie gras — $26</strong>; <strong>vegetarian dim sum platter — $32</strong>.</li>
+        <li><strong>Black pepper beef tenderloin — $68</strong>; <strong>Florida pink prawns with black truffle — $52</strong>.</li>
+        <li><strong>Maine lobster — $98</strong> (steamed, stir-fried, or Singapore chili).</li>
+        <li><strong>Stir-fried Chilean sea bass with sanpei sauce — $56</strong>.</li>
+        <li><strong>Crispy duck salad — $36</strong>; <strong>duck consommé with mushroom — $15</strong>.</li>
+      </ul>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The centerpiece:</strong> the Peking duck — the $78 half-duck if two, the $128 whole duck for a table.</li>
+        <li><strong>The Hakkasan move:</strong> the $40 dim sum platter — four pieces that show the kitchen's range.</li>
+        <li><strong>The splurge:</strong> Maine lobster ($98) or the caviar-topped duck ($228) for a true occasion.</li>
+        <li><strong>Budget note:</strong> remember the 20% service charge lands on top of every check.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via OpenTable</strong> — the listing shows strong daily demand; weekend slots go first.</li>
+        <li><strong>Dress code:</strong> business casual.</li>
+        <li><strong>Dinner only</strong> — it opens at 6 PM nightly.</li>
+        <li><strong>The name:</strong> an homage to the Hakka people of Hong Kong's New Territories plus the Japanese respectful form of address, "san."</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.fontainebleau.com/dining/hakkasan/miami-beach-restaurant-menus" target="_blank" rel="noopener">Official menu — fontainebleau.com</a> (current prices)</li>
+        <li><a href="https://www.opentable.com/r/hakkasan-fontainebleau-miami-beach?corrid=dca47f0e-7754-4547-91f0-b2847ddf5cb9" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        All prices above are from the <strong>official Fontainebleau menu page,
+        fetched September 2026</strong> — the most current source available. Menus and
+        prices change frequently; a 20% service charge is added to all checks. Always
+        verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Miami Beach guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-florida/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Florida →</a></li>
+        <li><a href="/jaya-menu/" class="text-gold-dark font-semibold hover:underline">Jaya at The Setai</a> <span class="text-ink-soft">— pan-Asian dining in a tropical courtyard</span></li>
+        <li><a href="/prime-54-menu/" class="text-gold-dark font-semibold hover:underline">Prime 54 at Fontainebleau</a> <span class="text-ink-soft">— the Bleau's modern steakhouse in the same hotel</span></li>
+        <li><a href="/nobu-miami-menu/" class="text-gold-dark font-semibold hover:underline">Nobu Miami Beach</a> <span class="text-ink-soft">— Japanese-Peruvian at Nobu Hotel Eden Roc</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

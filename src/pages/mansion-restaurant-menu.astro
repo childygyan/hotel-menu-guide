@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "The Mansion Restaurant",
+  servesCuisine: ["American", "Contemporary American"],
+  priceRange: "$$$$",
+  telephone: "+1-214-443-4747",
+  url: "https://www.rosewoodhotels.com/en/mansion-on-turtle-creek-dallas/dining/mansion-restaurant",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2821 Turtle Creek Blvd",
+    addressLocality: "Dallas",
+    addressRegion: "TX",
+    postalCode: "75219",
+    addressCountry: "US",
+  },
+  description:
+    "The Mansion Restaurant at Rosewood Mansion on Turtle Creek, Dallas — the historic dining room where Dean Fearing made his name, now led by chef Charles Olalia.",
+};
+---
+
+<BaseLayout
+  title="The Mansion Restaurant Menu Guide (2026) — Dallas Fine Dining & Hours | Hotel Menu Guide"
+  description="An independent guide to The Mansion Restaurant at Rosewood Mansion on Turtle Creek, Dallas: menu highlights, tasting menu, hours, chef Charles Olalia, and visiting tips. Written in our own words."
+  path="/mansion-restaurant-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/mansion-restaurant-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/mansion-restaurant-dining.webp"
+      alt="Illustration of a stately elegant dining room in a historic Southern mansion at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Dallas
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      The Mansion Restaurant — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      The Mansion Restaurant is the dining room of Rosewood Mansion on Turtle Creek — the
+      1925 Italian Renaissance estate where the Rosewood hotel brand itself was born, and
+      where a young Dean Fearing (now of <a href="/fearings-menu/" class="text-gold-dark font-semibold hover:underline">Fearing's</a>)
+      built the reputation that made him the father of Southwestern cuisine. Opened in 1980,
+      the restaurant earned <strong>OpenTable Icons badges for 2024, 2025, and 2026</strong>,
+      and the hotel holds <strong>one Michelin Key</strong> (the Michelin's hotel award —
+      not a restaurant star). Since a September 2024 menu revamp, the kitchen is led by
+      executive chef Charles Olalia. Below is our independent walkthrough, written in our
+      own words. Note: the restaurant does not publish official prices — we say so
+      honestly below rather than guessing.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">2821 Turtle Creek Blvd, Dallas, TX 75219 (Rosewood Mansion on Turtle Creek)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Charles Olalia (since the September 2024 revamp)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Contemporary American fine dining</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">OpenTable $50 and over; official prices not published</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via OpenTable — (214) 443-4747</dd></div>
+        <div><dt class="font-semibold text-ink">Recognition</dt><dd class="text-ink-soft">OpenTable Icons 2024, 2025 &amp; 2026; hotel holds one Michelin Key</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official Rosewood page (accessed October 2026):
+        <strong>breakfast Mon–Fri 7:00–10:30 AM, Sat–Sun 8:00–10:30 AM; lunch Mon–Fri
+        11:00 AM–2:00 PM; brunch Sat–Sun 11:00 AM–2:00 PM; dinner Mon–Thu &amp; Sun
+        5:30–9:00 PM, Fri–Sat 5:30–9:30 PM.</strong> Live jazz in the Mansion Bar: Thu
+        7–10 PM, Fri–Sat 8:30 PM–midnight.
+      </p>
+
+      <h2>Menu highlights</h2>
+      <p>
+        Dish names below are from press coverage of chef Charles Olalia's menu (notably
+        PaperCity, September 2024). The restaurant publishes no official prices:
+      </p>
+      <ul>
+        <li><strong>Mansion Tortilla Soup</strong> — the signature, a ~40-year staple, now officially on the menu.</li>
+        <li><strong>Squash blossom beignets</strong>; <strong>comté gougères</strong> — the opening bites.</li>
+        <li><strong>Tuna cigars</strong> (bluefin tuna cylinders, avocado, yuzu aioli); <strong>scallop &amp; hamachi aguachile</strong>; <strong>ahi tuna crudo</strong>.</li>
+        <li><strong>Sweet corn tortellini</strong> (grana padano, chives, lemon porcini froth); <strong>lobster thermidor</strong>.</li>
+        <li><strong>8-oz Nebraska beef tenderloin</strong>; <strong>grilled prime ribeye with foie gras peppercorn sauce</strong>.</li>
+        <li><strong>Discovery Tasting Menu</strong> — seven courses with wine pairing (foie gras, halibut, strawberry semifreddo among the courses); a five-course vegetarian tasting is also offered.</li>
+      </ul>
+
+      <h2>What about prices?</h2>
+      <p>
+        Honestly: <strong>the restaurant does not publish prices on its official
+        site</strong> — and the official site's "View Menu" button currently resolves to
+        an unrelated page, so there is no official menu to consult. Third-party listings
+        (e.g. menuwithprice.com, date unknown, user-scraped — treat as unverified) have
+        reported figures like a $115 tasting menu, $195/oz osetra caviar, and a $65 wine
+        pairing, but we won't present those as current. What <em>is</em> verified:
+        <strong>valet parking is $12 per vehicle</strong> (official Rosewood page, October
+        2026), and OpenTable lists the price tier as <strong>$50 and over</strong>.
+        Call (214) 443-4747 for current pricing before booking a special occasion.
+      </p>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>The history play:</strong> start with the Mansion Tortilla Soup — the dish that links this room to Dean Fearing's era.</li>
+        <li><strong>The full experience:</strong> the seven-course Discovery Tasting Menu with wine pairing.</li>
+        <li><strong>The steakhouse answer:</strong> the grilled prime ribeye with foie gras peppercorn sauce.</li>
+        <li><strong>Stay late:</strong> live jazz in the Mansion Bar Thu–Sat nights.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Call for prices:</strong> with no published menu prices, a quick call to (214) 443-4747 before a tasting-menu night avoids surprises.</li>
+        <li><strong>The Fearing connection:</strong> Dean Fearing ran this kitchen for years — our <a href="/fearings-menu/" class="text-gold-dark font-semibold hover:underline">Fearing's guide</a> covers where he cooks now.</li>
+        <li><strong>The estate:</strong> the 1925 mansion and its grounds are the birthplace of the Rosewood brand — worth arriving early to walk.</li>
+        <li><strong>Valet:</strong> $12 per vehicle, per the official site.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.rosewoodhotels.com/en/mansion-on-turtle-creek-dallas/dining/mansion-restaurant" target="_blank" rel="noopener">Official restaurant page — Rosewood</a></li>
+        <li><a href="https://www.opentable.com/r/the-rosewood-mansion-restaurant-on-turtle-creek-dallas?corrid=2f3ea94b-602d-497c-b5cc-c7bfe4fe8d52&avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJuIjowfQ" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        <strong>The Mansion Restaurant does not publish official menu prices</strong> —
+        we state this plainly rather than presenting third-party figures as fact.
+        OpenTable lists the tier as $50 and over, and valet is $12 per vehicle (official
+        Rosewood page, October 2026). Always verify current pricing with the restaurant
+        before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Texas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-texas/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Texas →</a></li>
+        <li><a href="/fearings-menu/" class="text-gold-dark font-semibold hover:underline">Fearing's at The Ritz-Carlton</a> <span class="text-ink-soft">— Dean Fearing's current kitchen</span></li>
+        <li><a href="/french-room-menu/" class="text-gold-dark font-semibold hover:underline">The French Room at The Adolphus</a> <span class="text-ink-soft">— afternoon tea &amp; the bar</span></li>
+        <li><a href="/supper-menu/" class="text-gold-dark font-semibold hover:underline">Supper at Hotel Emma</a> <span class="text-ink-soft">— San Antonio</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

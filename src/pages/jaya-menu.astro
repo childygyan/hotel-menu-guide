@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Jaya",
+  servesCuisine: ["Asian", "Thai", "Indian"],
+  priceRange: "$$$$",
+  telephone: "+1-844-662-8387",
+  url: "https://www.thesetaihotel.com/miami-beach-restaurants/jaya",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2001 Collins Ave",
+    addressLocality: "Miami Beach",
+    addressRegion: "FL",
+    postalCode: "33139",
+    addressCountry: "US",
+  },
+  description:
+    "Jaya at The Setai Miami Beach — pan-Asian fine dining (Thai, Indian, Chinese, Japanese) around a tropical courtyard, with a Peking duck program and nightly performances.",
+};
+---
+
+<BaseLayout
+  title="Jaya Miami Beach Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Jaya at The Setai Miami Beach: pan-Asian menu highlights (Peking duck reported $48, weekend brunch $110), hours, and visiting tips. Everything in our own words."
+  path="/jaya-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/jaya-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/jaya-dining.webp"
+      alt="Illustration of an elegant Asian restaurant dining room with lanterns and a tropical courtyard (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Miami Beach
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Jaya — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Jaya is the pan-Asian dining room at <strong>The Setai Miami Beach</strong> —
+      the most-searched Miami hotel restaurant menu in our research, averaging 6.2 on
+      Google Trends over the past 12 months. The kitchen works across Thailand, India,
+      China, and Japan (tandoor, wok, and a Peking duck program), and dinner happens
+      around an al fresco courtyard with nightly performances — aerial artists, fire
+      shows, and contortionists Thursday through Saturday. The name is Sanskrit for
+      "victory," honoring <strong>Jaya Ibrahim</strong>, the Setai's renowned interior
+      designer. Below is our independent walkthrough: brunch pricing from the hotel's own
+      page (current, October 2026) and à la carte figures from a published third-party
+      menu — all dated honestly. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">2001 Collins Ave, Miami Beach, FL 33139 (inside The Setai Miami Beach)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive Chef Vijayudu Veena</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Pan-Asian — Thai, Indian, Chinese, Japanese</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — OpenTable band $31–$50 per person average</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Recommended; bookable via OpenTable or +1 (844) 662-8387</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Breakfast daily 7–11 AM; lunch Mon–Fri 12–3 PM; dinner daily 6–11 PM; weekend brunch Sat–Sun 11:15 AM–3 PM (per the Setai's own page)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Reported by the Setai's own restaurant page (current): <strong>breakfast daily
+        7:00–11:00 AM; lunch Monday–Friday 12:00–3:00 PM; dinner daily 6:00–11:00 PM;
+        weekend brunch Saturday and Sunday 11:15 AM–3:00 PM</strong>. OpenTable's listing
+        shows slightly different splits — the hotel's own hours above are the safer bet,
+        but confirm when booking.
+      </p>
+
+      <h2>Signatures &amp; reported prices</h2>
+      <p>
+        The figures below are from a <strong>published third-party menu (menuweb.menu,
+        crawled ~July 2026)</strong> — the restaurant publishes no current à la carte
+        prices itself, so treat these as reported rather than confirmed:
+      </p>
+      <ul>
+        <li><strong>Peking Duck — $48</strong>: the headline dish, carved tableside-style in the courtyard setting.</li>
+        <li><strong>Thai Beef — $46</strong>; <strong>Lamb Shank — $48</strong>; <strong>Chicken Makhani — $32</strong>.</li>
+        <li><strong>Pad Thai — $28</strong>; <strong>Hamachi Jalapeño — $26</strong>; <strong>Espresso Martini — $22</strong>.</li>
+      </ul>
+      <p>
+        The one price straight from the source: the <strong>Caviar &amp; Champagne Weekend
+        Brunch — $110 per adult, $75 per child (ages 5–12)</strong>, per the Setai's own
+        page (October 2026; tax and service extra). Two-hour limit, free-flowing Louis
+        Roederer champagne, a Peking Duck bar, and a seafood tower. Separately, the
+        restaurant has run a <strong>Miami Spice 3-course lunch at $40 per person</strong>
+        (weekdays, August–October season) — one listing said through September 30, another
+        through October 31, so check the current dates before counting on it.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>The move:</strong> the Peking duck (reported $48) — it's the dish the kitchen is built around.</li>
+        <li><strong>Across Asia:</strong> hamachi jalapeño ($26) to start, chicken makhani ($32) for the tandoor side.</li>
+        <li><strong>The occasion play:</strong> the weekend brunch ($110) — champagne, duck bar, and seafood tower in the courtyard.</li>
+        <li><strong>Stay for the show:</strong> book Thursday–Saturday dinner for the aerial and fire performances.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via OpenTable</strong> — the listing shows 100+ bookings a day; prime dinner slots go fast.</li>
+        <li><strong>The courtyard is the point</strong> — request al fresco seating for the performances (Thu–Sat).</li>
+        <li><strong>Hotel pedigree:</strong> The Setai retained Two Michelin Keys in the 2026 Michelin Guide — one of only three two-Key hotels in Miami Beach (hotel-level, not restaurant-level).</li>
+        <li><strong>Miami Spice timing:</strong> the $40 lunch is seasonal with conflicting end dates published — verify current availability when booking.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.thesetaihotel.com/miami-beach-restaurants/jaya" target="_blank" rel="noopener">Official restaurant page — The Setai</a> (hours, brunch pricing, events)</li>
+        <li><a href="https://www.opentable.com/r/jaya-at-the-setai-miami-beach-2?corrid=98a91e72-f771-4f3e-bbb0-614c4ba7c442" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        The brunch price ($110) is from <strong>the Setai's own page, current as of October
+        2026</strong>. À la carte figures are from a <strong>published third-party menu
+        crawled around July 2026</strong> — reported, not confirmed by the restaurant, and
+        may have changed. Menus and prices change frequently; always verify with the
+        restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Miami Beach guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-florida/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Florida →</a></li>
+        <li><a href="/hakkasan-miami-menu/" class="text-gold-dark font-semibold hover:underline">Hakkasan at Fontainebleau</a> <span class="text-ink-soft">— Cantonese fine dining on Collins Ave</span></li>
+        <li><a href="/prime-54-menu/" class="text-gold-dark font-semibold hover:underline">Prime 54 at Fontainebleau</a> <span class="text-ink-soft">— the Bleau's modern steakhouse</span></li>
+        <li><a href="/pao-menu/" class="text-gold-dark font-semibold hover:underline">Pao at Faena Hotel</a> <span class="text-ink-soft">— Paul Qui's modern Asian</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

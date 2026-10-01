@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Nobu Miami Beach",
+  servesCuisine: ["Japanese", "Peruvian"],
+  priceRange: "$$$$",
+  telephone: "+1-305-695-3232",
+  url: "https://www.noburestaurants.com/miami/home/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "4525 Collins Ave",
+    addressLocality: "Miami Beach",
+    addressRegion: "FL",
+    postalCode: "33140",
+    addressCountry: "US",
+  },
+  description:
+    "Nobu Miami Beach at Nobu Hotel Eden Roc — Japanese-Peruvian ('New Style Japanese') fine dining from chef Nobu Matsuhisa, inside the landmark 1956 Morris Lapidus tower.",
+};
+---
+
+<BaseLayout
+  title="Nobu Miami Beach Menu Guide (2026) — Prices, What to Order | Hotel Menu Guide"
+  description="An independent guide to Nobu at Nobu Hotel Eden Roc, Miami Beach: reported menu prices (black cod $52, washu ribeye $85), hours, and visiting tips. Everything in our own words."
+  path="/nobu-miami-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/nobu-miami-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/nobu-miami-dining.webp"
+      alt="Illustration of an upscale Japanese-Peruvian restaurant dining room at night (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Miami Beach
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Nobu Miami Beach — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Nobu Miami Beach is the flagship dining room of <strong>Nobu Hotel Eden Roc</strong>
+      — chef <strong>Nobu Matsuhisa's</strong> "New Style Japanese" (Japanese–Peruvian)
+      restaurant, soft-opened in September 2016 inside the landmark <strong>1956
+      Morris Lapidus–designed Eden Roc tower</strong>. Below is our independent
+      walkthrough. A note on prices: <strong>Nobu's official site publishes no menu
+      prices</strong>, so food prices here are from a third-party menu compilation
+      (menuweb.menu, crawled ~August 2026, prices undated) and are <strong>reported,
+      not official</strong>. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">4525 Collins Ave, Miami Beach, FL 33140 (inside Nobu Hotel Eden Roc)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Nobu Matsuhisa (brand founder; co-founded with Robert De Niro and Meir Teper)</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Japanese–Peruvian ("New Style Japanese")</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">Very expensive — Google price level "very expensive"</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via Nobu's own reservations page; walk-ins welcome; +1 (305) 695-3232</dd></div>
+        <div><dt class="font-semibold text-ink">Hours</dt><dd class="text-ink-soft">Dinner nightly from 6 PM (close times vary 9:45–11:15 PM; see Hours). Tanoshi Hours daily 5 PM–close.</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Dinner-only restaurant. Reported hours (Google business listing): <strong>Sunday
+        6:00–10:15 PM; Monday 6:00–10:15 PM; Tuesday 6:00–9:45 PM; Wednesday
+        6:00–10:15 PM; Thursday 6:00–9:45 PM; Friday 6:00–11:15 PM; Saturday
+        6:00–10:45 PM</strong>. Tanoshi Hours (bar/lounge happy hour) run daily from
+        5 PM to close, and the oyster bar at the lobby bar runs daily 11 AM–close (per
+        noburestaurants.com, fetched October 2026).
+      </p>
+
+      <h2>Signatures &amp; reported prices</h2>
+      <p>
+        Nobu's official site does not publish food prices. The prices below are
+        <strong>reported on menuweb.menu (third-party compilation, crawled ~August 2026,
+        prices undated)</strong> — useful as a guide, not official:
+      </p>
+      <ul>
+        <li><strong>Black Cod with Miso — $52 (reported)</strong>: the dish Nobu is most famous for.</li>
+        <li><strong>Washu Ribeye with Yuzu, Truffle &amp; Crispy Onions — $85 (reported)</strong>.</li>
+        <li><strong>Wagyu Moromi Miso (2 oz) — $90 (reported)</strong>; <strong>Prime Filet Beef Toban Yaki — $48 (reported)</strong>.</li>
+        <li><strong>King Crab Tempura with Amazu Ponzu — $58 (reported)</strong>; <strong>Chilean Sea Bass with Black Bean Sauce — $58 (reported)</strong>.</li>
+        <li><strong>Roasted Octopus Aguachile — $48 (reported)</strong>; <strong>Tai Sashimi Dry Miso — $36 (reported)</strong>.</li>
+        <li><strong>Lobster Shiitake Salad with Spicy Lemon Dressing — $64 (reported)</strong>; <strong>Edamame — $9 (reported)</strong>; <strong>Miso Soup — $9 (reported)</strong>.</li>
+      </ul>
+      <p>
+        From the <strong>official site (fetched October 2026)</strong>: the oyster bar
+        offers a caviar pairing — 14g Kolikof Osetra caviar with nori-dusted chips and
+        crème fraîche — at <strong>$50</strong>. Miami Spice 2026 ran a three-course
+        prix fixe at <strong>$65</strong>, but that offer ran August 1–September 30,
+        2026 and has now ended.
+      </p>
+
+      <h2>What we'd order</h2>
+      <p>If we had one meal here, this is how we'd play it:</p>
+      <ul>
+        <li><strong>Non-negotiable:</strong> the black cod miso — the signature of the whole brand.</li>
+        <li><strong>The Miami upgrade:</strong> the oyster-bar caviar pairing ($50, official site).</li>
+        <li><strong>The splurge:</strong> washu ribeye ($85 reported) or wagyu moromi miso ($90 reported).</li>
+        <li><strong>Easy start:</strong> yellowtail jalapeño or rock shrimp tempura — the classics, then check prices with your server.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Book via Nobu's own reservations page</strong> — walk-ins are welcome but evenings fill up. Same-day no-shows for parties of 5+ carry a $25/person fee.</li>
+        <li><strong>Tanoshi Hours daily 5–close</strong> — the happiest-hour way to eat Nobu.</li>
+        <li><strong>The 10-seat teppanyaki room</strong> is its own experience — book it separately if available.</li>
+        <li><strong>Prices:</strong> since Nobu publishes none, ask your server for current pricing before ordering.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.noburestaurants.com/miami/home/" target="_blank" rel="noopener">Official restaurant page — noburestaurants.com</a></li>
+        <li><a href="http://noburestaurants.com/miami/reservations" target="_blank" rel="noopener">Reservations — official reservations page</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        <strong>Nobu's official site publishes no food prices.</strong> Food prices above
+        are <strong>reported on menuweb.menu, a third-party compilation crawled
+        ~August 2026 with undated prices</strong> — treat them as a guide, not as
+        current official figures. The $50 caviar pairing is from the official site
+        (October 2026); the $65 Miami Spice prix fixe expired September 30, 2026. Always
+        verify prices with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Miami Beach guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-florida/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Florida →</a></li>
+        <li><a href="/hakkasan-miami-menu/" class="text-gold-dark font-semibold hover:underline">Hakkasan at Fontainebleau</a> <span class="text-ink-soft">— Cantonese fine dining up Collins Ave</span></li>
+        <li><a href="/pao-menu/" class="text-gold-dark font-semibold hover:underline">Pao at Faena Hotel</a> <span class="text-ink-soft">— Paul Qui's modern Asian</span></li>
+        <li><a href="/jaya-menu/" class="text-gold-dark font-semibold hover:underline">Jaya at The Setai</a> <span class="text-ink-soft">— pan-Asian dining in a tropical courtyard</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

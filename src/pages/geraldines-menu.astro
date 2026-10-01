@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Geraldine's",
+  servesCuisine: ["Modern Mexican", "Latin American"],
+  priceRange: "$$$",
+  url: "https://www.hotelvanzandt.com/geraldines/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "605 Davis St",
+    addressLocality: "Austin",
+    addressRegion: "TX",
+    postalCode: "78701",
+    addressCountry: "US",
+  },
+  description:
+    "Geraldine's at Hotel Van Zandt, Austin — chef Sergio Ledesma's modern Mexican restaurant with live music, weekend jazz brunch, and a $39.99 Dinner Before Dark prix fixe.",
+};
+---
+
+<BaseLayout
+  title="Geraldine's Menu Guide (2026) — Menu, Prices & Hours at Hotel Van Zandt | Hotel Menu Guide"
+  description="An independent guide to Geraldine's at Hotel Van Zandt, Austin: modern-Mexican menu highlights, the $39.99 Dinner Before Dark prix fixe, hours, and visiting tips. Written in our own words."
+  path="/geraldines-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/geraldines-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/geraldines-dining.webp"
+      alt="Illustration of a lively modern restaurant with a stage for live music at evening (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Austin
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      Geraldine's — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      Geraldine's is the restaurant of Hotel Van Zandt in Austin's Rainey Street
+      district — a modern-Mexican kitchen led by executive chef Sergio Ledesma, wrapped
+      in one of the city's best live-music dining rooms. Opened with the hotel in 2015
+      and named for Geraldine, the Rainey Street guinea fowl, it runs breakfast through
+      late dinner with live music Thursday through Sunday nights, a weekend jazz brunch,
+      and a 4.6 OpenTable rating. Below is our independent walkthrough, written in our
+      own words. Note: the restaurant publishes <strong>no official menu page</strong> —
+      we say so honestly, with menu highlights from the hotel's official site and prices
+      from the hotel's own editorial and event listings, dated honestly.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">605 Davis St, Austin, TX 78701 (Hotel Van Zandt, Rainey Street)</dd></div>
+        <div><dt class="font-semibold text-ink">Chef</dt><dd class="text-ink-soft">Executive chef Sergio Ledesma</dd></div>
+        <div><dt class="font-semibold text-ink">Cuisine</dt><dd class="text-ink-soft">Modern Mexican / Latin American</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">OpenTable $31–$50 pp; Dinner Before Dark prix fixe $39.99</dd></div>
+        <div><dt class="font-semibold text-ink">Live music</dt><dd class="text-ink-soft">Thu–Sun nights 9:00–10:30 PM; weekend jazz brunch 11 AM–1 PM</dd></div>
+        <div><dt class="font-semibold text-ink">Happy hour</dt><dd class="text-ink-soft">Daily 5:00–6:30 PM (incl. $6 martini flights)</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        Per the official hotelvanzandt.com (accessed October 2026):
+        <strong>breakfast/brunch Mon–Fri 7:00–11:00 AM, Sat–Sun 9:00 AM–2:00 PM;
+        dinner Sun–Wed 5:00–11:00 PM, Thu–Sat 5:00–11:59 PM.</strong> The kitchen closes
+        at 10:00 PM daily.
+      </p>
+
+      <h2>Menu highlights</h2>
+      <p>
+        The hotel publishes no standalone menu page; highlights below are from the
+        official hotel site:
+      </p>
+      <ul>
+        <li><strong>Al Pastor</strong> — Berkshire pork jowl brochette.</li>
+        <li><strong>48-hour Short Rib</strong> in mole negro.</li>
+        <li><strong>Pato</strong> — 21-day aged duck breast.</li>
+        <li><strong>Chilaquiles</strong>; <strong>Mole Enchilada Eggs</strong>; <strong>Steak and Eggs</strong> (Wagyu skirt steak, chimichurri).</li>
+        <li><strong>Bucatini with Uni butter</strong>; <strong>Lamb Birria Tetela</strong>.</li>
+        <li><strong>Scallop Tostadas</strong>; <strong>Lamb Barbacoa Pellizcada</strong>; <strong>Street Sliders</strong>; <strong>Birria Wontons</strong>; <strong>Tuna Crudo</strong>.</li>
+        <li><strong>Baklava Napoleon</strong>; <strong>Mexican Tiramisu</strong>; pain au lait milk bread.</li>
+      </ul>
+
+      <h2>Prices we could verify</h2>
+      <ul>
+        <li><strong>Dinner Before Dark: $39.99 per guest</strong> — a 3-course prix fixe (per a hotel editorial article, circa 2026).</li>
+        <li><strong>Happy hour daily 5:00–6:30 PM</strong>, including <strong>$6 martini flights</strong> (per the hotel's October 2026 event calendar).</li>
+        <li><strong>OpenTable price band: $31–$50 per person</strong> (circa September 2026).</li>
+      </ul>
+      <p>
+        Individual dish prices are not published by the hotel — we won't invent them.
+        The only circulating dish-price list is an old third-party menu PDF (circa 2021,
+        $4–$18) that is clearly stale and not reliable.
+      </p>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>The deal:</strong> the Dinner Before Dark 3-course prix fixe ($39.99) — the best value in the building.</li>
+        <li><strong>The signatures:</strong> the 48-hour Short Rib in mole negro or the Pato (21-day aged duck).</li>
+        <li><strong>The brunch play:</strong> weekend jazz brunch (Sat–Sun, 11 AM–1 PM music) — chilaquiles or mole enchilada eggs.</li>
+        <li><strong>The pre-game:</strong> happy hour 5:00–6:30 PM with a $6 martini flight.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Music matters:</strong> live music Thu–Sun nights 9:00–10:30 PM — book dinner late on those nights for the full experience.</li>
+        <li><strong>Kitchen closes 10 PM daily</strong> even though the dining room runs later — order food before the music set ends.</li>
+        <li><strong>Rainey Street:</strong> the hotel sits in Austin's bar district — easy to make a night of it.</li>
+        <li><strong>Pair it:</strong> our <a href="/1886-cafe-menu/" class="text-gold-dark font-semibold hover:underline">1886 Café &amp; Bakery guide</a> covers Austin's other essential hotel dining room, at The Driskill.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://www.hotelvanzandt.com/geraldines/" target="_blank" rel="noopener">Official restaurant page — Hotel Van Zandt</a></li>
+        <li><a href="https://www.opentable.com/geraldines" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+        <li><a href="https://www.hotelvanzandt.com/geraldines/calendar/" target="_blank" rel="noopener">Events calendar — Hotel Van Zandt</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Geraldine's publishes <strong>no official menu page and no individual dish
+        prices</strong> — we state this plainly rather than presenting old third-party
+        figures as fact. The <strong>$39.99 Dinner Before Dark prix fixe</strong> is from
+        a hotel editorial (circa 2026); <strong>happy hour</strong> details are from the
+        hotel's October 2026 calendar; the <strong>$31–$50</strong> band is OpenTable's
+        (circa September 2026). Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Texas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-texas/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Texas →</a></li>
+        <li><a href="/1886-cafe-menu/" class="text-gold-dark font-semibold hover:underline">1886 Café &amp; Bakery at The Driskill</a> <span class="text-ink-soft">— Austin</span></li>
+        <li><a href="/supper-menu/" class="text-gold-dark font-semibold hover:underline">Supper at Hotel Emma</a> <span class="text-ink-soft">— San Antonio</span></li>
+        <li><a href="/fearings-menu/" class="text-gold-dark font-semibold hover:underline">Fearing's at The Ritz-Carlton</a> <span class="text-ink-soft">— Dallas</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>

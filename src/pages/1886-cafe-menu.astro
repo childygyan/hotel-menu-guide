@@ -1,0 +1,158 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "1886 Café & Bakery",
+  servesCuisine: ["American", "Breakfast", "Bakery"],
+  priceRange: "$$",
+  url: "https://driskillhotel.com/dining/1886-caf%C3%A9-bakery/",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "604 Brazos St",
+    addressLocality: "Austin",
+    addressRegion: "TX",
+    postalCode: "78701",
+    addressCountry: "US",
+  },
+  description:
+    "1886 Café & Bakery at The Driskill, Austin — the historic hotel's café and bakery, from Texas-shaped pecan waffles to the 1886 chocolate cake.",
+};
+---
+
+<BaseLayout
+  title="1886 Café & Bakery Menu Guide (2026) — Prices & Hours at The Driskill | Hotel Menu Guide"
+  description="An independent guide to 1886 Café & Bakery at The Driskill, Austin: official-menu prices (pecan waffle, chicken & waffles, migas, 1886 chocolate cake), hours, and visiting tips. Written in our own words."
+  path="/1886-cafe-menu/"
+  jsonLd={jsonLd}
+  ogImage="/images/1886-cafe-dining.webp"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6">
+    <img
+      src="/images/1886-cafe-dining.webp"
+      alt="Illustration of a charming historic hotel café with bakery cases and morning light (illustrative, not the actual restaurant)"
+      class="w-full h-64 sm:h-96 object-cover rounded-2xl mt-8"
+      fetchpriority="high"
+    />
+
+    <p class="mt-8 text-xs font-semibold uppercase tracking-widest text-gold-dark">
+      Menu Guide · Austin
+    </p>
+    <h1 class="font-display text-3xl sm:text-5xl font-bold mt-2 leading-tight">
+      1886 Café &amp; Bakery — Menu Guide
+    </h1>
+    <p class="mt-4 text-lg text-ink-soft leading-relaxed">
+      1886 Café &amp; Bakery is the daypart café inside The Driskill — Austin's landmark
+      hotel at 604 Brazos St. Opened on July 4, 2002, the café's recipes trace back to the
+      Heritage Society's 1886 Lunchroom and to Helen Corbitt, the legendary Texas chef
+      whose name still carries weight in the state. It's a breakfast-and-lunch room with a
+      serious bakery case, holding a 4.4 Google rating across 951 reviews. Below is our
+      independent walkthrough of the menu, with prices from the hotel's own official menu
+      PDFs — each labeled by its date-era. Everything is written in our own words.
+    </p>
+
+    <!-- At a glance -->
+    <div class="mt-8 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">At a glance</h2>
+      <dl class="mt-4 grid gap-3 sm:grid-cols-2 text-sm">
+        <div><dt class="font-semibold text-ink">Location</dt><dd class="text-ink-soft">604 Brazos St, Austin, TX 78701 (inside The Driskill)</dd></div>
+        <div><dt class="font-semibold text-ink">Concept</dt><dd class="text-ink-soft">Café &amp; bakery — breakfast and lunch only</dd></div>
+        <div><dt class="font-semibold text-ink">Heritage</dt><dd class="text-ink-soft">Opened July 4, 2002; recipes from the 1886 Lunchroom &amp; Helen Corbitt</dd></div>
+        <div><dt class="font-semibold text-ink">Price level</dt><dd class="text-ink-soft">$$ — brunch plates $15–$26, pastries $5–$7</dd></div>
+        <div><dt class="font-semibold text-ink">Reservations</dt><dd class="text-ink-soft">Via OpenTable</dd></div>
+        <div><dt class="font-semibold text-ink">Good to know</dt><dd class="text-ink-soft">Daypart only — closes mid-afternoon</dd></div>
+      </dl>
+    </div>
+
+    <div class="prose-guide">
+      <h2>Hours</h2>
+      <p>
+        <strong>The hotel does not publish café hours on its official page.</strong>
+        Third-party listings (RestaurantGuru, TripAdvisor, circa September 2026) report
+        <strong>daily 6:30 AM–3:00 PM</strong> — breakfast and lunch only. Treat this as
+        unverified on the official site and confirm before visiting.
+      </p>
+
+      <h2>Brunch menu</h2>
+      <p>
+        Prices below are from the hotel's <strong>official 2026-era brunch menu
+        PDF</strong> (with 2023-era prices from a March 2023 PDF shown for comparison):
+      </p>
+      <ul>
+        <li><strong>Texas-Shaped Pecan Waffle — $15</strong> ($17.86 on the 2023 PDF): the signature dish, shaped like the state.</li>
+        <li><strong>Chicken &amp; Waffles — $19</strong> ($24.86 in 2023).</li>
+        <li><strong>Brazos Huevos Rancheros — $18</strong> ($19.86 in 2023).</li>
+        <li><strong>Traditional Eggs Benedict — $17</strong>; <strong>Hangover Omelet — $17</strong>.</li>
+        <li><strong>Avocado Toast — $17</strong>; <strong>Texas Migas — $16</strong>; <strong>Bagel &amp; Lox — $19</strong>.</li>
+        <li><strong>Quiche Lorraine — $18</strong>; <strong>Fried Chicken Sandwich — $17</strong>; <strong>Steak &amp; Eggs — $26</strong> ($32.86 in 2023).</li>
+        <li><strong>Driskill House Salad — $11</strong>.</li>
+      </ul>
+
+      <h2>Bakery</h2>
+      <p>
+        From the same official menu era:
+      </p>
+      <ul>
+        <li><strong>1886 Chocolate Cake — $8</strong>: the namesake dessert.</li>
+        <li><strong>Butter Croissant — $5</strong>; <strong>Chocolate Pecan Croissant — $7</strong>; <strong>Cinnamon Roll — $7</strong>.</li>
+      </ul>
+      <p>
+        In-room breakfast prices (official PDF dated 03.01.26): Texas Waffle $14, Migas
+        $21, Driskill Breakfast $21, Breakfast Bun $12, Smoked Turkey Club $24.
+      </p>
+
+      <h2>What we'd order</h2>
+      <ul>
+        <li><strong>The signature:</strong> the Texas-Shaped Pecan Waffle ($15) — the dish the café is known for.</li>
+        <li><strong>The hearty plate:</strong> Chicken &amp; Waffles ($19).</li>
+        <li><strong>The Texas classic:</strong> Brazos Huevos Rancheros ($18) or Texas Migas ($16).</li>
+        <li><strong>Save room:</strong> a slice of 1886 Chocolate Cake ($8) — the namesake.</li>
+        <li><strong>The budget move:</strong> a butter croissant ($5) and coffee in a landmark lobby.</li>
+      </ul>
+
+      <h2>Planning your visit</h2>
+      <ul>
+        <li><strong>Morning only:</strong> the café closes mid-afternoon — this is a breakfast/lunch plan, not dinner.</li>
+        <li><strong>Confirm hours:</strong> the hotel doesn't publish them officially; the 6:30 AM–3:00 PM window comes from third-party listings.</li>
+        <li><strong>The Driskill itself:</strong> one of Texas's most storied hotels — the lobby and live-music history are worth the trip alone.</li>
+        <li><strong>Pair it:</strong> our <a href="/geraldines-menu/" class="text-gold-dark font-semibold hover:underline">Geraldine's guide</a> covers Austin's other essential hotel dining room, at Hotel Van Zandt.</li>
+      </ul>
+
+      <h2>Official links</h2>
+      <ul>
+        <li><a href="https://driskillhotel.com/dining/1886-caf%C3%A9-bakery/" target="_blank" rel="noopener">Official café page — The Driskill</a></li>
+        <li><a href="https://www.opentable.com/1886-cafe-and-bakery-driskill-hotel" target="_blank" rel="noopener">Reservations — OpenTable</a></li>
+        <li><a href="https://driskillhotel.com/documents/21/1886_Cafe__Bakery_Menu__24__18_in.pdf" target="_blank" rel="noopener">Official menu (PDF) — The Driskill</a></li>
+      </ul>
+    </div>
+
+    <!-- Price disclaimer -->
+    <div class="mt-10 rounded-xl border border-gold/40 bg-gold/10 p-5 text-sm text-ink-soft leading-relaxed">
+      <p class="font-semibold text-ink mb-1">About these prices</p>
+      <p>
+        Brunch and bakery prices are from the <strong>hotel's official 2026-era menu
+        PDF</strong>; comparison figures are from a <strong>March 2023 menu PDF</strong>
+        and are clearly 2023-era, not current. Café hours are <strong>not published on
+        the official site</strong> — the 6:30 AM–3:00 PM window comes from third-party
+        listings (circa September 2026). Always verify with the restaurant before visiting.
+      </p>
+    </div>
+
+    <!-- Related guides -->
+    <div class="mt-10 rounded-2xl border border-line bg-white p-6 sm:p-8">
+      <h2 class="!mt-0 font-display text-xl font-bold">More Texas guides</h2>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><a href="/best-hotel-restaurants-texas/" class="text-gold-dark font-semibold hover:underline">The best hotel restaurants in Texas →</a></li>
+        <li><a href="/geraldines-menu/" class="text-gold-dark font-semibold hover:underline">Geraldine's at Hotel Van Zandt</a> <span class="text-ink-soft">— Austin</span></li>
+        <li><a href="/supper-menu/" class="text-gold-dark font-semibold hover:underline">Supper at Hotel Emma</a> <span class="text-ink-soft">— San Antonio</span></li>
+        <li><a href="/french-room-menu/" class="text-gold-dark font-semibold hover:underline">The French Room at The Adolphus</a> <span class="text-ink-soft">— Dallas</span></li>
+      </ul>
+    </div>
+
+    <p class="mt-8 text-sm text-ink-soft">
+      <a href="/" class="text-gold-dark font-semibold hover:underline">← Back to all guides</a>
+    </p>
+  </article>
+</BaseLayout>
