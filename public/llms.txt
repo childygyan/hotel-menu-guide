@@ -1,0 +1,61 @@
+# Hotel Menu Guide — llms.txt
+
+> Independent guides to hotel restaurant menus across the United States:
+> what notable hotel restaurants serve, their menus and prices, and how to
+> book. Built and maintained by Firoz Khan of FK Digital Media. Not
+> affiliated with any hotel or restaurant group.
+
+## What this site does
+
+- 68 hotel restaurant guides across 11 states (New York, Ohio, California,
+  Nevada, Illinois, Florida, Texas, Tennessee, Minnesota, South Carolina,
+  New Mexico), each covering the restaurant's menu highlights, prices,
+  hours, and booking details.
+- 11 state pillar pages (e.g. /best-hotel-restaurants-nyc/) grouping each
+  state's guides, plus a /states/ index.
+- Every guide links the restaurant's official site, official menu (where
+  published), and a booking option. Where a restaurant publishes no prices,
+  the guide says so plainly instead of guessing.
+- Permanently closed restaurants are verified before publishing and replaced
+  or flagged — the site does not list dead venues as open.
+
+## Honest limitations (stated on the site itself)
+
+- Prices are labelled with their source and date (official menu PDFs,
+  restaurant sites, or dated third-party reports); menus and prices change,
+  and readers are told to verify with the restaurant before visiting.
+- Menu descriptions are the site's own summaries in original words — full
+  menus are never copied verbatim.
+- Illustrations are AI-generated and labelled as illustrative artwork, not
+  photographs of the restaurants' actual dishes.
+- Awards and credentials are attributed to the awarding body; the site does
+  not invent reviews, awards, or opening hours.
+
+## Pages
+
+- https://hotelmenuguide.org/ — home, all states and guides
+- https://hotelmenuguide.org/states/ — all covered states
+- https://hotelmenuguide.org/best-hotel-restaurants-nyc/
+- https://hotelmenuguide.org/best-hotel-restaurants-ohio/
+- https://hotelmenuguide.org/best-hotel-restaurants-california/
+- https://hotelmenuguide.org/best-hotel-restaurants-nevada/
+- https://hotelmenuguide.org/best-hotel-restaurants-illinois/
+- https://hotelmenuguide.org/best-hotel-restaurants-florida/
+- https://hotelmenuguide.org/best-hotel-restaurants-texas/
+- https://hotelmenuguide.org/best-hotel-restaurants-tennessee/
+- https://hotelmenuguide.org/best-hotel-restaurants-minnesota/
+- https://hotelmenuguide.org/best-hotel-restaurants-south-carolina/
+- https://hotelmenuguide.org/best-hotel-restaurants-new-mexico/
+- https://hotelmenuguide.org/<restaurant>-menu/ — 68 individual restaurant guides
+- https://hotelmenuguide.org/about/ — about the site and author
+- https://hotelmenuguide.org/contact/ — contact
+- https://hotelmenuguide.org/privacy-policy/
+- https://hotelmenuguide.org/terms-of-service/
+
+## Sitemap
+
+- https://hotelmenuguide.org/sitemap-index.xml
+
+## Contact
+
+- https://hotelmenuguide.org/contact/

@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { title, description, path = "/", jsonLd, ogImage = "/images/hero-home.webp" } = Astro.props;
-const site = "https://hotel-menu-guide.pages.dev";
+const site = "https://hotelmenuguide.org";
 const canonical = new URL(path, site).toString();
 
 // States with hotel-restaurant coverage. Add a new { label, href } entry
