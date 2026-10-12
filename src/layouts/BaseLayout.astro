@@ -172,6 +172,12 @@ const restaurants = [
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
       gtag('js', new Date());
 
       gtag('config', 'G-VF47V2VLCW');
@@ -431,6 +437,7 @@ const restaurants = [
               <li><a href="/contact/" class="hover:text-gold transition-colors">Contact</a></li>
               <li><a href="/privacy-policy/" class="hover:text-gold transition-colors">Privacy Policy</a></li>
               <li><a href="/terms-of-service/" class="hover:text-gold transition-colors">Terms of Service</a></li>
+              <li><button type="button" data-cookie-settings class="hover:text-gold transition-colors cursor-pointer">Cookie Settings</button></li>
             </ul>
           </div>
         </div>
@@ -501,6 +508,58 @@ const restaurants = [
 
         document.addEventListener("keydown", function (e) {
           if (e.key === "Escape") closeAll();
+        });
+      })();
+    </script>
+    <!-- Cookie consent banner -->
+    <div id="cookie-consent" hidden class="fixed bottom-0 inset-x-0 z-50 border-t border-gold/40 bg-ink text-cream shadow-2xl">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+        <p class="text-sm text-cream/85 leading-relaxed flex-1">
+          We use cookies for analytics and, soon, advertising. Choose "Accept" to allow
+          them or "Reject" to continue with only strictly necessary storage. See our
+          <a href="/privacy-policy/" class="text-gold hover:underline font-semibold">Privacy Policy</a>.
+        </p>
+        <div class="flex gap-2 shrink-0">
+          <button type="button" data-consent-reject class="px-4 py-2 text-sm font-semibold rounded-lg border border-cream/30 text-cream hover:border-gold hover:text-gold transition-colors cursor-pointer">Reject</button>
+          <button type="button" data-consent-accept class="px-4 py-2 text-sm font-semibold rounded-lg bg-gold text-ink hover:bg-gold-dark transition-colors cursor-pointer">Accept</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var KEY = "hmg-cookie-consent";
+        var banner = document.getElementById("cookie-consent");
+        function apply(choice) {
+          var granted = choice === "accepted" ? "granted" : "denied";
+          if (typeof gtag === "function") {
+            gtag("consent", "update", {
+              ad_storage: granted,
+              ad_user_data: granted,
+              ad_personalization: granted,
+              analytics_storage: granted,
+            });
+          }
+        }
+        var saved = null;
+        try { saved = localStorage.getItem(KEY); } catch (e) {}
+        if (saved) {
+          apply(saved);
+        } else if (banner) {
+          banner.hidden = false;
+        }
+        function choose(value) {
+          try { localStorage.setItem(KEY, value); } catch (e) {}
+          apply(value);
+          if (banner) banner.hidden = true;
+        }
+        var acceptBtn = document.querySelector("[data-consent-accept]");
+        var rejectBtn = document.querySelector("[data-consent-reject]");
+        if (acceptBtn) acceptBtn.addEventListener("click", function () { choose("accepted"); });
+        if (rejectBtn) rejectBtn.addEventListener("click", function () { choose("rejected"); });
+        var settingsBtn = document.querySelector("[data-cookie-settings]");
+        if (settingsBtn) settingsBtn.addEventListener("click", function () {
+          try { localStorage.removeItem(KEY); } catch (e) {}
+          if (banner) banner.hidden = false;
         });
       })();
     </script>
