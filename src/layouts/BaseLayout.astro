@@ -169,14 +169,17 @@ const restaurants = [
     <meta name="google-site-verification" content="YL-o7HsiTA-bIORLDqhsDsJj2C3MYtdARQoCe2SuHIY" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF47V2VLCW"></script>
-    <script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      var hmgSavedConsent = null;
+      try { hmgSavedConsent = localStorage.getItem('hmg-cookie-consent'); } catch (e) {}
+      var hmgGranted = hmgSavedConsent === 'accepted' ? 'granted' : 'denied';
       gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+        'ad_storage': hmgGranted,
+        'ad_user_data': hmgGranted,
+        'ad_personalization': hmgGranted,
+        'analytics_storage': hmgGranted
       });
       gtag('js', new Date());
 
@@ -525,7 +528,7 @@ const restaurants = [
         </div>
       </div>
     </div>
-    <script>
+    <script is:inline>
       (function () {
         var KEY = "hmg-cookie-consent";
         var banner = document.getElementById("cookie-consent");
@@ -550,6 +553,12 @@ const restaurants = [
         function choose(value) {
           try { localStorage.setItem(KEY, value); } catch (e) {}
           apply(value);
+          if (value === "accepted" && typeof gtag === "function") {
+            gtag("event", "page_view", {
+              page_location: window.location.href,
+              page_title: document.title,
+            });
+          }
           if (banner) banner.hidden = true;
         }
         var acceptBtn = document.querySelector("[data-consent-accept]");
