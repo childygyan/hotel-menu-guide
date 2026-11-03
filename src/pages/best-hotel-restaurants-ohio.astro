@@ -11,10 +11,9 @@ const jsonLd = {
   itemListElement: [
     { "@type": "ListItem", position: 1, url: "https://hotel-menu-guide.pages.dev/metropole-menu/", name: "Metropole at 21c Museum Hotel" },
     { "@type": "ListItem", position: 2, url: "https://hotel-menu-guide.pages.dev/burnham-menu/", name: "The Burnham at Hilton Cleveland Downtown" },
-    { "@type": "ListItem", position: 3, url: "https://hotel-menu-guide.pages.dev/adega-menu/", name: "Adega at the Metropolitan at The 9" },
-    { "@type": "ListItem", position: 4, url: "https://hotel-menu-guide.pages.dev/turn-bar-kitchen-menu/", name: "TURN Bar + Kitchen at The Ritz-Carlton, Cleveland" },
-    { "@type": "ListItem", position: 5, url: "https://hotel-menu-guide.pages.dev/guild-house-menu/", name: "The Guild House" },
-    { "@type": "ListItem", position: 6, url: "https://hotel-menu-guide.pages.dev/keep-menu/", name: "The Keep Kitchen & Liquor Bar at Hotel LeVeque" },
+    { "@type": "ListItem", position: 3, url: "https://hotel-menu-guide.pages.dev/turn-bar-kitchen-menu/", name: "TURN Bar + Kitchen at The Ritz-Carlton, Cleveland" },
+    { "@type": "ListItem", position: 4, url: "https://hotel-menu-guide.pages.dev/guild-house-menu/", name: "The Guild House" },
+    { "@type": "ListItem", position: 5, url: "https://hotel-menu-guide.pages.dev/keep-menu/", name: "The Keep Kitchen & Liquor Bar at Hotel LeVeque" },
   ],
 };
 
@@ -34,14 +33,6 @@ const guides = [
     tag: "Cleveland · Hilton Downtown",
     title: "The Burnham",
     text: "The Hilton Cleveland Downtown's signature restaurant, serving elevated Midwest comfort food — including the famous knife-and-fork po'boy. Our guide covers breakfast through dinner with reported prices and visiting tips.",
-  },
-  {
-    href: "/adega-menu/",
-    img: "/images/adega-dining.webp",
-    alt: "Illustration of Adega's refined Mediterranean dining room in Cleveland",
-    tag: "Cleveland · Metropolitan at The 9",
-    title: "Adega",
-    text: "Cleveland's award-winning Mediterranean hotel dining room — bouillabaisse, Iberico pork chop, and the Monday half-price wine tradition. Our guide walks through the menu and how to plan the visit.",
   },
   {
     href: "/turn-bar-kitchen-menu/",
@@ -71,8 +62,8 @@ const guides = [
 ---
 
 <BaseLayout
-  title="Best Hotel Restaurants in Ohio — 6 Great Guides"
-  description="Our picks for the best hotel restaurants in Ohio: Metropole in Cincinnati, The Burnham, Adega and TURN in Cleveland, The Guild House and The Keep in Columbus — each with an original menu guide."
+  title="Best Hotel Restaurants in Ohio — 5 Great Guides"
+  description="Our picks for the best hotel restaurants in Ohio: Metropole in Cincinnati, The Burnham and TURN in Cleveland, The Guild House and The Keep in Columbus — each with an original menu guide."
   path="/best-hotel-restaurants-ohio/"
   jsonLd={jsonLd}
   ogImage="/images/ohio-hotel-dining.webp"
@@ -93,9 +84,9 @@ const guides = [
     <p class="mt-3 text-sm text-ink-soft">By <span class="font-semibold text-ink">Firoz Khan</span> <span class="text-gold-dark">&middot;</span> FK Digital Media</p>
     <p class="mt-4 text-lg text-ink-soft leading-relaxed max-w-3xl">
       Ohio's great hotel dining rooms are spread across three cities: a museum-hotel restaurant
-      in Cincinnati, a trio of downtown standouts in Cleveland, and an artisan eatery plus an
+      in Cincinnati, a pair of downtown standouts in Cleveland, and an artisan eatery plus an
       art-deco brasserie in Columbus. We've written an original, independent guide to each of
-      the six below: what the menu looks like, what it costs, and what we'd order. Prices are
+      the five below: what the menu looks like, what it costs, and what we'd order. Prices are
       reported figures, dated honestly — never copied menus.
     </p>
 
@@ -124,7 +115,7 @@ const guides = [
     </div>
 
     <div class="mt-12 rounded-2xl bg-parchment border border-line p-6 sm:p-10">
-      <h2 class="font-display text-2xl sm:text-3xl font-bold">How we chose these six</h2>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold">How we chose these five</h2>
       <div class="mt-6 grid gap-6 md:grid-cols-3 text-sm leading-relaxed text-ink-soft">
         <div>
           <h3 class="font-display text-lg font-bold text-ink mb-2">Notability, not hype</h3>
@@ -136,7 +127,7 @@ const guides = [
         <div>
           <h3 class="font-display text-lg font-bold text-ink mb-2">Three cities, one list</h3>
           <p>
-            Cincinnati, Cleveland, and Columbus each get their due. Two picks per city keeps the
+            Cincinnati, Cleveland, and Columbus each get their due. A pick or two per city keeps the
             list honest: these are the rooms that define hotel dining in Ohio's three big metros.
           </p>
         </div>
